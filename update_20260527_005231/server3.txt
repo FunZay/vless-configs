@@ -1,0 +1,17 @@
+# profile-title: бесплатный обходной путь от @FunzaykaShop
+# интервал обновления профиля: 1
+vless://0a6291a2-9354-47b2-be34-a498e373b06e@158.160.240.83:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=wl-3-4.nodes.ac&pbk=fHypiMYrxed2PhUC0dZ91ioSv8Cd0dqijKQj16Jnb1M&sid=479898e66f5e7beb#🇷🇺 ru — #1
+vless://3c0e8756-a574-420b-b3a0-8dfdcd05c5a0@152.53.144.255:443?flow=xtls-rprx-vision&security=reality&encryption=none&sni=jobinvest.ru&fp=qq&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&type=tcp&path=/#🇩🇪 de — #2
+vless://280c0087-c0a6-4607-86ac-eae9155eb73d@188.68.218.161:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=qq&sni=ads.x5.ru&pbk=c8fQY4Ywo9NPZS0CuujyztRI-8z0D7fREoz8laMDVkQ&sid=c31f9a0e7d4b52#🇷🇺 ru — #3
+vless://c14b2731-7db6-49ee-9271-b1efc56c2630@146.59.15.81:443/?type=tcp&encryption=none&flow=&sni=dl.google.com&fp=chrome&security=reality&pbk=l8HS4g_h8xPWlhQm8hmj5ohKNMrMCBcoHSNBFij79Sk&sid=5bb805#🇵🇱 pl — #4
+vless://3e7e46fe-ccb8-45e9-9faf-bf6005b896cf@158.160.135.170:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=ads.x5.ru&pbk=jSx3_X_tBAcNgp7SrKSfZnr5WN0cTN2ShEJv4rHceQU#🇷🇺 ru — #5
+vless://280c0087-c0a6-4607-86ac-eae9155eb73d@51.250.18.25:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=qq&sni=ads.x5.ru&pbk=oqRus6Z_Q1jqJaTEPu7ENbRL0-XKOw54K0jwCCGLtEk&sid=a9c4f17e3b62d8#🇷🇺 ru — #6
+vless://5d68d508-aad5-4061-9791-13bca5c2e92a@51.250.114.26:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=wl-6-2.nodes.ac&pbk=HHmhCp_qS_hIgIniZwaNwqI5CFH2_QmES4dFO41BRWo&sid=64038de1ca7aad86#🇷🇺 ru — #7
+vless://0615cad3-5514-4581-9f0f-0ed4732f5c23@217.149.30.103:8446?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=jobinvest.ru&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc#🇷🇺 ru — #8
+vless://216b8f6c-8a0b-4f0b-8ba2-2dc4227609a5@109.120.152.3:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=yandex.ru&pbk=P5KfTl_fQ0lZutcRdLhEzhwWhPNJtrVYf2reWB5LgD8#🇷🇺 ru — #9
+vless://17b76cec-c0a0-4714-89bb-be2af2ad4850@84.201.130.25:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=wl-5-2.nodes.ac&pbk=e0Mb11d4CAtw89qrvJ59Lu0rfplLy6xLh2tbsKoN2UM&sid=7c05417ed86af034#🇷🇺 ru — #10
+vless://35f9d824-f51a-4b3b-b782-13a7a6359da0@37.9.4.224:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=wl-2-1.legendary.ac&pbk=uL4x8EbCl080G43kFlv8nbpEyseWi1Dc_bl8F7lWtm8&sid=aa03ec59c9695e91#🇷🇺 ru — #11
+vless://5a1de16d-ba98-4a45-9c13-3588301c70c9@91.219.227.203:8083?encryption=none&type=tcp&security=reality&fp=chrome&sni=max.ru&pbk=Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw&sid=7dbf7d3233971d5c#🇷🇺 ru — #12
+vless://0378bc14-36ed-47ac-a8f6-578be84f63ce@51.250.97.18:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=cdp.x5.ru&pbk=wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI&sid=8ec792bfd725be8a#🇷🇺 ru — #13
+vless://a91e64f0-9295-499d-bf4a-661ad99d4938@khabarovsk.geodema.network:443?security=reality&encryption=none&pbk=EltWI8AOqkN8lMjRycweRRoFRah5hu6xiKtgBmQOdE8&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=khabarovsk.geodema.network&sid=1ed136481e0ede74#🇷🇺 ru — #14
+vless://5a994107-32ab-4185-a610-a95263fe3f91@51.250.15.175:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=5post-gate.x5.ru&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc#🇷🇺 ru — #15
