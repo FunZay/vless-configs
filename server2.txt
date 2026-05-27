@@ -1,4 +1,4 @@
-# profile-title: Обход №1 от @FunZaykaShop
+# profile-title: Обход №2 от @FunZaykaShop
 # interval: 1
 
 vless://05e09c8a-a3a9-4bd5-acf9-2c3c87bab827@145.239.173.163:443?type=tcp&encryption=none&security=none#🇫🇷 | France | #1 | @FunZaykaShop
