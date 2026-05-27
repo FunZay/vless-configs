@@ -1,3 +1,6 @@
+# profile-title: Обход №1 от @FunZaykaShop
+# interval: 1
+
 vless://05e09c8a-a3a9-4bd5-acf9-2c3c87bab827@145.239.173.163:443?type=tcp&encryption=none&security=none#🇫🇷 | France | #1 | @FunZaykaShop
 vless://acba684c-4098-4eca-f519-828b09f96464@134.33.73.249:54254?&security=reality&flow=xtls-rprx-vision&pbk=HFEz9fAOugljXea_ZVOUHMju08su8h0P9RANNcHP2y4&sid=db35ffdc&sni=apple.com&type=tcp&headerType=none&host=apple.com&path=%2F#🇺🇸 | USA | #2 | @FunZaykaShop
 vless://6d49fae1-374d-313e-b360-1227b0ea8dea@s643.ccgfw.top:443?encryption=none&type=tcp&headerType=none&fp=random&host=s643.ccgfw.top&path=&flow=xtls-rprx-vision&security=tls&sni=7190s643.ccgfw.top&serviceName=&mode=&alpn=#🇬🇧 | United Kingdom | #3 | @FunZaykaShop
