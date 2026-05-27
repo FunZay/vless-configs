@@ -1,1 +1,1 @@
-https://raw.githack.com/FunZay/vless-configs/main/1/server1.txt
+https://rawcdn.githack.com/FunZay/vless-configs/165e95be93b54f3135445f6c75ed464341f46d48/1/server1.txt
