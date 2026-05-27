@@ -1,4 +1,4 @@
-# profile-title: Обход №3 от @FunZaykaShop
+# profile-title: Обход №4 от @FunZaykaShop
 # interval: 1
 vless://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@fr-tx.sbrf-cdn342.ru:443?security=tls&encryption=none&insecure=0&headerType=none&type=tcp&allowInsecure=0&flow=xtls-rprx-vision-udp443&sni=sub.sbrf-cdn342.ru#🇫🇷 | France | #1 | @FunZaykaShop
 vless://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@nl-tx.sbrf-cdn342.ru:443?sni=sub.sbrf-cdn342.ru&alpn=http/1.1&flow=xtls-rprx-vision-udp443&fp=chrome&security=tls#🇳🇱 | Netherlands | #2 | @FunZaykaShop
