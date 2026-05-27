@@ -1,4 +1,4 @@
-# profile-title: Рабочие серверы №1 от @FunZaykaShop
+# profile-title: Рабочие серверы №3 от @FunZaykaShop
 # interval: 1
 vless://089151c6-276a-4292-b8c3-b65ce1193b49@172.66.213.209:2087?path=/&security=tls&encryption=none&insecure=0&fp=chrome&type=ws&allowInsecure=0&sni=testvip1.aattaash.com#🌐 | Unknown | #1 | @FunZaykaShop
 vless://93fd443d-52b1-4f6a-b78f-2908b7c16fc0@91.107.181.212:20620?encryption=none&type=raw&headerType=none&security=none#🇩🇪 | Germany | #2 | @FunZaykaShop
