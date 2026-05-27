@@ -1,0 +1,12 @@
+# profile-title: Рабочие серверы №1 от @FunZaykaShop
+# interval: 1
+vless://089151c6-276a-4292-b8c3-b65ce1193b49@172.66.213.209:2087?path=/&security=tls&encryption=none&insecure=0&fp=chrome&type=ws&allowInsecure=0&sni=testvip1.aattaash.com#🌐 | Unknown | #1 | @FunZaykaShop
+vless://93fd443d-52b1-4f6a-b78f-2908b7c16fc0@91.107.181.212:20620?encryption=none&type=raw&headerType=none&security=none#🇩🇪 | Germany | #2 | @FunZaykaShop
+vless://a0ae4e44-480c-4282-b526-f1bdf749e0d1@104.16.7.70:443?path=/&security=tls&alpn=http/1.1&encryption=none&insecure=0&host=c.downloadphysics.ir&fp=chrome&type=ws&allowInsecure=0&sni=c.downloadphysics.ir#🌐 | Unknown | #3 | @FunZaykaShop
+vless://e85e5523-402e-4eb0-ad27-2bcdbd4ea0f4@212.47.244.85:16595?encryption=none&type=tcp&headerType=none#🇫🇷 | France | #4 | @FunZaykaShop
+vless://d7ec6862-e78c-4613-b97f-1ed983a3e163@ger.vpnsmart.xyz:8080?encryption=none&type=ws&host=ger.vpnsmart.xyz&path=%2F&security=none#🇳🇱 | Netherlands | #5 | @FunZaykaShop
+vless://06b65903-406d-4a41-8463-6fd5c0ee7798@154.9.239.44:443?encryption=none&security=tls&sni=sni.skylee4.cloudns.ch&insecure=0&allowInsecure=0&type=ws&host=sni.skylee4.cloudns.ch&path=%2F#🇺🇸 | USA | #6 | @FunZaykaShop
+vless://0b69e501-28c8-4d44-f1f5-b36942226db6@47.82.183.252:56231?encryption=none&type=tcp&headerType=none#🇸🇬 | Singapore | #7 | @FunZaykaShop
+vless://4dc0eec9-f0e1-4755-be7e-7ba628522d1b@91.99.145.207:443?path=%2F&security=none&encryption=none&type=ws#🇩🇪 | Germany | #8 | @FunZaykaShop
+vless://3d344acb-be0c-4275-8f3d-f4243939c5e4@158.160.235.245:2083?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=randomized&sni=mail.yandex.ru&pbk=GBq78LaVzdcarcTEGJV0sOIa32JlYQoCdsStkQfVmwo&sid=abcdef1234567890&spx=/#🇷🇺 | Russia | #9 | @FunZaykaShop
+vless://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@fr-tx.sbrf-cdn342.ru:443?encryption=none&flow=xtls-rprx-vision-udp443&security=tls&sni=sub.sbrf-cdn342.ru&type=tcp&headerType=none#🇫🇷 | France | #10 | @FunZaykaShop
