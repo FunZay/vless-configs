@@ -2,7 +2,6 @@
 #profile-update-interval: 5
 #subscription-userinfo: upload=0; download=0; total=0; expire=1798761600
 #support-url: https://t.me/FUNZAYKASHOP
-#profile-web-page-url: https://raw.githubusercontent.com/FunZay/vless-configs/refs/heads/main/Vpn.txt
 
 vless://58aa330e-9938-4dbf-b63e-6b9ae2456e93@top4265457822.mwscdn.ru:443?mode=auto&path=%2Fusercontent&security=tls&encryption=none&host=top4265457822.mwscdn.ru&fp=firefox&allowinsecure=0&type=xhttp&sni=top4265457822.mwscdn.ru#🇷🇺 | RU | Обход 1 | @FUNZAYKASHOP
 vless://dfb1ab61-066c-4bce-ba32-d8fe8cc42dd7@158.160.136.203:443?security=reality&encryption=none&pbk=wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI&headerType=none&allowinsecure=0&type=tcp&flow=xtls-rprx-vision&sni=cdp.x5.ru&sid=8ec792bfd725be8a#🇷🇺 | RU | Обход 2 | @FUNZAYKASHOP
