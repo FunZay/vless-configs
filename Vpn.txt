@@ -2,9 +2,8 @@
 #profile-update-interval: 1
 #subscription-auto-update-enable: 1
 #subscription-auto-update-open-enable: 1
-#subscription-userinfo: upload=0; download=0; total=0; expire=1798761600
+#subscription-userinfo:total=0; expire=1798761600
 #support-url: https://t.me/FUNZAYKASHOP
-#subscription-userinfo: upload=0; download=0; total=0; expire=1798761600
 #announce:Нажмите на спидометр и подключайтесь к быстрому серверу🔥. Чем меньше ms тем лучше. Регулярно нажимайте на 🔄. Совет:Настройки → Подписки → Сортировать по пингу.
 
 vless://1da3b96e-55af-000e-9147-39e79074aaea@62.152.56.212:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=sfera.x5.ru&fp=firefox&pbk=akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0&sid=79ed76c157977111&type=tcp#🇵🇱 PL | обход | №1 | TG:@FunZaykaShop
