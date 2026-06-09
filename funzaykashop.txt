@@ -1,4 +1,4 @@
-#profile-title: @FunZaykaShop
+#profile-title: Бесплатный обход БС TG:@FunZaykaShop
 #profile-update-interval: 1
 #profile-web-page-url: https://t.me/FunZaykaShop
 #support-url: https://t.me/FunZaykaShop
