@@ -6,7 +6,8 @@
 #support-url: https://t.me/FUNZAYKASHOP
 #announce:Нажмите на спидометр и подключайтесь к быстрому серверу🔥. Чем меньше ms тем лучше. Регулярно нажимайте на 🔄. Совет:Настройки → Подписки → Сортировать по пингу. ⚡— лучший сервер
 
-vless://0d287747-b7be-4ba7-9b98-5bbd9dfa385c@s95410.cdn.ngenix.net:443?path=%2Fstorage&security=tls&encryption=none&alpn=h2,http/1.1&host=s95410.cdn.ngenix.net&allowinsecure=0&type=ws&sni=s95410.cdn.ngenix.net#🇪🇺 ⚡ Автовыбор БС | TG:@FunZaykaShop
+vless://0d287747-b7be-4ba7-9b98-5bbd9dfa385c@s95410.cdn.ngenix.net:443?path=%2Fstorage&security=tls&encryption=none&alpn=h2,http/1.1&host=s95410.cdn.ngenix.net&allowinsecure=0&type=ws&sni=s95410.cdn.ngenix.net#🇪🇺 Автовыбор БС | TG:@FunZaykaShop
+vless://1da3b96e-55af-0012-9147-39e79074aaea@62.152.56.221:8443?mode=multi&security=reality&encryption=none&authority=&pbk=36F7ul7R68ih8TAKPfHnqEvw_23kWNgOXCrfQKK3MXQ&fp=firefox&allowinsecure=0&type=grpc&serviceName=%2Fapi&sni=sfera.x5.ru&sid=3722621913893e97#🇪🇺 ⚡ Автовыбор БС | TG:@FunZaykaShop80%A27
 vless://0d287747-b7be-4ba7-9b98-5bbd9dfa385c@37.220.163.98:443?path=%2Fstorage&security=tls&encryption=none&alpn=h2,http/1.1&echfq=none&host=s95410.cdn.ngenix.net&fp=safari&allowinsecure=0&type=ws&sni=s95410.cdn.ngenix.net#🇷🇺 ⚡ Россия №1 | @FUNZAYKASHOP
 vless://a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469@217.herumhas.shop:5443?security=reality&encryption=none&echfq=none&pbk=LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ&headerType=none&fp=chrome&allowinsecure=0&type=tcp&flow=xtls-rprx-vision&sni=max.ru#🇷🇺 Россия №2 | @FUNZAYKASHOP
 vless://a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469@217.16.21.116:5443?security=reality&encryption=none&echfq=none&pbk=LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ&headerType=none&fp=chrome&allowinsecure=0&type=tcp&flow=xtls-rprx-vision&sni=max.ru#🇷🇺 Россия №3 | @FUNZAYKASHOP
