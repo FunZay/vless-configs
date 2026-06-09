@@ -1,8 +1,9 @@
-#profile-title: Бесплатный обход БС TG:@FunZaykaShop
+#profile-title: Бесплатный обход БС
 #profile-update-interval: 1
 #profile-web-page-url: https://t.me/FunZaykaShop
 #support-url: https://t.me/FunZaykaShop
 #subscription-userinfo: upload=0; download=0; total=0; expire=1798761600
+#announce:Это бесплатный обход от @FunZaykaShop❤️. Если вы хотите более стабильные сервера то приобретите платный обход в боте @FunZaykaShop_bot. Нажмите на спидометр и подключайтесь к быстрому серверу🔥. Чем меньше ms тем лучше. Регулярно нажимайте на 🔄. Совет:Настройки → Подписки → Сортировать по пингу.
 vless://1da3b96e-55af-0012-9147-39e79074aaea@62.152.56.221:8443?encryption=none&security=reality&sni=sfera.x5.ru&fp=firefox&pbk=36F7ul7R68ih8TAKPfHnqEvw_23kWNgOXCrfQKK3MXQ&sid=3722621913893e97&type=grpc&serviceName=/api&mode=multi#🇬🇧 | GB | №1 | обход | @FUNZAYKASHOP
 vless://1da3b96e-55af-0012-9147-39e79074aaea@62.152.56.221:8443?encryption=none&type=grpc&security=reality&mode=gun&serviceName=%2Fapi&fp=firefox&sni=sfera.x5.ru&pbk=36F7ul7R68ih8TAKPfHnqEvw_23kWNgOXCrfQKK3MXQ&sid=3722621913893e97#🇬🇧 | GB | №2 | обход | @FUNZAYKASHOP
 vless://1da3b96e-55af-0012-9147-39e79074aaea@62.152.56.226:8443?encryption=none&type=grpc&security=reality&mode=gun&serviceName=%2Fapi&fp=firefox&sni=loadtest.dev.urent.ru&pbk=36F7ul7R68ih8TAKPfHnqEvw_23kWNgOXCrfQKK3MXQ&sid=3722621913893e97#🇬🇧 | GB | №3 | обход | @FUNZAYKASHOP
