@@ -1,4 +1,4 @@
-#profile-title:Premium TG:@FUNZAYKASHOP
+#profile-title:Premium TEST TG:@FUNZAYKASHOP
 #profile-update-interval: 1
 #subscription-auto-update-enable: 1
 #subscription-auto-update-open-enable: 1
