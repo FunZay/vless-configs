@@ -13,7 +13,6 @@
     "routing": {
       "rules": [
         {"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"},
-        {"type": "field", "domain": ["geosite:category-block"], "outboundTag": "block"},
         {"type": "field", "domain": ["geosite:category-proxy"], "balancerTag": "Balance"},
         {"type": "field", "domain": ["geosite:category-direct"], "outboundTag": "direct"},
         {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"},
@@ -49,7 +48,7 @@
     }
   },
   {
-    "remarks": "🇪🇺 Европа №2 | @FunZaykaShop",
+    "remarks": "🇪🇺 Европа №2 (AUTO — Обход БС) | @FunZaykaShop",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -62,7 +61,6 @@
     "routing": {
       "rules": [
         {"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"},
-        {"type": "field", "domain": ["geosite:category-block"], "outboundTag": "block"},
         {"type": "field", "domain": ["geosite:category-proxy"], "balancerTag": "Balance"},
         {"type": "field", "domain": ["geosite:category-direct"], "outboundTag": "direct"},
         {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"},
@@ -142,7 +140,7 @@
     }
   },
   {
-    "remarks": "🇪🇺 Европа №3 | @FunZaykaShop",
+    "remarks": "🇪🇺 Европа №3 (Моб интернет 2) | @FunZaykaShop",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -155,7 +153,6 @@
     "routing": {
       "rules": [
         {"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"},
-        {"type": "field", "domain": ["geosite:category-block"], "outboundTag": "block"},
         {"type": "field", "domain": ["geosite:category-proxy"], "balancerTag": "Balance"},
         {"type": "field", "domain": ["geosite:category-direct"], "outboundTag": "direct"},
         {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"},
@@ -244,7 +241,7 @@
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
-      "rules": [{"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"}, {"type": "field", "domain": ["geosite:category-block"], "outboundTag": "block"}, {"type": "field", "domain": ["geosite:category-proxy"], "balancerTag": "Balance"}, {"type": "field", "domain": ["geosite:category-direct"], "outboundTag": "direct"}, {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"}, {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}],
+      "rules": [{"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"}, {"type": "field", "domain": ["geosite:category-proxy"], "balancerTag": "Balance"}, {"type": "field", "domain": ["geosite:category-direct"], "outboundTag": "direct"}, {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"}, {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}],
       "balancers": [{"tag": "Balance", "selector": ["at-reality-1", "at-reality-2"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "at-reality-1"}],
       "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
     },
@@ -262,7 +259,7 @@
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
-      "rules": [{"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"}, {"type": "field", "domain": ["geosite:category-block"], "outboundTag": "block"}, {"type": "field", "domain": ["geosite:category-proxy"], "balancerTag": "Balance"}, {"type": "field", "domain": ["geosite:category-direct"], "outboundTag": "direct"}, {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"}, {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}],
+      "rules": [{"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"}, {"type": "field", "domain": ["geosite:category-proxy"], "balancerTag": "Balance"}, {"type": "field", "domain": ["geosite:category-direct"], "outboundTag": "direct"}, {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"}, {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}],
       "balancers": [{"tag": "Balance", "selector": ["ru-reality-1", "ru-reality-2"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "ru-reality-1"}],
       "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
     },
@@ -280,7 +277,7 @@
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
-      "rules": [{"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"}, {"type": "field", "domain": ["geosite:category-block"], "outboundTag": "block"}, {"type": "field", "domain": ["geosite:category-proxy"], "balancerTag": "Balance"}, {"type": "field", "domain": ["geosite:category-direct"], "outboundTag": "direct"}, {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"}, {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}],
+      "rules": [{"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"}, {"type": "field", "domain": ["geosite:category-proxy"], "balancerTag": "Balance"}, {"type": "field", "domain": ["geosite:category-direct"], "outboundTag": "direct"}, {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"}, {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}],
       "balancers": [{"tag": "Balance", "selector": ["ru-grpc-1"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "ru-grpc-1"}],
       "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
     },
@@ -297,7 +294,7 @@
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
-      "rules": [{"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"}, {"type": "field", "domain": ["geosite:category-block"], "outboundTag": "block"}, {"type": "field", "domain": ["geosite:category-proxy"], "balancerTag": "Balance"}, {"type": "field", "domain": ["geosite:category-direct"], "outboundTag": "direct"}, {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"}, {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}],
+      "rules": [{"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"}, {"type": "field", "domain": ["geosite:category-proxy"], "balancerTag": "Balance"}, {"type": "field", "domain": ["geosite:category-direct"], "outboundTag": "direct"}, {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"}, {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}],
       "balancers": [{"tag": "Balance", "selector": ["de-reality-1", "de-reality-2"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "de-reality-1"}],
       "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
     },
@@ -315,7 +312,7 @@
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
-      "rules": [{"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"}, {"type": "field", "domain": ["geosite:category-block"], "outboundTag": "block"}, {"type": "field", "domain": ["geosite:category-proxy"], "balancerTag": "Balance"}, {"type": "field", "domain": ["geosite:category-direct"], "outboundTag": "direct"}, {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"}, {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}],
+      "rules": [{"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"}, {"type": "field", "domain": ["geosite:category-proxy"], "balancerTag": "Balance"}, {"type": "field", "domain": ["geosite:category-direct"], "outboundTag": "direct"}, {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"}, {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}],
       "balancers": [{"tag": "Balance", "selector": ["de-ws-1", "de-ws-2"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "de-ws-1"}],
       "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
     },
@@ -329,7 +326,7 @@
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["de-ws-1", "de-ws-2"], "enableConcurrency": true}
   },
   {
-    "remarks": "🇩🇪 Германия №3 | @FunZaykaShop",
+    "remarks": "🇩🇪 Германия №3 (Моб интернет 1) | @FunZaykaShop",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -342,7 +339,6 @@
     "routing": {
       "rules": [
         {"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"},
-        {"type": "field", "domain": ["geosite:category-block"], "outboundTag": "block"},
         {"type": "field", "domain": ["geosite:category-proxy"], "balancerTag": "Balance"},
         {"type": "field", "domain": ["geosite:category-direct"], "outboundTag": "direct"},
         {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"},
@@ -367,7 +363,7 @@
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
-      "rules": [{"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"}, {"type": "field", "domain": ["geosite:category-block"], "outboundTag": "block"}, {"type": "field", "domain": ["geosite:category-proxy"], "balancerTag": "Balance"}, {"type": "field", "domain": ["geosite:category-direct"], "outboundTag": "direct"}, {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"}, {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}],
+      "rules": [{"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"}, {"type": "field", "domain": ["geosite:category-proxy"], "balancerTag": "Balance"}, {"type": "field", "domain": ["geosite:category-direct"], "outboundTag": "direct"}, {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"}, {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}],
       "balancers": [{"tag": "Balance", "selector": ["se-reality-1", "se-reality-2"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "se-reality-1"}],
       "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
     },
