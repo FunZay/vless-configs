@@ -6,9 +6,9 @@
 #support-url: https://t.me/FUNZAYKASHOP
 #announce:Тут нету стабильных серверов. Эта подписка предназначена для тестов. Регулярно нажимайте на 🔄. Совет:Настройки → Подписки → Сортировать по пингу. ⚡— лучший сервер
 
-https://github.com/FunZay/vless-configs/blob/main/autoservers/as.json
-https://github.com/FunZay/vless-configs/blob/main/autoservers/ru.json
-https://github.com/FunZay/vless-configs/blob/main/autoservers/ge.json
-https://github.com/FunZay/vless-configs/blob/main/autoservers/uk.json
-https://github.com/FunZay/vless-configs/blob/main/autoservers/sw.json
-https://github.com/FunZay/vless-configs/blob/main/autoservers/fi.json
+https://raw.githubusercontent.com/FunZay/vless-configs/main/autoservers/as.json
+https://raw.githubusercontent.com/FunZay/vless-configs/main/autoservers/ru.json
+https://raw.githubusercontent.com/FunZay/vless-configs/main/autoservers/ge.json
+https://raw.githubusercontent.com/FunZay/vless-configs/main/autoservers/uk.json
+https://raw.githubusercontent.com/FunZay/vless-configs/main/autoservers/sw.json
+https://raw.githubusercontent.com/FunZay/vless-configs/main/autoservers/fi.json
