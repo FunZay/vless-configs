@@ -1,6 +1,6 @@
 [
   {
-    "remarks": "🇪🇺 Европа №1 тест | @FunZaykaShop",
+    "remarks": "🇪🇺 Европа №1 | @FunZaykaShop",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -46,7 +46,7 @@
     }
   },
   {
-    "remarks": "🇪🇺 Европа №2 (AUTO — Обход БС) | @FunZaykaShop",
+    "remarks": "🇪🇺 Европа №2 | @FunZaykaShop",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -136,7 +136,7 @@
     }
   },
   {
-    "remarks": "🇪🇺 Европа №3 (Моб интернет 2) | @FunZaykaShop",
+    "remarks": "🇪🇺 Европа №3 | @FunZaykaShop",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -320,7 +320,7 @@
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["de-ws-1", "de-ws-2"], "enableConcurrency": true}
   },
   {
-    "remarks": "🇩🇪 Германия №3 (Моб интернет 1) | @FunZaykaShop",
+    "remarks": "🇩🇪 Германия №3 | @FunZaykaShop",
     "dns": {
       "tag": "dns-in",
       "servers": [
