@@ -1,0 +1,339 @@
+{
+  "outbounds": [
+    {
+      "type": "urltest",
+      "tag": "🇬🇧 Великобритания | @FunZaykaShop",
+      "outbounds": [
+        "🇬🇧 UK | @FunZaykaShop"
+      ],
+      "url": "https://www.google.com/generate_204",
+      "interval": "30s"
+    },
+    {
+      "type": "urltest",
+      "tag": "🇩🇪 Германия Автовыбор | @FunZaykaShop",
+      "outbounds": [
+        "🇩🇪 DE Node 1 | @FunZaykaShop",
+        "🇩🇪 DE Node 2 | @FunZaykaShop",
+        "🇩🇪 DE Node 3 | @FunZaykaShop",
+        "🇩🇪 DE Node 4 | @FunZaykaShop"
+      ],
+      "url": "https://www.google.com/generate_204",
+      "interval": "30s"
+    },
+    {
+      "type": "urltest",
+      "tag": "🇷🇺 Россия Автовыбор | @FunZaykaShop",
+      "outbounds": [
+        "🇷🇺 RU Node 1 | @FunZaykaShop",
+        "🇷🇺 RU Node 2 | @FunZaykaShop",
+        "🇷🇺 RU Node 3 | @FunZaykaShop",
+        "🇷🇺 RU YT gRPC | @FunZaykaShop"
+      ],
+      "url": "https://www.google.com/generate_204",
+      "interval": "30s"
+    },
+    {
+      "type": "urltest",
+      "tag": "🇫🇮 Финляндия Автовыбор | @FunZaykaShop",
+      "outbounds": [
+        "🇫🇮 FI Node 1 | @FunZaykaShop",
+        "🇫🇮 FI Node 2 | @FunZaykaShop"
+      ],
+      "url": "https://www.google.com/generate_204",
+      "interval": "30s"
+    },
+    {
+      "type": "urltest",
+      "tag": "🇸🇪 Швеция | @FunZaykaShop",
+      "outbounds": [
+        "🇸🇪 SE | @FunZaykaShop"
+      ],
+      "url": "https://www.google.com/generate_204",
+      "interval": "30s"
+    },
+    {
+      "type": "urltest",
+      "tag": "🇦🇹 Австрия | @FunZaykaShop",
+      "outbounds": [
+        "🇦🇹 AT | @FunZaykaShop"
+      ],
+      "url": "https://www.google.com/generate_204",
+      "interval": "30s"
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 UK | @FunZaykaShop",
+      "server": "84.201.139.114",
+      "server_port": 443,
+      "uuid": "d205ae68-0819-473c-b425-6c5947ac2f8d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "5oHKiTEb9_EUxj2vODi3EWCxhh7gXgFYDw4Sf6JYvEc",
+          "short_id": "25"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 DE Node 1 | @FunZaykaShop",
+      "server": "icyeu.starmonstr.pro",
+      "server_port": 443,
+      "uuid": "2fd62862-a32d-47f8-89d0-8da80474e8fe",
+      "tls": {
+        "enabled": true,
+        "server_name": "s36393.cdn.ngenix.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/v1/data/sync/",
+        "headers": {
+          "Host": "s36393.cdn.ngenix.net"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 DE Node 2 | @FunZaykaShop",
+      "server": "s4.whitelists-cloudflare.ips-list.vhub.pro",
+      "server_port": 443,
+      "uuid": "5bf12aea-0a92-41fb-ab2d-0e034b9f57a2",
+      "tls": {
+        "enabled": true,
+        "server_name": "cloudflare.vhub.pro",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/sequre/ws?ed=2560",
+        "headers": {
+          "Host": "cloudflare.vhub.pro"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 DE Node 3 | @FunZaykaShop",
+      "server": "s3.whitelists-cloudflare.ips-list.vhub.pro",
+      "server_port": 443,
+      "uuid": "5bf12aea-0a92-41fb-ab2d-0e034b9f57a2",
+      "tls": {
+        "enabled": true,
+        "server_name": "cloudflare.vhub.pro",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/sequre/ws?ed=2560",
+        "headers": {
+          "Host": "cloudflare.vhub.pro"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 DE Node 4 | @FunZaykaShop",
+      "server": "78.159.250.70",
+      "server_port": 20447,
+      "uuid": "6d18e395-efb3-40c7-9d05-fd1509ccc188",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "xBpyo1hUqSIC_DjeVuTDN1EqAsTnFNJPDgBoJZ79clw",
+          "short_id": "aabb"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 RU Node 1 | @FunZaykaShop",
+      "server": "beamgedrive.topupaxme.icu",
+      "server_port": 5443,
+      "uuid": "a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 RU Node 2 | @FunZaykaShop",
+      "server": "109.120.189.154",
+      "server_port": 443,
+      "uuid": "696f81d1-3df4-45f4-a251-dcfcd14ee447",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "KvQ0JuE-17nWMSvEnG9xdlqPWv3bZBn9JlDiLmyE-SE",
+          "short_id": "6aa44564cda56661"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 RU Node 3 | @FunZaykaShop",
+      "server": "89.208.230.241",
+      "server_port": 5443,
+      "uuid": "a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 RU YT gRPC | @FunZaykaShop",
+      "server": "89.169.38.249.blanesik.space",
+      "server_port": 443,
+      "uuid": "5bf12aea-0a92-41fb-ab2d-0e034b9f57a2",
+      "tls": {
+        "enabled": true,
+        "server_name": "89.169.38.249.blanesik.space",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "/sequre/grpc"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 FI Node 1 | @FunZaykaShop",
+      "server": "185.229.9.38",
+      "server_port": 5443,
+      "uuid": "a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 FI Node 2 | @FunZaykaShop",
+      "server": "62.152.56.159",
+      "server_port": 5443,
+      "uuid": "a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 SE | @FunZaykaShop",
+      "server": "109.120.188.54",
+      "server_port": 443,
+      "uuid": "696f81d1-3df4-45f4-a251-dcfcd14ee447",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "4woJiVyGtLro6qRQdUcM2EJDHI3CLOeeE-knmSHk8lE",
+          "short_id": "1ca44564cda56661"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇹 AT | @FunZaykaShop",
+      "server": "78.159.250.70",
+      "server_port": 2053,
+      "uuid": "6d18e395-efb3-40c7-9d05-fd1509ccc188",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.max.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "6nsVaGZyZOiD9A0Rd9ci-r-7PO_i2ZP5kPK-0orxdS4",
+          "short_id": "aabb"
+        }
+      }
+    }
+  ]
+}
