@@ -1,6 +1,6 @@
 [
   {
-    "remarks": "ðŸ‡ªðŸ‡º Ð•Ð²Ñ€Ð¾Ð¿Ð° â„–1 | @FunZaykaShop",
+    "remarks": "🇪🇺 Европа №1 | @FunZaykaShop",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -49,7 +49,7 @@
     }
   },
   {
-    "remarks": "ðŸ‡ªðŸ‡º Ð•Ð²Ñ€Ð¾Ð¿Ð° â„–2 | @FunZaykaShop",
+    "remarks": "🇪🇺 Европа №2 | @FunZaykaShop",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -142,7 +142,7 @@
     }
   },
   {
-    "remarks": "ðŸ‡ªðŸ‡º Ð•Ð²Ñ€Ð¾Ð¿Ð° â„–3 | @FunZaykaShop",
+    "remarks": "🇪🇺 Европа №3 | @FunZaykaShop",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -240,7 +240,7 @@
     }
   },
   {
-    "remarks": "ðŸ‡¦ðŸ‡¹ ÐÐ²ÑÑ‚Ñ€Ð¸Ñ â„–1 | @FunZaykaShop",
+    "remarks": "🇦🇹 Австрия №1 | @FunZaykaShop",
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
@@ -258,7 +258,7 @@
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["at-reality-1", "at-reality-2"], "enableConcurrency": true}
   },
   {
-    "remarks": "ðŸ‡·ðŸ‡º Ð Ð¾ÑÑÐ¸Ñ â„–1 | @FunZaykaShop",
+    "remarks": "🇷🇺 Россия №1 | @FunZaykaShop",
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
@@ -276,7 +276,7 @@
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["ru-reality-1", "ru-reality-2"], "enableConcurrency": true}
   },
   {
-    "remarks": "ðŸ‡·ðŸ‡º Ð Ð¾ÑÑÐ¸Ñ â„–2 | @FunZaykaShop",
+    "remarks": "🇷🇺 Россия №2 | @FunZaykaShop",
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
@@ -293,7 +293,7 @@
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["ru-grpc-1"], "enableConcurrency": true}
   },
   {
-    "remarks": "ðŸ‡©ðŸ‡ª Ð“ÐµÑ€Ð¼Ð°Ð½Ð¸Ñ â„–1 | @FunZaykaShop",
+    "remarks": "🇩🇪 Германия №1 | @FunZaykaShop",
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
@@ -311,7 +311,7 @@
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["de-reality-1", "de-reality-2"], "enableConcurrency": true}
   },
   {
-    "remarks": "ðŸ‡©ðŸ‡ª Ð“ÐµÑ€Ð¼Ð°Ð½Ð¸Ñ â„–2 | @FunZaykaShop",
+    "remarks": "🇩🇪 Германия №2 | @FunZaykaShop",
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
@@ -329,7 +329,7 @@
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["de-ws-1", "de-ws-2"], "enableConcurrency": true}
   },
   {
-    "remarks": "ðŸ‡©ðŸ‡ª Ð“ÐµÑ€Ð¼Ð°Ð½Ð¸Ñ â„–3 | @FunZaykaShop",
+    "remarks": "🇩🇪 Германия №3 | @FunZaykaShop",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -363,7 +363,7 @@
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["mobile-cf"], "enableConcurrency": true}
   },
   {
-    "remarks": "ðŸ‡¸ðŸ‡ª Ð¨Ð²ÐµÑ†Ð¸Ñ â„–1 | @FunZaykaShop",
+    "remarks": "🇸🇪 Швеция №1 | @FunZaykaShop",
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
@@ -380,4 +380,4 @@
     ],
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["se-reality-1", "se-reality-2"], "enableConcurrency": true}
   }
-        ]
+      ]
