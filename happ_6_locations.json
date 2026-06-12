@@ -1,353 +1,284 @@
 {
-  "log": {
-    "loglevel": "warning"
-  },
-  "routing": {
-    "domainStrategy": "AsIs",
-    "balancers": [
-      {
-        "tag": "balancer_de",
-        "selector": [
-          "de-"
-        ]
-      },
-      {
-        "tag": "balancer_ru",
-        "selector": [
-          "ru-"
-        ]
-      },
-      {
-        "tag": "balancer_fi",
-        "selector": [
-          "fi-"
-        ]
-      }
-    ],
-    "rules": [
-      {
-        "type": "field",
-        "inboundTag": [
-          "in_uk"
-        ],
-        "outboundTag": "uk-main"
-      },
-      {
-        "type": "field",
-        "inboundTag": [
-          "in_de"
-        ],
-        "balancerTag": "balancer_de"
-      },
-      {
-        "type": "field",
-        "inboundTag": [
-          "in_ru"
-        ],
-        "balancerTag": "balancer_ru"
-      },
-      {
-        "type": "field",
-        "inboundTag": [
-          "in_fi"
-        ],
-        "balancerTag": "balancer_fi"
-      },
-      {
-        "type": "field",
-        "inboundTag": [
-          "in_se"
-        ],
-        "outboundTag": "se-main"
-      },
-      {
-        "type": "field",
-        "inboundTag": [
-          "in_at"
-        ],
-        "outboundTag": "at-main"
-      }
-    ]
-  },
-  "observatory": {
-    "subjectSelector": [
-      "de-",
-      "ru-",
-      "fi-"
-    ],
-    "probeUrl": "https://www.google.com/generate_204",
-    "probeInterval": "30s"
-  },
-  "inbounds": [
-    {
-      "tag": "in_uk",
-      "port": 10801,
-      "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
-      },
-      "_remarks": "🇬🇧 Великобритания | @FunZaykaShop"
-    },
-    {
-      "tag": "in_de",
-      "port": 10802,
-      "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
-      },
-      "_remarks": "🇩🇪 Германия Автовыбор | @FunZaykaShop"
-    },
-    {
-      "tag": "in_ru",
-      "port": 10803,
-      "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
-      },
-      "_remarks": "🇷🇺 Россия Автовыбор | @FunZaykaShop"
-    },
-    {
-      "tag": "in_fi",
-      "port": 10804,
-      "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
-      },
-      "_remarks": "🇫🇮 Финляндия Автовыбор | @FunZaykaShop"
-    },
-    {
-      "tag": "in_se",
-      "port": 10805,
-      "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
-      },
-      "_remarks": "🇸🇪 Швеция | @FunZaykaShop"
-    },
-    {
-      "tag": "in_at",
-      "port": 10806,
-      "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
-      },
-      "_remarks": "🇦🇹 Австрия | @FunZaykaShop"
-    }
-  ],
-  "outbounds": [
-    {
-      "tag": "uk-main",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [{
-          "address": "84.201.139.114",
-          "port": 443,
-          "users": [{
-            "id": "d205ae68-0819-473c-b425-6c5947ac2f8d",
-            "encryption": "none",
-            "flow": "xtls-rprx-vision"
-          }]
-        }]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "show": false,
-          "fingerprint": "chrome",
-          "serverName": "ads.x5.ru",
-          "publicKey": "5oHKiTEb9_EUxj2vODi3EWCxhh7gXgFYDw4Sf6JYvEc",
-          "shortId": "25"
+        "type": "vless",
+        "tag": "🇬🇧 Великобритания 1 REALITY | @FunZaykaShop",
+        "server": "84.201.139.114",
+        "server_port": 443,
+        "uuid": "d205ae68-0819-473c-b425-6c5947ac2f8d",
+        "flow": "xtls-rprx-vision",
+        "tls": {
+            "enabled": True,
+            "server_name": "ads.x5.ru",
+            "utls": {
+                "enabled": True,
+                "fingerprint": "chrome"
+            },
+            "reality": {
+                "enabled": True,
+                "public_key": "5oHKiTEb9_EUxj2vODi3EWCxhh7gXgFYDw4Sf6JYvEc",
+                "short_id": "25"
+            }
         }
-      }
     },
+    # 2. Германия
     {
-      "tag": "de-1",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [{
-          "address": "78.159.250.70",
-          "port": 20447,
-          "users": [{
-            "id": "6d18e395-efb3-40c7-9d05-fd1509ccc188",
-            "encryption": "none",
-            "flow": "xtls-rprx-vision"
-          }]
-        }]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "show": false,
-          "fingerprint": "chrome",
-          "serverName": "max.ru",
-          "publicKey": "xBpyo1hUqSIC_DjeVuTDN1EqAsTnFNJPDgBoJZ79clw",
-          "shortId": "aabb"
-        }
-      }
-    },
-    {
-      "tag": "de-2",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [{
-          "address": "icyeu.starmonstr.pro",
-          "port": 443,
-          "users": [{
-            "id": "2fd62862-a32d-47f8-89d0-8da80474e8fe",
-            "encryption": "none"
-          }]
-        }]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "s36393.cdn.ngenix.net",
-          "fingerprint": "chrome"
+        "type": "vless",
+        "tag": "🇩🇪 Германия 1 WS TLS | @FunZaykaShop",
+        "server": "icyeu.starmonstr.pro",
+        "server_port": 443,
+        "uuid": "2fd62862-a32d-47f8-89d0-8da80474e8fe",
+        "tls": {
+            "enabled": True,
+            "server_name": "s36393.cdn.ngenix.net",
+            "utls": {
+                "enabled": True,
+                "fingerprint": "chrome"
+            }
         },
-        "wsSettings": {
-          "path": "/v1/data/sync/",
-          "headers": {
-            "Host": "s36393.cdn.ngenix.net"
-          }
+        "transport": {
+            "type": "ws",
+            "path": "/v1/data/sync/",
+            "headers": {
+                "Host": "s36393.cdn.ngenix.net"
+            }
         }
-      }
     },
     {
-      "tag": "ru-main",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [{
-          "address": "beamgedrive.topupaxme.icu",
-          "port": 5443,
-          "users": [{
-            "id": "a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469",
-            "encryption": "none",
-            "flow": "xtls-rprx-vision"
-          }]
-        }]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "show": false,
-          "fingerprint": "chrome",
-          "serverName": "max.ru",
-          "publicKey": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
-          "shortId": ""
+        "type": "vless",
+        "tag": "🇩🇪 Германия 2 WS TLS | @FunZaykaShop",
+        "server": "s4.whitelists-cloudflare.ips-list.vhub.pro",
+        "server_port": 443,
+        "uuid": "5bf12aea-0a92-41fb-ab2d-0e034b9f57a2",
+        "tls": {
+            "enabled": True,
+            "server_name": "cloudflare.vhub.pro",
+            "utls": {
+                "enabled": True,
+                "fingerprint": "safari"
+            }
+        },
+        "transport": {
+            "type": "ws",
+            "path": "/sequre/ws?ed=2560",
+            "headers": {
+                "Host": "cloudflare.vhub.pro"
+            }
         }
-      }
     },
     {
-      "tag": "fi-main",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [{
-          "address": "185.229.9.38",
-          "port": 5443,
-          "users": [{
-            "id": "a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469",
-            "encryption": "none",
-            "flow": "xtls-rprx-vision"
-          }]
-        }]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "show": false,
-          "fingerprint": "firefox",
-          "serverName": "max.ru",
-          "publicKey": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
-          "shortId": ""
+        "type": "vless",
+        "tag": "🇩🇪 Германия 3 WS TLS | @FunZaykaShop",
+        "server": "s3.whitelists-cloudflare.ips-list.vhub.pro",
+        "server_port": 443,
+        "uuid": "5bf12aea-0a92-41fb-ab2d-0e034b9f57a2",
+        "tls": {
+            "enabled": True,
+            "server_name": "cloudflare.vhub.pro",
+            "utls": {
+                "enabled": True,
+                "fingerprint": "ios"
+            }
+        },
+        "transport": {
+            "type": "ws",
+            "path": "/sequre/ws?ed=2560",
+            "headers": {
+                "Host": "cloudflare.vhub.pro"
+            }
         }
-      }
     },
     {
-      "tag": "se-main",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [{
-          "address": "109.120.188.54",
-          "port": 443,
-          "users": [{
-            "id": "696f81d1-3df4-45f4-a251-dcfcd14ee447",
-            "encryption": "none",
-            "flow": "xtls-rprx-vision"
-          }]
-        }]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "show": false,
-          "fingerprint": "firefox",
-          "serverName": "ads.x5.ru",
-          "publicKey": "4woJiVyGtLro6qRQdUcM2EJDHI3CLOeeE-knmSHk8lE",
-          "shortId": "1ca44564cda56661"
+        "type": "vless",
+        "tag": "🇩🇪 Германия 4 REALITY | @FunZaykaShop",
+        "server": "78.159.250.70",
+        "server_port": 20447,
+        "uuid": "6d18e395-efb3-40c7-9d05-fd1509ccc188",
+        "flow": "xtls-rprx-vision",
+        "tls": {
+            "enabled": True,
+            "server_name": "max.ru",
+            "utls": {
+                "enabled": True,
+                "fingerprint": "chrome"
+            },
+            "reality": {
+                "enabled": True,
+                "public_key": "xBpyo1hUqSIC_DjeVuTDN1EqAsTnFNJPDgBoJZ79clw",
+                "short_id": "aabb"
+            }
         }
-      }
+    },
+    # 3. Россия
+    {
+        "type": "vless",
+        "tag": "🇷🇺 Россия 1 REALITY | @FunZaykaShop",
+        "server": "beamgedrive.topupaxme.icu",
+        "server_port": 5443,
+        "uuid": "a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469",
+        "flow": "xtls-rprx-vision",
+        "tls": {
+            "enabled": True,
+            "server_name": "max.ru",
+            "utls": {
+                "enabled": True,
+                "fingerprint": "chrome"
+            },
+            "reality": {
+                "enabled": True,
+                "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+                "short_id": ""
+            }
+        }
     },
     {
-      "tag": "at-main",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [{
-          "address": "78.159.250.70",
-          "port": 2053,
-          "users": [{
-            "id": "6d18e395-efb3-40c7-9d05-fd1509ccc188",
-            "encryption": "none",
-            "flow": "xtls-rprx-vision"
-          }]
-        }]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "show": false,
-          "fingerprint": "chrome",
-          "serverName": "www.max.ru",
-          "publicKey": "6nsVaGZyZOiD9A0Rd9ci-r-7PO_i2ZP5kPK-0orxdS4",
-          "shortId": "aabb"
+        "type": "vless",
+        "tag": "🇷🇺 Россия 2 REALITY | @FunZaykaShop",
+        "server": "109.120.189.154",
+        "server_port": 443,
+        "uuid": "696f81d1-3df4-45f4-a251-dcfcd14ee447",
+        "flow": "xtls-rprx-vision",
+        "tls": {
+            "enabled": True,
+            "server_name": "ads.x5.ru",
+            "utls": {
+                "enabled": True,
+                "fingerprint": "firefox"
+            },
+            "reality": {
+                "enabled": True,
+                "public_key": "KvQ0JuE-17nWMSvEnG9xdlqPWv3bZBn9JlDiLmyE-SE",
+                "short_id": "6aa44564cda56661"
+            }
         }
-      }
+    },
+    {
+        "type": "vless",
+        "tag": "🇷🇺 Россия 3 REALITY | @FunZaykaShop",
+        "server": "89.208.230.241",
+        "server_port": 5443,
+        "uuid": "a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469",
+        "flow": "xtls-rprx-vision",
+        "tls": {
+            "enabled": True,
+            "server_name": "max.ru",
+            "utls": {
+                "enabled": True,
+                "fingerprint": "firefox"
+            },
+            "reality": {
+                "enabled": True,
+                "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+                "short_id": ""
+            }
+        }
+    },
+    {
+        "type": "vless",
+        "tag": "🇷🇺 Россия YouTube gRPC | @FunZaykaShop",
+        "server": "89.169.38.249.blanesik.space",
+        "server_port": 443,
+        "uuid": "5bf12aea-0a92-41fb-ab2d-0e034b9f57a2",
+        "tls": {
+            "enabled": True,
+            "server_name": "89.169.38.249.blanesik.space",
+            "utls": {
+                "enabled": True,
+                "fingerprint": "safari"
+            }
+        },
+        "transport": {
+            "type": "grpc",
+            "service_name": "/sequre/grpc"
+        }
+    },
+    # 4. Финляндия
+    {
+        "type": "vless",
+        "tag": "🇫🇮 Финляндия 1 REALITY | @FunZaykaShop",
+        "server": "185.229.9.38",
+        "server_port": 5443,
+        "uuid": "a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469",
+        "flow": "xtls-rprx-vision",
+        "tls": {
+            "enabled": True,
+            "server_name": "max.ru",
+            "utls": {
+                "enabled": True,
+                "fingerprint": "firefox"
+            },
+            "reality": {
+                "enabled": True,
+                "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+                "short_id": ""
+            }
+        }
+    },
+    {
+        "type": "vless",
+        "tag": "🇫🇮 Финляндия 2 REALITY | @FunZaykaShop",
+        "server": "62.152.56.159",
+        "server_port": 5443,
+        "uuid": "a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469",
+        "flow": "xtls-rprx-vision",
+        "tls": {
+            "enabled": True,
+            "server_name": "max.ru",
+            "utls": {
+                "enabled": True,
+                "fingerprint": "chrome"
+            },
+            "reality": {
+                "enabled": True,
+                "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+                "short_id": ""
+            }
+        }
+    },
+    # 5. Швеция
+    {
+        "type": "vless",
+        "tag": "🇸🇪 Швеция 1 REALITY | @FunZaykaShop",
+        "server": "109.120.188.54",
+        "server_port": 443,
+        "uuid": "696f81d1-3df4-45f4-a251-dcfcd14ee447",
+        "flow": "xtls-rprx-vision",
+        "tls": {
+            "enabled": True,
+            "server_name": "ads.x5.ru",
+            "utls": {
+                "enabled": True,
+                "fingerprint": "firefox"
+            },
+            "reality": {
+                "enabled": True,
+                "public_key": "4woJiVyGtLro6qRQdUcM2EJDHI3CLOeeE-knmSHk8lE",
+                "short_id": "1ca44564cda56661"
+            }
+        }
+    },
+    # 6. Австрия
+    {
+        "type": "vless",
+        "tag": "🇦🇹 Австрия 1 REALITY | @FunZaykaShop",
+        "server": "78.159.250.70",
+        "server_port": 2053,
+        "uuid": "6d18e395-efb3-40c7-9d05-fd1509ccc188",
+        "flow": "xtls-rprx-vision",
+        "tls": {
+            "enabled": True,
+            "server_name": "www.max.ru",
+            "utls": {
+                "enabled": True,
+                "fingerprint": "chrome"
+            },
+            "reality": {
+                "enabled": True,
+                "public_key": "6nsVaGZyZOiD9A0Rd9ci-r-7PO_i2ZP5kPK-0orxdS4",
+                "short_id": "aabb"
+            }
+        }
     }
-  ]
+]
+
+output_data = {
+    "outbounds": sing_box_outbounds
 }
