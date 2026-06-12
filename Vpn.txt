@@ -4,7 +4,7 @@
 #subscription-auto-update-open-enable: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=1798761600
 #support-url: https://t.me/FUNZAYKASHOP
-#info-url: https://telegra.ph/Premium-Obhod-ot-FunZaykaShop-06-12
+#profile-web: https://telegra.ph/Premium-Obhod-ot-FunZaykaShop-06-12
 #announce:Нажмите на спидометр и подключайтесь к быстрому серверу🔥. Чем меньше ms тем лучше. Регулярно нажимайте на 🔄. Совет:Настройки → Подписки → Сортировать по пингу. ⚡— лучший сервер
 
 vless://5bf12aea-0a92-41fb-ab2d-0e034b9f57a2@s4.whitelists-cloudflare.ips-list.vhub.pro:443?path=%2Fsequre%2Fws%3Fed%3D2560&security=tls&encryption=none&alpn=http/1.1&host=cloudflare.vhub.pro&fp=safari&allowinsecure=0&type=ws&sni=cloudflare.vhub.pro#🇪🇺 ⚡📱🌐 Автовыбор БС | @FunZaykaShop
