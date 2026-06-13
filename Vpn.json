@@ -570,5 +570,5 @@
     "subjectSelector": ["mobile", "mobile-225813686fdf95eeecd152a7cd108efb783255b7d709277b79491792500e8880-2", "mobile-76dba547e791b33bc0a0a02c7f9b3b7c61e74768ea260cb6de86bfbe1ccbe251-4", "mobile-76dba547e791b33bc0a0a02c7f9b3b7c61e74768ea260cb6de86bfbe1ccbe251-5", "mobile-76dba547e791b33bc0a0a02c7f9b3b7c61e74768ea260cb6de86bfbe1ccbe251-6"],
     "enableConcurrency": true
   }
-},
+}
         ]
