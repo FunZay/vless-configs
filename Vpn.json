@@ -1,6 +1,6 @@
 [
   {
-    "remarks": "🇪🇺 Европа №1 | @FunZaykaShop",
+    "remarks": "🇪🇺 Европа №1 | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -46,7 +46,7 @@
     }
   },
   {
-    "remarks": "🇪🇺 ⚡ Европа №2 | @FunZaykaShop",
+    "remarks": "🇪🇺 ⚡ Европа №2 | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -136,7 +136,7 @@
     }
   },
   {
-    "remarks": "🇪🇺 Европа №3 | @FunZaykaShop",
+    "remarks": "🇪🇺 Европа №3 | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -231,7 +231,7 @@
     }
   },
   {
-    "remarks": "🇦🇹 ⚡ Австрия №1 | @FunZaykaShop",
+    "remarks": "🇦🇹 ⚡ Австрия №1 | @FunZ_VPN",
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
@@ -249,7 +249,7 @@
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["at-reality-1", "at-reality-2"], "enableConcurrency": true}
   },
   {
-    "remarks": "🇷🇺 Россия №1 | @FunZaykaShop",
+    "remarks": "🇷🇺 Россия №1 | @FunZ_VPN",
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
@@ -267,7 +267,7 @@
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["ru-reality-1", "ru-reality-2"], "enableConcurrency": true}
   },
   {
-    "remarks": "🇷🇺 Россия №2 | @FunZaykaShop",
+    "remarks": "🇷🇺 Россия №2 | @FunZ_VPN",
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
@@ -284,7 +284,7 @@
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["ru-grpc-1"], "enableConcurrency": true}
   },
   {
-    "remarks": "🇩🇪 Германия №1 | @FunZaykaShop",
+    "remarks": "🇩🇪 Германия №1 | @FunZ_VPN",
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
@@ -302,7 +302,7 @@
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["de-reality-1", "de-reality-2"], "enableConcurrency": true}
   },
   {
-    "remarks": "🇩🇪 Германия №2 | @FunZaykaShop",
+    "remarks": "🇩🇪 Германия №2 | @FunZ_VPN",
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
@@ -320,7 +320,7 @@
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["de-ws-1", "de-ws-2"], "enableConcurrency": true}
   },
   {
-    "remarks": "🇩🇪 Германия №3 | @FunZaykaShop",
+    "remarks": "🇩🇪 Германия №3 | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -351,7 +351,7 @@
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["mobile-cf"], "enableConcurrency": true}
   },
   {
-    "remarks": "🇸🇪 Швеция №1 | @FunZaykaShop",
+    "remarks": "🇸🇪 Швеция №1 | @FunZ_VPN",
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
@@ -367,5 +367,28 @@
       {"tag": "direct", "protocol": "freedom"}
     ],
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["se-reality-1", "se-reality-2"], "enableConcurrency": true}
+  },
+  {
+  "protocol": "vless",
+  "settings": {
+    "id": "5bf12aea-0a92-41fb-ab2d-0e034b9f57a2",
+    "encryption": "none"
+  },
+  "streamSettings": {
+    "network": "ws",
+    "security": "tls",
+    "tlsSettings": {
+      "serverName": "194.238.79.150.fwqfw783rg2dad.website",
+      "allowInsecure": false,
+      "alpn": ["h2"]
+    },
+    "wsSettings": {
+      "path": "/sequre/ws?ed=2560",
+      "headers": {}
+    }
+  },
+  "address": "194.238.79.150.fwqfw783rg2dad.website",
+  "port": 443,
+  "remark": "Nigger"
   }
         ]
