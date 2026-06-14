@@ -486,7 +486,7 @@
   }
 },
   {
-    "remarks": "🇸🇪 Швеция №1 | @FunZ_VPN",
+    "remarks": "🇸🇪 Швеция | @FunZ_VPN",
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
@@ -504,7 +504,7 @@
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["se-reality-1", "se-reality-2"], "enableConcurrency": true}
   },
   {
-  "remarks": "🇳🇱 Нидерланды №1 | @FunZ_VPN",
+  "remarks": "🇳🇱 Нидерланды | @FunZ_VPN",
   "dns": {
     "tag": "dns-in",
     "servers": [
@@ -546,8 +546,8 @@
     "enableConcurrency": true
   }
 },
-  {
-  "remarks": "🇬🇧 Великобритания №1 | @FunZ_VPN",
+{
+  "remarks": "🇬🇧 Великобритания | @FunZ_VPN",
   "dns": {
     "tag": "dns-in",
     "servers": [
@@ -563,7 +563,7 @@
       {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"},
       {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}
     ],
-    "balancers": [{"tag": "Balance", "selector": ["uk-tcp-reality-196", "uk-tcp-reality-197", "uk-tcp-reality-198", "uk-tcp-reality-199"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "uk-tcp-reality-196"}],
+    "balancers": [{"tag": "Balance", "selector": ["uk-tcp-reality-196", "uk-tcp-reality-197", "uk-tcp-reality-198", "uk-tcp-reality-199", "europe-5-uk"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "europe-5-uk"}],
     "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
   },
   "inbounds": [
@@ -575,16 +575,53 @@
     {"tag": "uk-tcp-reality-197", "protocol": "vless", "settings": {"vnext": [{"address": "51.250.47.193", "port": 443, "users": [{"id": "8376c733-6292-46d8-83a1-caf6bcf80625", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "api-maps.yandex.ru", "fingerprint": "random", "publicKey": "xwusQ4IEWdYyuPLCc4LOA89P6HyQDNT7xo_75v2YW2I", "shortId": "27e53bbcab7593d7"}}},
     {"tag": "uk-tcp-reality-198", "protocol": "vless", "settings": {"vnext": [{"address": "84.201.153.33", "port": 443, "users": [{"id": "8376c733-6292-46d8-83a1-caf6bcf80625", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "api-maps.yandex.ru", "fingerprint": "random", "publicKey": "xwusQ4IEWdYyuPLCc4LOA89P6HyQDNT7xo_75v2YW2I", "shortId": "27e53bbcab7593d7"}}},
     {"tag": "uk-tcp-reality-199", "protocol": "vless", "settings": {"vnext": [{"address": "84.201.153.33", "port": 443, "users": [{"id": "8376c733-6292-46d8-83a1-caf6bcf80625", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "ads.x5.ru", "fingerprint": "random", "publicKey": "v6rib0-2FxBd1MnBxdylbIRIhvXywSj56QEtCkaEuBo", "shortId": "27e53bbcab7593d7"}}},
+    {"tag": "europe-5-uk", "protocol": "vless", "settings": {"vnext": [{"address": "uk-gthost-01.com", "port": 8443, "users": [{"id": "39c61035-36aa-4892-8cf8-b6f3ffc0b145", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "rbc.ru", "fingerprint": "chrome", "publicKey": "dY9SNEllJMW63xo-JdXufhmjAxB_4uFw_QMjgufjiD8", "shortId": "c20b1035d72d7793"}}},
     {"tag": "block", "protocol": "blackhole"},
     {"tag": "direct", "protocol": "freedom"}
   ],
   "observatory": {
     "probeUrl": "http://cp.cloudflare.com/generate_204",
     "probeInterval": "30m",
-    "subjectSelector": ["uk-tcp-reality-196", "uk-tcp-reality-197", "uk-tcp-reality-198", "uk-tcp-reality-199"],
+    "subjectSelector": ["uk-tcp-reality-196", "uk-tcp-reality-197", "uk-tcp-reality-198", "uk-tcp-reality-199", "europe-5-uk"],
     "enableConcurrency": true
   }
- },
+},
+{
+  "remarks": "🇵🇱 Польша | @FunZ_VPN",
+  "dns": {
+    "tag": "dns-in",
+    "servers": [
+      {"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]},
+      {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}
+    ],
+    "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true
+  },
+  "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
+  "routing": {
+    "rules": [
+      {"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"},
+      {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"},
+      {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}
+    ],
+    "balancers": [{"tag": "Balance", "selector": ["europe-5-pl"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "europe-5-pl"}],
+    "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
+  },
+  "inbounds": [
+    {"tag": "socks", "port": 10808, "listen": "127.0.0.1", "protocol": "socks", "settings": {"udp": true, "auth": "noauth"}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}},
+    {"tag": "http", "port": 10809, "listen": "127.0.0.1", "protocol": "http", "settings": {"allowTransparent": false}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}}
+  ],
+  "outbounds": [
+    {"tag": "europe-5-pl", "protocol": "vless", "settings": {"vnext": [{"address": "77.239.114.140", "port": 603, "users": [{"id": "f7166a73-c0d8-0001-8c33-00af87919774", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "ss.31431411.xyz", "fingerprint": "firefox", "publicKey": "WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc", "shortId": "a696de84963656de"}}},
+    {"tag": "block", "protocol": "blackhole"},
+    {"tag": "direct", "protocol": "freedom"}
+  ],
+  "observatory": {
+    "probeUrl": "http://cp.cloudflare.com/generate_204",
+    "probeInterval": "30m",
+    "subjectSelector": ["europe-5-pl"],
+    "enableConcurrency": true
+  }
+},
 {
   "remarks": "🇨🇭 Швейцария №1 | @FunZ_VPN",
   "dns": {
