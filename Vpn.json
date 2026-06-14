@@ -363,7 +363,7 @@
     "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true
   },
   "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
-  "remarks": "🇩🇪 Германия Тест
+  "remarks": "🇩🇪 Германия Тест"
   "routing": {
     "rules": [{"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"}, {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"}, {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}],
     "balancers": [{"tag": "Balance", "selector": ["mobile-cf"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "mobile-cf"}],
