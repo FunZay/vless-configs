@@ -349,24 +349,6 @@
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
       "rules": [{"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"}, {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"}, {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}],
-      "balancers": [{"tag": "Balance", "selector": ["de-reality-1", "de-reality-2"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "de-reality-1"}],
-      "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
-    },
-    "inbounds": [{"tag": "socks", "port": 10808, "listen": "127.0.0.1", "protocol": "socks", "settings": {"udp": true, "auth": "noauth"}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}}, {"tag": "http", "port": 10809, "listen": "127.0.0.1", "protocol": "http", "settings": {"allowTransparent": false}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}}],
-    "outbounds": [
-      {"tag": "de-reality-1", "protocol": "vless", "settings": {"vnext": [{"address": "78.159.250.70", "port": 20447, "users": [{"id": "6d18e395-efb3-40c7-9d05-fd1509ccc188", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "max.ru", "fingerprint": "chrome", "publicKey": "xBpyo1hUqSIC_DjeVuTDN1EqAsTnFNJPDgBoJZ79clw", "shortId": "aabb"}}},
-      {"tag": "de-reality-2", "protocol": "vless", "settings": {"vnext": [{"address": "78.159.250.70", "port": 20447, "users": [{"id": "6d18e395-efb3-40c7-9d05-fd1509ccc188", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "max.ru", "fingerprint": "chrome", "publicKey": "xBpyo1hUqSIC_DjeVuTDN1EqAsTnFNJPDgBoJZ79clw", "shortId": "aabb"}}},
-      {"tag": "block", "protocol": "blackhole"},
-      {"tag": "direct", "protocol": "freedom"}
-    ],
-    "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["de-reality-1", "de-reality-2"], "enableConcurrency": true}
-  },
-  {
-    "remarks": "🇩🇪 Германия №2 | @FunZ_VPN",
-    "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
-    "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
-    "routing": {
-      "rules": [{"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"}, {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"}, {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}],
       "balancers": [{"tag": "Balance", "selector": ["de-ws-1", "de-ws-2", "mobile-cf"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "de-ws-1"}],
       "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
     },
@@ -381,7 +363,7 @@
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["de-ws-1", "de-ws-2"], "enableConcurrency": true}
   },
   {
-  "remarks": "🇩🇪 Германия №3 | @FunZ_VPN",
+  "remarks": "🇩🇪 Германия №2 | @FunZ_VPN",
   "dns": {
     "tag": "dns-in",
     "servers": [
@@ -407,6 +389,8 @@
     {"tag": "mobile-f73dbbb1d71ecc409055e322e4ce9a826c66240d00c462bb2aa859de536279e2-1", "protocol": "vless", "settings": {"vnext": [{"address": "186.246.11.154", "port": 443, "users": [{"id": "1a3c61ed-9eac-4cb1-bf55-adbc0db2ccfb", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"shortId": "cd48fb9e3d6ff950", "publicKey": "M8DLYGcA7JkXalB1Gg0tjQ1lBLgLNbWBgDjWYBnVPGo", "serverName": "bbsd.mediastreamer.online", "fingerprint": "firefox"}}},
     {"tag": "mobile-f73dbbb1d71ecc409055e322e4ce9a826c66240d00c462bb2aa859de536279e2-2", "protocol": "vless", "settings": {"vnext": [{"address": "186.246.11.154", "port": 443, "users": [{"id": "1a3c61ed-9eac-4cb1-bf55-adbc0db2ccfb", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"shortId": "36c7150b", "publicKey": "M8DLYGcA7JkXalB1Gg0tjQ1lBLgLNbWBgDjWYBnVPGo", "serverName": "bbsd.mediastreamer.online", "fingerprint": "firefox"}}},
     {"tag": "mobile-76dba547e791b33bc0a0a02c7f9b3b7c61e74768ea260cb6de86bfbe1ccbe251", "protocol": "vless", "settings": {"vnext": [{"address": "ch-gt-02.com", "port": 8443, "users": [{"id": "783d226a-2a05-4b38-a93e-616da5990c42", "encryption": "none", "flow": "xtls-rprx-vision", "level": 8}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"shortId": "40ce08cf20c67003", "publicKey": "IdqrygjwHBEMCOamBl7a504TVk6uMAtTRj0xLWcFcxY", "serverName": "storage.yandex.net", "fingerprint": "firefox", "allowInsecure": false}}},
+    {"tag": "de-reality-1", "protocol": "vless", "settings": {"vnext": [{"address": "78.159.250.70", "port": 20447, "users": [{"id": "6d18e395-efb3-40c7-9d05-fd1509ccc188", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "max.ru", "fingerprint": "chrome", "publicKey": "xBpyo1hUqSIC_DjeVuTDN1EqAsTnFNJPDgBoJZ79clw", "shortId": "aabb"}}},
+    {"tag": "de-reality-2", "protocol": "vless", "settings": {"vnext": [{"address": "78.159.250.70", "port": 20447, "users": [{"id": "6d18e395-efb3-40c7-9d05-fd1509ccc188", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "max.ru", "fingerprint": "chrome", "publicKey": "xBpyo1hUqSIC_DjeVuTDN1EqAsTnFNJPDgBoJZ79clw", "shortId": "aabb"}}},
     {"tag": "block", "protocol": "blackhole"},
     {"tag": "direct", "protocol": "freedom"},
     {"tag": "direct-fragment", "protocol": "freedom", "settings": {"fragment": {"length": "10-20", "packets": "tlshello", "interval": "5-10"}}}
@@ -414,7 +398,7 @@
   "observatory": {
     "probeUrl": "http://cp.cloudflare.com/generate_204",
     "probeInterval": "30m",
-    "subjectSelector": ["mobile", "mobile-225813686fdf95eeecd152a7cd108efb783255b7d709277b79491792500e8880-1", "mobile-225813686fdf95eeecd152a7cd108efb783255b7d709277b79491792500e8880-6", "mobile-f73dbbb1d71ecc409055e322e4ce9a826c66240d00c462bb2aa859de536279e2-1", "mobile-f73dbbb1d71ecc409055e322e4ce9a826c66240d00c462bb2aa859de536279e2-2", "mobile-76dba547e791b33bc0a0a02c7f9b3b7c61e74768ea260cb6de86bfbe1ccbe251"],
+    "subjectSelector": ["mobile", "mobile-225813686fdf95eeecd152a7cd108efb783255b7d709277b79491792500e8880-1", "mobile-225813686fdf95eeecd152a7cd108efb783255b7d709277b79491792500e8880-6", "mobile-f73dbbb1d71ecc409055e322e4ce9a826c66240d00c462bb2aa859de536279e2-1", "mobile-f73dbbb1d71ecc409055e322e4ce9a826c66240d00c462bb2aa859de536279e2-2", "mobile-76dba547e791b33bc0a0a02c7f9b3b7c61e74768ea260cb6de86bfbe1ccbe251", "de-reality-1", "de-reality-2"],
     "enableConcurrency": true
   }
 },
