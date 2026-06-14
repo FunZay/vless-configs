@@ -1,6 +1,6 @@
 [
   {
-    "remarks": "🇪🇺 ⚡ Европа №1 | @FunZ_VPN",
+    "remarks": "🇪🇺 📱⚡ Европа №1 | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -90,7 +90,7 @@
     }
   },
   {
-    "remarks": "🇪🇺 Европа №2 | @FunZ_VPN",
+    "remarks": "🇪🇺 📱 Европа №2 | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -185,7 +185,7 @@
     }
   },
   {
-  "remarks": "🇪🇺 Европа №3 | @FunZ_VPN",
+  "remarks": "🇪🇺 📱 Европа №3 | @FunZ_VPN",
   "dns": {
     "tag": "dns-in",
     "servers": [
@@ -245,7 +245,7 @@
   }
  },
   {
-    "remarks": "🇪🇺 Европа №4 | @FunZ_VPN",
+    "remarks": "🇪🇺 📱 Европа №4 | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -294,7 +294,7 @@
     }
   },
   {
-  "remarks": "🇩🇪 Германия | @FunZ_VPN",
+  "remarks": "🇩🇪 🌐 Германия | @FunZ_VPN",
   "dns": {
     "tag": "dns-in",
     "servers": [
@@ -342,7 +342,7 @@
   }
 },
   {
-    "remarks": "🇸🇪 Швеция | @FunZ_VPN",
+    "remarks": "🇸🇪 🌐 Швеция | @FunZ_VPN",
     "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
     "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
     "routing": {
@@ -360,7 +360,7 @@
     "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["se-reality-1", "se-reality-2"], "enableConcurrency": true}
   },
   {
-  "remarks": "🇳🇱 Нидерланды | @FunZ_VPN",
+  "remarks": "🇳🇱 📱 Нидерланды | @FunZ_VPN",
   "dns": {
     "tag": "dns-in",
     "servers": [
@@ -403,7 +403,7 @@
   }
 },
 {
-  "remarks": "🇬🇧 Великобритания | @FunZ_VPN",
+  "remarks": "🇬🇧 🌐 Великобритания | @FunZ_VPN",
   "dns": {
     "tag": "dns-in",
     "servers": [
@@ -443,7 +443,7 @@
   }
 },
 {
-  "remarks": "🇵🇱 Польша | @FunZ_VPN",
+  "remarks": "🇵🇱 🌐 Польша | @FunZ_VPN",
   "dns": {
     "tag": "dns-in",
     "servers": [
@@ -479,7 +479,7 @@
   }
 },
 {
-  "remarks": "🇨🇭 Швейцария | @FunZ_VPN",
+  "remarks": "🇨🇭 🌐 Швейцария | @FunZ_VPN",
   "dns": {
     "tag": "dns-in",
     "servers": [
