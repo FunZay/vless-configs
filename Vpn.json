@@ -354,7 +354,7 @@
   ]
  },
 {
-  "remarks": "🇩🇪 Германия Тест",
+  "remarks": "🇩🇪 Германия №1 | @FunZ_VPN",
   "dns": {"tag": "dns-in", "servers": [{"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]}, {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}], "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true},
   "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
   "routing": {
