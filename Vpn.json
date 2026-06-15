@@ -46,7 +46,7 @@
     }
   },
   {
-    "remarks": "🇪🇺 AUTO — Обход БС",
+    "remarks": "🇪🇺 Европа №2 | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -82,7 +82,7 @@
     }
   },
   {
-    "remarks": "🇫🇲 Моб интернет 2",
+    "remarks": "🇪🇺 Европа №3 | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -118,7 +118,44 @@
     }
   },
   {
-    "remarks": "🇩🇪 Моб интернет 1",
+    "remarks": "🇪🇺 YouTube без рекламы | | @FunZ_VPN",
+    "dns": {
+      "tag": "dns-in",
+      "servers": [
+        { "address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"] },
+        { "domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000 }
+      ],
+      "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true
+    },
+    "policy": { "levels": { "0": { "connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2 } } },
+    "routing": {
+      "rules": [
+        { "port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct" },
+        { "ip": ["geoip:private"], "type": "field", "outboundTag": "direct" },
+        { "type": "field", "network": "tcp,udp", "balancerTag": "Balance" }
+      ],
+      "balancers": [{ "tag": "Balance", "selector": ["proxy"], "strategy": { "type": "leastLoad", "settings": { "expected": 1 } }, "fallbackTag": "proxy" }],
+      "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
+    },
+    "inbounds": [
+      { "tag": "socks", "port": 10808, "listen": "127.0.0.1", "protocol": "socks", "settings": { "udp": true, "auth": "noauth" }, "sniffing": { "enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"] } },
+      { "tag": "http", "port": 10809, "listen": "127.0.0.1", "protocol": "http", "settings": { "allowTransparent": false }, "sniffing": { "enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"] } }
+    ],
+    "outbounds": [
+      { "tag": "proxy", "protocol": "vless", "settings": { "vnext": [{ "address": "89.169.38.249.blanesik.space", "port": 443, "users": [{ "id": "5bf12aea-0a92-41fb-ab2d-0e034b9f57a2", "encryption": "none", "flow": "" }] }] }, "streamSettings": { "network": "grpc", "grpcSettings": { "serviceName": "/sequre/grpc", "authority": "grpc.vhub.pro", "mode": false }, "security": "tls", "tlsSettings": { "serverName": "89.169.38.249.blanesik.space", "fingerprint": "safari", "alpn": ["h2"] }, "sockopt": { "tcpFastOpen": true, "tcpcongestion": "bbr" }, "mux": { "enabled": false } } },
+      { "tag": "direct", "protocol": "freedom" },
+      { "tag": "direct-fragment", "protocol": "freedom", "settings": { "fragment": { "length": "10-20", "packets": "tlshello", "interval": "5-10" } } },
+      { "tag": "block", "protocol": "blackhole" }
+    ],
+    "observatory": {
+      "probeUrl": "http://cp.cloudflare.com/generate_204",
+      "probeInterval": "30m",
+      "subjectSelector": ["proxy"],
+      "enableConcurrency": true
+    }
+  },
+  {
+    "remarks": "🇩🇪 Германия №1 | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -164,7 +201,7 @@
     }
   },
   {
-    "remarks": "🇩🇪 Германия",
+    "remarks": "🇩🇪 Германия №2 | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -201,7 +238,7 @@
     }
   },
   {
-    "remarks": "🇸🇪 Швеция",
+    "remarks": "🇸🇪 Швеция | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -238,7 +275,7 @@
     }
   },
   {
-    "remarks": "🇬🇧 Великобритания",
+    "remarks": "🇬🇧 Великобритания | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -275,44 +312,7 @@
     }
   },
   {
-    "remarks": "🇷🇺 YouTube без рекламы",
-    "dns": {
-      "tag": "dns-in",
-      "servers": [
-        { "address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"] },
-        { "domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000 }
-      ],
-      "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true
-    },
-    "policy": { "levels": { "0": { "connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2 } } },
-    "routing": {
-      "rules": [
-        { "port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct" },
-        { "ip": ["geoip:private"], "type": "field", "outboundTag": "direct" },
-        { "type": "field", "network": "tcp,udp", "balancerTag": "Balance" }
-      ],
-      "balancers": [{ "tag": "Balance", "selector": ["proxy"], "strategy": { "type": "leastLoad", "settings": { "expected": 1 } }, "fallbackTag": "proxy" }],
-      "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
-    },
-    "inbounds": [
-      { "tag": "socks", "port": 10808, "listen": "127.0.0.1", "protocol": "socks", "settings": { "udp": true, "auth": "noauth" }, "sniffing": { "enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"] } },
-      { "tag": "http", "port": 10809, "listen": "127.0.0.1", "protocol": "http", "settings": { "allowTransparent": false }, "sniffing": { "enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"] } }
-    ],
-    "outbounds": [
-      { "tag": "proxy", "protocol": "vless", "settings": { "vnext": [{ "address": "89.169.38.249.blanesik.space", "port": 443, "users": [{ "id": "5bf12aea-0a92-41fb-ab2d-0e034b9f57a2", "encryption": "none", "flow": "" }] }] }, "streamSettings": { "network": "grpc", "grpcSettings": { "serviceName": "/sequre/grpc", "authority": "grpc.vhub.pro", "mode": false }, "security": "tls", "tlsSettings": { "serverName": "89.169.38.249.blanesik.space", "fingerprint": "safari", "alpn": ["h2"] }, "sockopt": { "tcpFastOpen": true, "tcpcongestion": "bbr" }, "mux": { "enabled": false } } },
-      { "tag": "direct", "protocol": "freedom" },
-      { "tag": "direct-fragment", "protocol": "freedom", "settings": { "fragment": { "length": "10-20", "packets": "tlshello", "interval": "5-10" } } },
-      { "tag": "block", "protocol": "blackhole" }
-    ],
-    "observatory": {
-      "probeUrl": "http://cp.cloudflare.com/generate_204",
-      "probeInterval": "30m",
-      "subjectSelector": ["proxy"],
-      "enableConcurrency": true
-    }
-  },
-  {
-    "remarks": "🇰🇿 Казахстан",
+    "remarks": "🇰🇿 Казахстан | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -349,7 +349,7 @@
     }
   },
   {
-    "remarks": "🇱🇻 Латвия",
+    "remarks": "🇱🇻 Латвия | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -390,7 +390,7 @@
     }
   },
   {
-    "remarks": "🇳🇱 Нидерланды",
+    "remarks": "🇳🇱 Нидерланды | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
