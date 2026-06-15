@@ -37,7 +37,6 @@
     {"tag": "se-reality-2", "protocol": "vless", "settings": {"vnext": [{"address": "109.120.188.54", "port": 443, "users": [{"id": "696f81d1-3df4-45f4-a251-dcfcd14ee447", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "ads.x5.ru", "fingerprint": "firefox", "publicKey": "4woJiVyGtLro6qRQdUcM2EJDHI3CLOeeE-knmSHk8lE", "shortId": "1ca44564cda56661"}},
     {"tag": "block", "protocol": "blackhole"},
     {"tag": "direct", "protocol": "freedom"}
-  ],
   "observatory": {
     "probeUrl": "http://cp.cloudflare.com/generate_204",
     "probeInterval": "30m",
@@ -73,7 +72,6 @@
     {"tag": "mobile", "protocol": "vless", "settings": {"vnext": [{"address": "wl1.zeuss.top", "port": 443, "users": [{"id": "0bb3239a-1e0f-4f44-9957-09e70d536125", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"shortId": "91caa9da", "publicKey": "b2phLjakNMXTCVqq2rZu_53ce6DYj6jb5L6WRjDbTmw", "serverName": "ads.x5.ru", "fingerprint": "chrome"}},
     {"tag": "block", "protocol": "blackhole"},
     {"tag": "direct", "protocol": "freedom"}
-    ],
   "observatory": {
     "probeUrl": "http://cp.cloudflare.com/generate_204",
     "probeInterval": "30m",
@@ -109,7 +107,6 @@
     {"tag": "mobile", "protocol": "vless", "settings": {"vnext": [{"address": "ch-gt-01.com", "port": 8443, "users": [{"id": "94508e8f-c261-4aff-a395-5478316dc30a", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"shortId": "445ab326fc7c90ac", "publicKey": "8qHRGcCezzSu4S-Cz9l19BNRLWm4MkaSwZV3dNrLEwc", "serverName": "storage.yandex.net", "fingerprint": "firefox"}},
     {"tag": "block", "protocol": "blackhole"},
     {"tag": "direct", "protocol": "freedom"}
-    ],
   "observatory": {
     "probeUrl": "http://cp.cloudflare.com/generate_204",
     "probeInterval": "30m",
@@ -155,7 +152,6 @@
     {"tag": "block", "protocol": "blackhole"},
     {"tag": "direct", "protocol": "freedom"},
     {"tag": "direct-fragment", "protocol": "freedom", "settings": {"fragment": {"length": "10-20", "packets": "tlshello", "interval": "5-10"}}}
-    ],
   "observatory": {
     "probeUrl": "http://cp.cloudflare.com/generate_204",
     "probeInterval": "30m",
@@ -192,7 +188,6 @@
     {"tag": "block", "protocol": "blackhole"},
     {"tag": "direct", "protocol": "freedom"},
     {"tag": "direct-fragment", "protocol": "freedom", "settings": {"fragment": {"length": "10-20", "packets": "tlshello", "interval": "5-10"}}}
-    ],
   "observatory": {
     "probeUrl": "http://cp.cloudflare.com/generate_204",
     "probeInterval": "30m",
@@ -229,7 +224,6 @@
     {"tag": "direct", "protocol": "freedom"},
     {"tag": "direct-fragment", "protocol": "freedom", "settings": {"fragment": {"length": "10-20", "packets": "tlshello", "interval": "5-10"}}},
     {"tag": "block", "protocol": "blackhole"}
-    ],
   "observatory": {
     "probeUrl": "http://cp.cloudflare.com/generate_204",
     "probeInterval": "30m",
@@ -266,8 +260,7 @@
     {"tag": "direct", "protocol": "freedom"},
     {"tag": "direct-fragment", "protocol": "freedom", "settings": {"fragment": {"length": "10-20", "packets": "tlshello", "interval": "5-10"}}},
     {"tag": "block", "protocol": "blackhole"}
-    ],
-  "observatory": {
+    "observatory": {
     "probeUrl": "http://cp.cloudflare.com/generate_204",
     "probeInterval": "30m",
     "subjectSelector": ["proxy"],
@@ -303,7 +296,6 @@
     {"tag": "direct", "protocol": "freedom"},
     {"tag": "direct-fragment", "protocol": "freedom", "settings": {"fragment": {"length": "10-20", "packets": "tlshello", "interval": "5-10"}}},
     {"tag": "block", "protocol": "blackhole"}
-    ],
   "observatory": {
     "probeUrl": "http://cp.cloudflare.com/generate_204",
     "probeInterval": "30m",
@@ -340,7 +332,6 @@
     {"tag": "direct", "protocol": "freedom"},
     {"tag": "direct-fragment", "protocol": "freedom", "settings": {"fragment": {"length": "10-20", "packets": "tlshello", "interval": "5-10"}}},
     {"tag": "block", "protocol": "blackhole"}
-    ],
   "observatory": {
     "probeUrl": "http://cp.cloudflare.com/generate_204",
     "probeInterval": "30m",
@@ -371,7 +362,7 @@
   "inbounds": [
     {"tag": "socks", "port": 10808, "listen": "127.0.0.1", "protocol": "socks", "settings": {"udp": true, "auth": "noauth"}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}},
     {"tag": "http", "port": 10809, "listen": "127.0.0.1", "protocol": "http", "settings": {"allowTransparent": false}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}}
-  ],
+      ],
   "outbounds": [
     {"tag": "proxy", "protocol": "vless", "settings": {"vnext": [{"address": "213.21.222.19.blanesik.space", "port": 443, "users": [{"id": "5bf12aea-0a92-41fb-ab2d-0e034b9f57a2", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "grpc", "grpcSettings": {"serviceName": "/sequre/grpc", "authority": "grpc.vhub.pro", "mode": false}, "security": "tls", "tlsSettings": {"serverName": "213.21.222.19.blanesik.space", "fingerprint": "ios", "alpn": ["h2"]}, "mux": {"enabled": false}},
     {"tag": "proxy-2", "protocol": "vless", "settings": {"vnext": [{"address": "213.21.222.29.fwqfw783rg2dad.website", "port": 443, "users": [{"id": "5bf12aea-0a92-41fb-ab2d-0e034b9f57a2", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "ws", "wsSettings": {"path": "/sequre/ws?ed=2560", "headers": {"Host": ""}, "heartbeatPeriod": 10}, "security": "tls", "tlsSettings": {"serverName": "213.21.222.29.fwqfw783rg2dad.website", "fingerprint": "ios", "alpn": ["http/1.1"]}, "mux": {"enabled": true, "concurrency": 16, "xudpConcurrency": 0, "xudpProxyUDP443": "reject"}},
@@ -381,7 +372,6 @@
     {"tag": "block", "protocol": "blackhole"},
     {"tag": "direct", "protocol": "freedom"},
     {"tag": "direct-fragment", "protocol": "freedom", "settings": {"fragment": {"length": "10-20", "packets": "tlshello", "interval": "5-10"}}}
-    ],
   "observatory": {
     "probeUrl": "http://cp.cloudflare.com/generate_204",
     "probeInterval": "30m",
@@ -418,7 +408,6 @@
     {"tag": "direct", "protocol": "freedom"},
     {"tag": "direct-fragment", "protocol": "freedom", "settings": {"fragment": {"length": "10-20", "packets": "tlshello", "interval": "5-10"}}},
     {"tag": "block", "protocol": "blackhole"}
-  ],
   "observatory": {
     "probeUrl": "http://cp.cloudflare.com/generate_204",
     "probeInterval": "30m",
@@ -508,7 +497,6 @@
       {"tag": "mobile-2ed5e05647d524763375b66a442a47710de4caa6bb5f68892e15b9ffa8c8f11e-4", "protocol": "vless", "settings": {"vnext": [{"address": "top1749001238.mwscdn.ru", "port": 443, "users": [{"id": "c21f8d84-cda7-4872-8b40-ee20d6412682", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "xhttp", "security": "tls", "tlsSettings": {"serverName": "top1749001238.mwscdn.ru", "fingerprint": "random"}, "xhttpSettings": {"mode": "auto", "path": "/xhttppath"}}},
       {"tag": "block", "protocol": "blackhole"},
       {"tag": "direct", "protocol": "freedom"}
-    ],
     "observatory": {
       "probeUrl": "http://cp.cloudflare.com/generate_204",
       "probeInterval": "30m",
