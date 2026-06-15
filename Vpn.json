@@ -515,7 +515,7 @@
   }
 },
 {
-  "remarks": "🇨🇭 🌐 Швейцария | @FunZ_VPN",
+  "remarks": "🇨🇭 🌐 Швейцария №1 | @FunZ_VPN",
   "dns": {
     "tag": "dns-in",
     "servers": [
@@ -550,5 +550,58 @@
     "subjectSelector": ["mobile", "mobile-225813686fdf95eeecd152a7cd108efb783255b7d709277b79491792500e8880-2", "mobile-76dba547e791b33bc0a0a02c7f9b3b7c61e74768ea260cb6de86bfbe1ccbe251-4", "mobile-76dba547e791b33bc0a0a02c7f9b3b7c61e74768ea260cb6de86bfbe1ccbe251-5", "mobile-76dba547e791b33bc0a0a02c7f9b3b7c61e74768ea260cb6de86bfbe1ccbe251-6"],
     "enableConcurrency": true
   }
-}
+},
+  {
+  "remarks": "🇨🇭 📱 Швейцария №2 | @FunZ_VPN",
+  "dns": {
+    "tag": "dns-in",
+    "servers": [
+      {"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]},
+      {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}
+    ],
+    "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true
+  },
+  "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
+  "routing": {
+    "rules": [
+      {"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"},
+      {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"},
+      {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}
+    ],
+    "balancers": [{"tag": "Balance", "selector": ["ch-main", "ch-bypass", "ch-xhttp"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "ch-main"}],
+    "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
+  },
+  "inbounds": [
+    {"tag": "socks", "port": 10808, "listen": "127.0.0.1", "protocol": "socks", "settings": {"udp": true, "auth": "noauth"}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}},
+    {"tag": "http", "port": 10809, "listen": "127.0.0.1", "protocol": "http", "settings": {"allowTransparent": false}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}}
+  ],
+  "outbounds": [
+    {
+      "tag": "ch-main",
+      "protocol": "vless",
+      "settings": {"vnext": [{"address": "grinoree.ru", "port": 8443, "users": [{"id": "d91397a6-aa9c-4ce3-903e-81c50e14fdaf", "encryption": "none", "flow": "xtls-rprx-vision"}]}]},
+      "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "storage.yandex.net", "fingerprint": "firefox", "publicKey": "7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg", "shortId": "8ba12e75110b7a9c"}}
+    },
+    {
+      "tag": "ch-bypass",
+      "protocol": "vless",
+      "settings": {"vnext": [{"address": "bypass.fi-m247-02.com", "port": 8443, "users": [{"id": "50abe11e-6721-4737-b8a0-b7311297de2c", "encryption": "none", "flow": "xtls-rprx-vision"}]}]},
+      "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "storage.yandex.net", "fingerprint": "firefox", "publicKey": "66-fz0xjwauydj29EfFKyPHjJ2CIGaGSsJ6hsB--zAc", "shortId": "de8d3223e7d85761"}}
+    },
+    {
+      "tag": "ch-xhttp",
+      "protocol": "vless",
+      "settings": {"vnext": [{"address": "188.72.103.3", "port": 443, "users": [{"id": "06bcd513-ef0b-4c0c-a03b-e25fcda66fe2", "encryption": "none", "flow": ""}]}]},
+      "streamSettings": {"network": "xhttp", "security": "tls", "tlsSettings": {"serverName": "cdn.tracker.yandex.net", "fingerprint": "chrome"}, "xhttpSettings": {"host": "bbb.kdjdjssjwiqwr.online", "mode": "packet-up", "path": "/livestreamcontent/"}}
+    },
+    {"tag": "direct", "protocol": "freedom"},
+    {"tag": "block", "protocol": "blackhole"}
+  ],
+  "observatory": {
+    "probeUrl": "http://cp.cloudflare.com/generate_204",
+    "probeInterval": "30m",
+    "subjectSelector": ["ch-main", "ch-bypass", "ch-xhttp"],
+    "enableConcurrency": true
+  }
+ }
         ]
