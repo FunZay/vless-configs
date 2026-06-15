@@ -37,6 +37,7 @@
     {"tag": "se-reality-2", "protocol": "vless", "settings": {"vnext": [{"address": "109.120.188.54", "port": 443, "users": [{"id": "696f81d1-3df4-45f4-a251-dcfcd14ee447", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "ads.x5.ru", "fingerprint": "firefox", "publicKey": "4woJiVyGtLro6qRQdUcM2EJDHI3CLOeeE-knmSHk8lE", "shortId": "1ca44564cda56661"}},
     {"tag": "block", "protocol": "blackhole"},
     {"tag": "direct", "protocol": "freedom"}
+  ],
   "observatory": {
     "probeUrl": "http://cp.cloudflare.com/generate_204",
     "probeInterval": "30m",
