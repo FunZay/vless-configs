@@ -13,9 +13,6 @@
     "routing": {
       "rules": [
         {"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"},
-        {"domain": ["geosite:category-block"], "type": "field", "outboundTag": "block"},
-        {"domain": ["geosite:category-proxy"], "type": "field", "balancerTag": "Balance"},
-        {"domain": ["geosite:category-direct"], "type": "field", "outboundTag": "direct"},
         {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"},
         {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}
       ],
