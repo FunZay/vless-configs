@@ -159,5 +159,88 @@
       "subjectSelector": ["ru-vk-1", "ru-beget-2", "ru-beget-3", "ru-beget-4", "ru-beget-5", "ru-beget-6", "ru-beget-7", "ru-beget-8", "ru-datahouse-9", "ru-datahouse-10", "ru-datahouse-11", "ru-datahouse-12", "ru-datahouse-13", "ru-datahouse-14", "ru-selectel-15", "ru-selectel-16", "ru-selectel-17", "ru-selectel-18", "ru-selectel-19", "ru-selectel-20", "ru-selectel-21", "ru-selectel-22", "ru-selectel-23", "ru-selectel-24", "ru-selectel-25", "ru-selectel-26", "ru-selectel-27", "ru-selectel-28", "ru-selectel-29", "ru-timeweb-30", "ru-timeweb-31", "ru-timeweb-32", "ru-timeweb-33", "ru-timeweb-34", "ch-swiss-35", "ch-swiss-36", "de-germany-38", "de-germany-39", "de-germany-40", "de-germany-41", "de-germany-42", "de-germany-43", "de-germany-44", "de-germany-45", "de-germany-46", "de-germany-47", "de-germany-48", "de-germany-49", "de-germany-50", "de-germany-51", "de-germany-52", "de-germany-53", "de-germany-54", "de-germany-55", "de-germany-56", "de-germany-57", "de-germany-58", "de-germany-59", "de-germany-60", "de-germany-61", "de-germany-62", "de-germany-63", "de-germany-64", "de-germany-65", "de-germany-66", "de-germany-67", "de-germany-68", "de-germany-69", "de-germany-70", "de-germany-71", "de-germany-72", "de-germany-73", "de-germany-74", "de-germany-75", "de-germany-76", "de-germany-77", "de-germany-78", "de-germany-79", "de-germany-80", "de-germany-81", "de-germany-82", "de-germany-83", "de-germany-84", "de-germany-85", "de-germany-86", "de-germany-87", "de-germany-88", "de-germany-89", "de-germany-92", "de-germany-93", "de-germany-94", "de-germany-95", "de-germany-96", "de-germany-97", "de-germany-98", "de-germany-99", "de-germany-100", "de-germany-101", "de-germany-102", "de-germany-103", "de-germany-104", "de-germany-105", "de-germany-106", "de-germany-107", "de-germany-108", "de-germany-109", "de-germany-110", "de-germany-111", "de-germany-112", "de-germany-113", "es-spain-116", "fi-finland-117", "fi-finland-118", "fr-france-122", "fr-france-123", "uk-britain-144", "uk-britain-145", "uk-britain-146", "uk-britain-147", "uk-britain-148", "uk-britain-149", "lt-lithuania-150", "lt-lithuania-151"],
       "enableConcurrency": true
     }
+  },
+  {
+    "remarks": "🇪🇺 Europe — VLESS+TLS",
+    "dns": {
+      "tag": "dns-in",
+      "servers": [
+        {"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]},
+        {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}
+      ],
+      "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true
+    },
+    "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
+    "routing": {
+      "rules": [
+        {"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"},
+        {"domain": ["geosite:category-block"], "type": "field", "outboundTag": "block"},
+        {"domain": ["geosite:category-proxy"], "type": "field", "balancerTag": "Balance"},
+        {"domain": ["geosite:category-direct"], "type": "field", "outboundTag": "direct"},
+        {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"},
+        {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}
+      ],
+      "balancers": [{"tag": "Balance", "selector": ["ru-tls-1", "de-tls-90", "de-tls-91", "ee-tls-115"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "ru-tls-1"}],
+      "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
+    },
+    "inbounds": [
+      {"tag": "socks", "port": 10808, "listen": "127.0.0.1", "protocol": "socks", "settings": {"udp": true, "auth": "noauth"}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}},
+      {"tag": "http", "port": 10809, "listen": "127.0.0.1", "protocol": "http", "settings": {"allowTransparent": false}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}}
+    ],
+    "outbounds": [
+      {"tag": "ru-tls-1", "protocol": "vless", "settings": {"vnext": [{"address": "89.208.231.191", "port": 52006, "users": [{"id": "9d34c94c-46a8-07d0-bc27-25f3a62b7298", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "tls", "tlsSettings": {"serverName": "89.208.231.191", "fingerprint": "chrome", "alpn": ["h2", "http/1.1"]}}},
+      {"tag": "de-tls-90", "protocol": "vless", "settings": {"vnext": [{"address": "89.208.231.191", "port": 52006, "users": [{"id": "9d34c94c-46a8-03e8-bc27-25f3a62b7298", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "tls", "tlsSettings": {"serverName": "89.208.231.191", "fingerprint": "chrome", "alpn": ["h2", "http/1.1"]}}},
+      {"tag": "de-tls-91", "protocol": "vless", "settings": {"vnext": [{"address": "89.208.231.191", "port": 52006, "users": [{"id": "9d34c94c-46a8-0bb8-bc27-25f3a62b7298", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "tls", "tlsSettings": {"serverName": "89.208.231.191", "fingerprint": "chrome", "alpn": ["h2", "http/1.1"]}}},
+      {"tag": "ee-tls-115", "protocol": "vless", "settings": {"vnext": [{"address": "89.208.231.191", "port": 52006, "users": [{"id": "9d34c94c-46a8-2328-bc27-25f3a62b7298", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "tls", "tlsSettings": {"serverName": "89.208.231.191", "fingerprint": "chrome", "alpn": ["h2", "http/1.1"]}}},
+      {"tag": "block", "protocol": "blackhole"},
+      {"tag": "direct", "protocol": "freedom"}
+    ],
+    "observatory": {
+      "probeUrl": "http://cp.cloudflare.com/generate_204",
+      "probeInterval": "30m",
+      "subjectSelector": ["ru-tls-1", "de-tls-90", "de-tls-91", "ee-tls-115"],
+      "enableConcurrency": true
+    }
+  },
+  {
+    "remarks": "🇪🇺 Europe — VLESS+gRPC",
+    "dns": {
+      "tag": "dns-in",
+      "servers": [
+        {"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]},
+        {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}
+      ],
+      "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true
+    },
+    "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
+    "routing": {
+      "rules": [
+        {"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"},
+        {"domain": ["geosite:category-block"], "type": "field", "outboundTag": "block"},
+        {"domain": ["geosite:category-proxy"], "type": "field", "balancerTag": "Balance"},
+        {"domain": ["geosite:category-direct"], "type": "field", "outboundTag": "direct"},
+        {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"},
+        {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}
+      ],
+      "balancers": [{"tag": "Balance", "selector": ["fi-grpc-119", "fi-grpc-120", "fi-grpc-121"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "fi-grpc-119"}],
+      "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
+    },
+    "inbounds": [
+      {"tag": "socks", "port": 10808, "listen": "127.0.0.1", "protocol": "socks", "settings": {"udp": true, "auth": "noauth"}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}},
+      {"tag": "http", "port": 10809, "listen": "127.0.0.1", "protocol": "http", "settings": {"allowTransparent": false}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}}
+    ],
+    "outbounds": [
+      {"tag": "fi-grpc-119", "protocol": "vless", "settings": {"vnext": [{"address": "185.91.52.217", "port": 1443, "users": [{"id": "109a4791-846c-458b-9a36-ef842ae7f532", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "grpc", "security": "reality", "grpcSettings": {"serviceName": "grpc-vk", "multiMode": true}, "realitySettings": {"serverName": "avatars.mds.yandex.net", "fingerprint": "qq", "publicKey": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg", "shortId": "e67fb918ed6b9ffb"}}},
+      {"tag": "fi-grpc-120", "protocol": "vless", "settings": {"vnext": [{"address": "185.91.52.217", "port": 1443, "users": [{"id": "109a4791-846c-458b-9a36-ef842ae7f532", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "grpc", "security": "reality", "grpcSettings": {"serviceName": "grpc-vk", "multiMode": true}, "realitySettings": {"serverName": "ads.x5.ru", "fingerprint": "qq", "publicKey": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg", "shortId": "e67fb918ed6b9ffb"}}},
+      {"tag": "fi-grpc-121", "protocol": "vless", "settings": {"vnext": [{"address": "185.91.53.53", "port": 1443, "users": [{"id": "109a4791-846c-458b-9a36-ef842ae7f532", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "grpc", "security": "reality", "grpcSettings": {"serviceName": "grpc-vk", "multiMode": true}, "realitySettings": {"serverName": "avatars.mds.yandex.net", "fingerprint": "qq", "publicKey": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg", "shortId": "844352756c1fabba"}}},
+      {"tag": "block", "protocol": "blackhole"},
+      {"tag": "direct", "protocol": "freedom"}
+    ],
+    "observatory": {
+      "probeUrl": "http://cp.cloudflare.com/generate_204",
+      "probeInterval": "30m",
+      "subjectSelector": ["fi-grpc-119", "fi-grpc-120", "fi-grpc-121"],
+      "enableConcurrency": true
+    }
   }
         ]
