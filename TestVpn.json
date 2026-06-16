@@ -425,78 +425,6 @@
     }
   },
   {
-    "remarks": "🇪🇺 Europe — TROJAN+REALITY (TCP)",
-    "dns": {
-      "tag": "dns-in",
-      "servers": [
-        {"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]},
-        {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}
-      ],
-      "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true
-    },
-    "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
-    "routing": {
-      "rules": [
-        {"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"},
-        {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"},
-        {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}
-      ],
-      "balancers": [{"tag": "Balance", "selector": ["tr-reality-1"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "tr-reality-1"}],
-      "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
-    },
-    "inbounds": [
-      {"tag": "socks", "port": 10808, "listen": "127.0.0.1", "protocol": "socks", "settings": {"udp": true, "auth": "noauth"}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}},
-      {"tag": "http", "port": 10809, "listen": "127.0.0.1", "protocol": "http", "settings": {"allowTransparent": false}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}}
-    ],
-    "outbounds": [
-      {"tag": "tr-reality-1", "protocol": "trojan", "settings": {"servers": [{"address": "130.185.121.229", "port": 8443, "password": "SoftNetConnect"}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "www.yahoo.com", "fingerprint": "chrome", "publicKey": "h0Lem3eyDGqkye4yAMuxixCMI2EqD1EKdH9Ky0Xetjg", "shortId": "c7"}}},
-      {"tag": "block", "protocol": "blackhole"},
-      {"tag": "direct", "protocol": "freedom"}
-    ],
-    "observatory": {
-      "probeUrl": "http://cp.cloudflare.com/generate_204",
-      "probeInterval": "30m",
-      "subjectSelector": ["tr-reality-1"],
-      "enableConcurrency": true
-    }
-  },
-  {
-    "remarks": "🇪🇺 Europe — VMESS+TLS (WS)",
-    "dns": {
-      "tag": "dns-in",
-      "servers": [
-        {"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]},
-        {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}
-      ],
-      "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true
-    },
-    "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
-    "routing": {
-      "rules": [
-        {"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"},
-        {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"},
-        {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}
-      ],
-      "balancers": [{"tag": "Balance", "selector": ["vmess-ws-1"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "vmess-ws-1"}],
-      "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
-    },
-    "inbounds": [
-      {"tag": "socks", "port": 10808, "listen": "127.0.0.1", "protocol": "socks", "settings": {"udp": true, "auth": "noauth"}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}},
-      {"tag": "http", "port": 10809, "listen": "127.0.0.1", "protocol": "http", "settings": {"allowTransparent": false}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}}
-    ],
-    "outbounds": [
-      {"tag": "vmess-ws-1", "protocol": "vmess", "settings": {"vnext": [{"address": "renderer-stream-1-411.mirra.now", "port": 443, "users": [{"id": "df9c9355-b02c-4c12-909d-0dbeb725d52b", "alterId": 0, "security": "auto"}]}]}, "streamSettings": {"network": "ws", "wsSettings": {"path": "/api/v1/gpu-stream/socket", "headers": {"Host": "renderer-stream-1-411.mirra.now"}}, "security": "tls", "tlsSettings": {"serverName": "renderer-stream-1-411.mirra.now", "fingerprint": "chrome", "alpn": ["h2", "http/1.1"]}}},
-      {"tag": "block", "protocol": "blackhole"},
-      {"tag": "direct", "protocol": "freedom"}
-    ],
-    "observatory": {
-      "probeUrl": "http://cp.cloudflare.com/generate_204",
-      "probeInterval": "30m",
-      "subjectSelector": ["vmess-ws-1"],
-      "enableConcurrency": true
-    }
-  },
-  {
     "remarks": "🇪🇺 Europe — VLESS+REALITY (gRPC) [SNI-RU]",
     "dns": {
       "tag": "dns-in",
@@ -618,42 +546,6 @@
       "probeUrl": "http://cp.cloudflare.com/generate_204",
       "probeInterval": "30m",
       "subjectSelector": ["ee-xhttp-sni-1", "de-xhttp-sni-2", "de-xhttp-sni-3", "de-xhttp-sni-4"],
-      "enableConcurrency": true
-    }
-  },
-  {
-    "remarks": "🇪🇺 Europe — VLESS+TLS (WS) [SNI-RU]",
-    "dns": {
-      "tag": "dns-in",
-      "servers": [
-        {"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]},
-        {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}
-      ],
-      "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true
-    },
-    "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
-    "routing": {
-      "rules": [
-        {"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"},
-        {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"},
-        {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}
-      ],
-      "balancers": [{"tag": "Balance", "selector": ["us-sni-ws-1"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "us-sni-ws-1"}],
-      "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
-    },
-    "inbounds": [
-      {"tag": "socks", "port": 10808, "listen": "127.0.0.1", "protocol": "socks", "settings": {"udp": true, "auth": "noauth"}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}},
-      {"tag": "http", "port": 10809, "listen": "127.0.0.1", "protocol": "http", "settings": {"allowTransparent": false}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}}
-    ],
-    "outbounds": [
-      {"tag": "us-sni-ws-1", "protocol": "vless", "settings": {"vnext": [{"address": "69.46.46.10", "port": 443, "users": [{"id": "7c352f3b-6535-788f-fb0c-f28a76d6deb6", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "ws", "wsSettings": {"path": "/ws/7c352f3b-6535-788f-fb0c-f28a76d6deb6", "headers": {"Host": "rvg2-production.up.railway.app"}}, "security": "tls", "tlsSettings": {"serverName": "eh.vk.com", "fingerprint": "chrome"}}},
-      {"tag": "block", "protocol": "blackhole"},
-      {"tag": "direct", "protocol": "freedom"}
-    ],
-    "observatory": {
-      "probeUrl": "http://cp.cloudflare.com/generate_204",
-      "probeInterval": "30m",
-      "subjectSelector": ["us-sni-ws-1"],
       "enableConcurrency": true
     }
   },
@@ -844,44 +736,6 @@
       "probeUrl": "http://cp.cloudflare.com/generate_204",
       "probeInterval": "30m",
       "subjectSelector": ["de-bypass3-1", "de-bypass3-2", "de-bypass3-3", "de-bypass3-4", "ru-bypass3-5", "ru-bypass3-6", "ru-bypass3-7", "ru-bypass3-8", "in-bypass3-9", "in-bypass3-10", "nl-bypass3-11", "us-bypass3-12", "cz-bypass3-13", "cz-bypass3-14", "br-bypass3-15", "ph-bypass3-16", "ph-bypass3-17", "ph-bypass3-18", "tw-bypass3-19", "ru-bypass3-20", "fr-bypass3-21"],
-      "enableConcurrency": true
-    }
-  },
-  {
-    "remarks": "🇪🇺 Europe — VLESS+REALITY (TCP) [BYPASS-UNSECURE]",
-    "dns": {
-      "tag": "dns-in",
-      "servers": [
-        {"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]},
-        {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}
-      ],
-      "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true
-    },
-    "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
-    "routing": {
-      "rules": [
-        {"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"},
-        {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"},
-        {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}
-      ],
-      "balancers": [{"tag": "Balance", "selector": ["us-unsecure-1", "de-unsecure-2", "ru-unsecure-3"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "us-unsecure-1"}],
-      "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
-    },
-    "inbounds": [
-      {"tag": "socks", "port": 10808, "listen": "127.0.0.1", "protocol": "socks", "settings": {"udp": true, "auth": "noauth"}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}},
-      {"tag": "http", "port": 10809, "listen": "127.0.0.1", "protocol": "http", "settings": {"allowTransparent": false}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}}
-    ],
-    "outbounds": [
-      {"tag": "us-unsecure-1", "protocol": "vless", "settings": {"vnext": [{"address": "5.78.190.181", "port": 443, "users": [{"id": "9aba5792-2a79-4305-b526-2e8e6c28a500", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "www.microsoft.com", "fingerprint": "firefox", "publicKey": "H57GGjaOzyPvjdDL-f2B9MyfYpI3xacDq8r18JFDLTk", "shortId": "4c21271f"}}},
-      {"tag": "de-unsecure-2", "protocol": "vless", "settings": {"vnext": [{"address": "89.125.20.100", "port": 443, "users": [{"id": "fdba43e2-9dc3-4c3e-a890-08ab21e60081", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "auto.malina24.xyz", "fingerprint": "firefox", "publicKey": "V6FabatADtcX7aO9KMjGCadJC4LuQ_5nRViab-z-nFQ", "shortId": "abcd0000"}}},
-      {"tag": "ru-unsecure-3", "protocol": "vless", "settings": {"vnext": [{"address": "c65e5625-fdb4-44f6-8b83-3734123310a0", "port": 8443, "users": [{"id": "2.59.80.65", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "rbc.ru", "fingerprint": "firefox", "publicKey": "rZgu2lJcC2yrYnx66znee-Z75mW6m4TRfWt7_neoEVI", "shortId": "1c74cf626ef50bb3"}}},
-      {"tag": "block", "protocol": "blackhole"},
-      {"tag": "direct", "protocol": "freedom"}
-    ],
-    "observatory": {
-      "probeUrl": "http://cp.cloudflare.com/generate_204",
-      "probeInterval": "30m",
-      "subjectSelector": ["us-unsecure-1", "de-unsecure-2", "ru-unsecure-3"],
       "enableConcurrency": true
     }
   }
