@@ -567,5 +567,5 @@
       "subjectSelector": ["ru-mixed-1", "ru-mixed-2", "ru-mixed-3", "ru-mixed-4", "ru-mixed-5", "ru-mixed-6", "ru-mixed-7", "ru-mixed-8", "ru-mixed-9", "ru-mixed-10"],
       "enableConcurrency": true
     }
-  },
+  }
         ]
