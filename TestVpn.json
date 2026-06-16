@@ -229,47 +229,6 @@
     }
   },
   {
-    "remarks": "🇪🇺 Europe — VLESS+REALITY (XHTTP)",
-    "dns": {
-      "tag": "dns-in",
-      "servers": [
-        {"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]},
-        {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}
-      ],
-      "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true
-    },
-    "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
-    "routing": {
-      "rules": [
-        {"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"},
-        {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"},
-        {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}
-      ],
-      "balancers": [{"tag": "Balance", "selector": ["nl-xhttp-1", "ee-xhttp-2", "nl-xhttp-3", "ee-xhttp-4", "nl-xhttp-5", "nl-xhttp-6"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "nl-xhttp-1"}],
-      "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
-    },
-    "inbounds": [
-      {"tag": "socks", "port": 10808, "listen": "127.0.0.1", "protocol": "socks", "settings": {"udp": true, "auth": "noauth"}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}},
-      {"tag": "http", "port": 10809, "listen": "127.0.0.1", "protocol": "http", "settings": {"allowTransparent": false}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}}
-    ],
-    "outbounds": [
-      {"tag": "nl-xhttp-1", "protocol": "vless", "settings": {"vnext": [{"address": "167.17.70.76", "port": 8080, "users": [{"id": "dc321ddb-63da-4d71-b570-fd3831179b94", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "xhttp", "xhttpSettings": {"mode": "auto", "host": "", "path": "", "extra": {"host": "", "path": "", "mode": "auto", "headers": null, "xPaddingBytes": "100-1000", "xPaddingObfsMode": false, "xPaddingKey": "", "xPaddingHeader": "", "xPaddingPlacement": "", "xPaddingMethod": "", "uplinkHTTPMethod": "", "sessionPlacement": "", "sessionKey": "", "seqPlacement": "", "seqKey": "", "uplinkDataPlacement": "", "uplinkDataKey": "", "uplinkChunkSize": 0, "noGRPCHeader": false, "noSSEHeader": false, "scMaxEachPostBytes": "0", "scMinPostsIntervalMs": "0", "scMaxBufferedPosts": 0, "scStreamUpServerSecs": "0", "xmux": {"maxConcurrency": "8-16", "maxConnections": 0, "cMaxReuseTimes": "96-192", "hMaxRequestTimes": "400-600", "hMaxReusableSecs": "1800-3000", "hKeepAlivePeriod": 0}, "downloadSettings": null, "extra": null}}, "security": "reality", "realitySettings": {"serverName": "storage.yandex.net", "fingerprint": "firefox", "publicKey": "s7_oyK1d1vs8R5huw9XOeWtn5BmMogoAmbNf0HFUuUs", "shortId": "aa68d50fafbf5419"}}},
-      {"tag": "ee-xhttp-2", "protocol": "vless", "settings": {"vnext": [{"address": "94.183.170.16", "port": 55443, "users": [{"id": "e5f01dff-24be-4ae8-b701-a9b3e783cca0", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "xhttp", "xhttpSettings": {"mode": "auto", "host": "yandex.ru", "path": "/", "extra": {"host": "", "path": "", "mode": "auto", "headers": null, "xPaddingBytes": "100-1000", "xPaddingObfsMode": false, "xPaddingKey": "", "xPaddingHeader": "", "xPaddingPlacement": "", "xPaddingMethod": "", "uplinkHTTPMethod": "", "sessionPlacement": "", "sessionKey": "", "seqPlacement": "", "seqKey": "", "uplinkDataPlacement": "", "uplinkDataKey": "", "uplinkChunkSize": 0, "noGRPCHeader": false, "noSSEHeader": false, "scMaxEachPostBytes": "0", "scMinPostsIntervalMs": "0", "scMaxBufferedPosts": 0, "scStreamUpServerSecs": "0", "xmux": {"maxConcurrency": "8-16", "maxConnections": 0, "cMaxReuseTimes": "96-192", "hMaxRequestTimes": "400-600", "hMaxReusableSecs": "1800-3000", "hKeepAlivePeriod": 0}, "downloadSettings": null, "extra": null}}, "security": "reality", "realitySettings": {"serverName": "yandex.ru", "fingerprint": "firefox", "publicKey": "i3ZLu0BrMnsEuDUgWoceRnaYMzRVphJE0CiPXmEhE3c", "shortId": "63a9b4c563de9906"}}},
-      {"tag": "nl-xhttp-3", "protocol": "vless", "settings": {"vnext": [{"address": "nl.techdatacloud.org", "port": 8080, "users": [{"id": "dc321ddb-63da-4d71-b570-fd3831179b94", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "xhttp", "xhttpSettings": {"mode": "auto", "host": "", "path": "", "extra": {"host": "", "path": "", "mode": "auto", "headers": null, "xPaddingBytes": "100-1000", "xPaddingObfsMode": false, "xPaddingKey": "", "xPaddingHeader": "", "xPaddingPlacement": "", "xPaddingMethod": "", "uplinkHTTPMethod": "", "sessionPlacement": "", "sessionKey": "", "seqPlacement": "", "seqKey": "", "uplinkDataPlacement": "", "uplinkDataKey": "", "uplinkChunkSize": 0, "noGRPCHeader": false, "noSSEHeader": false, "scMaxEachPostBytes": "0", "scMinPostsIntervalMs": "0", "scMaxBufferedPosts": 0, "scStreamUpServerSecs": "0", "xmux": {"maxConcurrency": "8-16", "maxConnections": 0, "cMaxReuseTimes": "96-192", "hMaxRequestTimes": "400-600", "hMaxReusableSecs": "1800-3000", "hKeepAlivePeriod": 0}, "downloadSettings": null, "extra": null}}, "security": "reality", "realitySettings": {"serverName": "storage.yandex.net", "fingerprint": "firefox", "publicKey": "s7_oyK1d1vs8R5huw9XOeWtn5BmMogoAmbNf0HFUuUs", "shortId": "aa68d50fafbf5419"}}},
-      {"tag": "ee-xhttp-4", "protocol": "vless", "settings": {"vnext": [{"address": "94.183.170.16", "port": 55443, "users": [{"id": "e5f01dff-24be-4ae8-b701-a9b3e783cca0", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "xhttp", "xhttpSettings": {"mode": "auto", "host": "yandex.ru", "path": "/", "extra": {"host": "", "path": "", "mode": "auto", "headers": null, "xPaddingBytes": "100-1000", "xPaddingObfsMode": false, "xPaddingKey": "", "xPaddingHeader": "", "xPaddingPlacement": "", "xPaddingMethod": "", "uplinkHTTPMethod": "", "sessionPlacement": "", "sessionKey": "", "seqPlacement": "", "seqKey": "", "uplinkDataPlacement": "", "uplinkDataKey": "", "uplinkChunkSize": 0, "noGRPCHeader": false, "noSSEHeader": false, "scMaxEachPostBytes": "0", "scMinPostsIntervalMs": "0", "scMaxBufferedPosts": 0, "scStreamUpServerSecs": "0", "xmux": {"maxConcurrency": "8-16", "maxConnections": 0, "cMaxReuseTimes": "96-192", "hMaxRequestTimes": "400-600", "hMaxReusableSecs": "1800-3000", "hKeepAlivePeriod": 0}, "downloadSettings": null, "extra": null}}, "security": "reality", "realitySettings": {"serverName": "yandex.ru", "fingerprint": "firefox", "publicKey": "i3ZLu0BrMnsEuDUgWoceRnaYMzRVphJE0CiPXmEhE3c", "shortId": "63a9b4c563de9906"}}},
-      {"tag": "nl-xhttp-5", "protocol": "vless", "settings": {"vnext": [{"address": "nl.techdatacloud.org", "port": 8080, "users": [{"id": "dc321ddb-63da-4d71-b570-fd3831179b94", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "xhttp", "xhttpSettings": {"mode": "auto", "host": "", "path": "", "extra": {"host": "", "path": "", "mode": "auto", "headers": null, "xPaddingBytes": "100-1000", "xPaddingObfsMode": false, "xPaddingKey": "", "xPaddingHeader": "", "xPaddingPlacement": "", "xPaddingMethod": "", "uplinkHTTPMethod": "", "sessionPlacement": "", "sessionKey": "", "seqPlacement": "", "seqKey": "", "uplinkDataPlacement": "", "uplinkDataKey": "", "uplinkChunkSize": 0, "noGRPCHeader": false, "noSSEHeader": false, "scMaxEachPostBytes": "0", "scMinPostsIntervalMs": "0", "scMaxBufferedPosts": 0, "scStreamUpServerSecs": "0", "xmux": {"maxConcurrency": "8-16", "maxConnections": 0, "cMaxReuseTimes": "96-192", "hMaxRequestTimes": "400-600", "hMaxReusableSecs": "1800-3000", "hKeepAlivePeriod": 0}, "downloadSettings": null, "extra": null}}, "security": "reality", "realitySettings": {"serverName": "storage.yandex.net", "fingerprint": "firefox", "publicKey": "s7_oyK1d1vs8R5huw9XOeWtn5BmMogoAmbNf0HFUuUs", "shortId": "aa68d50fafbf5419"}}},
-      {"tag": "nl-xhttp-6", "protocol": "vless", "settings": {"vnext": [{"address": "nl.techdatacloud.org", "port": 8080, "users": [{"id": "dc321ddb-63da-4d71-b570-fd3831179b94", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "xhttp", "xhttpSettings": {"mode": "auto", "host": "", "path": "", "extra": {"host": "", "path": "", "mode": "auto", "headers": null, "xPaddingBytes": "100-1000", "xPaddingObfsMode": false, "xPaddingKey": "", "xPaddingHeader": "", "xPaddingPlacement": "", "xPaddingMethod": "", "uplinkHTTPMethod": "", "sessionPlacement": "", "sessionKey": "", "seqPlacement": "", "seqKey": "", "uplinkDataPlacement": "", "uplinkDataKey": "", "uplinkChunkSize": 0, "noGRPCHeader": false, "noSSEHeader": false, "scMaxEachPostBytes": "0", "scMinPostsIntervalMs": "0", "scMaxBufferedPosts": 0, "scStreamUpServerSecs": "0", "xmux": {"maxConcurrency": "8-16", "maxConnections": 0, "cMaxReuseTimes": "96-192", "hMaxRequestTimes": "400-600", "hMaxReusableSecs": "1800-3000", "hKeepAlivePeriod": 0}, "downloadSettings": null, "extra": null}}, "security": "reality", "realitySettings": {"serverName": "storage.yandex.net", "fingerprint": "firefox", "publicKey": "s7_oyK1d1vs8R5huw9XOeWtn5BmMogoAmbNf0HFUuUs", "shortId": "aa68d50fafbf5419"}}},
-      {"tag": "block", "protocol": "blackhole"},
-      {"tag": "direct", "protocol": "freedom"}
-    ],
-    "observatory": {
-      "probeUrl": "http://cp.cloudflare.com/generate_204",
-      "probeInterval": "30m",
-      "subjectSelector": ["nl-xhttp-1", "ee-xhttp-2", "nl-xhttp-3", "ee-xhttp-4", "nl-xhttp-5", "nl-xhttp-6"],
-      "enableConcurrency": true
-    }
-  },
-  {
     "remarks": "🇪🇺 Europe — VLESS+REALITY (gRPC)",
     "dns": {
       "tag": "dns-in",
@@ -348,43 +307,6 @@
       "probeUrl": "http://cp.cloudflare.com/generate_204",
       "probeInterval": "30m",
       "subjectSelector": ["cf-ws-1", "cf-ws-2", "cf-ws-3", "cf-ws-4", "cf-ws-5", "cf-ws-6", "cf-ws-7"],
-      "enableConcurrency": true
-    }
-  },
-  {
-    "remarks": "🇪🇺 Europe — VLESS+TLS (XHTTP)",
-    "dns": {
-      "tag": "dns-in",
-      "servers": [
-        {"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]},
-        {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}
-      ],
-      "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true
-    },
-    "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
-    "routing": {
-      "rules": [
-        {"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"},
-        {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"},
-        {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}
-      ],
-      "balancers": [{"tag": "Balance", "selector": ["pl-xhttp-1", "pl-xhttp-2"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "pl-xhttp-1"}],
-      "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
-    },
-    "inbounds": [
-      {"tag": "socks", "port": 10808, "listen": "127.0.0.1", "protocol": "socks", "settings": {"udp": true, "auth": "noauth"}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}},
-      {"tag": "http", "port": 10809, "listen": "127.0.0.1", "protocol": "http", "settings": {"allowTransparent": false}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}}
-    ],
-    "outbounds": [
-      {"tag": "pl-xhttp-1", "protocol": "vless", "settings": {"vnext": [{"address": "pol6.odavpn.online", "port": 443, "users": [{"id": "8553ae90-2a81-493a-b050-8ee79c8dbe4c", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "xhttp", "xhttpSettings": {"mode": "auto", "path": "/tDjkeuxyQPUDqF8wT2", "host": "", "extra": {"host": "", "path": "", "mode": "auto", "headers": null, "xPaddingBytes": "100-1000", "xPaddingObfsMode": false, "xPaddingKey": "", "xPaddingHeader": "", "xPaddingPlacement": "", "xPaddingMethod": "", "uplinkHTTPMethod": "", "sessionPlacement": "", "sessionKey": "", "seqPlacement": "", "seqKey": "", "uplinkDataPlacement": "", "uplinkDataKey": "", "uplinkChunkSize": 0, "noGRPCHeader": false, "noSSEHeader": false, "scMaxEachPostBytes": "0", "scMinPostsIntervalMs": "0", "scMaxBufferedPosts": 0, "scStreamUpServerSecs": "0", "xmux": {"maxConcurrency": "8-16", "maxConnections": 0, "cMaxReuseTimes": "96-192", "hMaxRequestTimes": "400-600", "hMaxReusableSecs": "1800-3000", "hKeepAlivePeriod": 0}, "downloadSettings": null, "extra": null}}, "security": "reality", "realitySettings": {"serverName": "www.kinopoisk.ru", "fingerprint": "chrome", "publicKey": "ice5ApDYceTGVoxODC51F4RVW0HBoykvMpgL4_qLABw", "shortId": "aabbccdd"}}},
-      {"tag": "pl-xhttp-2", "protocol": "vless", "settings": {"vnext": [{"address": "pol6.odavpn.online", "port": 443, "users": [{"id": "8553ae90-2a81-493a-b050-8ee79c8dbe4c", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "xhttp", "xhttpSettings": {"mode": "auto", "path": "/tDjkeuxyQPUDqF8wT2", "host": "", "extra": {"host": "", "path": "", "mode": "auto", "headers": null, "xPaddingBytes": "100-1000", "xPaddingObfsMode": false, "xPaddingKey": "", "xPaddingHeader": "", "xPaddingPlacement": "", "xPaddingMethod": "", "uplinkHTTPMethod": "", "sessionPlacement": "", "sessionKey": "", "seqPlacement": "", "seqKey": "", "uplinkDataPlacement": "", "uplinkDataKey": "", "uplinkChunkSize": 0, "noGRPCHeader": false, "noSSEHeader": false, "scMaxEachPostBytes": "0", "scMinPostsIntervalMs": "0", "scMaxBufferedPosts": 0, "scStreamUpServerSecs": "0", "xmux": {"maxConcurrency": "8-16", "maxConnections": 0, "cMaxReuseTimes": "96-192", "hMaxRequestTimes": "400-600", "hMaxReusableSecs": "1800-3000", "hKeepAlivePeriod": 0}, "downloadSettings": null, "extra": null}}, "security": "reality", "realitySettings": {"serverName": "www.kinopoisk.ru", "fingerprint": "chrome", "publicKey": "ice5ApDYceTGVoxODC51F4RVW0HBoykvMpgL4_qLABw", "shortId": "aabbccdd"}}},
-      {"tag": "block", "protocol": "blackhole"},
-      {"tag": "direct", "protocol": "freedom"}
-    ],
-    "observatory": {
-      "probeUrl": "http://cp.cloudflare.com/generate_204",
-      "probeInterval": "30m",
-      "subjectSelector": ["pl-xhttp-1", "pl-xhttp-2"],
       "enableConcurrency": true
     }
   },
