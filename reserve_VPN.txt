@@ -1,9 +1,0 @@
-#profile-title:Резерв TG:@FUNZAYKASHOP
-#profile-update-interval: 1
-#subscription-auto-update-enable: 1
-#subscription-auto-update-open-enable: 1
-#subscription-userinfo: upload=0; download=0; total=0; expire=1798761600
-#support-url: https://t.me/FUNZAYKASHOP
-#announce:Нажмите на спидометр и подключайтесь к быстрому серверу🔥. Чем меньше ms тем лучше. Регулярно нажимайте на 🔄. Совет:Настройки → Подписки → Сортировать по пингу. ⚡— лучший сервер
-
-https://raw.githubusercontent.com/FunZay/vless-configs/refs/heads/main/autoservers/all.json
