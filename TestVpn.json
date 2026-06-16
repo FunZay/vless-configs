@@ -208,7 +208,53 @@
     }
   },
   {
-    "remarks": "🇷🇺 Russia — VLESS+REALITY (Selectel VK)",
+    "remarks": "🇳🇱 Нидерланды Обход БС №1 | @FunZ_VPN",
+    "dns": {
+      "tag": "dns-in",
+      "servers": [
+        {"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]},
+        {"domain": ["geosite:category-direct", "geosite:category-ru"], "address": "udp+local://77.88.8.8", "timeoutMs": 1000}
+      ],
+      "serveStale": true, "disableCache": false, "queryStrategy": "UseIPv4", "useSystemHosts": false, "disableFallback": false, "serveExpiredTTL": 0, "enableParallelQuery": false, "disableFallbackIfMatch": true
+    },
+    "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
+    "routing": {
+      "rules": [
+        {"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"},
+        {"ip": ["geoip:private"], "type": "field", "outboundTag": "direct"},
+        {"type": "field", "network": "tcp,udp", "balancerTag": "Balance"}
+      ],
+      "balancers": [{"tag": "Balance", "selector": ["mobile", "nl-vk-1", "nl-xhttp-1", "nl-reality-1", "nl-max-1", "nl-stackline-1", "nl-grpc-1", "nl-storage-1", "nl-uk-1", "nl-uk-2"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "mobile"}],
+      "domainMatcher": "hybrid", "domainStrategy": "IPIfNonMatch"
+    },
+    "inbounds": [
+      {"tag": "socks", "port": 10808, "listen": "127.0.0.1", "protocol": "socks", "settings": {"udp": true, "auth": "noauth"}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}},
+      {"tag": "http", "port": 10809, "listen": "127.0.0.1", "protocol": "http", "settings": {"allowTransparent": false}, "sniffing": {"enabled": true, "routeOnly": false, "destOverride": ["http", "tls", "quic"]}}
+    ],
+    "outbounds": [
+      {"tag": "mobile", "protocol": "vless", "settings": {"vnext": [{"address": "wl1.zeuss.top", "port": 443, "users": [{"id": "0bb3239a-1e0f-4f44-9957-09e70d536125", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"shortId": "1551", "publicKey": "b2phLjakNMXTCVqq2rZu_53ce6DYj6jb5L6WRjDbTmw", "serverName": "ads.x5.ru", "fingerprint": "chrome"}}},
+      {"tag": "nl-vk-1", "protocol": "vless", "settings": {"vnext": [{"address": "158.160.17.171", "port": 443, "users": [{"id": "2be6c15c-7bb7-4153-a4f3-4fd474a2b2d5", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"shortId": "27e53bbcab7593d7", "publicKey": "xwusQ4IEWdYyuPLCc4LOA89P6HyQDNT7xo_75v2YW2I", "serverName": "api-maps.yandex.ru", "fingerprint": "random"}}},
+      {"tag": "nl-xhttp-1", "protocol": "vless", "settings": {"vnext": [{"address": "compressor.work", "port": 443, "users": [{"id": "5a7b6fdf-ff42-47bd-97e1-55d83bf22cce", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "xhttp", "security": "tls", "tlsSettings": {"serverName": "compressor.work", "fingerprint": "chrome"}, "xhttpSettings": {"mode": "packet-up", "path": "/ubuntu-releases/24.04/ubuntu-24.04-desktop-amd64.iso", "extra": {"seqKey": "offset", "sessionKey": "media_sid", "seqPlacement": "query", "uplinkDataKey": "data", "xPaddingBytes": "0-0", "uplinkChunkSize": "256-512", "sessionPlacement": "query", "uplinkHTTPMethod": "GET", "xPaddingObfsMode": false, "serverMaxHeaderBytes": 16384}}}},
+      {"tag": "nl-reality-1", "protocol": "vless", "settings": {"vnext": [{"address": "nuxde.jojack.ru", "port": 443, "users": [{"id": "de7e5d34-7c58-49a8-8440-05a8d4877cf7", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"shortId": "428ef87fd47a3a32", "publicKey": "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs", "serverName": "patents.su", "fingerprint": "firefox"}}},
+      {"tag": "nl-max-1", "protocol": "vless", "settings": {"vnext": [{"address": "51.250.108.107", "port": 443, "users": [{"id": "4e5017e0-07da-48ef-a882-fa26a845ead6", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"shortId": "27e53bbcab7593d7", "publicKey": "FkyjJ-RLGIBWnsUQAuyfv-qReJSiuyb7qFnJS14ASgQ", "serverName": "web.max.ru", "fingerprint": "random"}}},
+      {"tag": "nl-stackline-1", "protocol": "vless", "settings": {"vnext": [{"address": "72.56.37.124", "port": 443, "users": [{"id": "2ea524db-74c0-4a32-9936-a7dff34ba978", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"shortId": "ed", "publicKey": "MUB9wnBEDyNQRdMszWBuSqX1yFWitF0wI0dWDKWlHTU", "serverName": "xzzb.stackline.online", "fingerprint": "firefox"}}},
+      {"tag": "nl-grpc-1", "protocol": "vless", "settings": {"vnext": [{"address": "81.163.22.160", "port": 443, "users": [{"id": "5a1a334d-9c3e-4b04-a058-7e88f86c55f7", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "grpc", "security": "reality", "grpcSettings": {"serviceName": ""}, "realitySettings": {"shortId": "504d1cc1f3", "publicKey": "pjKloRtuUEklhdfAsqSOOBxsR_qIDqDpP-qKuL2t4TE", "serverName": "st.vk.com", "fingerprint": "firefox"}}},
+      {"tag": "nl-storage-1", "protocol": "vless", "settings": {"vnext": [{"address": "ch-gt-02.com", "port": 8443, "users": [{"id": "783d226a-2a05-4b38-a93e-616da5990c42", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"shortId": "40ce08cf20c67003", "publicKey": "IdqrygjwHBEMCOamBl7a504TVk6uMAtTRj0xLWcFcxY", "serverName": "storage.yandex.net", "fingerprint": "firefox"}}},
+      {"tag": "nl-uk-1", "protocol": "vless", "settings": {"vnext": [{"address": "46.8.209.183", "port": 443, "users": [{"id": "52a2a278-9a61-4588-8b23-51d4ebbf1f1b", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "ads.x5.ru", "fingerprint": "qq", "publicKey": "oqRus6Z_Q1jqJaTEPu7ENbRL0-XKOw54K0jwCCGLtEk", "shortId": "a9c4f17e3b62d8"}}},
+      {"tag": "nl-uk-2", "protocol": "vless", "settings": {"vnext": [{"address": "194.55.239.241", "port": 443, "users": [{"id": "52a2a278-9a61-4588-8b23-51d4ebbf1f1b", "encryption": "none", "flow": "xtls-rprx-vision"}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"serverName": "ads.x5.ru", "fingerprint": "qq", "publicKey": "oqRus6Z_Q1jqJaTEPu7ENbRL0-XKOw54K0jwCCGLtEk", "shortId": "a9c4f17e3b62d8"}}},
+      {"tag": "block", "protocol": "blackhole"},
+      {"tag": "direct", "protocol": "freedom"},
+      {"tag": "direct-fragment", "protocol": "freedom", "settings": {"fragment": {"length": "10-20", "packets": "tlshello", "interval": "5-10"}}}
+    ],
+    "observatory": {
+      "probeUrl": "http://cp.cloudflare.com/generate_204",
+      "probeInterval": "30m",
+      "subjectSelector": ["mobile", "nl-vk-1", "nl-xhttp-1", "nl-reality-1", "nl-max-1", "nl-stackline-1", "nl-grpc-1", "nl-storage-1", "nl-uk-1", "nl-uk-2"],
+      "enableConcurrency": true
+    }
+  },
+  {
+    "remarks": "🇷🇺 Россия Обход БС №1 | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -253,7 +299,7 @@
     }
   },
   {
-    "remarks": "🇷🇺 Russia — VLESS+REALITY (Selectel MAX)",
+    "remarks": "🇷🇺 Россия Обход БС №2 | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -298,7 +344,7 @@
     }
   },
   {
-    "remarks": "🇷🇺 Russia — VLESS+REALITY (Selectel VK — MIFA)",
+    "remarks": "🇷🇺 Россия Обход БС №3 | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -343,7 +389,7 @@
     }
   },
   {
-    "remarks": "🇷🇺 Russia — VLESS+REALITY (CIDR VK)",
+    "remarks": "🇷🇺 Россия Обход БС №4 | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -388,7 +434,7 @@
     }
   },
   {
-    "remarks": "🇷🇺 Russia — VLESS+REALITY (SNI-VK)",
+    "remarks": "🇷🇺 Россия Обход БС №5 | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -433,7 +479,7 @@
     }
   },
   {
-    "remarks": "🇷🇺 Russia — VLESS+REALITY (VPNHOCTb)",
+    "remarks": "🇷🇺 Россия Обход БС №6 | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -478,7 +524,7 @@
     }
   },
   {
-    "remarks": "🇷🇺 Russia — VLESS+REALITY (Selectel Mixed)",
+    "remarks": "🇷🇺 Россия Обход БС №7 | @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
