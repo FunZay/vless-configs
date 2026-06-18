@@ -260,7 +260,7 @@
       "tag": "block"
     }
   ],
-  "remarks": "БС Автовыбор #1",
+  "remarks": "test Обход бс",
   "routing": {
     "balancers": [
       {
