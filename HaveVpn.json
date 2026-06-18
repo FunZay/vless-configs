@@ -984,6 +984,68 @@
     ]
   }
   },
+ {
+  "remarks": "test 2",
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
+      },
+      "tag": "socks"
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": 10809,
+      "protocol": "http",
+      "settings": {},
+      "tag": "http"
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "hysteria",
+      "settings": {
+        "address": "newlte.kihsuyhf8jkiugsxb.cfd",
+        "port": 443,
+        "version": 2
+      },
+      "streamSettings": {
+        "network": "hysteria",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "newlte.kihsuyhf8jkiugsxb.cfd",
+          "fingerprint": "random"
+        },
+        "hysteriaSettings": {
+          "auth": "0dd50f72-bf39-4b59-b183-61b3fa52df57",
+          "version": 2
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom"
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "outboundTag": "direct",
+        "ip": ["geoip:private"]
+      }
+    ]
+  }
+ },
   {
   "remarks": "🇳🇱 Белые списки №1 | @FunZ_VPN",
   "dns": {
