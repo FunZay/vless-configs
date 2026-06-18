@@ -1,5 +1,255 @@
 [
-  {"burstObservatory":{"pingConfig":{"connectivity":"http://connectivitycheck.platform.hicloud.com/generate_204","destination":"https://www.google.com/generate_204","interval":"1m","sampling":3,"timeout":"5s"},"subjectSelector":["Satellite"]},"dns":{"disableCache":false,"disableFallback":false,"disableFallbackIfMatch":true,"hosts":{"1.1.1.1":"1.1.1.1","77.88.8.8":"77.88.8.8","8.8.8.8":"8.8.8.8","cloudflare-dns.com":"1.1.1.1","dns.google":"8.8.8.8"},"queryStrategy":"UseIPv4","servers":[{"address":"77.88.8.8","tag":"dou-yandex-main"},{"address":"77.88.8.1","tag":"dou-yandex-secondary"},{"address":"https://77.88.8.8/dns-query","tag":"doh-main"},{"address":"https://1.1.1.1/dns-query","tag":"doh-fallback"}]},"inbounds":[{"listen":"0.0.0.0","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"sniffing":{"destOverride":["http","tls","quic"],"enabled":true,"routeOnly":true},"tag":"socks"},{"listen":"0.0.0.0","port":10809,"protocol":"http","settings":{},"sniffing":{"destOverride":["http","tls","quic"],"enabled":true,"routeOnly":true},"tag":"http"}],"log":{"dnsLog":false,"loglevel":"warning"},"outbounds":[{"protocol":"vless","settings":{"vnext":[{"address":"sputnik.tnohub.top","port":443,"users":[{"encryption":"none","flow":"","id":"f9ab7cbe-2826-480a-9d10-3ad38ca14be4"}]}]},"streamSettings":{"network":"xhttp","realitySettings":{"fingerprint":"random","publicKey":"7VkrylPaWB3cx8b-AN1BXWhsQ3B6SuB2sQx9zzrwnlc","serverName":"media.mediavitrina.ru","shortId":"a55215a9509841"},"security":"reality","xhttpSettings":{"extra":{"xPaddingBytes":"100-1000","xmux":{"cMaxReuseTimes":"64-128","hKeepAlivePeriod":30,"hMaxRequestTimes":"16-32","hMaxReusableSecs":"30-60","maxConcurrency":"8-16"}},"host":"","mode":"auto","path":"/check-update"}},"tag":"Satellite"},{"protocol":"vless","settings":{"vnext":[{"address":"sputnik.tnohub.top","port":443,"users":[{"encryption":"none","flow":"","id":"f9ab7cbe-2826-480a-9d10-3ad38ca14be4"}]}]},"streamSettings":{"network":"xhttp","realitySettings":{"fingerprint":"random","publicKey":"7VkrylPaWB3cx8b-AN1BXWhsQ3B6SuB2sQx9zzrwnlc","serverName":"player.mediavitrina.ru","shortId":"a55215a9509841"},"security":"reality","xhttpSettings":{"extra":{"xPaddingBytes":"100-1000","xmux":{"cMaxReuseTimes":"64-128","hKeepAlivePeriod":30,"hMaxRequestTimes":"16-32","hMaxReusableSecs":"30-60","maxConcurrency":"8-16"}},"host":"","mode":"auto","path":"/check-update"}},"tag":"Satellite-2"},{"protocol":"vless","settings":{"vnext":[{"address":"sputnik.tnohub.top","port":443,"users":[{"encryption":"none","flow":"","id":"f9ab7cbe-2826-480a-9d10-3ad38ca14be4"}]}]},"streamSettings":{"network":"xhttp","realitySettings":{"fingerprint":"random","publicKey":"7VkrylPaWB3cx8b-AN1BXWhsQ3B6SuB2sQx9zzrwnlc","serverName":"iv.kommersant.ru","shortId":"a55215a9509841"},"security":"reality","xhttpSettings":{"extra":{"xPaddingBytes":"100-1000","xmux":{"cMaxReuseTimes":"64-128","hKeepAlivePeriod":30,"hMaxRequestTimes":"16-32","hMaxReusableSecs":"30-60","maxConcurrency":"8-16"}},"host":"","mode":"auto","path":"/check-update"}},"tag":"Satellite-3"},{"protocol":"vless","settings":{"vnext":[{"address":"dh.tnohub.top","port":8443,"users":[{"encryption":"none","flow":"","id":"f9ab7cbe-2826-480a-9d10-3ad38ca14be4"}]}]},"streamSettings":{"network":"xhttp","realitySettings":{"fingerprint":"firefox","publicKey":"7VkrylPaWB3cx8b-AN1BXWhsQ3B6SuB2sQx9zzrwnlc","serverName":"iv.kommersant.ru","shortId":"a55215a9509841"},"security":"reality","xhttpSettings":{"host":"","mode":"auto","path":"/check-update"}},"tag":"Satellite-4"},{"protocol":"freedom","tag":"direct"},{"protocol":"blackhole","tag":"block"}],"remarks":"test Обход бс","routing":{"balancers":[{"fallbackTag":"direct","selector":["Satellite"],"strategy":{"settings":{"baselines":["1s"],"expected":2,"maxRTT":"1s","tolerance":0.01},"type":"leastLoad"},"tag":"Super_Balancer"}],"domainMatcher":"hybrid","domainStrategy":"IPIfNonMatch","rules":[{"outboundTag":"direct","protocol":["bittorrent"],"type":"field"},{"domain":["dht.aelitis.com","dht.transmissionbt.com","dht.vuze.com","router.bittorrent.com","router.utorrent.com","1.tracker.eu.org","1337.abcvg.info","2.tracker.eu.org","3.tracker.eu.org","3rt.tace.ru","47.ip-51-68-199.eu","5rt.tace.ru","61626c.net","9.rarbg.com","9.rarbg.me","9.rarbg.to","a.leopard-raws.org","aaa.army","academic-p2p.appspot.com","acg.rip","adm.category5.tv","admin.videoenpoche.info","adminion.n-blade.ru","all4nothin.net","anidex.moe","api.bitumconference.ru","aruacfilmes.com.br","asger.xyz","atrack.pow7.com","baibako.tv","bclearning.top","benouworldtrip.fr","big-boss-tracker.net","bit-hdtv.com","bithq.org","bitseduce.com","bitsparadise.info","biztorrents.com","blackcats-games.net","blackz.ro","blokas.io","bluebird-hd.org","bms-hosxp.com","bobbialbano.com","bt-club.ws","bt-tracker.gamexp.ru","bt.3dmgame.com","bt.3kb.xyz","bt.ali213.net","bt.beatrice-raws.org","bt.edwardk.info","bt.firebit.org","bt.hliang.com","bt.okmp3.ru","bt.pusacg.org","bt.zlofenix.org","bt2.54new.com","bt2.edwardk.info","bubu.mapfactor.com","camera.lei001.com","carbon-bonsai-621.appspot.com","cdn-1.gamecoast.org","cdn-2.gamecoast.org","chanchan.uchuu.co.uk","chihaya.de","chihaya.toss.li","code2chicken.nl","concen.org","cutiegirl.ru","data-bg.net","datascene.net","daveking.com","denis.stalker.upeer.me","derpyradio.net","deviloid.net","discord.heihachi.pw","dpiui.reedlan.com","drumkitx.com","eddie4.nl","edu.uifr.ru","elitezones.ro","engplus.ru","exodus.desync.com","explodie.org","fe.dealclub.de","finbytes.org","forever-tracker.zooki.xyz","free-tracker.zooki.xyz","funfile.org","git.vulnix.sh","grifon.info","h4.trakx.nibba.trade","hdreactor.org","inferno.demonoid.is","inferno.demonoid.pw","ipv4.tracker.harry.lu","ipv6.tracker.harry.lu","ipv6.tracker.zerobytes.xyz","jsb.by","kanal-4.de","kinorun.com","koli.services","learnbits.me","line-net.ru","ln.mtahost.co","loushao.net","mail.realliferpg.de","mail2.zelenaya.net","masters-tb.com","mediaclub.tv","megatorrents.kg","metal.iplay.ro","mgtracker.org","milliontorrent.pl","mixfiend.com","movies.zsw.ca","mvgroup.org","nagios.tks.sumy.ua","novaopcj.icu","ns-1.x-fins.com","ns349743.ip-91-121-106.eu","ns389251.ovh.net","nyaa.tracker.wf","omg.wtftrackr.xyz","open.acgnxtracker.com","open.acgtracker.com","open.demonii.com","open.demonii.si","open.kickasstracker.com","open.lolicon.eu","open.nyaatorrents.info","open.nyap2p.com","open.stealth.si","open.touki.ru","opentor.org","opentracker.acgnx.com","opentracker.acgnx.se","opentracker.i2p.rocks","opentracker.xyz","p4p.arenabg.com","peerfect.org","potuk.com","pow7.com","prestige.minimafia.nl","proaudiotorrents.org","public-tracker.zooki.xyz","public.popcorn-tracker.org","public.publictracker.xyz","publictracker.ch","publictracker.xyz","qg.lorzl.gq","retracker.akado-ural.ru","retracker.baikal-telecom.net","retracker.hotplug.ru","retracker.krs-ix.ru","retracker.lanta-net.ru","retracker.local.msn-net.ru","retracker.netbynet.ru","retracker.nts.su","retracker.sevstar.net","retracker.spark-rostov.ru","rt.tace.ru","rutorrent.frontline-mod.com","sd-161673.dedibox.fr","secure.pow7.com","shadowshq.eddie4.nl","shadowshq.yi.org","share.camoe.cn","shnflac.net","siambt.com","sukebei.tracker.wf","t.acg.rip","t.nyaatracker.com","t.overflow.biz","t1.leech.ie","t1.pow7.com","t2.leech.ie","t2.pow7.com","t3.leech.ie","tc-boxing.com","tehconnection.eu","thegeeks.bz","theoccult.bz","theplace.bz","thetracker.org","thetradersden.org","thevault.bz","tk.mabo.ltd","torrent-team.net","torrent.arjlover.net","torrent.mp3quran.net","torrent.nwps.ws","torrent.resonatingmedia.com","torrent.tdjs.tech","torrentclub.tech","torrents-nn.cn","torrentsmd.com","torrenttracker.nwc.acsalaska.net","torrentzilla.org","tp.m-team.cc","tr.bangumi.moe","tr.cili001.com","tr.kxmp.cf","tr.ready4.icu","tr2.ysagin.top","tracker-udp.gbitt.info","tracker-v6.zooki.xyz","tracker.0o.is","tracker.0x.tf","tracker.36dm.com","tracker.acgnx.se","tracker.aletorrenty.pl","tracker.ali213.net","tracker.altrosky.nl","tracker.anirena.com","tracker.anonwebz.xyz","tracker.army","tracker.baltracker.net","tracker.beeimg.com","tracker.birkenwald.de","tracker.bittor.pw","tracker.bittorrent.am","tracker.blacksparrowmedia.net","tracker.bt-hash.com","tracker.bt4g.com","tracker.btnext.com","tracker.btsync.gq","tracker.bz","tracker.coppersurfer.tk","tracker.corpscorp.online","tracker.cyber-hub.net","tracker.cyberia.is","tracker.dler.org","tracker.ds.is","tracker.dutchtracking.nl","tracker.dyne.org","tracker.e-utp.net","tracker.eddie4.nl","tracker.electro-torrent.pl","tracker.etree.org","tracker.ex.ua","tracker.filemail.com","tracker.filepit.to","tracker.files.fm","tracker.flashtorrents.org","tracker.fortu.io","tracker.frozen-layer.net","tracker.funfile.org","tracker.gbitt.info","tracker.gigatorrents.ws","tracker.grepler.com","tracker.halfchub.club","tracker.hama3.net","tracker.iamhansen.xyz","tracker.imgoingto.icu","tracker.internetwarriors.net","tracker.ipv6tracker.ru","tracker.kali.org","tracker.kamigami.org","tracker.kuroy.me","tracker.leechers-paradise.org","tracker.lelux.fi","tracker.minglong.org","tracker.mininova.org","tracker.moeking.me","tracker.msm8916.com","tracker.nanoha.org","tracker.nextrp.ru","tracker.nitrix.me","tracker.noobsubs.net","tracker.nyaa.uk","tracker.nyap2p.com","tracker.open-internet.nl","tracker.openbittorrent.com","tracker.opentracker.se","tracker.opentrackr.org","tracker.parrotlinux.org","tracker.parrotsec.org","tracker.pirateparty.gr","tracker.piratepublic.com","tracker.pomf.se","tracker.publicbt.com","tracker.publictracker.xyz","tracker.pussytorrents.org","tracker.sbsub.com","tracker.shkinev.me","tracker.skynetcloud.site","tracker.skyts.net","tracker.sloppyta.co","tracker.swateam.org.uk","tracker.tambovnet.org","tracker.tamersunion.org","tracker.tasvideos.org","tracker.teambelgium.net","tracker.theempire.bz","tracker.tiny-vps.com","tracker.tntvillage.scambioetico.org","tracker.torrent.eu.org","tracker.torrentbay.to","tracker.torrentbytes.net","tracker.torrentleech.org","tracker.torrentsnows.com","tracker.torrenty.org","tracker.torrentyorg.pl","tracker.trackerfix.com","tracker.trackton.ga","tracker.tricitytorrents.com","tracker.tvunderground.org.ru","tracker.uw0.xyz","tracker.v6speed.org","tracker.vectahosting.eu","tracker.vulnix.sh","tracker.ygsub.com","tracker.yoshi210.com","tracker.zemoj.com","tracker.zerobytes.xyz","tracker.zum.bi","tracker0.ufibox.com","tracker01.loveapp.com","tracker1.itzmx.com","tracker2.christianbro.pw","tracker2.dler.org","tracker2.indowebster.com","tracker2.itzmx.com","tracker3.itzmx.com","tracker4.itzmx.com","tracker6.dler.org","tracker6.lelux.fi","trakx.herokuapp.com","tribalmixes.com","trun.tom.ru","tsundere.pw","u.wwwww.wtf","uatracker.net","ultra.zt.ua","us-tracker.publictracker.xyz","valakas.rollo.dnsabr.com","vibe.community","vpn.flying-datacenter.de","vps02.net.orel.ru","w.wwwww.wtf","wareztorrent.com","wassermann.online","worldboxingvideoarchive.com","loushao.net","midea123.z-media.com.cn","torrent.eu.org","wareztorrent.com","xwt-classics.net","xxxtor.com","yuwabits.net","z.mercax.com","zephir.monocul.us","zer0day.ch","zer0day.to","zone-torrent.net","open.demonoid.ch","wepzone.net","ttk2.nbaonlineservice.com","tracker.tryhackx.org","tracker.torrust-demo.com","tracker.srv00.com","tracker.qu.ax","tracker.gmi.gd","tr4ck3r.duckdns.org","run.publictracker.xyz","retracker01-msk-virt.corbina.net","retracker.lanta.me","opentracker.io","open.dstud.io","martin-gebhardt.eu","ipv4announce.sktorrent.eu","d40969.acod.regrucolo.ru","bt.bontal.net","bittorrent-tracker.e-n-c-r-y-p-t.net","bandito.byterunner.io","tracker.yemekyedim.com","tracker.pmman.tech","tracker.leechshield.link","tracker.ghostchu-services.top","tracker.cutie.dating","tr.zukizuki.org","tr.nyacat.pw","torrent.tracker.durukanbal.com","tracker810.xyz","tracker.waaa.moe","tracker.vanitycore.co","tracker.tritan.gg","tracker.renfei.net","tracker.mywaifu.best","tracker.lintk.me","tracker.ipv6tracker.org","tracker.dmcomic.org","tracker.dhitechnical.com","tracker.darkness.services","tracker.23794.top","torrent.hificode.in","shubt.net","share.hkg-fansub.info","seeders-paradise.org","extracker.dahrkael.net","bvarf.tracker.sh","bt.rer.lol","0d.kebhana.mx","0123456789nonexistent.com","udp.tracker.projectk.org","tracker.zupix.online","tracker.therarbg.to","tracker.t-1.org","tracker.startwork.cv","tracker.plx.im","tracker.hifimarket.in","tracker.fnix.net","tracker.ducks.party","tracker.1h.is","torrentclub.online","rekcart.duckdns.org","tracker.zhuqiy.com","tracker.uraniumhexafluori.de","tracker.moeblog.cn","tracker.gcrenwp.top","tracker.belmult.online","tracker.alaskantf.com","t.213891.xyz","shahidrazi.online","torrentsnipe.info","genesis-sp.org","tracker1.bt.moack.co.kr","tracker.xiaoduola.xyz","tracker.moxing.party","servandroidkino.ru","open.trackerlist.xyz","home.yxgz.club","buny.uk","bt1.xxxxbt.cc","bt.poletracker.org","aboutbeautifulgallopinghorsesinthegreenpasture.online"],"outboundTag":"direct","type":"field"},{"domain":["geosite:yandex","geosite:mailru","geosite:vk","domain:gosuslugi.ru","domain:goskey.ru","domain:gov.ru","domain:mos.ru","domain:mosreg.ru","domain:nalog.ru","domain:nalog.gov.ru","domain:cbr.ru","domain:government.ru","domain:kremlin.ru","domain:council.gov.ru","domain:duma.gov.ru","domain:mvd.ru","domain:mchs.gov.ru","domain:genproc.gov.ru","domain:gisgkh.ru","domain:rosseti.ru","domain:rosatom.ru","domain:rostec.ru","domain:rosneft.ru","domain:nornickel.ru","domain:pochta.ru","domain:crpt.ru","domain:glonass-union.ru","domain:tensor.ru","domain:kontur.ru","domain:hrlink.ru","domain:roskazna.ru","domain:dobro.ru","domain:rsv.ru","domain:moyobraz.ru","domain:lizaalert.org","domain:onf.ru","domain:znanie.ru","domain:pervye.ru","domain:xn--80ajghhoc2aj1c8b.xn--p1ai","domain:xn--80aesfpebagmfblc0a.xn--p1ai","domain:deg.gov.ru","domain:dnevnik.ru","domain:emias.info","domain:finuslugi.ru","domain:digital.gov.ru","domain:rustore.ru","domain:cmd-online.ru","domain:alfabank.ru","domain:vtb.ru","domain:psbank.ru","domain:gazprombank.ru","domain:gpb.ru","domain:nspk.ru","domain:mirpayonline.ru","domain:moex.com","domain:mts.ru","domain:megafon.ru","domain:beeline.ru","domain:tele2.ru","domain:t2.ru","domain:rostelecom.ru","domain:yota.ru","domain:dom.ru","domain:medsi.ru","domain:mater-i-ditya.ru","domain:ozon.ru","domain:ozonusercontent.com","domain:o3.ru","domain:wildberries.ru","domain:wb.ru","domain:megamarket.ru","domain:sbermegamarket.ru","domain:avito.ru","domain:hh.ru","domain:dodopizza.ru","domain:vkusnoitochka.ru","domain:burgerking.ru","domain:vkusvill.ru","domain:spar.ru","domain:metro-cc.ru","domain:auchan.ru","domain:lenta.com","domain:okmarket.ru","domain:petrovich.ru","domain:detmir.ru","domain:mnogolososa.ru","domain:magnit.ru","domain:azbukavkusa.ru","domain:dixy.ru","domain:5ka.ru","domain:perekrestok.ru","domain:chizhik.club","domain:x5.ru","domain:cdek.ru","domain:dostavista.ru","domain:kuper.ru","domain:samokat.ru","domain:dellin.ru","domain:domclick.ru","domain:csat.ru","domain:rosagrolizing.ru","domain:evotor.ru","domain:auto.ru","domain:rzd.ru","domain:tutu.ru","domain:aeroflot.ru","domain:pobeda.aero","domain:grandtrain.ru","domain:2gis.ru","domain:2gis.com","domain:gismeteo.ru","domain:taximaxim.ru","domain:citydrive.ru","domain:delimobil.ru","domain:belkacar.ru","domain:ria.ru","domain:tass.ru","domain:parlamentskaya-gazeta.ru","domain:kommersant.ru","domain:vedomosti.ru","domain:rbc.ru","domain:iz.ru","domain:gazeta.ru","domain:lenta.ru","domain:rambler.ru","domain:rg.ru","domain:kp.ru","domain:aif.ru","domain:mk.ru","domain:sport24.ru","domain:radioplayer.ru","domain:vgtrk.ru","domain:tvzvezda.ru","domain:vmeste-rf.tv","domain:rt.ru","domain:1tv.ru","domain:mir-tv.ru","domain:5-tv.ru","domain:ren.tv","domain:spastv.ru","domain:tnt-online.ru","domain:ctc.ru","domain:ntv.ru","domain:otr-online.ru","domain:tvc.ru","domain:tv3.ru","domain:matchtv.ru","domain:friday.ru","domain:domashny.ru","domain:muztv.ru","domain:360tv.ru","domain:soloviev.live","domain:dumatv.ru","domain:vitrina.tv","domain:rutube.ru","domain:kinopoisk.ru","domain:premier.one","domain:okko.tv","domain:ivi.ru","domain:ruviki.ru","domain:khl.ru","domain:1c.ru","domain:trueconf.ru","domain:ifconfig.me","domain:ifconfig.io","domain:ifconfig.co","domain:ifconfig.is","domain:ipinfo.io","domain:ipinfo.is","domain:ipinfo.app","domain:ipify.org","domain:ip.seeip.org","domain:ident.me","domain:icanhazip.com","domain:ipecho.net","domain:checkip.amazonaws.com","domain:myexternalip.com","domain:wtfismyip.com","domain:ipchicken.com","domain:whatismyipaddress.com","domain:whatismyip.com","domain:myip.com","domain:2ip.io","domain:2ip.ru","domain:whoer.net","domain:browserleaks.com","domain:ipleak.net","domain:dnsleaktest.com","domain:ip-api.com","domain:ipapi.co","domain:ipwho.is","domain:iplocation.net","domain:geojs.io","domain:db-ip.com","domain:ipdata.co","domain:ipregistry.co","domain:ipgeolocation.io","domain:ip.sb","domain:iplocation.com","domain:showmyip.com","domain:whatismypublicip.com","domain:myip.ms","tools.keycdn.com","domain:browserling.com","domain:dnschecker.org","domain:mxtoolbox.com","domain:securitytrails.com","domain:hackertarget.com","domain:bigdatacloud.com","domain:whatismyip.live","domain:myip.ru"],"outboundTag":"direct","type":"field"},{"ip":["0.0.0.0/8","10.0.0.0/8","100.64.0.0/10","127.0.0.0/8","169.254.0.0/16","172.16.0.0/12","192.0.0.0/24","192.0.2.0/24","192.88.99.0/24","192.168.0.0/16","198.18.0.0/15","198.51.100.0/24","203.0.113.0/24","224.0.0.0/3","0000::/127","fc00::/7","fe80::/10","ff00::/8"],"outboundTag":"direct","type":"field"},{"balancerTag":"Super_Balancer","network":"tcp,udp","type":"field"}]}},
+ {
+  "burstObservatory": {
+    "pingConfig": {
+      "connectivity": "http://connectivitycheck.platform.hicloud.com/generate_204",
+      "destination": "https://www.google.com/generate_204",
+      "interval": "1m",
+      "sampling": 3,
+      "timeout": "5s"
+    },
+    "subjectSelector": ["Satellite"]
+  },
+  "dns": {
+    "disableCache": false,
+    "disableFallback": false,
+    "disableFallbackIfMatch": true,
+    "hosts": {
+      "1.1.1.1": "1.1.1.1",
+      "77.88.8.8": "77.88.8.8",
+      "8.8.8.8": "8.8.8.8",
+      "cloudflare-dns.com": "1.1.1.1",
+      "dns.google": "8.8.8.8"
+    },
+    "queryStrategy": "UseIPv4",
+    "servers": [
+      { "address": "77.88.8.8", "tag": "dou-yandex-main" },
+      { "address": "77.88.8.1", "tag": "dou-yandex-secondary" },
+      { "address": "https://77.88.8.8/dns-query", "tag": "doh-main" },
+      { "address": "https://1.1.1.1/dns-query", "tag": "doh-fallback" }
+    ]
+  },
+  "inbounds": [
+    {
+      "listen": "0.0.0.0",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": { "auth": "noauth", "udp": true },
+      "sniffing": { "destOverride": ["http", "tls", "quic"], "enabled": true, "routeOnly": true },
+      "tag": "socks"
+    },
+    {
+      "listen": "0.0.0.0",
+      "port": 10809,
+      "protocol": "http",
+      "settings": {},
+      "sniffing": { "destOverride": ["http", "tls", "quic"], "enabled": true, "routeOnly": true },
+      "tag": "http"
+    }
+  ],
+  "log": { "dnsLog": false, "loglevel": "warning" },
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "sputnik.tnohub.top",
+            "port": 443,
+            "users": [{ "encryption": "none", "flow": "", "id": "f9ab7cbe-2826-480a-9d10-3ad38ca14be4" }]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "reality",
+        "realitySettings": {
+          "fingerprint": "random",
+          "publicKey": "7VkrylPaWB3cx8b-AN1BXWhsQ3B6SuB2sQx9zzrwnlc",
+          "serverName": "media.mediavitrina.ru",
+          "shortId": "a55215a9509841"
+        },
+        "xhttpSettings": {
+          "extra": {
+            "xPaddingBytes": "100-1000",
+            "xmux": {
+              "cMaxReuseTimes": "64-128",
+              "hKeepAlivePeriod": 30,
+              "hMaxRequestTimes": "16-32",
+              "hMaxReusableSecs": "30-60",
+              "maxConcurrency": "8-16"
+            }
+          },
+          "host": "",
+          "mode": "auto",
+          "path": "/check-update"
+        }
+      },
+      "tag": "Satellite"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "sputnik.tnohub.top",
+            "port": 443,
+            "users": [{ "encryption": "none", "flow": "", "id": "f9ab7cbe-2826-480a-9d10-3ad38ca14be4" }]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "reality",
+        "realitySettings": {
+          "fingerprint": "random",
+          "publicKey": "7VkrylPaWB3cx8b-AN1BXWhsQ3B6SuB2sQx9zzrwnlc",
+          "serverName": "player.mediavitrina.ru",
+          "shortId": "a55215a9509841"
+        },
+        "xhttpSettings": {
+          "extra": {
+            "xPaddingBytes": "100-1000",
+            "xmux": {
+              "cMaxReuseTimes": "64-128",
+              "hKeepAlivePeriod": 30,
+              "hMaxRequestTimes": "16-32",
+              "hMaxReusableSecs": "30-60",
+              "maxConcurrency": "8-16"
+            }
+          },
+          "host": "",
+          "mode": "auto",
+          "path": "/check-update"
+        }
+      },
+      "tag": "Satellite-2"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "sputnik.tnohub.top",
+            "port": 443,
+            "users": [{ "encryption": "none", "flow": "", "id": "f9ab7cbe-2826-480a-9d10-3ad38ca14be4" }]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "reality",
+        "realitySettings": {
+          "fingerprint": "random",
+          "publicKey": "7VkrylPaWB3cx8b-AN1BXWhsQ3B6SuB2sQx9zzrwnlc",
+          "serverName": "iv.kommersant.ru",
+          "shortId": "a55215a9509841"
+        },
+        "xhttpSettings": {
+          "extra": {
+            "xPaddingBytes": "100-1000",
+            "xmux": {
+              "cMaxReuseTimes": "64-128",
+              "hKeepAlivePeriod": 30,
+              "hMaxRequestTimes": "16-32",
+              "hMaxReusableSecs": "30-60",
+              "maxConcurrency": "8-16"
+            }
+          },
+          "host": "",
+          "mode": "auto",
+          "path": "/check-update"
+        }
+      },
+      "tag": "Satellite-3"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "dh.tnohub.top",
+            "port": 8443,
+            "users": [{ "encryption": "none", "flow": "", "id": "f9ab7cbe-2826-480a-9d10-3ad38ca14be4" }]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "reality",
+        "realitySettings": {
+          "fingerprint": "firefox",
+          "publicKey": "7VkrylPaWB3cx8b-AN1BXWhsQ3B6SuB2sQx9zzrwnlc",
+          "serverName": "iv.kommersant.ru",
+          "shortId": "a55215a9509841"
+        },
+        "xhttpSettings": {
+          "host": "",
+          "mode": "auto",
+          "path": "/check-update"
+        }
+      },
+      "tag": "Satellite-4"
+    },
+    { "protocol": "freedom", "tag": "direct" },
+    { "protocol": "blackhole", "tag": "block" }
+  ],
+  "remarks": "test 1",
+  "routing": {
+    "balancers": [
+      {
+        "fallbackTag": "direct",
+        "selector": ["Satellite"],
+        "strategy": {
+          "settings": { "baselines": ["1s"], "expected": 2, "maxRTT": "1s", "tolerance": 0.01 },
+          "type": "leastLoad"
+        },
+        "tag": "Super_Balancer"
+      }
+    ],
+    "domainMatcher": "hybrid",
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      { "outboundTag": "direct", "protocol": ["bittorrent"], "type": "field" },
+      {
+        "domain": [
+          "domain:yandex.ru",
+          "domain:yandex.com",
+          "domain:ya.ru",
+          "domain:vk.com",
+          "domain:vk.ru",
+          "domain:mail.ru",
+          "domain:list.ru",
+          "domain:bk.ru",
+          "domain:inbox.ru",
+          "domain:gosuslugi.ru",
+          "domain:nalog.ru",
+          "domain:gov.ru"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "0.0.0.0/8",
+          "10.0.0.0/8",
+          "100.64.0.0/10",
+          "127.0.0.0/8",
+          "169.254.0.0/16",
+          "172.16.0.0/12",
+          "192.168.0.0/16"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "balancerTag": "Super_Balancer",
+        "network": "tcp,udp",
+        "type": "field"
+      }
+    ]
+  }
+ },
  {
   "remarks": "test 2",
   "inbounds": [
