@@ -1029,14 +1029,6 @@
           "geoip:ru"
         ]
       },
-      {
-        "domain": [
-          "geosite:category-direct",
-          "geosite:category-ru"
-        ],
-        "address": "udp+local://77.88.8.8",
-        "timeoutMs": 1000
-      }
     ],
     "serveStale": true,
     "disableCache": false,
