@@ -1461,27 +1461,6 @@
         "outboundTag": "direct"
       },
       {
-        "type": "field",
-        "domain": [
-          "geosite:category-block"
-        ],
-        "outboundTag": "block"
-      },
-      {
-        "type": "field",
-        "domain": [
-          "geosite:category-proxy"
-        ],
-        "balancerTag": "Balance"
-      },
-      {
-        "type": "field",
-        "domain": [
-          "geosite:category-direct"
-        ],
-        "outboundTag": "direct"
-      },
-      {
         "ip": [
           "geoip:private"
         ],
