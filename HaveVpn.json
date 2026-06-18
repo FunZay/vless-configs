@@ -2,6 +2,75 @@
  {
   "burstObservatory": {
     "pingConfig": {
+      "connectivity": "https://www.gstatic.com/generate_204",
+      "destination": "https://www.gstatic.com/generate_204",
+      "interval": "30s",
+      "sampling": 2,
+      "timeout": "3s"
+    },
+    "subjectSelector": [
+      "proxy"
+    ]
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true
+      },
+      "tag": "socks"
+    }
+  ],
+  "log": {
+    "loglevel": "warning"
+  },
+  "outbounds": [
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "37.9.4.138",
+            "password": "keQeesM2AQWsvhQr0QWRfBG-snCNxDzG",
+            "port": 7443
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tcpSettings": {},
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "serverName": "speed.overload.ovh",
+          "show": false
+        }
+      },
+      "tag": "proxy"
+    },
+    {
+      "protocol": "freedom",
+      "tag": "direct"
+    }
+  ],
+  "remarks": "test 3",
+  "routing": {
+    "rules": [
+      {
+        "network": "tcp,udp",
+        "outboundTag": "proxy",
+        "type": "field"
+      }
+    ]
+  }
+},
+ {
+  "burstObservatory": {
+    "pingConfig": {
       "connectivity": "http://connectivitycheck.platform.hicloud.com/generate_204",
       "destination": "https://www.google.com/generate_204",
       "interval": "1m",
@@ -194,7 +263,7 @@
     { "protocol": "freedom", "tag": "direct" },
     { "protocol": "blackhole", "tag": "block" }
   ],
-  "remarks": "test 1",
+  "remarks": "🇳🇱 Белые списки №1 | @FunZ_VPN",
   "routing": {
     "balancers": [
       {
@@ -312,40 +381,6 @@
     ]
   }
  },
-  {
-  "remarks": "🇳🇱 Белые списки №1 | @FunZ_VPN",
-  "dns": {
-    "servers": ["https://8.8.8.8/dns-query", "https://8.8.4.4/dns-query"],
-    "queryStrategy": "UseIP"
-  },
-  "inbounds": [
-    {"listen": "127.0.0.1", "port": 10808, "protocol": "socks", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": false}, "tag": "socks"},
-    {"listen": "127.0.0.1", "port": 10809, "protocol": "http", "settings": {"userLevel": 8}, "tag": "http"}
-  ],
-  "log": {"loglevel": "info"},
-  "outbounds": [
-    {"tag": "proxy-nl-storage", "protocol": "vless", "settings": {"vnext": [{"address": "nl01-cherry.online", "port": 8443, "users": [{"id": "efe3901e-b309-43f3-843a-f4f871670cf3", "encryption": "none", "flow": "xtls-rprx-vision", "level": 8}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"fingerprint": "firefox", "publicKey": "LT_0j3zQkaqgtJHvyaG24xz0IfmXUswVCTeC75Qsgjo", "serverName": "storage.yandex.net", "shortId": "0905b6e16602f326"}}, "mux": {"enabled": false, "concurrency": -1}},
-    {"tag": "proxy-grinoree", "protocol": "vless", "settings": {"vnext": [{"address": "bypass.grinoree.ru", "port": 8443, "users": [{"id": "d91397a6-aa9c-4ce3-903e-81c50e14fdaf", "encryption": "none", "flow": "xtls-rprx-vision", "level": 8}]}]}, "streamSettings": {"network": "tcp", "security": "reality", "realitySettings": {"fingerprint": "firefox", "publicKey": "7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg", "serverName": "storage.yandex.net", "shortId": "8ba12e75110b7a9c"}, "sockopt": {"dialerProxy": "ru-upstream-0"}}, "mux": {"enabled": false, "concurrency": -1}},
-    {"tag": "proxy-xhttp", "protocol": "vless", "settings": {"vnext": [{"address": "188.72.103.3", "port": 443, "users": [{"id": "efe3901e-b309-43f3-843a-f4f871670cf3", "encryption": "none", "flow": "", "level": 8}]}]}, "streamSettings": {"network": "xhttp", "security": "tls", "tlsSettings": {"serverName": "cdn.tracker.yandex.net"}, "xhttpSettings": {"mode": "packet-up", "host": "static171.kdjdjssjwiqwr.ru", "path": "/livestreamcontent/", "extra": {"xPaddingBytes": "0-0", "uplinkHTTPMethod": "GET", "scMaxBufferedPosts": 30, "scMaxEachPostBytes": "1000000", "scStreamUpServerSecs": "20-80"}}}},
-    {"tag": "ru-upstream-0", "protocol": "socks", "settings": {"servers": [{"address": "94.154.190.230", "port": 63391, "users": [{"user": "uBHsJGaHr", "pass": "C2mp1ZF7F"}]}]}},
-    {"tag": "direct", "protocol": "freedom", "settings": {"domainStrategy": "UseIP"}},
-    {"tag": "block", "protocol": "blackhole", "settings": {"response": {"type": "http"}}}
-  ],
-  "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    "domainMatcher": "hybrid",
-    "rules": [
-      {"type": "field", "protocol": ["bittorrent"], "outboundTag": "direct"},
-      {"type": "field", "outboundTag": "direct", "domain": ["domain:ru", "domain:xn--p1ai", "geosite:category-ru", "domain:1cfresh.com", "domain:2gis.by", "domain:2gis.com", "domain:2gis.com.cy", "domain:alfa-bank.com", "domain:alfabank.com", "domain:alfafinance.biz", "domain:alfafx.com", "domain:alfaprivate.com", "domain:beta-bank.com", "domain:gazprombank.tech", "domain:investalfabank.com", "domain:moex.com", "domain:tbank-online.com", "domain:tochka.com", "domain:tochka-tech.com", "domain:vtb.com", "domain:vtb.digital", "domain:vtb.promo", "domain:vtb24.com", "domain:vtbrussia.com", "domain:avito.st", "domain:lenta.com", "domain:megamarket.tech", "domain:okko.tv", "domain:ozonusercontent.com", "domain:premier.one", "domain:wildberries.by", "domain:wbstatic.net", "domain:youla.io", "domain:userapi.com", "domain:vk.com", "domain:vk-portal.net", "domain:yads.tech", "domain:yandex", "domain:yandex-bank.net", "domain:yandex.aero", "domain:yandex.az", "domain:yandex.by", "domain:yandex.cloud", "domain:yandex.co.il", "domain:yandex.com", "domain:yandex.com.ge", "domain:yandex.eu", "domain:yandex.fr", "domain:yandex.jobs", "domain:yandex.kg", "domain:yandex.kz", "domain:yandex.net", "domain:yandex.org", "domain:yandexadexchange.net", "domain:yandexcloud.net", "domain:yandexcom.net", "domain:yandexmetrica.com", "domain:yandexwebcache.net", "domain:yandexwebcache.org", "domain:yastat.net", "domain:yastatic.net", "domain:gismeteo.com", "domain:lmru.tech", "domain:mradx.net", "domain:tildaapi.com", "domain:kontur.host"]},
-      {"type": "field", "network": "tcp", "balancerTag": "WL_Balancer"}
-    ],
-    "balancers": [{"tag": "WL_Balancer", "selector": ["proxy"], "strategy": {"type": "leastLoad", "settings": {"maxRTT": "1s", "expected": 1, "baselines": ["300ms", "500ms"], "tolerance": 0, "costs": [{"match": "proxy-xhttp", "value": 10}]}}, "fallbackTag": "proxy-xhttp"}]
-  },
-  "burstObservatory": {
-    "pingConfig": {"timeout": "3s", "interval": "5m", "sampling": 1, "destination": "http://www.gstatic.com/generate_204"},
-    "subjectSelector": ["proxy"]
-  }
-},
  {
   "dns": {
     "tag": "dns-in",
