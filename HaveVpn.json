@@ -1,17 +1,6 @@
 [
  {
-  "burstObservatory": {
-    "pingConfig": {
-      "connectivity": "https://www.gstatic.com/generate_204",
-      "destination": "https://www.gstatic.com/generate_204",
-      "interval": "30s",
-      "sampling": 2,
-      "timeout": "3s"
-    },
-    "subjectSelector": [
-      "proxy"
-    ]
-  },
+  "remarks": "test",
   "inbounds": [
     {
       "listen": "127.0.0.1",
@@ -21,53 +10,57 @@
         "auth": "noauth",
         "udp": true
       },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
+      },
       "tag": "socks"
-    }
-  ],
-  "log": {
-    "loglevel": "warning"
-  },
-  "outbounds": [
-    {
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "37.9.4.138",
-            "password": "keQeesM2AQWsvhQr0QWRfBG-snCNxDzG",
-            "port": 7443
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tcpSettings": {},
-        "tlsSettings": {
-          "allowInsecure": false,
-          "fingerprint": "chrome",
-          "serverName": "speed.overload.ovh",
-          "show": false
-        }
-      },
-      "tag": "proxy"
     },
     {
-      "protocol": "freedom",
-      "tag": "direct"
+      "listen": "127.0.0.1",
+      "port": 10809,
+      "protocol": "http",
+      "settings": {},
+      "tag": "http"
     }
   ],
-  "remarks": "test 3",
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "hysteria",
+      "settings": {
+        "address": "newlte.kihsuyhf8jkiugsxb.cfd",
+        "port": 443,
+        "version": 2
+      },
+      "streamSettings": {
+        "network": "hysteria",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "newlte.kihsuyhf8jkiugsxb.cfd",
+          "fingerprint": "random"
+        },
+        "hysteriaSettings": {
+          "auth": "0dd50f72-bf39-4b59-b183-61b3fa52df57",
+          "version": 2
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom"
+    }
+  ],
   "routing": {
+    "domainStrategy": "AsIs",
     "rules": [
       {
-        "network": "tcp,udp",
-        "outboundTag": "proxy",
-        "type": "field"
+        "outboundTag": "direct",
+        "ip": ["geoip:private"]
       }
     ]
   }
-},
+ },
  {
   "burstObservatory": {
     "pingConfig": {
@@ -320,7 +313,18 @@
   }
  },
  {
-  "remarks": "test 2",
+  "burstObservatory": {
+    "pingConfig": {
+      "connectivity": "https://www.gstatic.com/generate_204",
+      "destination": "https://www.gstatic.com/generate_204",
+      "interval": "30s",
+      "sampling": 2,
+      "timeout": "3s"
+    },
+    "subjectSelector": [
+      "proxy"
+    ]
+  },
   "inbounds": [
     {
       "listen": "127.0.0.1",
@@ -330,95 +334,75 @@
         "auth": "noauth",
         "udp": true
       },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
-      },
       "tag": "socks"
-    },
-    {
-      "listen": "127.0.0.1",
-      "port": 10809,
-      "protocol": "http",
-      "settings": {},
-      "tag": "http"
     }
   ],
+  "log": {
+    "loglevel": "warning"
+  },
   "outbounds": [
     {
-      "tag": "proxy",
-      "protocol": "hysteria",
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
       "settings": {
-        "address": "newlte.kihsuyhf8jkiugsxb.cfd",
-        "port": 443,
-        "version": 2
+        "vnext": [
+          {
+            "address": "81.163.22.19",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "1ca60829-476f-Fade-b1b4-a42660c00159",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
       },
       "streamSettings": {
-        "network": "hysteria",
+        "grpcSettings": {
+          "authority": "",
+          "health_check_timeout": 20,
+          "idle_timeout": 60,
+          "multiMode": false,
+          "serviceName": ""
+        },
+        "network": "grpc",
         "security": "tls",
         "tlsSettings": {
-          "serverName": "newlte.kihsuyhf8jkiugsxb.cfd",
-          "fingerprint": "random"
-        },
-        "hysteriaSettings": {
-          "auth": "0dd50f72-bf39-4b59-b183-61b3fa52df57",
-          "version": 2
+          "allowInsecure": false,
+          "alpn": [
+            "h2"
+          ],
+          "fingerprint": "qq",
+          "serverName": "emssq-ru-wl46sel.my-fade.cloud",
+          "show": false
         }
-      }
+      },
+      "tag": "proxy"
     },
     {
-      "tag": "direct",
-      "protocol": "freedom"
+      "protocol": "freedom",
+      "tag": "direct"
     }
   ],
+  "remarks": "🇩🇪 Белые списки №2 | @FunZ_VPN",
   "routing": {
-    "domainStrategy": "AsIs",
     "rules": [
       {
-        "outboundTag": "direct",
-        "ip": ["geoip:private"]
+        "network": "tcp,udp",
+        "outboundTag": "proxy",
+        "type": "field"
       }
     ]
   }
  },
  {
-  "dns": {
-    "tag": "dns-in",
-    "servers": [
-      {"address": "https://1.1.1.1/dns-query", "timeoutMs": 1000, "unexpectedIPs": ["geoip:ru"]},
-      {"address": "udp+local://77.88.8.8", "timeoutMs": 1000}
-    ],
-    "serveStale": true,
-    "queryStrategy": "UseIPv4"
-  },
-  "policy": {"levels": {"0": {"connIdle": 30, "handshake": 8, "bufferSize": 8, "uplinkOnly": 2, "downlinkOnly": 2}}},
-  "remarks": "🇩🇪 Белые списки №2 | @FunZ_VPN",
-  "routing": {
-    "rules": [
-      {"port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900", "outboundTag": "direct"},
-      {"ip": ["geoip:private"], "outboundTag": "direct"},
-      {"network": "tcp,udp", "balancerTag": "Balance"}
-    ],
-    "balancers": [{"tag": "Balance", "selector": ["mobile-cf"], "strategy": {"type": "leastLoad", "settings": {"expected": 1}}, "fallbackTag": "mobile-cf"}],
-    "domainStrategy": "IPIfNonMatch"
-  },
-  "inbounds": [
-    {"tag": "socks", "port": 10808, "listen": "127.0.0.1", "protocol": "socks", "settings": {"udp": true}, "sniffing": {"enabled": true, "destOverride": ["http", "tls", "quic"]}},
-    {"tag": "http", "port": 10809, "listen": "127.0.0.1", "protocol": "http", "sniffing": {"enabled": true, "destOverride": ["http", "tls", "quic"]}}
-  ],
-  "outbounds": [
-    {"tag": "mobile-cf", "protocol": "vless", "settings": {"vnext": [{"address": "s1.whitelists-cloudflare.ips-list.vhub.pro", "port": 443, "users": [{"id": "5bf12aea-0a92-41fb-ab2d-0e034b9f57a2", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "ws", "wsSettings": {"path": "/sequre/ws?ed=2560", "headers": {"Host": "cloudflare.vhub.pro", "user-agent": "Mozilla/5.0"}, "heartbeatPeriod": 10}, "security": "tls", "tlsSettings": {"serverName": "cloudflare.vhub.pro", "fingerprint": "edge", "alpn": ["http/1.1"]}, "sockopt": {"tcpFastOpen": true, "tcpcongestion": "bbr"}}, "mux": {"enabled": true, "concurrency": 8, "xudpConcurrency": 16, "xudpProxyUDP443": "skip"}},
-    {"tag": "mobile-cf-2", "protocol": "vless", "settings": {"vnext": [{"address": "s2.whitelists-cloudflare.ips-list.vhub.pro", "port": 443, "users": [{"id": "5bf12aea-0a92-41fb-ab2d-0e034b9f57a2", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "ws", "wsSettings": {"path": "/sequre/ws?ed=2560", "headers": {"Host": "cloudflare.vhub.pro"}, "heartbeatPeriod": 10}, "security": "tls", "tlsSettings": {"serverName": "cloudflare.vhub.pro", "fingerprint": "edge", "alpn": ["http/1.1"]}, "sockopt": {"tcpFastOpen": true, "tcpcongestion": "bbr"}}, "mux": {"enabled": true, "concurrency": 8, "xudpConcurrency": 16, "xudpProxyUDP443": "skip"}},
-    {"tag": "mobile-cf-3", "protocol": "vless", "settings": {"vnext": [{"address": "s3.whitelists-cloudflare.ips-list.vhub.pro", "port": 443, "users": [{"id": "5bf12aea-0a92-41fb-ab2d-0e034b9f57a2", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "ws", "wsSettings": {"path": "/sequre/ws?ed=2560", "headers": {"Host": "cloudflare.vhub.pro"}, "heartbeatPeriod": 10}, "security": "tls", "tlsSettings": {"serverName": "cloudflare.vhub.pro", "fingerprint": "ios", "alpn": ["http/1.1"]}, "sockopt": {"tcpFastOpen": true, "tcpcongestion": "bbr"}}, "mux": {"enabled": true, "concurrency": 8, "xudpConcurrency": 16, "xudpProxyUDP443": "skip"}},
-    {"tag": "mobile-cf-4", "protocol": "vless", "settings": {"vnext": [{"address": "s4.whitelists-cloudflare.ips-list.vhub.pro", "port": 443, "users": [{"id": "5bf12aea-0a92-41fb-ab2d-0e034b9f57a2", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "ws", "wsSettings": {"path": "/sequre/ws?ed=2560", "headers": {"Host": "cloudflare.vhub.pro"}, "heartbeatPeriod": 10}, "security": "tls", "tlsSettings": {"serverName": "cloudflare.vhub.pro", "fingerprint": "safari", "alpn": ["http/1.1"]}, "sockopt": {"tcpFastOpen": true, "tcpcongestion": "bbr"}}, "mux": {"enabled": true, "concurrency": 8, "xudpConcurrency": 16, "xudpProxyUDP443": "skip"}},
-    {"tag": "mobile-cf-5", "protocol": "vless", "settings": {"vnext": [{"address": "s5.whitelists-cloudflare.ips-list.vhub.pro", "port": 443, "users": [{"id": "5bf12aea-0a92-41fb-ab2d-0e034b9f57a2", "encryption": "none", "flow": ""}]}]}, "streamSettings": {"network": "ws", "wsSettings": {"path": "/sequre/ws?ed=2560", "headers": {"Host": "cloudflare.vhub.pro"}, "heartbeatPeriod": 10}, "security": "tls", "tlsSettings": {"serverName": "cloudflare.vhub.pro", "fingerprint": "ios", "alpn": ["http/1.1"]}, "sockopt": {"tcpFastOpen": true, "tcpcongestion": "bbr"}}, "mux": {"enabled": true, "concurrency": 8, "xudpConcurrency": 16, "xudpProxyUDP443": "skip"}},
-    {"tag": "block", "protocol": "blackhole"},
-    {"tag": "direct", "protocol": "freedom"},
-    {"tag": "direct-fragment", "protocol": "freedom", "settings": {"fragment": {"length": "10-20", "packets": "tlshello", "interval": "5-10"}}}
-  ],
-  "observatory": {"probeUrl": "http://cp.cloudflare.com/generate_204", "probeInterval": "30m", "subjectSelector": ["mobile-cf"], "enableConcurrency": true}
- },
-  {
   "remarks": "🇷🇺 Белые списки №3 | @FunZ_VPN",
   "dns": {
     "tag": "dns-in",
@@ -491,7 +475,7 @@
   }
 },
   {
-    "remarks": "🇪🇺 Белые списки №5 | @FunZ_VPN",
+    "remarks": "🇪🇺 Белые списки №5| @FunZ_VPN",
     "dns": {
       "tag": "dns-in",
       "servers": [
