@@ -5,7 +5,7 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=1798761600
 #support-url: https://t.me/astrovpnlink
 #profile-web-page-url: https://t.me/astrovpnru_bot
-#announce: ↖ перейти в бота. Это бесплатная версия. Работоспособность и безопасность не гарантирована. Для купить/проверить качественный обход можно в боте
+#announce: ↖ перейти в бота. Это бесплатная версия. Работоспособность и безопасность не гарантирована. Купить/проверить качественный обход можно в боте
 
 vless://33de2596-d95d-412b-a8c2-410be7060ca3@109.196.102.203:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&security=reality&sni=fi.sellflow.org&type=tcp# %F0%9F%87%A9%F0%9F%87%AA%20DE%201%20%40AstroVpnLink
 vless://b0f08ae1-7cf9-4612-ad61-72681e0b92da@sw-1.coinbridge.nl:443?mode=gun&security=reality&encryption=none&pbk=kPBXTe2KCp55GrHS_qU_sF7ohUcT8Vu-e8i6Yd9MERI&fp=chrome&type=grpc&serviceName=data-sync&sni=google.com&sid=d5c7f84e37e0c12d# %F0%9F%87%A9%F0%9F%87%AA%20DE%2010%20%40AstroVpnLink
