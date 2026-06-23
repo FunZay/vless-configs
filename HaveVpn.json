@@ -1,6 +1,6 @@
 [
  {
-  "remarks": "test",
+  "remarks": "🇪🇺 Белые списки №1 | @AstroVpnLink",
   "inbounds": [
     {
       "listen": "127.0.0.1",
@@ -256,7 +256,7 @@
     { "protocol": "freedom", "tag": "direct" },
     { "protocol": "blackhole", "tag": "block" }
   ],
-  "remarks": "🇳🇱 Белые списки №1 | @FunZ_VPN",
+  "remarks": "🇳🇱 Белые списки №2 | @AstroVpnLink",
   "routing": {
     "balancers": [
       {
@@ -391,7 +391,7 @@
       "tag": "direct"
     }
   ],
-  "remarks": "🇩🇪 Белые списки №2 | @FunZ_VPN",
+  "remarks": "🇩🇪 Белые списки №3 | @AstroVpnLink",
   "routing": {
     "rules": [
       {
@@ -402,10 +402,10 @@
     ]
   }
  },
-{"inbounds":[{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks"}],"log":{"loglevel":"warning"},"outbounds":[{"protocol":"hysteria","settings":{"address":"newlte.kihsuyhf8jkiugsxb.cfd","port":8443,"version":2},"streamSettings":{"finalmask":{"quicParams":{"brutalDown":"300 mbps","brutalUp":"300 mbps","congestion":"brutal","debug":false}},"hysteriaSettings":{"auth":"0dd50f72-bf39-4b59-b183-61b3fa52df57","version":2},"network":"hysteria","security":"tls","tlsSettings":{"alpn":["h3"],"fingerprint":"random","serverName":"newlte.kihsuyhf8jkiugsxb.cfd"}},"tag":"proxy"},{"protocol":"freedom","tag":"direct"}],"remarks":"🇷🇺 Белые списки №3 | @FunZ_VPN","routing":{"rules":[{"network":"tcp,udp","outboundTag":"proxy","type":"field"}]}},
-{"inbounds":[{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks"}],"log":{"loglevel":"warning"},"outbounds":[{"protocol":"hysteria","settings":{"address":"newlte.kihsuyhf8jkiugsxb.cfd","port":9443,"version":2},"streamSettings":{"finalmask":{"quicParams":{"brutalDown":"300 mbps","brutalUp":"300 mbps","congestion":"brutal","debug":false}},"hysteriaSettings":{"auth":"0dd50f72-bf39-4b59-b183-61b3fa52df57","version":2},"network":"hysteria","security":"tls","tlsSettings":{"alpn":["h3"],"fingerprint":"random","serverName":"newlte.kihsuyhf8jkiugsxb.cfd"}},"tag":"proxy"},{"protocol":"freedom","tag":"direct"}],"remarks":"🇷🇺 Белые списки №4 | @FunZ_VPN","routing":{"rules":[{"network":"tcp,udp","outboundTag":"proxy","type":"field"}]}},
-{"inbounds":[{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks"}],"log":{"loglevel":"warning"},"outbounds":[{"protocol":"hysteria","settings":{"address":"newlte.kihsuyhf8jkiugsxb.cfd","port":7443,"version":2},"streamSettings":{"finalmask":{"quicParams":{"brutalDown":"300 mbps","brutalUp":"300 mbps","congestion":"brutal","debug":false}},"hysteriaSettings":{"auth":"0dd50f72-bf39-4b59-b183-61b3fa52df57","version":2},"network":"hysteria","security":"tls","tlsSettings":{"alpn":["h3"],"fingerprint":"random","serverName":"newlte.kihsuyhf8jkiugsxb.cfd"}},"tag":"proxy"},{"protocol":"freedom","tag":"direct"}],"remarks":"🇷🇺 Белые списки №5 | @FunZ_VPN","routing":{"rules":[{"network":"tcp,udp","outboundTag":"proxy","type":"field"}]}},
-{"inbounds":[{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks"}],"log":{"loglevel":"warning"},"outbounds":[{"protocol":"hysteria","settings":{"address":"newlte.kihsuyhf8jkiugsxb.cfd","port":6443,"version":2},"streamSettings":{"finalmask":{"quicParams":{"brutalDown":"300 mbps","brutalUp":"300 mbps","congestion":"brutal","debug":false}},"hysteriaSettings":{"auth":"0dd50f72-bf39-4b59-b183-61b3fa52df57","version":2},"network":"hysteria","security":"tls","tlsSettings":{"alpn":["h3"],"fingerprint":"random","serverName":"newlte.kihsuyhf8jkiugsxb.cfd"}},"tag":"proxy"},{"protocol":"freedom","tag":"direct"}],"remarks":"🇷🇺 Белые списки №6 | @FunZ_VPN","routing":{"rules":[{"network":"tcp,udp","outboundTag":"proxy","type":"field"}]}},
+{"inbounds":[{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks"}],"log":{"loglevel":"warning"},"outbounds":[{"protocol":"hysteria","settings":{"address":"newlte.kihsuyhf8jkiugsxb.cfd","port":8443,"version":2},"streamSettings":{"finalmask":{"quicParams":{"brutalDown":"300 mbps","brutalUp":"300 mbps","congestion":"brutal","debug":false}},"hysteriaSettings":{"auth":"0dd50f72-bf39-4b59-b183-61b3fa52df57","version":2},"network":"hysteria","security":"tls","tlsSettings":{"alpn":["h3"],"fingerprint":"random","serverName":"newlte.kihsuyhf8jkiugsxb.cfd"}},"tag":"proxy"},{"protocol":"freedom","tag":"direct"}],"remarks":"🇷🇺 Белые списки №4 | @AstroVpnLink","routing":{"rules":[{"network":"tcp,udp","outboundTag":"proxy","type":"field"}]}},
+{"inbounds":[{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks"}],"log":{"loglevel":"warning"},"outbounds":[{"protocol":"hysteria","settings":{"address":"newlte.kihsuyhf8jkiugsxb.cfd","port":9443,"version":2},"streamSettings":{"finalmask":{"quicParams":{"brutalDown":"300 mbps","brutalUp":"300 mbps","congestion":"brutal","debug":false}},"hysteriaSettings":{"auth":"0dd50f72-bf39-4b59-b183-61b3fa52df57","version":2},"network":"hysteria","security":"tls","tlsSettings":{"alpn":["h3"],"fingerprint":"random","serverName":"newlte.kihsuyhf8jkiugsxb.cfd"}},"tag":"proxy"},{"protocol":"freedom","tag":"direct"}],"remarks":"🇷🇺 Белые списки №5 | @AstroVpnLink","routing":{"rules":[{"network":"tcp,udp","outboundTag":"proxy","type":"field"}]}},
+{"inbounds":[{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks"}],"log":{"loglevel":"warning"},"outbounds":[{"protocol":"hysteria","settings":{"address":"newlte.kihsuyhf8jkiugsxb.cfd","port":7443,"version":2},"streamSettings":{"finalmask":{"quicParams":{"brutalDown":"300 mbps","brutalUp":"300 mbps","congestion":"brutal","debug":false}},"hysteriaSettings":{"auth":"0dd50f72-bf39-4b59-b183-61b3fa52df57","version":2},"network":"hysteria","security":"tls","tlsSettings":{"alpn":["h3"],"fingerprint":"random","serverName":"newlte.kihsuyhf8jkiugsxb.cfd"}},"tag":"proxy"},{"protocol":"freedom","tag":"direct"}],"remarks":"🇷🇺 Белые списки №6 | @AstroVpnLink","routing":{"rules":[{"network":"tcp,udp","outboundTag":"proxy","type":"field"}]}},
+{"inbounds":[{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true},"tag":"socks"}],"log":{"loglevel":"warning"},"outbounds":[{"protocol":"hysteria","settings":{"address":"newlte.kihsuyhf8jkiugsxb.cfd","port":6443,"version":2},"streamSettings":{"finalmask":{"quicParams":{"brutalDown":"300 mbps","brutalUp":"300 mbps","congestion":"brutal","debug":false}},"hysteriaSettings":{"auth":"0dd50f72-bf39-4b59-b183-61b3fa52df57","version":2},"network":"hysteria","security":"tls","tlsSettings":{"alpn":["h3"],"fingerprint":"random","serverName":"newlte.kihsuyhf8jkiugsxb.cfd"}},"tag":"proxy"},{"protocol":"freedom","tag":"direct"}],"remarks":"🇷🇺 Белые списки №7 | @AstroVpnLink","routing":{"rules":[{"network":"tcp,udp","outboundTag":"proxy","type":"field"}]}},
   {
     "remarks": "🇪🇺 Чёрные списки №1 | @FunZ_VPN",
     "dns": {
@@ -477,7 +477,7 @@
     }
   },
   {
-    "remarks": "🇪🇺 Чёрные списки №2 | @FunZ_VPN",
+    "remarks": "🇪🇺 Чёрные списки №2 | @AstroVpnLink",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -560,7 +560,7 @@
     }
   },
   {
-    "remarks": "🇪🇺 Чёрные списки №3| @FunZ_VPN",
+    "remarks": "🇪🇺 Чёрные списки №3| @AstroVpnLink",
     "dns": {
       "tag": "dns-in",
       "servers": [
@@ -643,7 +643,7 @@
     }
   },
   {
-    "remarks": "🇪🇺 Чёрные списки №4 | @FunZ_VPN",
+    "remarks": "🇪🇺 Чёрные списки №4 | @AstroVpnLink",
     "dns": {
       "tag": "dns-in",
       "servers": [
