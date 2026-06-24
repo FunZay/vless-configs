@@ -62,111 +62,30 @@
   }
  },
 {
-  "api": {
-    "listen": "127.0.0.1:10085",
-    "services": [
-      "StatsService"
-    ],
-    "tag": "api"
-  },
+  "remarks": "🇳🇱 Белые списки №2 | @AstroVpnLink",
   "dns": {
-    "hosts": {
-      "dns.google": "8.8.8.8",
-      "common.dot.dns.yandex.net": "77.88.8.8",
-      "domain:googleapis.cn": "googleapis.com",
-      "cloudflare-dns.com": "1.1.1.1",
-      "lkfl2.nalog.ru": "213.24.64.175",
-      "lknpd.nalog.ru": "213.24.64.181"
-    },
-    "queryStrategy": "UseIP",
     "servers": [
-      "https://dns.google/dns-query",
+      "https://1.1.1.1/dns-query",
       {
-        "address": "https://dns.google/dns-query",
-        "domains": [
-          "geosite:youtube",
-          "geosite:telegram",
-          "geosite:github",
-          "geosite:google-play",
-          "geosite:twitch-ads"
-        ]
-      },
-      {
-        "address": "https://common.dot.dns.yandex.net/dns-query",
-        "domains": [
-          "geosite:whitelist",
-          "geosite:category-ru",
-          "geosite:apple",
-          "geosite:microsoft",
-          "geosite:steam",
-          "geosite:private",
-          "geosite:epicgames",
-          "geosite:riot",
-          "geosite:pinterest",
-          "geosite:escapefromtarkov",
-          "geosite:faceit",
-          "geosite:twitch",
-          "domain:tanki.su",
-          "domain:korabli.su",
-          "domain:blitz.su",
-          "domain:lesta.games",
-          "domain:sirus.su",
-          "domain:gaijin.net",
-          "domain:gaijinent.com",
-          "domain:warthunder.com",
-          "domain:enlisted.net",
-          "domain:crossout.net",
-          "domain:star-conflict.com",
-          "domain:crsed.net",
-          "domain:age-of-water.com",
-          "domain:gjcdn.net",
-          "domain:my.games",
-          "domain:my.com",
-          "domain:astrum.net",
-          "domain:stalcraft.net",
-          "domain:hawked.com",
-          "domain:allods.net",
-          "domain:skyforge.com",
-          "domain:warface.com",
-          "domain:4game.com",
-          "domain:4gameforum.com",
-          "domain:vkplay.live"
-        ]
+        "address": "udp+local://77.88.8.8",
+        "domains": ["geosite:category-ru"]
       }
-    ]
+    ],
+    "queryStrategy": "UseIPv4"
   },
   "inbounds": [
     {
-      "listen": "127.0.0.1",
+      "tag": "socks",
       "port": 10808,
+      "listen": "127.0.0.1",
       "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "userLevel": 8
-      },
-      "sniffing": {
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "enabled": true
-      },
-      "tag": "socks"
+      "settings": {"udp": true, "auth": "noauth"},
+      "sniffing": {"enabled": true, "destOverride": ["http", "tls"]}
     }
   ],
-  "log": {
-    "access": "/data/user/0/com.happproxy/files/logs/access/access_log.txt",
-    "dnsLog": true,
-    "error": "/data/user/0/com.happproxy/files/logs/error/1782321136019_error_log.txt",
-    "loglevel": "warning"
-  },
   "outbounds": [
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true
-      },
+      "tag": "proxy",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -175,10 +94,9 @@
             "port": 3443,
             "users": [
               {
-                "encryption": "none",
-                "flow": "xtls-rprx-vision",
                 "id": "d4ece91e-d443-4189-a0ae-8a0a4fbe81e9",
-                "level": 8
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
@@ -186,15 +104,14 @@
       },
       "streamSettings": {
         "network": "tcp",
+        "security": "reality",
         "realitySettings": {
+          "serverName": "voicechat.core-multiplayer.com",
           "fingerprint": "firefox",
           "publicKey": "BuLef93Fau0_y1NOcQvChIqPQ2HQ23wMEMGNkgx9JRs",
-          "serverName": "voicechat.core-multiplayer.com",
           "shortId": "4fd3840415403f31"
-        },
-        "security": "reality"
-      },
-      "tag": "proxy"
+        }
+      }
     },
     {
       "protocol": "freedom",
@@ -205,120 +122,22 @@
       "tag": "block"
     }
   ],
-  "policy": {
-    "levels": {
-      "8": {
-        "connIdle": 300,
-        "downlinkOnly": 1,
-        "handshake": 4,
-        "uplinkOnly": 1
-      }
-    },
-    "system": {
-      "statsOutboundUplink": true,
-      "statsOutboundDownlink": true
-    }
-  },
-  "remarks": "🇳🇱 Белые списки №2 | @AstroVpnLink",
   "routing": {
-    "domainStrategy": "IPIfNonMatch",
     "rules": [
       {
-        "ip": [
-          "8.8.8.8"
-        ],
-        "outboundTag": "proxy",
-        "port": "443"
+        "type": "field",
+        "ip": ["geoip:private"],
+        "outboundTag": "direct"
       },
       {
-        "ip": [
-          "77.88.8.8"
-        ],
-        "outboundTag": "direct",
-        "port": "443"
-      },
-      {
-        "domain": [
-          "geosite:win-spy"
-        ],
-        "outboundTag": "block"
-      },
-      {
-        "domain": [
-          "geosite:youtube",
-          "geosite:telegram",
-          "geosite:github",
-          "geosite:google-play",
-          "geosite:twitch-ads"
-        ],
+        "type": "field",
+        "network": "tcp,udp",
         "outboundTag": "proxy"
-      },
-      {
-        "domain": [
-          "geosite:whitelist",
-          "geosite:category-ru",
-          "geosite:apple",
-          "geosite:microsoft",
-          "geosite:steam",
-          "geosite:private",
-          "geosite:epicgames",
-          "geosite:riot",
-          "geosite:pinterest",
-          "geosite:escapefromtarkov",
-          "geosite:faceit",
-          "geosite:twitch",
-          "domain:tanki.su",
-          "domain:korabli.su",
-          "domain:blitz.su",
-          "domain:lesta.games",
-          "domain:sirus.su",
-          "domain:gaijin.net",
-          "domain:gaijinent.com",
-          "domain:warthunder.com",
-          "domain:enlisted.net",
-          "domain:crossout.net",
-          "domain:star-conflict.com",
-          "domain:crsed.net",
-          "domain:age-of-water.com",
-          "domain:gjcdn.net",
-          "domain:my.games",
-          "domain:my.com",
-          "domain:astrum.net",
-          "domain:stalcraft.net",
-          "domain:hawked.com",
-          "domain:allods.net",
-          "domain:skyforge.com",
-          "domain:warface.com",
-          "domain:4game.com",
-          "domain:4gameforum.com",
-          "domain:vkplay.live"
-        ],
-        "outboundTag": "direct"
-      },
-      {
-        "ip": [
-          "geoip:direct",
-          "geoip:whitelist",
-          "geoip:private"
-        ],
-        "outboundTag": "direct"
-      },
-      {
-        "ip": [
-          "10.0.0.0/8",
-          "172.16.0.0/12",
-          "192.168.0.0/16",
-          "169.254.0.0/16",
-          "224.0.0.0/4",
-          "255.255.255.255"
-        ],
-        "outboundTag": "direct"
       }
     ]
-  },
-  "stats": {}
+  }
 },
- {
+{
   "burstObservatory": {
     "pingConfig": {
       "connectivity": "https://www.gstatic.com/generate_204",
