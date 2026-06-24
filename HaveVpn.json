@@ -1,6 +1,6 @@
 [
  {
-  "remarks": "🇪🇺 Белые списки №1 | @AstroVpnLink",
+  "remarks": "🇳🇱 №1 | @AstroVpnLink",
   "inbounds": [
     {
       "listen": "127.0.0.1",
@@ -62,7 +62,7 @@
   }
  },
 {
-  "remarks": "🇩🇪 Белые списки №2 | @AstroVpnLink",
+  "remarks": "🇩🇪 №2 | @AstroVpnLink",
   "dns": {
     "servers": [
       "https://1.1.1.1/dns-query",
