@@ -61,192 +61,9 @@
     ]
   }
  },
- {
-  "burstObservatory": {
-    "pingConfig": {
-      "connectivity": "http://connectivitycheck.platform.hicloud.com/generate_204",
-      "destination": "https://www.google.com/generate_204",
-      "interval": "1m",
-      "sampling": 3,
-      "timeout": "5s"
-    },
-    "subjectSelector": ["Satellite"]
-  },
-  "dns": {
-    "disableCache": false,
-    "disableFallback": false,
-    "disableFallbackIfMatch": true,
-    "hosts": {
-      "1.1.1.1": "1.1.1.1",
-      "77.88.8.8": "77.88.8.8",
-      "8.8.8.8": "8.8.8.8",
-      "cloudflare-dns.com": "1.1.1.1",
-      "dns.google": "8.8.8.8"
-    },
-    "queryStrategy": "UseIPv4",
-    "servers": [
-      { "address": "77.88.8.8", "tag": "dou-yandex-main" },
-      { "address": "77.88.8.1", "tag": "dou-yandex-secondary" },
-      { "address": "https://77.88.8.8/dns-query", "tag": "doh-main" },
-      { "address": "https://1.1.1.1/dns-query", "tag": "doh-fallback" }
-    ]
-  },
-  "inbounds": [
-    {
-      "listen": "0.0.0.0",
-      "port": 10808,
-      "protocol": "socks",
-      "settings": { "auth": "noauth", "udp": true },
-      "sniffing": { "destOverride": ["http", "tls", "quic"], "enabled": true, "routeOnly": true },
-      "tag": "socks"
-    },
-    {
-      "listen": "0.0.0.0",
-      "port": 10809,
-      "protocol": "http",
-      "settings": {},
-      "sniffing": { "destOverride": ["http", "tls", "quic"], "enabled": true, "routeOnly": true },
-      "tag": "http"
-    }
-  ],
-  "log": { "dnsLog": false, "loglevel": "warning" },
-  "outbounds": [
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "sputnik.tnohub.top",
-            "port": 443,
-            "users": [{ "encryption": "none", "flow": "", "id": "f9ab7cbe-2826-480a-9d10-3ad38ca14be4" }]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "xhttp",
-        "security": "reality",
-        "realitySettings": {
-          "fingerprint": "random",
-          "publicKey": "7VkrylPaWB3cx8b-AN1BXWhsQ3B6SuB2sQx9zzrwnlc",
-          "serverName": "media.mediavitrina.ru",
-          "shortId": "a55215a9509841"
-        },
-        "xhttpSettings": {
-          "extra": {
-            "xPaddingBytes": "100-1000",
-            "xmux": {
-              "cMaxReuseTimes": "64-128",
-              "hKeepAlivePeriod": 30,
-              "hMaxRequestTimes": "16-32",
-              "hMaxReusableSecs": "30-60",
-              "maxConcurrency": "8-16"
-            }
-          },
-          "host": "",
-          "mode": "auto",
-          "path": "/check-update"
-        }
-      },
-      "tag": "Satellite"
-    },
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "sputnik.tnohub.top",
-            "port": 443,
-            "users": [{ "encryption": "none", "flow": "", "id": "f9ab7cbe-2826-480a-9d10-3ad38ca14be4" }]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "xhttp",
-        "security": "reality",
-        "realitySettings": {
-          "fingerprint": "random",
-          "publicKey": "7VkrylPaWB3cx8b-AN1BXWhsQ3B6SuB2sQx9zzrwnlc",
-          "serverName": "player.mediavitrina.ru",
-          "shortId": "a55215a9509841"
-        },
-        "xhttpSettings": {
-          "extra": {
-            "xPaddingBytes": "100-1000",
-            "xmux": {
-              "cMaxReuseTimes": "64-128",
-              "hKeepAlivePeriod": 30,
-              "hMaxRequestTimes": "16-32",
-              "hMaxReusableSecs": "30-60",
-              "maxConcurrency": "8-16"
-            }
-          },
-          "host": "",
-          "mode": "auto",
-          "path": "/check-update"
-        }
-      },
-      "tag": "Satellite-2"
-    },
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "sputnik.tnohub.top",
-            "port": 443,
-            "users": [{ "encryption": "none", "flow": "", "id": "f9ab7cbe-2826-480a-9d10-3ad38ca14be4" }]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "xhttp",
-        "security": "reality",
-        "realitySettings": {
-          "fingerprint": "random",
-          "publicKey": "7VkrylPaWB3cx8b-AN1BXWhsQ3B6SuB2sQx9zzrwnlc",
-          "serverName": "iv.kommersant.ru",
-          "shortId": "a55215a9509841"
-        },
-        "xhttpSettings": {
-          "extra": {
-            "xPaddingBytes": "100-1000",
-            "xmux": {
-              "cMaxReuseTimes": "64-128",
-              "hKeepAlivePeriod": 30,
-              "hMaxRequestTimes": "16-32",
-              "hMaxReusableSecs": "30-60",
-              "maxConcurrency": "8-16"
-            }
-          },
-          "host": "",
-          "mode": "auto",
-          "path": "/check-update"
-        }
-      },
-      "tag": "Satellite-3"
-    },
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "dh.tnohub.top",
-            "port": 8443,
-            "users": [{ "encryption": "none", "flow": "", "id": "f9ab7cbe-2826-480a-9d10-3ad38ca14be4" }]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "xhttp",
-        "security": "reality",
-        "realitySettings": {
-          "fingerprint": "firefox",
-          "publicKey": "7VkrylPaWB3cx8b-AN1BXWhsQ3B6SuB2sQx9zzrwnlc",
-          "serverName": "iv.kommersant.ru",
-          "shortId": "a55215a9509841"
 {
   "api": {
-    "listen": "[::1]:10085",
+    "listen": "127.0.0.1:10085",
     "services": [
       "StatsService"
     ],
@@ -329,8 +146,11 @@
         "userLevel": 8
       },
       "sniffing": {
-        "destOverride": [],
-        "enabled": false
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true
       },
       "tag": "socks"
     }
@@ -338,16 +158,14 @@
   "log": {
     "access": "/data/user/0/com.happproxy/files/logs/access/access_log.txt",
     "dnsLog": true,
-    "error": "/data/user/0/com.happproxy/files/logs/error/1782320703601_error_log.txt",
-    "loglevel": "debug"
+    "error": "/data/user/0/com.happproxy/files/logs/error/1782321136019_error_log.txt",
+    "loglevel": "warning"
   },
   "outbounds": [
     {
       "mux": {
-        "concurrency": -1,
-        "enabled": false,
-        "xudpConcurrency": 8,
-        "xudpProxyUDP443": ""
+        "concurrency": 8,
+        "enabled": true
       },
       "protocol": "vless",
       "settings": {
@@ -360,8 +178,7 @@
                 "encryption": "none",
                 "flow": "xtls-rprx-vision",
                 "id": "d4ece91e-d443-4189-a0ae-8a0a4fbe81e9",
-                "level": 8,
-                "security": "auto"
+                "level": 8
               }
             ]
           }
@@ -370,19 +187,12 @@
       "streamSettings": {
         "network": "tcp",
         "realitySettings": {
-          "allowInsecure": false,
           "fingerprint": "firefox",
           "publicKey": "BuLef93Fau0_y1NOcQvChIqPQ2HQ23wMEMGNkgx9JRs",
           "serverName": "voicechat.core-multiplayer.com",
-          "shortId": "4fd3840415403f31",
-          "show": false
+          "shortId": "4fd3840415403f31"
         },
-        "security": "reality",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
+        "security": "reality"
       },
       "tag": "proxy"
     },
@@ -507,7 +317,7 @@
     ]
   },
   "stats": {}
-        },
+},
  {
   "burstObservatory": {
     "pingConfig": {
