@@ -1,4 +1,4 @@
-#profile-title:FREE TG:@AstroVpnLink
+#profile-title:AstroVpn Free
 #profile-update-interval: 1
 #subscription-auto-update-enable: 1
 #subscription-auto-update-open-enable: 1
