@@ -7,6 +7,7 @@
 #profile-web-page-url: https://t.me/XelaraVpnBot
 #announce: ↖ перейти в бота. Это бесплатная версия. Работоспособность не гарантирована. Купить/проверить качественный обход можно в боте
 
-vless://dba50bb9-2456-4128-8632-f7ba1e6a7ab5@78.41.111.87:443?encryption=none&type=ws&security=tls&path=/api/user&host=s10211.cdn.ngenix.net&fp=qq&sni=s10211.cdn.ngenix.net#🇩🇪 №1 Free XelaraVpn
-vless://3483aa7a-8a7d-4561-8f77-4fbf7a0b1033@5.188.115.226:9443?encryption=none&security=reality&sni=id.pervye.ru&fp=chrome&echfq=none&pbk=QZz4tjRkxYsgTZBlRALOQU4O5YnAGtSGkXF8OSX11m8&allowinsecure=0&type=grpc&mode=gun&authority=&serviceName=ns#🇱🇻 №2 Free XelaraVpn
-vless://1aeba778-61b6-423c-a2e4-651c52030671@46.8.209.56:443?encryption=none&security=reality&sni=ads.x5.ru&fp=firefox&echfq=none&pbk=Jbu62FTsQXfCBLELy25KhLU3YQ7RMVaAvIcvcgFqliw&sid=9329f8b5985b2a7d&allowinsecure=0&type=grpc&mode=gun&authority=&serviceName=UpdateService#🇩🇪 №3 Free XelaraVpn
+vless://dba50bb9-2456-4128-8632-f7ba1e6a7ab5@78.41.111.87:443?encryption=none&type=ws&security=tls&path=/api/user&host=s10211.cdn.ngenix.net&fp=qq&sni=s10211.cdn.ngenix.net#🇩🇪 №1 Free @XelaraVpn
+vless://3483aa7a-8a7d-4561-8f77-4fbf7a0b1033@5.188.115.226:9443?encryption=none&security=reality&sni=id.pervye.ru&fp=chrome&echfq=none&pbk=QZz4tjRkxYsgTZBlRALOQU4O5YnAGtSGkXF8OSX11m8&allowinsecure=0&type=grpc&mode=gun&authority=&serviceName=ns#🇱🇻 №2 Free @XelaraVpn
+vless://1aeba778-61b6-423c-a2e4-651c52030671@46.8.209.56:443?encryption=none&security=reality&sni=ads.x5.ru&fp=firefox&echfq=none&pbk=Jbu62FTsQXfCBLELy25KhLU3YQ7RMVaAvIcvcgFqliw&sid=9329f8b5985b2a7d&allowinsecure=0&type=grpc&mode=gun&authority=&serviceName=UpdateService#🇩🇪 №3 Free @XelaraVpn
+vless://166ef05e-8ab5-43b7-8910-d1bb0a4326a5@84.201.156.217:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw&sni=eh5.vk.ru&sid=a150d81117ad570a&type=raw&security=reality#🇷🇺 №4 Free @XelaraVpn
