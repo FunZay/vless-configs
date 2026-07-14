@@ -1,14 +1,22 @@
-#profile-title:Premium TEST TG:@FUNZAYKASHOP
+#profile-title:Premium TEST Xelara
 #profile-update-interval: 1
 #subscription-auto-update-enable: 1
 #subscription-auto-update-open-enable: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=1798761600
-#support-url: https://t.me/FUNZAYKASHOP
-#announce:Тут нету стабильных серверов. Эта подписка предназначена для тестов. Регулярно нажимайте на 🔄. Совет:Настройки → Подписки → Сортировать по пингу. ⚡— лучший сервер
+#support-url: https://t.me/XelaraVpn
+#announce:Тут нету стабильных серверов. Эта подписка предназначена для тестов. Регулярно нажимайте на 🔄. Совет:Настройки → Подписки → Сортировать по пингу. 
 
-https://raw.githubusercontent.com/FunZay/vless-configs/main/autoservers/as.json
-https://raw.githubusercontent.com/FunZay/vless-configs/main/autoservers/ru.json
-https://raw.githubusercontent.com/FunZay/vless-configs/main/autoservers/ge.json
-https://raw.githubusercontent.com/FunZay/vless-configs/main/autoservers/uk.json
-https://raw.githubusercontent.com/FunZay/vless-configs/main/autoservers/sw.json
-https://raw.githubusercontent.com/FunZay/vless-configs/main/autoservers/fi.json
+vless://cc822ee3-51ca-0009-846d-25ed535491e9@194.55.239.133:8443?security=reality&flow=xtls-rprx-vision&type=raw&sni=rutube.ru&fp=qq&insecure=1&pbk=10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc&sid=43dcff53849b81e6#🇸🇪 1 | test xelara
+vless://a3a34b58-14b4-41cb-a555-8752f7694916@46.243.142.121:8443?security=reality&flow=xtls-rprx-vision&type=raw&sni=rutube.ru&fp=qq&insecure=1&pbk=10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc&sid=43dcff53849b81e6#🇳🇱 2 | test xelara
+vless://a3a34b58-14b4-0009-a555-8752f7694916@194.55.239.168:8443?security=reality&flow=xtls-rprx-vision&type=raw&sni=rutube.ru&fp=qq&insecure=1&pbk=10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc&sid=43dcff53849b81e6#🇸🇪 3 | test xelara
+vless://b8f1b61e-d5c4-4765-866d-ece1fc8e590b@s13933.cdn.ngenix.net:443?security=tls&type=ws&path=%2Fv1%2Fdata%2Fsync%2F&fp=qq#🇳🇱 4 | test xelara
+vless://b8f1b61e-d5c4-4765-866d-ece1fc8e590b@s65339.cdn.ngenix.net:443?security=tls&type=ws&path=%2Fv1%2Fdata%2Fsync%2F&fp=qq#🇳🇱 5 | test xelara
+vless://b8f1b61e-d5c4-4765-866d-ece1fc8e590b@s94399.cdn.ngenix.net:443?security=tls&type=ws&path=%2Fv1%2Fdata%2Fsync%2F&fp=qq#🇳🇱 6 | test xelara
+vless://b8f1b61e-d5c4-4765-866d-ece1fc8e590b@s52708.cdn.ngenix.net:443?security=tls&type=ws&path=%2Fv1%2Fdata%2Fsync%2F&fp=qq#🇩🇪 7 | test xelara
+vless://cc822ee3-51ca-4e28-846d-25ed535491e9@46.8.208.7:8443?security=reality&flow=xtls-rprx-vision&type=raw&sni=smartcaptcha.yandexcloud.net&fp=qq&insecure=1&pbk=10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc&sid=43dcff53849b81e6#🇳🇱 8 | test xelara
+vless://97b930ef-d873-0009-8940-9e461909a3a3@194.55.239.150:8443?security=reality&flow=xtls-rprx-vision&type=raw&sni=rutube.ru&fp=qq&insecure=1&pbk=10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc&sid=43dcff53849b81e6#🇸🇪 9 | test xelara
+vless://0b9bcbc1-b289-4a64-86fa-a5b731b65384@194.55.239.228:6443?security=reality&flow=xtls-rprx-vision&type=raw&sni=api-maps.yandex.ru&fp=qq&pbk=hlJpjNVBd0c3DP2ngqXoaKtgw-0p5PKj5eF9mO_Od3I&sid=45ba91f179ad1f26#🇳🇴 10 | test xelara
+vless://97b930ef-d873-0012-8940-9e461909a3a3@194.55.239.126:8443?security=reality&flow=xtls-rprx-vision&type=raw&sni=rutube.ru&fp=qq&insecure=1&pbk=10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc&sid=43dcff53849b81e6#🇩🇪 11 | test xelara
+vless://0b9bcbc1-b289-4a64-86fa-a5b731b65384@185.229.9.240:6443?security=reality&flow=xtls-rprx-vision&type=raw&sni=api-maps.yandex.ru&fp=qq&pbk=hlJpjNVBd0c3DP2ngqXoaKtgw-0p5PKj5eF9mO_Od3I&sid=45ba91f179ad1f26#🇳🇴 12 | test xelara
+vless://a3a34b58-14b4-0019-a555-8752f7694916@46.243.142.157:8443?security=reality&flow=xtls-rprx-vision&type=raw&sni=rutube.ru&fp=qq&insecure=1&pbk=10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc&sid=43dcff53849b81e6#🇬🇧 13 | test xelara
+vless://cc822ee3-51ca-0007-846d-25ed535491e9@194.55.239.161:8443?security=reality&flow=xtls-rprx-vision&type=raw&sni=rutube.ru&fp=qq&insecure=1&pbk=10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc&sid=43dcff53849b81e6#🇳🇱 14 | test xelara
