@@ -1,6 +1,6 @@
 [
  {
-  "remarks": "🏳️ Нейро-Обход | @XelaraVpn",
+  "remarks": "🇪🇺 Нейро-Обход | @XelaraVpn",
   "log": {
    "loglevel": "warning"
   },
@@ -78,7 +78,7 @@
       "shortId": "00000000"
      }
     },
-    "tag": "xx-1"
+    "tag": "eu-1"
    },
    {
     "protocol": "freedom",
@@ -140,14 +140,14 @@
     {
      "type": "field",
      "network": "tcp,udp",
-     "balancerTag": "xx-balancer"
+     "balancerTag": "eu-balancer"
     }
    ],
    "balancers": [
     {
-     "tag": "xx-balancer",
+     "tag": "eu-balancer",
      "selector": [
-      "xx-1"
+      "eu-1"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -171,7 +171,7 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "xx-1"
+    "eu-1"
    ]
   }
  },
