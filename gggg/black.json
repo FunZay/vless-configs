@@ -918,40 +918,6 @@
     "tag": "pl-2"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "188.225.77.143",
-       "port": 8478,
-       "users": [
-        {
-         "id": "40c12ce6-b1c6-424e-862e-010a4585ff52",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/xh",
-      "mode": "auto"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "random",
-      "spiderX": "/",
-      "serverName": "ads.x5.ru",
-      "publicKey": "mLNQ8cirYSUCtYa5485RnCPzrmp2OfkI0ENmweDxJQc",
-      "shortId": "6ba85179e30d4fc2"
-     }
-    },
-    "tag": "pl-3"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -1019,8 +985,7 @@
      "tag": "pl-balancer",
      "selector": [
       "pl-1",
-      "pl-2",
-      "pl-3"
+      "pl-2"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -1045,8 +1010,7 @@
    },
    "subjectSelector": [
     "pl-1",
-    "pl-2",
-    "pl-3"
+    "pl-2"
    ]
   }
  },
