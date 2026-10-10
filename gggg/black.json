@@ -929,37 +929,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "79.174.92.222",
-       "port": 443,
-       "users": [
-        {
-         "id": "03ca8c3f-e777-45b5-a1b1-592094ca99ee",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {},
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "m.vk.com",
-      "publicKey": "_PYBo3dyZRpGC44vADqcmlBCSeAVh1X8l3mulghVsTI",
-      "shortId": "a1b2c3d4"
-     }
-    },
-    "tag": "ru-1"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "78.159.246.85",
        "port": 2053,
        "users": [
@@ -1026,80 +995,7 @@
       ]
      }
     },
-    "tag": "ru-2"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "185.141.227.180",
-       "port": 2053,
-       "users": [
-        {
-         "id": "2c634977-584e-4e1f-b501-1b70c77a6743",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/api/v1/upload",
-      "mode": "auto",
-      "host": "dismissaltree.net",
-      "extra": {
-       "downloadSettings": null,
-       "headers": null,
-       "host": "",
-       "mode": "",
-       "noGRPCHeader": false,
-       "noSSEHeader": false,
-       "path": "",
-       "scMaxBufferedPosts": 0,
-       "scMaxEachPostBytes": "1000000",
-       "scMinPostsIntervalMs": "30",
-       "scStreamUpServerSecs": "0",
-       "seqKey": "",
-       "seqPlacement": "",
-       "serverMaxHeaderBytes": 0,
-       "sessionIDKey": "",
-       "sessionIDLength": "0",
-       "sessionIDPlacement": "",
-       "sessionIDTable": "",
-       "uplinkChunkSize": "0",
-       "uplinkDataKey": "",
-       "uplinkDataPlacement": "",
-       "uplinkHTTPMethod": "",
-       "xPaddingBytes": "100-1000",
-       "xPaddingHeader": "",
-       "xPaddingKey": "",
-       "xPaddingMethod": "",
-       "xPaddingObfsMode": false,
-       "xPaddingPlacement": "",
-       "xmux": {
-        "cMaxReuseTimes": "64-128",
-        "hKeepAlivePeriod": 0,
-        "hMaxRequestTimes": "0",
-        "hMaxReusableSecs": "0",
-        "maxConcurrency": "16-32",
-        "maxConnections": "0"
-       }
-      }
-     },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "dismissaltree.net",
-      "fingerprint": "random",
-      "alpn": [
-       "h2",
-       "http/1.1"
-      ]
-     }
-    },
-    "tag": "ru-3"
+    "tag": "ru-1"
    },
    {
     "protocol": "vless",
@@ -1132,7 +1028,7 @@
       ]
      }
     },
-    "tag": "ru-4"
+    "tag": "ru-2"
    },
    {
     "protocol": "vless",
@@ -1166,7 +1062,7 @@
       ]
      }
     },
-    "tag": "ru-5"
+    "tag": "ru-3"
    },
    {
     "protocol": "freedom",
@@ -1237,9 +1133,7 @@
      "selector": [
       "ru-1",
       "ru-2",
-      "ru-3",
-      "ru-4",
-      "ru-5"
+      "ru-3"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -1265,9 +1159,7 @@
    "subjectSelector": [
     "ru-1",
     "ru-2",
-    "ru-3",
-    "ru-4",
-    "ru-5"
+    "ru-3"
    ]
   }
  },
