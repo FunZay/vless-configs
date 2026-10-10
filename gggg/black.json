@@ -182,6 +182,37 @@
     "tag": "eu-3"
    },
    {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "188.225.77.254",
+       "port": 443,
+       "users": [
+        {
+         "id": "9cfb9099-439f-4bd2-87d3-54e67269fdc3",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "firefox",
+      "spiderX": "/",
+      "serverName": "io.ozone.ru",
+      "publicKey": "rJ-fFNYXh7WW9LuYe1N71fh7nAEe5i09Pi5ZDSDlH1s",
+      "shortId": "4951a2313524dd8f"
+     }
+    },
+    "tag": "eu-4"
+   },
+   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -250,7 +281,8 @@
      "selector": [
       "eu-1",
       "eu-2",
-      "eu-3"
+      "eu-3",
+      "eu-4"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -276,7 +308,8 @@
    "subjectSelector": [
     "eu-1",
     "eu-2",
-    "eu-3"
+    "eu-3",
+    "eu-4"
    ]
   }
  },
