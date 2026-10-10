@@ -1,6 +1,6 @@
 [
  {
-  "remarks": "🇨🇿 Нейро-Обход | @XelaraVpn",
+  "remarks": "🇪🇺 Нейро-Обход | @XelaraVpn",
   "log": {
    "loglevel": "warning"
   },
@@ -54,33 +54,31 @@
     "settings": {
      "vnext": [
       {
-       "address": "87.242.95.239",
-       "port": 9443,
+       "address": "91.240.87.166",
+       "port": 443,
        "users": [
         {
-         "id": "75b517db-1f97-4bda-a479-863d988c31a0",
-         "encryption": "none"
+         "id": "c5b5ef33-819e-4972-9a5a-4ad91f38507f",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
         }
        ]
       }
      ]
     },
     "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {
-      "serviceName": "grpc"
-     },
+     "network": "tcp",
      "security": "reality",
      "realitySettings": {
       "show": false,
-      "fingerprint": "random",
+      "fingerprint": "firefox",
       "spiderX": "/",
-      "serverName": "max.ru",
-      "publicKey": "ivgTfLR13A6xBsicIA28OPoav2tXlsstTTmGuETfnSk",
-      "shortId": "5c766813929a1fdd"
+      "serverName": "www.vk.com",
+      "publicKey": "nkpZyXHfG7nhEh1vjBjEDV-Tn7UhHEb5iN9iA8gc9VE",
+      "shortId": "c31188450fe50718"
      }
     },
-    "tag": "cz-1"
+    "tag": "eu-1"
    },
    {
     "protocol": "freedom",
@@ -142,14 +140,14 @@
     {
      "type": "field",
      "network": "tcp,udp",
-     "balancerTag": "cz-balancer"
+     "balancerTag": "eu-balancer"
     }
    ],
    "balancers": [
     {
-     "tag": "cz-balancer",
+     "tag": "eu-balancer",
      "selector": [
-      "cz-1"
+      "eu-1"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -173,7 +171,7 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "cz-1"
+    "eu-1"
    ]
   }
  },
@@ -499,6 +497,99 @@
     "tag": "fr-2"
    },
    {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "82.202.182.40",
+       "port": 1443,
+       "users": [
+        {
+         "id": "ccd6419d-6943-4e7c-bc8c-7a157dadff80",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "firefox",
+      "spiderX": "/",
+      "serverName": "smartcaptcha.yandexcloud.net",
+      "publicKey": "DPQZz0DSeKFq3Q6-h7PTWngUuITOs8r0-MQiXGgLRRE",
+      "shortId": "49900b0593d610"
+     }
+    },
+    "tag": "fr-3"
+   },
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "82.202.178.133",
+       "port": 31443,
+       "users": [
+        {
+         "id": "54f22246-cc9c-4315-907a-6c94c901d20f",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "random",
+      "spiderX": "/",
+      "serverName": "smartcaptcha.yandexcloud.net",
+      "publicKey": "lA0NS88gVVkaZf4qA1aYystzmLsZ5SNzszDsC-8DMSM",
+      "shortId": "e351ebf520"
+     }
+    },
+    "tag": "fr-4"
+   },
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "82.202.182.40",
+       "port": 1443,
+       "users": [
+        {
+         "id": "54f22246-cc9c-4315-907a-6c94c901d20f",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "random",
+      "spiderX": "/",
+      "serverName": "smartcaptcha.yandexcloud.net",
+      "publicKey": "DPQZz0DSeKFq3Q6-h7PTWngUuITOs8r0-MQiXGgLRRE",
+      "shortId": "49900b0593d610"
+     }
+    },
+    "tag": "fr-5"
+   },
+   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -566,7 +657,10 @@
      "tag": "fr-balancer",
      "selector": [
       "fr-1",
-      "fr-2"
+      "fr-2",
+      "fr-3",
+      "fr-4",
+      "fr-5"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -591,7 +685,10 @@
    },
    "subjectSelector": [
     "fr-1",
-    "fr-2"
+    "fr-2",
+    "fr-3",
+    "fr-4",
+    "fr-5"
    ]
   }
  },
@@ -832,7 +929,7 @@
        "port": 7444,
        "users": [
         {
-         "id": "cd00e244-3d0c-412a-8a6b-f9d389b01bba",
+         "id": "c3cc9111-4dc3-47bb-9241-93dbd3724a60",
          "encryption": "none",
          "flow": "xtls-rprx-vision"
         }
@@ -863,7 +960,7 @@
        "port": 7444,
        "users": [
         {
-         "id": "c3cc9111-4dc3-47bb-9241-93dbd3724a60",
+         "id": "0a48813f-7258-4e0c-b498-0750f5fdbd2c",
          "encryption": "none",
          "flow": "xtls-rprx-vision"
         }
@@ -894,37 +991,6 @@
        "port": 7444,
        "users": [
         {
-         "id": "0a48813f-7258-4e0c-b498-0750f5fdbd2c",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "novosrv.raw-srv.org",
-      "publicKey": "PZajgWT2dtEu0Avc2QWiZELK9wDQW9p9vvcckfQBfCE",
-      "shortId": "632cd48001bdb09a"
-     }
-    },
-    "tag": "nl-3"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "87.242.95.77",
-       "port": 7444,
-       "users": [
-        {
          "id": "edd934cd-f925-44ff-b849-037d99db458d",
          "encryption": "none",
          "flow": "xtls-rprx-vision"
@@ -945,7 +1011,7 @@
       "shortId": "632cd48001bdb09a"
      }
     },
-    "tag": "nl-4"
+    "tag": "nl-3"
    },
    {
     "protocol": "freedom",
@@ -1016,8 +1082,7 @@
      "selector": [
       "nl-1",
       "nl-2",
-      "nl-3",
-      "nl-4"
+      "nl-3"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -1043,8 +1108,7 @@
    "subjectSelector": [
     "nl-1",
     "nl-2",
-    "nl-3",
-    "nl-4"
+    "nl-3"
    ]
   }
  },
