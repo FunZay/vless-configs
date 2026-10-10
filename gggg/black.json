@@ -54,37 +54,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "82.202.179.104",
-       "port": 9443,
-       "users": [
-        {
-         "id": "ccd6419d-6943-4e7c-bc8c-7a157dadff80",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "smartcaptcha.yandexcloud.net",
-      "publicKey": "tvc-zUxqKX5P3DrZ2OiLIKHVPeu5MKjFLRWRYcvL3BQ",
-      "shortId": "9b027a0fe332"
-     }
-    },
-    "tag": "fr-1"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "82.202.182.40",
        "port": 1443,
        "users": [
@@ -109,7 +78,7 @@
       "shortId": "49900b0593d610"
      }
     },
-    "tag": "fr-2"
+    "tag": "fr-1"
    },
    {
     "protocol": "vless",
@@ -140,7 +109,7 @@
       "shortId": "49900b0593d610"
      }
     },
-    "tag": "fr-3"
+    "tag": "fr-2"
    },
    {
     "protocol": "freedom",
@@ -210,8 +179,7 @@
      "tag": "fr-balancer",
      "selector": [
       "fr-1",
-      "fr-2",
-      "fr-3"
+      "fr-2"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -236,8 +204,7 @@
    },
    "subjectSelector": [
     "fr-1",
-    "fr-2",
-    "fr-3"
+    "fr-2"
    ]
   }
  },
@@ -296,39 +263,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "95.163.232.54",
-       "port": 2096,
-       "users": [
-        {
-         "id": "e44358a5-f523-4b60-90a1-c4dac604aa28",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {
-      "serviceName": "grpc2"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "max.ru",
-      "publicKey": "-Dg4mGAAM5Lwe9ri7Bx5WlYdPBsyYJy-Pai2Z0FGlyc",
-      "shortId": "afee962d"
-     }
-    },
-    "tag": "lv-1"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "81.163.22.24",
        "port": 8443,
        "users": [
@@ -355,7 +289,7 @@
       "shortId": "5c766813929a1fdd"
      }
     },
-    "tag": "lv-2"
+    "tag": "lv-1"
    },
    {
     "protocol": "vless",
@@ -388,7 +322,7 @@
       "shortId": "5c766813929a1fdd"
      }
     },
-    "tag": "lv-3"
+    "tag": "lv-2"
    },
    {
     "protocol": "vless",
@@ -421,7 +355,7 @@
       "shortId": "5c766813929a1fdd"
      }
     },
-    "tag": "lv-4"
+    "tag": "lv-3"
    },
    {
     "protocol": "freedom",
@@ -492,8 +426,7 @@
      "selector": [
       "lv-1",
       "lv-2",
-      "lv-3",
-      "lv-4"
+      "lv-3"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -519,8 +452,7 @@
    "subjectSelector": [
     "lv-1",
     "lv-2",
-    "lv-3",
-    "lv-4"
+    "lv-3"
    ]
   }
  },
