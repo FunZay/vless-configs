@@ -85,37 +85,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "82.202.178.133",
-       "port": 31443,
-       "users": [
-        {
-         "id": "03218c7c-acd1-45c0-87a1-9cc77101c6b4",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "smartcaptcha.yandexcloud.net",
-      "publicKey": "lA0NS88gVVkaZf4qA1aYystzmLsZ5SNzszDsC-8DMSM",
-      "shortId": "e351ebf520"
-     }
-    },
-    "tag": "fr-2"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "82.202.182.40",
        "port": 1443,
        "users": [
@@ -140,38 +109,7 @@
       "shortId": "49900b0593d610"
      }
     },
-    "tag": "fr-3"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "82.202.178.133",
-       "port": 31443,
-       "users": [
-        {
-         "id": "54f22246-cc9c-4315-907a-6c94c901d20f",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "random",
-      "spiderX": "/",
-      "serverName": "smartcaptcha.yandexcloud.net",
-      "publicKey": "lA0NS88gVVkaZf4qA1aYystzmLsZ5SNzszDsC-8DMSM",
-      "shortId": "e351ebf520"
-     }
-    },
-    "tag": "fr-4"
+    "tag": "fr-2"
    },
    {
     "protocol": "vless",
@@ -202,7 +140,7 @@
       "shortId": "49900b0593d610"
      }
     },
-    "tag": "fr-5"
+    "tag": "fr-3"
    },
    {
     "protocol": "freedom",
@@ -273,9 +211,7 @@
      "selector": [
       "fr-1",
       "fr-2",
-      "fr-3",
-      "fr-4",
-      "fr-5"
+      "fr-3"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -301,9 +237,7 @@
    "subjectSelector": [
     "fr-1",
     "fr-2",
-    "fr-3",
-    "fr-4",
-    "fr-5"
+    "fr-3"
    ]
   }
  },
@@ -1170,110 +1104,6 @@
     "tag": "ru-2"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "78.159.246.85",
-       "port": 2053,
-       "users": [
-        {
-         "id": "95a608b6-bff1-4e10-bb61-0a39f221bb7d",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/api/v1/upload",
-      "mode": "auto",
-      "host": "fitindoor.net"
-     },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "fitindoor.net",
-      "fingerprint": "firefox",
-      "alpn": [
-       "h2",
-       "http/1.1"
-      ]
-     }
-    },
-    "tag": "ru-3"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "185.141.227.180",
-       "port": 2053,
-       "users": [
-        {
-         "id": "2c634977-584e-4e1f-b501-1b70c77a6743",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/api/v1/upload",
-      "mode": "auto",
-      "host": "dismissaltree.net"
-     },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "dismissaltree.net",
-      "fingerprint": "chrome",
-      "alpn": [
-       "h2",
-       "http/1.1"
-      ]
-     }
-    },
-    "tag": "ru-4"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "185.141.227.180",
-       "port": 2053,
-       "users": [
-        {
-         "id": "2c634977-584e-4e1f-b501-1b70c77a6743",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/api/v1/upload",
-      "mode": "auto"
-     },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "dismissaltree.net",
-      "fingerprint": "random",
-      "alpn": [
-       "h2",
-       "http/1.1"
-      ]
-     }
-    },
-    "tag": "ru-5"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -1341,10 +1171,7 @@
      "tag": "ru-balancer",
      "selector": [
       "ru-1",
-      "ru-2",
-      "ru-3",
-      "ru-4",
-      "ru-5"
+      "ru-2"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -1369,10 +1196,7 @@
    },
    "subjectSelector": [
     "ru-1",
-    "ru-2",
-    "ru-3",
-    "ru-4",
-    "ru-5"
+    "ru-2"
    ]
   }
  },
