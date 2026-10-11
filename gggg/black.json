@@ -383,68 +383,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "185.229.9.234",
-       "port": 443,
-       "users": [
-        {
-         "id": "c5b5ef33-819e-4972-9a5a-4ad91f38507f",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "api.ok.ru",
-      "publicKey": "lIgF8B3ICGAQ6ExbRe9YDu8ZD1Ozzqu7-YO7hfuXfRw",
-      "shortId": "cc8069f6c2cbcb32"
-     }
-    },
-    "tag": "de-6"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "194.55.239.101",
-       "port": 8443,
-       "users": [
-        {
-         "id": "accfae78-b31c-47cb-86a1-bb9a07973e4a",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "passport.yandex.ru",
-      "publicKey": "vxA0Fdcn39Z6w1JrR958Ii0W9uLk2Knxg5XDagcPtxQ",
-      "shortId": "e016190556fb1c9b"
-     }
-    },
-    "tag": "de-7"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "87.242.94.90",
        "port": 8449,
        "users": [
@@ -469,7 +407,7 @@
       "shortId": "da70aafe569d4b16"
      }
     },
-    "tag": "de-8"
+    "tag": "de-6"
    },
    {
     "protocol": "freedom",
@@ -543,9 +481,7 @@
       "de-3",
       "de-4",
       "de-5",
-      "de-6",
-      "de-7",
-      "de-8"
+      "de-6"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -574,9 +510,7 @@
     "de-3",
     "de-4",
     "de-5",
-    "de-6",
-    "de-7",
-    "de-8"
+    "de-6"
    ]
   }
  },
@@ -2851,80 +2785,6 @@
     "tag": "ru-2"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "78.159.246.85",
-       "port": 2053,
-       "users": [
-        {
-         "id": "95a608b6-bff1-4e10-bb61-0a39f221bb7d",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/api/v1/upload",
-      "mode": "auto",
-      "host": "fitindoor.net",
-      "extra": {
-       "host": "",
-       "path": "",
-       "mode": "",
-       "headers": null,
-       "xPaddingBytes": "100-1000",
-       "xPaddingObfsMode": false,
-       "xPaddingKey": "",
-       "xPaddingHeader": "",
-       "xPaddingPlacement": "",
-       "xPaddingMethod": "",
-       "uplinkHTTPMethod": "",
-       "sessionIDPlacement": "",
-       "sessionIDKey": "",
-       "sessionIDTable": "",
-       "sessionIDLength": "0",
-       "seqPlacement": "",
-       "seqKey": "",
-       "uplinkDataPlacement": "",
-       "uplinkDataKey": "",
-       "uplinkChunkSize": "0",
-       "noGRPCHeader": false,
-       "noSSEHeader": false,
-       "scMaxEachPostBytes": "1000000",
-       "scMinPostsIntervalMs": "30",
-       "scMaxBufferedPosts": 0,
-       "scStreamUpServerSecs": "0",
-       "serverMaxHeaderBytes": 0,
-       "xmux": {
-        "maxConcurrency": "16-32",
-        "maxConnections": "0",
-        "cMaxReuseTimes": "64-128",
-        "hMaxRequestTimes": "0",
-        "hMaxReusableSecs": "0",
-        "hKeepAlivePeriod": 0
-       },
-       "downloadSettings": null,
-       "extra": null
-      }
-     },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "fitindoor.net",
-      "fingerprint": "firefox",
-      "alpn": [
-       "h2",
-       "http/1.1"
-      ]
-     }
-    },
-    "tag": "ru-3"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -2992,8 +2852,7 @@
      "tag": "ru-balancer",
      "selector": [
       "ru-1",
-      "ru-2",
-      "ru-3"
+      "ru-2"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -3018,8 +2877,7 @@
    },
    "subjectSelector": [
     "ru-1",
-    "ru-2",
-    "ru-3"
+    "ru-2"
    ]
   }
  },
