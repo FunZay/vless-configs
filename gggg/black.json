@@ -142,37 +142,6 @@
     "tag": "eu-3"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "185.229.9.234",
-       "port": 443,
-       "users": [
-        {
-         "id": "c5b5ef33-819e-4972-9a5a-4ad91f38507f",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "api.ok.ru",
-      "publicKey": "lIgF8B3ICGAQ6ExbRe9YDu8ZD1Ozzqu7-YO7hfuXfRw",
-      "shortId": "cc8069f6c2cbcb32"
-     }
-    },
-    "tag": "eu-4"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -241,8 +210,7 @@
      "selector": [
       "eu-1",
       "eu-2",
-      "eu-3",
-      "eu-4"
+      "eu-3"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -268,8 +236,7 @@
    "subjectSelector": [
     "eu-1",
     "eu-2",
-    "eu-3",
-    "eu-4"
+    "eu-3"
    ]
   }
  },
@@ -1147,6 +1114,37 @@
     "tag": "de-9"
    },
    {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "185.229.9.234",
+       "port": 443,
+       "users": [
+        {
+         "id": "c5b5ef33-819e-4972-9a5a-4ad91f38507f",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "firefox",
+      "spiderX": "/",
+      "serverName": "api.ok.ru",
+      "publicKey": "lIgF8B3ICGAQ6ExbRe9YDu8ZD1Ozzqu7-YO7hfuXfRw",
+      "shortId": "cc8069f6c2cbcb32"
+     }
+    },
+    "tag": "de-10"
+   },
+   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -1221,7 +1219,8 @@
       "de-6",
       "de-7",
       "de-8",
-      "de-9"
+      "de-9",
+      "de-10"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -1253,7 +1252,8 @@
     "de-6",
     "de-7",
     "de-8",
-    "de-9"
+    "de-9",
+    "de-10"
    ]
   }
  },
