@@ -352,37 +352,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "91.240.87.166",
-       "port": 443,
-       "users": [
-        {
-         "id": "c5b5ef33-819e-4972-9a5a-4ad91f38507f",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "www.vk.com",
-      "publicKey": "nkpZyXHfG7nhEh1vjBjEDV-Tn7UhHEb5iN9iA8gc9VE",
-      "shortId": "c31188450fe50718"
-     }
-    },
-    "tag": "de-5"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "87.242.94.90",
        "port": 8449,
        "users": [
@@ -407,7 +376,7 @@
       "shortId": "da70aafe569d4b16"
      }
     },
-    "tag": "de-6"
+    "tag": "de-5"
    },
    {
     "protocol": "freedom",
@@ -480,8 +449,7 @@
       "de-2",
       "de-3",
       "de-4",
-      "de-5",
-      "de-6"
+      "de-5"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -509,8 +477,7 @@
     "de-2",
     "de-3",
     "de-4",
-    "de-5",
-    "de-6"
+    "de-5"
    ]
   }
  },
@@ -2332,37 +2299,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "151.236.114.224",
-       "port": 4510,
-       "users": [
-        {
-         "id": "c3db7657-88ce-42a6-b998-1e0364b277ac",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "9c99da.usecache.net",
-      "publicKey": "hkvjyE8WMKHvdGfMta7PAIGz6HAv2WiXvWvAQmsE_DM",
-      "shortId": "2d0c188798bae174"
-     }
-    },
-    "tag": "pl-5"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "185.229.9.7",
        "port": 443,
        "users": [
@@ -2387,7 +2323,7 @@
       "shortId": "27e53bbcab7593d7"
      }
     },
-    "tag": "pl-6"
+    "tag": "pl-5"
    },
    {
     "protocol": "freedom",
@@ -2460,8 +2396,7 @@
       "pl-2",
       "pl-3",
       "pl-4",
-      "pl-5",
-      "pl-6"
+      "pl-5"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -2489,8 +2424,7 @@
     "pl-2",
     "pl-3",
     "pl-4",
-    "pl-5",
-    "pl-6"
+    "pl-5"
    ]
   }
  },
