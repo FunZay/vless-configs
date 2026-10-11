@@ -1947,37 +1947,6 @@
     "tag": "gb-1"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "45.141.118.232",
-       "port": 7443,
-       "users": [
-        {
-         "id": "81a227e3-cb97-40fe-b7b6-45a60ed065cf",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "node.remnagecsp.ru",
-      "publicKey": "0BVxZKOt6wO0jIB1xRkAAtaFUkmyFAbVWfkkKSJBfEI",
-      "shortId": "570ffeb12f6e4635"
-     }
-    },
-    "tag": "gb-2"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -2044,14 +2013,13 @@
     {
      "tag": "gb-balancer",
      "selector": [
-      "gb-1",
-      "gb-2"
+      "gb-1"
      ],
      "strategy": {
       "type": "leastLoad",
       "settings": {
        "maxRTT": "1s",
-       "expected": 2,
+       "expected": 1,
        "baselines": [
         "1s"
        ],
@@ -2069,8 +2037,7 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "gb-1",
-    "gb-2"
+    "gb-1"
    ]
   }
  },
@@ -2437,37 +2404,6 @@
        "port": 7444,
        "users": [
         {
-         "id": "edd934cd-f925-44ff-b849-037d99db458d",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "novosrv.raw-srv.org",
-      "publicKey": "PZajgWT2dtEu0Avc2QWiZELK9wDQW9p9vvcckfQBfCE",
-      "shortId": "632cd48001bdb09a"
-     }
-    },
-    "tag": "nl-4"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "87.242.95.77",
-       "port": 7444,
-       "users": [
-        {
          "id": "c3cc9111-4dc3-47bb-9241-93dbd3724a60",
          "encryption": "none",
          "flow": "xtls-rprx-vision"
@@ -2488,7 +2424,7 @@
       "shortId": "632cd48001bdb09a"
      }
     },
-    "tag": "nl-5"
+    "tag": "nl-4"
    },
    {
     "protocol": "vless",
@@ -2521,7 +2457,7 @@
       "shortId": "5803463a64073dfc"
      }
     },
-    "tag": "nl-6"
+    "tag": "nl-5"
    },
    {
     "protocol": "freedom",
@@ -2594,8 +2530,7 @@
       "nl-2",
       "nl-3",
       "nl-4",
-      "nl-5",
-      "nl-6"
+      "nl-5"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -2623,8 +2558,7 @@
     "nl-2",
     "nl-3",
     "nl-4",
-    "nl-5",
-    "nl-6"
+    "nl-5"
    ]
   }
  },
