@@ -854,6 +854,33 @@
   ],
   "outbounds": [
    {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "87.228.33.153",
+       "port": 6443,
+       "users": [
+        {
+         "id": "7b859f9e-0e6a-475f-b5e3-5d671b043164",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "tls",
+     "tlsSettings": {
+      "serverName": "for.cloudgamings.org",
+      "fingerprint": "firefox"
+     }
+    },
+    "tag": "ee-1"
+   },
+   {
     "protocol": "trojan",
     "settings": {
      "servers": [
@@ -876,7 +903,7 @@
       ]
      }
     },
-    "tag": "ee-1"
+    "tag": "ee-2"
    },
    {
     "protocol": "freedom",
@@ -945,13 +972,14 @@
     {
      "tag": "ee-balancer",
      "selector": [
-      "ee-1"
+      "ee-1",
+      "ee-2"
      ],
      "strategy": {
       "type": "leastLoad",
       "settings": {
        "maxRTT": "1s",
-       "expected": 1,
+       "expected": 2,
        "baselines": [
         "1s"
        ],
@@ -969,7 +997,8 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "ee-1"
+    "ee-1",
+    "ee-2"
    ]
   }
  },
@@ -1066,37 +1095,6 @@
     "tag": "fi-1"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "188.225.24.33",
-       "port": 8445,
-       "users": [
-        {
-         "id": "d2f0aeef-fa54-4c93-9fda-448eec3de210",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "edge",
-      "spiderX": "/Ec6moJoHmtiC-i0F",
-      "serverName": "api-cdn.sendmsg.ru",
-      "publicKey": "8C8i0OhzBlEEez7c332IU4s0B7uwpvVEaeTUJvA2HTA",
-      "shortId": "f7ce475282c06a8f"
-     }
-    },
-    "tag": "fi-2"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -1163,14 +1161,13 @@
     {
      "tag": "fi-balancer",
      "selector": [
-      "fi-1",
-      "fi-2"
+      "fi-1"
      ],
      "strategy": {
       "type": "leastLoad",
       "settings": {
        "maxRTT": "1s",
-       "expected": 2,
+       "expected": 1,
        "baselines": [
         "1s"
        ],
@@ -1188,8 +1185,7 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "fi-1",
-    "fi-2"
+    "fi-1"
    ]
   }
  },
@@ -2975,11 +2971,11 @@
     "settings": {
      "vnext": [
       {
-       "address": "87.228.33.153",
-       "port": 6443,
+       "address": "188.225.24.33",
+       "port": 8445,
        "users": [
         {
-         "id": "7b859f9e-0e6a-475f-b5e3-5d671b043164",
+         "id": "d2f0aeef-fa54-4c93-9fda-448eec3de210",
          "encryption": "none",
          "flow": "xtls-rprx-vision"
         }
@@ -2989,10 +2985,14 @@
     },
     "streamSettings": {
      "network": "tcp",
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "for.cloudgamings.org",
-      "fingerprint": "firefox"
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "edge",
+      "spiderX": "/Ec6moJoHmtiC-i0F",
+      "serverName": "api-cdn.sendmsg.ru",
+      "publicKey": "8C8i0OhzBlEEez7c332IU4s0B7uwpvVEaeTUJvA2HTA",
+      "shortId": "f7ce475282c06a8f"
      }
     },
     "tag": "nl-3"
@@ -4065,7 +4065,7 @@
        "port": 443,
        "users": [
         {
-         "id": "37914d93-f1a7-4bd2-8cfe-c44c26a720f2",
+         "id": "ee945772-163f-44db-93d5-180a2006a803",
          "encryption": "none",
          "flow": "xtls-rprx-vision"
         }
@@ -4096,37 +4096,6 @@
        "port": 443,
        "users": [
         {
-         "id": "ee945772-163f-44db-93d5-180a2006a803",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "qq",
-      "spiderX": "/",
-      "serverName": "rutube.ru",
-      "publicKey": "BgH8ba_xaAeLa5pyvwwJp6HT7i09aNoiAsE1HgTXXkU",
-      "shortId": "3275b9d98d3b69fc"
-     }
-    },
-    "tag": "ru-5"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "151.236.114.253",
-       "port": 443,
-       "users": [
-        {
          "id": "ae0a61eb-e24d-4860-8859-7c300b9d4c15",
          "encryption": "none",
          "flow": "xtls-rprx-vision"
@@ -4147,7 +4116,7 @@
       "shortId": "3275b9d98d3b69fc"
      }
     },
-    "tag": "ru-6"
+    "tag": "ru-5"
    },
    {
     "protocol": "vless",
@@ -4178,7 +4147,7 @@
       "shortId": "3275b9d98d3b69fc"
      }
     },
-    "tag": "ru-7"
+    "tag": "ru-6"
    },
    {
     "protocol": "vless",
@@ -4209,7 +4178,7 @@
       "shortId": "3275b9d98d3b69fc"
      }
     },
-    "tag": "ru-8"
+    "tag": "ru-7"
    },
    {
     "protocol": "vless",
@@ -4240,38 +4209,7 @@
       "shortId": "3275b9d98d3b69fc"
      }
     },
-    "tag": "ru-9"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "78.159.250.104",
-       "port": 443,
-       "users": [
-        {
-         "id": "37914d93-f1a7-4bd2-8cfe-c44c26a720f2",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "qq",
-      "spiderX": "/",
-      "serverName": "rutube.ru",
-      "publicKey": "BgH8ba_xaAeLa5pyvwwJp6HT7i09aNoiAsE1HgTXXkU",
-      "shortId": "3275b9d98d3b69fc"
-     }
-    },
-    "tag": "ru-10"
+    "tag": "ru-8"
    },
    {
     "protocol": "vless",
@@ -4302,7 +4240,7 @@
       "shortId": "3275b9d98d3b69fc"
      }
     },
-    "tag": "ru-11"
+    "tag": "ru-9"
    },
    {
     "protocol": "trojan",
@@ -4327,7 +4265,7 @@
       ]
      }
     },
-    "tag": "ru-12"
+    "tag": "ru-10"
    },
    {
     "protocol": "freedom",
@@ -4405,9 +4343,7 @@
       "ru-7",
       "ru-8",
       "ru-9",
-      "ru-10",
-      "ru-11",
-      "ru-12"
+      "ru-10"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -4440,9 +4376,7 @@
     "ru-7",
     "ru-8",
     "ru-9",
-    "ru-10",
-    "ru-11",
-    "ru-12"
+    "ru-10"
    ]
   }
  },
