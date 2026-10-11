@@ -2728,37 +2728,6 @@
     "tag": "pl-7"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "87.242.127.113",
-       "port": 4510,
-       "users": [
-        {
-         "id": "c3db7657-88ce-42a6-b998-1e0364b277ac",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "9c99da.usecache.net",
-      "publicKey": "hkvjyE8WMKHvdGfMta7PAIGz6HAv2WiXvWvAQmsE_DM",
-      "shortId": "2d0c188798bae174"
-     }
-    },
-    "tag": "pl-8"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -2831,8 +2800,7 @@
       "pl-4",
       "pl-5",
       "pl-6",
-      "pl-7",
-      "pl-8"
+      "pl-7"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -2862,8 +2830,7 @@
     "pl-4",
     "pl-5",
     "pl-6",
-    "pl-7",
-    "pl-8"
+    "pl-7"
    ]
   }
  },
