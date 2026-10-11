@@ -3067,66 +3067,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "185.141.227.180",
-       "port": 2053,
-       "users": [
-        {
-         "id": "2c634977-584e-4e1f-b501-1b70c77a6743",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/api/v1/upload",
-      "mode": "auto",
-      "host": "dismissaltree.net"
-     },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "dismissaltree.net"
-     }
-    },
-    "tag": "ru-1"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "185.141.227.180",
-       "port": 2053,
-       "users": [
-        {
-         "id": "2c634977-584e-4e1f-b501-1b70c77a6743",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/api/v1/upload",
-      "mode": "auto"
-     },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "dismissaltree.net",
-      "fingerprint": "random"
-     }
-    },
-    "tag": "ru-2"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "79.174.92.222",
        "port": 443,
        "users": [
@@ -3151,7 +3091,7 @@
       "shortId": "a1b2c3d4"
      }
     },
-    "tag": "ru-3"
+    "tag": "ru-1"
    },
    {
     "protocol": "vless",
@@ -3184,7 +3124,7 @@
       ]
      }
     },
-    "tag": "ru-4"
+    "tag": "ru-2"
    },
    {
     "protocol": "vless",
@@ -3218,7 +3158,7 @@
       ]
      }
     },
-    "tag": "ru-5"
+    "tag": "ru-3"
    },
    {
     "protocol": "vless",
@@ -3292,7 +3232,7 @@
       ]
      }
     },
-    "tag": "ru-6"
+    "tag": "ru-4"
    },
    {
     "protocol": "vless",
@@ -3327,7 +3267,7 @@
       ]
      }
     },
-    "tag": "ru-7"
+    "tag": "ru-5"
    },
    {
     "protocol": "vless",
@@ -3358,7 +3298,7 @@
       "shortId": "a1b2c3d4"
      }
     },
-    "tag": "ru-8"
+    "tag": "ru-6"
    },
    {
     "protocol": "vless",
@@ -3432,7 +3372,7 @@
       ]
      }
     },
-    "tag": "ru-9"
+    "tag": "ru-7"
    },
    {
     "protocol": "freedom",
@@ -3507,9 +3447,7 @@
       "ru-4",
       "ru-5",
       "ru-6",
-      "ru-7",
-      "ru-8",
-      "ru-9"
+      "ru-7"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -3539,9 +3477,7 @@
     "ru-4",
     "ru-5",
     "ru-6",
-    "ru-7",
-    "ru-8",
-    "ru-9"
+    "ru-7"
    ]
   }
  },
