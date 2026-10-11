@@ -4462,37 +4462,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "188.225.77.254",
-       "port": 443,
-       "users": [
-        {
-         "id": "9cfb9099-439f-4bd2-87d3-54e67269fdc3",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "io.ozone.ru",
-      "publicKey": "rJ-fFNYXh7WW9LuYe1N71fh7nAEe5i09Pi5ZDSDlH1s",
-      "shortId": "4951a2313524dd8f"
-     }
-    },
-    "tag": "se-1"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "81.90.21.96",
        "port": 443,
        "users": [
@@ -4520,38 +4489,7 @@
       "shortId": "47237b5f7ac0"
      }
     },
-    "tag": "se-2"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "188.225.77.254",
-       "port": 443,
-       "users": [
-        {
-         "id": "1071a55c-99fd-4d05-977f-cd450ac9a1c8",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "io.ozone.ru",
-      "publicKey": "rJ-fFNYXh7WW9LuYe1N71fh7nAEe5i09Pi5ZDSDlH1s",
-      "shortId": "4951a2313524dd8f"
-     }
-    },
-    "tag": "se-3"
+    "tag": "se-1"
    },
    {
     "protocol": "vless",
@@ -4584,7 +4522,7 @@
       "shortId": "4951a2313524dd8f"
      }
     },
-    "tag": "se-4"
+    "tag": "se-2"
    },
    {
     "protocol": "freedom",
@@ -4654,9 +4592,7 @@
      "tag": "se-balancer",
      "selector": [
       "se-1",
-      "se-2",
-      "se-3",
-      "se-4"
+      "se-2"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -4681,9 +4617,7 @@
    },
    "subjectSelector": [
     "se-1",
-    "se-2",
-    "se-3",
-    "se-4"
+    "se-2"
    ]
   }
  },
