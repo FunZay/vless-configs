@@ -531,37 +531,6 @@
     "tag": "de-2"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "188.225.42.52",
-       "port": 443,
-       "users": [
-        {
-         "id": "8a43658b-fede-4eea-b05e-10d7a3840593",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "spb1.uni-plan.com",
-      "publicKey": "_AJrIKDPHT1h1TT4vGouVI_-GKYby138cWf29erKmX0",
-      "shortId": "20a048ac5dcb34bd"
-     }
-    },
-    "tag": "de-3"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -629,8 +598,7 @@
      "tag": "de-balancer",
      "selector": [
       "de-1",
-      "de-2",
-      "de-3"
+      "de-2"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -655,8 +623,7 @@
    },
    "subjectSelector": [
     "de-1",
-    "de-2",
-    "de-3"
+    "de-2"
    ]
   }
  },
@@ -887,66 +854,6 @@
   ],
   "outbounds": [
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "79.174.92.254",
-       "port": 443,
-       "users": [
-        {
-         "id": "f9321952-5b39-2329-8dc7-ec2af14a72ef",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {
-      "serviceName": "grpc"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "qq",
-      "spiderX": "/",
-      "serverName": "cdn.selectel.ru",
-      "publicKey": "D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY",
-      "shortId": "c1a7e9b4711d5f60"
-     }
-    },
-    "tag": "ee-1"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "87.228.33.153",
-       "port": 6443,
-       "users": [
-        {
-         "id": "7b859f9e-0e6a-475f-b5e3-5d671b043164",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "for.cloudgamings.org",
-      "fingerprint": "firefox"
-     }
-    },
-    "tag": "ee-2"
-   },
-   {
     "protocol": "trojan",
     "settings": {
      "servers": [
@@ -969,7 +876,7 @@
       ]
      }
     },
-    "tag": "ee-3"
+    "tag": "ee-1"
    },
    {
     "protocol": "freedom",
@@ -1038,15 +945,13 @@
     {
      "tag": "ee-balancer",
      "selector": [
-      "ee-1",
-      "ee-2",
-      "ee-3"
+      "ee-1"
      ],
      "strategy": {
       "type": "leastLoad",
       "settings": {
        "maxRTT": "1s",
-       "expected": 2,
+       "expected": 1,
        "baselines": [
         "1s"
        ],
@@ -1064,9 +969,7 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "ee-1",
-    "ee-2",
-    "ee-3"
+    "ee-1"
    ]
   }
  },
@@ -1163,6 +1066,37 @@
     "tag": "fi-1"
    },
    {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "188.225.24.33",
+       "port": 8445,
+       "users": [
+        {
+         "id": "d2f0aeef-fa54-4c93-9fda-448eec3de210",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "edge",
+      "spiderX": "/Ec6moJoHmtiC-i0F",
+      "serverName": "api-cdn.sendmsg.ru",
+      "publicKey": "8C8i0OhzBlEEez7c332IU4s0B7uwpvVEaeTUJvA2HTA",
+      "shortId": "f7ce475282c06a8f"
+     }
+    },
+    "tag": "fi-2"
+   },
+   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -1229,13 +1163,14 @@
     {
      "tag": "fi-balancer",
      "selector": [
-      "fi-1"
+      "fi-1",
+      "fi-2"
      ],
      "strategy": {
       "type": "leastLoad",
       "settings": {
        "maxRTT": "1s",
-       "expected": 1,
+       "expected": 2,
        "baselines": [
         "1s"
        ],
@@ -1253,7 +1188,8 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "fi-1"
+    "fi-1",
+    "fi-2"
    ]
   }
  },
@@ -3039,11 +2975,11 @@
     "settings": {
      "vnext": [
       {
-       "address": "188.225.24.33",
-       "port": 8445,
+       "address": "87.228.33.153",
+       "port": 6443,
        "users": [
         {
-         "id": "d2f0aeef-fa54-4c93-9fda-448eec3de210",
+         "id": "7b859f9e-0e6a-475f-b5e3-5d671b043164",
          "encryption": "none",
          "flow": "xtls-rprx-vision"
         }
@@ -3053,14 +2989,10 @@
     },
     "streamSettings": {
      "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "edge",
-      "spiderX": "/Ec6moJoHmtiC-i0F",
-      "serverName": "api-cdn.sendmsg.ru",
-      "publicKey": "8C8i0OhzBlEEez7c332IU4s0B7uwpvVEaeTUJvA2HTA",
-      "shortId": "f7ce475282c06a8f"
+     "security": "tls",
+     "tlsSettings": {
+      "serverName": "for.cloudgamings.org",
+      "fingerprint": "firefox"
      }
     },
     "tag": "nl-3"
