@@ -142,37 +142,6 @@
     "tag": "de-3"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "87.242.94.90",
-       "port": 8449,
-       "users": [
-        {
-         "id": "accfae78-b31c-47cb-86a1-bb9a07973e4a",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "passport.yandex.ru",
-      "publicKey": "-1okho1n7_K2VRB5yYsLwq6LaKYy1DdhcbDwraPGLUw",
-      "shortId": "da70aafe569d4b16"
-     }
-    },
-    "tag": "de-4"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -241,8 +210,7 @@
      "selector": [
       "de-1",
       "de-2",
-      "de-3",
-      "de-4"
+      "de-3"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -268,8 +236,7 @@
    "subjectSelector": [
     "de-1",
     "de-2",
-    "de-3",
-    "de-4"
+    "de-3"
    ]
   }
  },
