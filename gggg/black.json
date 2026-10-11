@@ -1123,43 +1123,12 @@
       "show": false,
       "fingerprint": "firefox",
       "spiderX": "/",
-      "serverName": "api.ok.ru",
-      "publicKey": "lIgF8B3ICGAQ6ExbRe9YDu8ZD1Ozzqu7-YO7hfuXfRw",
-      "shortId": "cc8069f6c2cbcb32"
-     }
-    },
-    "tag": "de-4"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "185.229.9.234",
-       "port": 443,
-       "users": [
-        {
-         "id": "c5b5ef33-819e-4972-9a5a-4ad91f38507f",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
       "serverName": "yandex.ru",
       "publicKey": "fsyvGBPzzwpnSA0UnJML_cDqviNSEdj9zktpC1EeFhY",
       "shortId": "743541f932fa3959"
      }
     },
-    "tag": "de-5"
+    "tag": "de-4"
    },
    {
     "protocol": "vless",
@@ -1190,7 +1159,7 @@
       "shortId": "9ea74b83f4993ca9"
      }
     },
-    "tag": "de-6"
+    "tag": "de-5"
    },
    {
     "protocol": "vless",
@@ -1221,7 +1190,7 @@
       "shortId": "2c9a2790ad5900b2"
      }
     },
-    "tag": "de-7"
+    "tag": "de-6"
    },
    {
     "protocol": "vless",
@@ -1251,7 +1220,7 @@
       "publicKey": "9J5SrrBYJ4Tz_zpSM3n-EWuin5jmUqEI8LJ5htsGZy8"
      }
     },
-    "tag": "de-8"
+    "tag": "de-7"
    },
    {
     "protocol": "vless",
@@ -1282,7 +1251,7 @@
       "shortId": "17d65a607618697d"
      }
     },
-    "tag": "de-9"
+    "tag": "de-8"
    },
    {
     "protocol": "vless",
@@ -1313,7 +1282,7 @@
       "shortId": "9ea74b83f4993ca9"
      }
     },
-    "tag": "de-10"
+    "tag": "de-9"
    },
    {
     "protocol": "vless",
@@ -1344,7 +1313,7 @@
       "shortId": "17d65a607618697d"
      }
     },
-    "tag": "de-11"
+    "tag": "de-10"
    },
    {
     "protocol": "freedom",
@@ -1422,8 +1391,7 @@
       "de-7",
       "de-8",
       "de-9",
-      "de-10",
-      "de-11"
+      "de-10"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -1456,8 +1424,7 @@
     "de-7",
     "de-8",
     "de-9",
-    "de-10",
-    "de-11"
+    "de-10"
    ]
   }
  },
