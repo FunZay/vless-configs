@@ -651,37 +651,6 @@
        "port": 31443,
        "users": [
         {
-         "id": "03218c7c-acd1-45c0-87a1-9cc77101c6b4",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "smartcaptcha.yandexcloud.net",
-      "publicKey": "lA0NS88gVVkaZf4qA1aYystzmLsZ5SNzszDsC-8DMSM",
-      "shortId": "e351ebf520"
-     }
-    },
-    "tag": "fr-1"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "82.202.178.133",
-       "port": 31443,
-       "users": [
-        {
          "id": "54f22246-cc9c-4315-907a-6c94c901d20f",
          "encryption": "none",
          "flow": "xtls-rprx-vision"
@@ -702,7 +671,7 @@
       "shortId": "e351ebf520"
      }
     },
-    "tag": "fr-2"
+    "tag": "fr-1"
    },
    {
     "protocol": "vless",
@@ -733,7 +702,7 @@
       "shortId": "49900b0593d610"
      }
     },
-    "tag": "fr-3"
+    "tag": "fr-2"
    },
    {
     "protocol": "vless",
@@ -764,7 +733,7 @@
       "shortId": "49900b0593d610"
      }
     },
-    "tag": "fr-4"
+    "tag": "fr-3"
    },
    {
     "protocol": "freedom",
@@ -835,8 +804,7 @@
      "selector": [
       "fr-1",
       "fr-2",
-      "fr-3",
-      "fr-4"
+      "fr-3"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -862,8 +830,7 @@
    "subjectSelector": [
     "fr-1",
     "fr-2",
-    "fr-3",
-    "fr-4"
+    "fr-3"
    ]
   }
  },
@@ -1304,39 +1271,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "147.78.182.5",
-       "port": 443,
-       "users": [
-        {
-         "id": "2fef98ad-aa5a-6727-fcc9-33714e619056",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/",
-      "mode": "auto"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "chrome",
-      "spiderX": "/",
-      "serverName": "download.nvidia.com",
-      "publicKey": "EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ"
-     }
-    },
-    "tag": "nl-2"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "188.225.45.77",
        "port": 443,
        "users": [
@@ -1363,7 +1297,7 @@
       "shortId": "5803463a64073dfc"
      }
     },
-    "tag": "nl-3"
+    "tag": "nl-2"
    },
    {
     "protocol": "freedom",
@@ -1433,8 +1367,7 @@
      "tag": "nl-balancer",
      "selector": [
       "nl-1",
-      "nl-2",
-      "nl-3"
+      "nl-2"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -1459,8 +1392,7 @@
    },
    "subjectSelector": [
     "nl-1",
-    "nl-2",
-    "nl-3"
+    "nl-2"
    ]
   }
  },
