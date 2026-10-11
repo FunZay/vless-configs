@@ -468,37 +468,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "64.188.83.186",
-       "port": 443,
-       "users": [
-        {
-         "id": "616c7b3b-41f4-4038-88c6-d6fedd0ae4a7",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "random",
-      "spiderX": "/",
-      "serverName": "de-2.ardesnode.ru",
-      "publicKey": "PKlt_5ASsz137EvA9SKSadtjEv1k_U7VRtoelKCgADs",
-      "shortId": "9ea74b83f4993ca9"
-     }
-    },
-    "tag": "de-2"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "147.45.63.64",
        "port": 443,
        "users": [
@@ -522,7 +491,7 @@
       "publicKey": "9J5SrrBYJ4Tz_zpSM3n-EWuin5jmUqEI8LJ5htsGZy8"
      }
     },
-    "tag": "de-3"
+    "tag": "de-2"
    },
    {
     "protocol": "vless",
@@ -553,7 +522,7 @@
       "shortId": "190c27ae5f2e4d2c"
      }
     },
-    "tag": "de-4"
+    "tag": "de-3"
    },
    {
     "protocol": "vless",
@@ -584,7 +553,7 @@
       "shortId": "9ea74b83f4993ca9"
      }
     },
-    "tag": "de-5"
+    "tag": "de-4"
    },
    {
     "protocol": "vless",
@@ -615,38 +584,7 @@
       "shortId": "c31188450fe50718"
      }
     },
-    "tag": "de-6"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "185.229.9.234",
-       "port": 443,
-       "users": [
-        {
-         "id": "c5b5ef33-819e-4972-9a5a-4ad91f38507f",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "yandex.ru",
-      "publicKey": "fsyvGBPzzwpnSA0UnJML_cDqviNSEdj9zktpC1EeFhY",
-      "shortId": "743541f932fa3959"
-     }
-    },
-    "tag": "de-7"
+    "tag": "de-5"
    },
    {
     "protocol": "vless",
@@ -677,7 +615,38 @@
       "shortId": "cc8069f6c2cbcb32"
      }
     },
-    "tag": "de-8"
+    "tag": "de-6"
+   },
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "194.55.239.101",
+       "port": 8443,
+       "users": [
+        {
+         "id": "accfae78-b31c-47cb-86a1-bb9a07973e4a",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "firefox",
+      "spiderX": "/",
+      "serverName": "passport.yandex.ru",
+      "publicKey": "vxA0Fdcn39Z6w1JrR958Ii0W9uLk2Knxg5XDagcPtxQ",
+      "shortId": "e016190556fb1c9b"
+     }
+    },
+    "tag": "de-7"
    },
    {
     "protocol": "vless",
@@ -708,7 +677,7 @@
       "shortId": "da70aafe569d4b16"
      }
     },
-    "tag": "de-9"
+    "tag": "de-8"
    },
    {
     "protocol": "freedom",
@@ -784,8 +753,7 @@
       "de-5",
       "de-6",
       "de-7",
-      "de-8",
-      "de-9"
+      "de-8"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -816,8 +784,7 @@
     "de-5",
     "de-6",
     "de-7",
-    "de-8",
-    "de-9"
+    "de-8"
    ]
   }
  },
@@ -1170,6 +1137,182 @@
    },
    "subjectSelector": [
     "ee-1"
+   ]
+  }
+ },
+ {
+  "remarks": "🇪🇸 Нейро-Обход | @XelaraVpn",
+  "log": {
+   "loglevel": "warning"
+  },
+  "dns": {
+   "queryStrategy": "UseIP",
+   "servers": [
+    "https://1.1.1.1/dns-query",
+    "https://8.8.8.8/dns-query"
+   ]
+  },
+  "inbounds": [
+   {
+    "listen": "127.0.0.1",
+    "port": 10808,
+    "protocol": "socks",
+    "settings": {
+     "auth": "noauth",
+     "udp": true
+    },
+    "sniffing": {
+     "destOverride": [
+      "http",
+      "tls",
+      "quic"
+     ],
+     "enabled": true
+    },
+    "tag": "socks"
+   },
+   {
+    "listen": "127.0.0.1",
+    "port": 10809,
+    "protocol": "http",
+    "settings": {
+     "allowTransparent": false
+    },
+    "sniffing": {
+     "destOverride": [
+      "http",
+      "tls",
+      "quic"
+     ],
+     "enabled": true
+    },
+    "tag": "http"
+   }
+  ],
+  "outbounds": [
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "76.164.203.141",
+       "port": 443,
+       "users": [
+        {
+         "id": "e75ad2eb-6c1f-45ce-8023-f5f10875df66",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "firefox",
+      "spiderX": "/",
+      "serverName": "zses.eu-cdn294.com",
+      "publicKey": "ajzyADs9mOY6I3v7OWym5KgYh0afKmlCFaNw1pdQsWA",
+      "shortId": "6b4cf686eebb37b9"
+     }
+    },
+    "tag": "es-1"
+   },
+   {
+    "protocol": "freedom",
+    "tag": "direct"
+   },
+   {
+    "protocol": "blackhole",
+    "tag": "block"
+   }
+  ],
+  "routing": {
+   "domainMatcher": "hybrid",
+   "domainStrategy": "IPIfNonMatch",
+   "rules": [
+    {
+     "type": "field",
+     "protocol": [
+      "bittorrent"
+     ],
+     "outboundTag": "block"
+    },
+    {
+     "type": "field",
+     "ip": [
+      "geoip:private"
+     ],
+     "outboundTag": "direct"
+    },
+    {
+     "type": "field",
+     "domain": [
+      "vk.com",
+      "yandex.ru",
+      "mail.ru",
+      "ok.ru",
+      "gosuslugi.ru",
+      "kremlin.ru",
+      "ozon.ru",
+      "wildberries.ru",
+      "vseinstrumenti.ru",
+      "max.ru",
+      "dzen.ru",
+      "rutube.ru",
+      "avito.ru",
+      "2gis.ru",
+      "kinopoisk.ru",
+      "sberbank.ru",
+      "tbank.ru",
+      "rzd.ru",
+      "nalog.ru",
+      "mchs.gov.ru",
+      "minzdrav.gov.ru",
+      "edu.gov.ru",
+      "mos.ru",
+      "spb.ru"
+     ],
+     "outboundTag": "direct"
+    },
+    {
+     "type": "field",
+     "network": "tcp,udp",
+     "balancerTag": "es-balancer"
+    }
+   ],
+   "balancers": [
+    {
+     "tag": "es-balancer",
+     "selector": [
+      "es-1"
+     ],
+     "strategy": {
+      "type": "leastLoad",
+      "settings": {
+       "maxRTT": "1s",
+       "expected": 1,
+       "baselines": [
+        "1s"
+       ],
+       "tolerance": 0.01
+      }
+     }
+    }
+   ]
+  },
+  "burstObservatory": {
+   "pingConfig": {
+    "timeout": "10s",
+    "interval": "120s",
+    "sampling": 5,
+    "destination": "http://www.gstatic.com/generate_204"
+   },
+   "subjectSelector": [
+    "es-1"
    ]
   }
  },
@@ -2465,6 +2608,37 @@
     "settings": {
      "vnext": [
       {
+       "address": "213.21.232.26",
+       "port": 443,
+       "users": [
+        {
+         "id": "616c7b3b-41f4-4038-88c6-d6fedd0ae4a7",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "random",
+      "spiderX": "/",
+      "serverName": "pl-3.ardesnode.ru",
+      "publicKey": "PKlt_5ASsz137EvA9SKSadtjEv1k_U7VRtoelKCgADs",
+      "shortId": "9ea74b83f4993ca9"
+     }
+    },
+    "tag": "pl-4"
+   },
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
        "address": "185.229.9.176",
        "port": 46018,
        "users": [
@@ -2489,7 +2663,7 @@
       "shortId": "68ae5e7c11f80af5"
      }
     },
-    "tag": "pl-4"
+    "tag": "pl-5"
    },
    {
     "protocol": "vless",
@@ -2520,7 +2694,7 @@
       "shortId": "2d0c188798bae174"
      }
     },
-    "tag": "pl-5"
+    "tag": "pl-6"
    },
    {
     "protocol": "vless",
@@ -2551,7 +2725,7 @@
       "shortId": "27e53bbcab7593d7"
      }
     },
-    "tag": "pl-6"
+    "tag": "pl-7"
    },
    {
     "protocol": "vless",
@@ -2582,7 +2756,7 @@
       "shortId": "2d0c188798bae174"
      }
     },
-    "tag": "pl-7"
+    "tag": "pl-8"
    },
    {
     "protocol": "freedom",
@@ -2657,7 +2831,8 @@
       "pl-4",
       "pl-5",
       "pl-6",
-      "pl-7"
+      "pl-7",
+      "pl-8"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -2687,7 +2862,8 @@
     "pl-4",
     "pl-5",
     "pl-6",
-    "pl-7"
+    "pl-7",
+    "pl-8"
    ]
   }
  },
