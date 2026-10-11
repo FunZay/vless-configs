@@ -647,37 +647,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "82.202.178.133",
-       "port": 31443,
-       "users": [
-        {
-         "id": "54f22246-cc9c-4315-907a-6c94c901d20f",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "random",
-      "spiderX": "/",
-      "serverName": "smartcaptcha.yandexcloud.net",
-      "publicKey": "lA0NS88gVVkaZf4qA1aYystzmLsZ5SNzszDsC-8DMSM",
-      "shortId": "e351ebf520"
-     }
-    },
-    "tag": "fr-1"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "82.202.182.40",
        "port": 1443,
        "users": [
@@ -702,7 +671,7 @@
       "shortId": "49900b0593d610"
      }
     },
-    "tag": "fr-2"
+    "tag": "fr-1"
    },
    {
     "protocol": "vless",
@@ -733,7 +702,7 @@
       "shortId": "49900b0593d610"
      }
     },
-    "tag": "fr-3"
+    "tag": "fr-2"
    },
    {
     "protocol": "freedom",
@@ -803,8 +772,7 @@
      "tag": "fr-balancer",
      "selector": [
       "fr-1",
-      "fr-2",
-      "fr-3"
+      "fr-2"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -829,8 +797,7 @@
    },
    "subjectSelector": [
     "fr-1",
-    "fr-2",
-    "fr-3"
+    "fr-2"
    ]
   }
  },
