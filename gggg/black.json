@@ -146,37 +146,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "87.121.47.114",
-       "port": 443,
-       "users": [
-        {
-         "id": "616c7b3b-41f4-4038-88c6-d6fedd0ae4a7",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "random",
-      "spiderX": "/",
-      "serverName": "de-5.ardesnode.ru",
-      "publicKey": "PKlt_5ASsz137EvA9SKSadtjEv1k_U7VRtoelKCgADs",
-      "shortId": "9ea74b83f4993ca9"
-     }
-    },
-    "tag": "de-4"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "87.242.94.90",
        "port": 8449,
        "users": [
@@ -201,7 +170,7 @@
       "shortId": "da70aafe569d4b16"
      }
     },
-    "tag": "de-5"
+    "tag": "de-4"
    },
    {
     "protocol": "freedom",
@@ -273,8 +242,7 @@
       "de-1",
       "de-2",
       "de-3",
-      "de-4",
-      "de-5"
+      "de-4"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -301,8 +269,7 @@
     "de-1",
     "de-2",
     "de-3",
-    "de-4",
-    "de-5"
+    "de-4"
    ]
   }
  },
@@ -1757,37 +1724,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "89.125.100.59",
-       "port": 443,
-       "users": [
-        {
-         "id": "86096188-0ece-41af-922d-792c5f96c3ad",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "chrome",
-      "spiderX": "/",
-      "serverName": "anime.caloribro.uno",
-      "publicKey": "BzXQPqKb1waqaBR4b2GGyE6VWX4LGd9iCOkyuMc8IGs",
-      "shortId": "14aa9b370c30c55d"
-     }
-    },
-    "tag": "nl-1"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "31.56.186.115",
        "port": 443,
        "users": [
@@ -1812,7 +1748,7 @@
       "shortId": "78f97d82e16aaad6"
      }
     },
-    "tag": "nl-2"
+    "tag": "nl-1"
    },
    {
     "protocol": "vless",
@@ -1845,7 +1781,7 @@
       "publicKey": "EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ"
      }
     },
-    "tag": "nl-3"
+    "tag": "nl-2"
    },
    {
     "protocol": "vless",
@@ -1878,7 +1814,7 @@
       "shortId": "5803463a64073dfc"
      }
     },
-    "tag": "nl-4"
+    "tag": "nl-3"
    },
    {
     "protocol": "freedom",
@@ -1949,8 +1885,7 @@
      "selector": [
       "nl-1",
       "nl-2",
-      "nl-3",
-      "nl-4"
+      "nl-3"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -1976,8 +1911,7 @@
    "subjectSelector": [
     "nl-1",
     "nl-2",
-    "nl-3",
-    "nl-4"
+    "nl-3"
    ]
   }
  },
