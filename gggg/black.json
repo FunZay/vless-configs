@@ -1104,43 +1104,12 @@
       "show": false,
       "fingerprint": "firefox",
       "spiderX": "/",
-      "serverName": "www.vk.com",
-      "publicKey": "7o36V1H4H_34kTMpwCfJmDB1bbd21Rgbk2dM_dAonyM",
-      "shortId": "0bb3fbdc6cb178d4"
-     }
-    },
-    "tag": "de-10"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "185.229.9.234",
-       "port": 443,
-       "users": [
-        {
-         "id": "c5b5ef33-819e-4972-9a5a-4ad91f38507f",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
       "serverName": "api.ok.ru",
       "publicKey": "lIgF8B3ICGAQ6ExbRe9YDu8ZD1Ozzqu7-YO7hfuXfRw",
       "shortId": "cc8069f6c2cbcb32"
      }
     },
-    "tag": "de-11"
+    "tag": "de-10"
    },
    {
     "protocol": "vless",
@@ -1171,7 +1140,7 @@
       "shortId": "e016190556fb1c9b"
      }
     },
-    "tag": "de-12"
+    "tag": "de-11"
    },
    {
     "protocol": "vless",
@@ -1202,7 +1171,7 @@
       "shortId": "da70aafe569d4b16"
      }
     },
-    "tag": "de-13"
+    "tag": "de-12"
    },
    {
     "protocol": "freedom",
@@ -1282,8 +1251,7 @@
       "de-9",
       "de-10",
       "de-11",
-      "de-12",
-      "de-13"
+      "de-12"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -1318,8 +1286,7 @@
     "de-9",
     "de-10",
     "de-11",
-    "de-12",
-    "de-13"
+    "de-12"
    ]
   }
  },
@@ -4492,39 +4459,6 @@
     "tag": "se-1"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "188.225.77.254",
-       "port": 8443,
-       "users": [
-        {
-         "id": "9cfb9099-439f-4bd2-87d3-54e67269fdc3",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {
-      "serviceName": "ozone"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "io.ozone.ru",
-      "publicKey": "rJ-fFNYXh7WW9LuYe1N71fh7nAEe5i09Pi5ZDSDlH1s",
-      "shortId": "4951a2313524dd8f"
-     }
-    },
-    "tag": "se-2"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -4591,14 +4525,13 @@
     {
      "tag": "se-balancer",
      "selector": [
-      "se-1",
-      "se-2"
+      "se-1"
      ],
      "strategy": {
       "type": "leastLoad",
       "settings": {
        "maxRTT": "1s",
-       "expected": 2,
+       "expected": 1,
        "baselines": [
         "1s"
        ],
@@ -4616,8 +4549,7 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "se-1",
-    "se-2"
+    "se-1"
    ]
   }
  },
