@@ -1429,40 +1429,6 @@
     "tag": "fi-2"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "81.90.21.96",
-       "port": 443,
-       "users": [
-        {
-         "id": "f9cb2991-ad4a-4a54-aeb3-55d56ac02a8e",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/SweCDN",
-      "mode": "auto"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "random",
-      "spiderX": "/",
-      "serverName": "swe01.deflink.net",
-      "publicKey": "gXi4qaomc8uNUNBPlLikwsiJ3yNIphH5nM--81GmD2c",
-      "shortId": "47237b5f7ac0"
-     }
-    },
-    "tag": "fi-3"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -1530,8 +1496,7 @@
      "tag": "fi-balancer",
      "selector": [
       "fi-1",
-      "fi-2",
-      "fi-3"
+      "fi-2"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -1556,8 +1521,7 @@
    },
    "subjectSelector": [
     "fi-1",
-    "fi-2",
-    "fi-3"
+    "fi-2"
    ]
   }
  },
@@ -3194,79 +3158,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "185.141.227.180",
-       "port": 2053,
-       "users": [
-        {
-         "id": "2c634977-584e-4e1f-b501-1b70c77a6743",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/api/v1/upload",
-      "mode": "auto",
-      "host": "dismissaltree.net",
-      "extra": {
-       "downloadSettings": null,
-       "headers": null,
-       "host": "",
-       "mode": "",
-       "noGRPCHeader": false,
-       "noSSEHeader": false,
-       "path": "",
-       "scMaxBufferedPosts": 0,
-       "scMaxEachPostBytes": "1000000",
-       "scMinPostsIntervalMs": "30",
-       "scStreamUpServerSecs": "0",
-       "seqKey": "",
-       "seqPlacement": "",
-       "serverMaxHeaderBytes": 0,
-       "sessionIDKey": "",
-       "sessionIDLength": "0",
-       "sessionIDPlacement": "",
-       "sessionIDTable": "",
-       "uplinkChunkSize": "0",
-       "uplinkDataKey": "",
-       "uplinkDataPlacement": "",
-       "uplinkHTTPMethod": "",
-       "xPaddingBytes": "100-1000",
-       "xPaddingHeader": "",
-       "xPaddingKey": "",
-       "xPaddingMethod": "",
-       "xPaddingObfsMode": false,
-       "xPaddingPlacement": "",
-       "xmux": {
-        "cMaxReuseTimes": "64-128",
-        "hKeepAlivePeriod": 0,
-        "hMaxRequestTimes": "0",
-        "hMaxReusableSecs": "0",
-        "maxConcurrency": "16-32",
-        "maxConnections": "0"
-       }
-      }
-     },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "dismissaltree.net",
-      "fingerprint": "random",
-      "alpn": [
-       "h2",
-       "http/1.1"
-      ]
-     }
-    },
-    "tag": "ru-4"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "78.159.250.84",
        "port": 2053,
        "users": [
@@ -3293,7 +3184,7 @@
       ]
      }
     },
-    "tag": "ru-5"
+    "tag": "ru-4"
    },
    {
     "protocol": "vless",
@@ -3327,7 +3218,7 @@
       ]
      }
     },
-    "tag": "ru-6"
+    "tag": "ru-5"
    },
    {
     "protocol": "vless",
@@ -3401,7 +3292,7 @@
       ]
      }
     },
-    "tag": "ru-7"
+    "tag": "ru-6"
    },
    {
     "protocol": "vless",
@@ -3436,7 +3327,7 @@
       ]
      }
     },
-    "tag": "ru-8"
+    "tag": "ru-7"
    },
    {
     "protocol": "vless",
@@ -3467,7 +3358,7 @@
       "shortId": "a1b2c3d4"
      }
     },
-    "tag": "ru-9"
+    "tag": "ru-8"
    },
    {
     "protocol": "vless",
@@ -3541,7 +3432,7 @@
       ]
      }
     },
-    "tag": "ru-10"
+    "tag": "ru-9"
    },
    {
     "protocol": "freedom",
@@ -3618,8 +3509,7 @@
       "ru-6",
       "ru-7",
       "ru-8",
-      "ru-9",
-      "ru-10"
+      "ru-9"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -3651,8 +3541,7 @@
     "ru-6",
     "ru-7",
     "ru-8",
-    "ru-9",
-    "ru-10"
+    "ru-9"
    ]
   }
  },
