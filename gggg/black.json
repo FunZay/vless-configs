@@ -668,71 +668,6 @@
     "tag": "de-4"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "87.228.32.195",
-       "port": 2087,
-       "users": [
-        {
-         "id": "f38ad158-a1f6-462c-9b27-0428938c4a9c",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/",
-      "mode": "auto"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "www.rutube.ru",
-      "publicKey": "1ybyzbrhLRTR6tVC9w3IrNSuAPQG7KUJpzfUztUnYTc",
-      "shortId": "98b20d664b0e4933"
-     }
-    },
-    "tag": "de-5"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "87.228.32.195",
-       "port": 8444,
-       "users": [
-        {
-         "id": "f38ad158-a1f6-462c-9b27-0428938c4a9c",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "www.rutube.ru",
-      "publicKey": "1ybyzbrhLRTR6tVC9w3IrNSuAPQG7KUJpzfUztUnYTc",
-      "shortId": "bf5ab39131c42816"
-     }
-    },
-    "tag": "de-6"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -802,9 +737,7 @@
       "de-1",
       "de-2",
       "de-3",
-      "de-4",
-      "de-5",
-      "de-6"
+      "de-4"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -831,9 +764,7 @@
     "de-1",
     "de-2",
     "de-3",
-    "de-4",
-    "de-5",
-    "de-6"
+    "de-4"
    ]
   }
  },
@@ -3459,58 +3390,6 @@
       "mode": "auto",
       "host": "dismissaltree.net",
       "extra": {
-       "host": "",
-       "mode": "",
-       "path": "",
-       "scMaxEachPostBytes": "0",
-       "scMinPostsIntervalMs": "0",
-       "scStreamUpServerSecs": "0",
-       "sessionIDLength": "0",
-       "uplinkChunkSize": "0",
-       "xPaddingBytes": "100-1000",
-       "xmux": {
-        "cMaxReuseTimes": "64-128",
-        "hMaxRequestTimes": "0",
-        "hMaxReusableSecs": "0",
-        "maxConcurrency": "16-32",
-        "maxConnections": "0"
-       }
-      }
-     },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "dismissaltree.net",
-      "fingerprint": "random",
-      "alpn": [
-       "h2"
-      ]
-     }
-    },
-    "tag": "ru-16"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "185.141.227.180",
-       "port": 2053,
-       "users": [
-        {
-         "id": "2c634977-584e-4e1f-b501-1b70c77a6743",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/api/v1/upload",
-      "mode": "auto",
-      "host": "dismissaltree.net",
-      "extra": {
        "scMaxEachPostBytes": "1000000",
        "scMinPostsIntervalMs": "30",
        "xPaddingBytes": "100-1000",
@@ -3527,7 +3406,7 @@
       "fingerprint": "random"
      }
     },
-    "tag": "ru-17"
+    "tag": "ru-16"
    },
    {
     "protocol": "vless",
@@ -3558,7 +3437,7 @@
       "fingerprint": "firefox"
      }
     },
-    "tag": "ru-18"
+    "tag": "ru-17"
    },
    {
     "protocol": "freedom",
@@ -3643,8 +3522,7 @@
       "ru-14",
       "ru-15",
       "ru-16",
-      "ru-17",
-      "ru-18"
+      "ru-17"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -3684,8 +3562,7 @@
     "ru-14",
     "ru-15",
     "ru-16",
-    "ru-17",
-    "ru-18"
+    "ru-17"
    ]
   }
  },
@@ -3806,31 +3683,6 @@
     "tag": "us-2"
    },
    {
-    "protocol": "trojan",
-    "settings": {
-     "servers": [
-      {
-       "address": "87.242.95.164",
-       "port": 8449,
-       "password": "dKn7hqgST668mj_8EgoMUd3_zPSxnTFQ"
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "it.quickgo.cc",
-      "fingerprint": "firefox",
-      "alpn": [
-       "h2",
-       "http/1.1"
-      ]
-     }
-    },
-    "tag": "us-3"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -3898,8 +3750,7 @@
      "tag": "us-balancer",
      "selector": [
       "us-1",
-      "us-2",
-      "us-3"
+      "us-2"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -3924,8 +3775,7 @@
    },
    "subjectSelector": [
     "us-1",
-    "us-2",
-    "us-3"
+    "us-2"
    ]
   }
  }
