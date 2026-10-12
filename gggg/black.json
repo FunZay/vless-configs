@@ -1057,48 +1057,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "95.167.57.17",
-       "port": 8444,
-       "users": [
-        {
-         "id": "d6f1b983-e97b-4f7c-adee-2a9227b691a9",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/",
-      "mode": "auto",
-      "host": "passport.yandex.ru",
-      "extra": {
-       "noSSEHeader": true,
-       "xPaddingBytes": "100-1000",
-       "scMaxBufferedPosts": 30,
-       "scMaxEachPostBytes": 1000000,
-       "scStreamUpServerSecs": "20-80"
-      }
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "passport.yandex.ru",
-      "publicKey": "z7GrVgYcEWSLwXpJdfyC4YzGyI4DkX1EiFSQsonTm0Q",
-      "shortId": "b4e91a7c3d628f05"
-     }
-    },
-    "tag": "fi-1"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "188.225.24.33",
        "port": 8445,
        "users": [
@@ -1123,7 +1081,7 @@
       "shortId": "f7ce475282c06a8f"
      }
     },
-    "tag": "fi-2"
+    "tag": "fi-1"
    },
    {
     "protocol": "freedom",
@@ -1192,14 +1150,13 @@
     {
      "tag": "fi-balancer",
      "selector": [
-      "fi-1",
-      "fi-2"
+      "fi-1"
      ],
      "strategy": {
       "type": "leastLoad",
       "settings": {
        "maxRTT": "1s",
-       "expected": 2,
+       "expected": 1,
        "baselines": [
         "1s"
        ],
@@ -1217,8 +1174,7 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "fi-1",
-    "fi-2"
+    "fi-1"
    ]
   }
  },
@@ -3169,28 +3125,30 @@
     "settings": {
      "vnext": [
       {
-       "address": "78.159.250.34",
-       "port": 4510,
+       "address": "92.53.74.182",
+       "port": 443,
        "users": [
         {
-         "id": "c3db7657-88ce-42a6-b998-1e0364b277ac",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
+         "id": "d97e4f1d-8a59-444e-8e12-e00bfe0820cd",
+         "encryption": "none"
         }
        ]
       }
      ]
     },
     "streamSettings": {
-     "network": "tcp",
+     "network": "grpc",
+     "grpcSettings": {
+      "serviceName": "grpc"
+     },
      "security": "reality",
      "realitySettings": {
       "show": false,
-      "fingerprint": "firefox",
+      "fingerprint": "edge",
       "spiderX": "/",
-      "serverName": "9c99da.usecache.net",
-      "publicKey": "hkvjyE8WMKHvdGfMta7PAIGz6HAv2WiXvWvAQmsE_DM",
-      "shortId": "2d0c188798bae174"
+      "serverName": "freetato-digital.ru",
+      "publicKey": "pIvAHbj4d1ogUo7dEAvyNNVMYjP-7pUCCKN0vDJ1YxM",
+      "shortId": "d9662905"
      }
     },
     "tag": "pl-7"
@@ -3200,7 +3158,7 @@
     "settings": {
      "vnext": [
       {
-       "address": "194.55.239.229",
+       "address": "78.159.250.34",
        "port": 4510,
        "users": [
         {
@@ -3231,11 +3189,11 @@
     "settings": {
      "vnext": [
       {
-       "address": "37.143.15.161",
-       "port": 2443,
+       "address": "194.55.239.229",
+       "port": 4510,
        "users": [
         {
-         "id": "8c26aea7-77ef-4b90-9c98-3b940b191883",
+         "id": "c3db7657-88ce-42a6-b998-1e0364b277ac",
          "encryption": "none",
          "flow": "xtls-rprx-vision"
         }
@@ -3250,9 +3208,9 @@
       "show": false,
       "fingerprint": "firefox",
       "spiderX": "/",
-      "serverName": "avito.ru",
-      "publicKey": "s-gskYntpgVc2Gc4CI64vamYaZnnqpzNIhM1HTztJnQ",
-      "shortId": "999e9c9057344de5"
+      "serverName": "9c99da.usecache.net",
+      "publicKey": "hkvjyE8WMKHvdGfMta7PAIGz6HAv2WiXvWvAQmsE_DM",
+      "shortId": "2d0c188798bae174"
      }
     },
     "tag": "pl-9"
@@ -3266,7 +3224,7 @@
        "port": 2443,
        "users": [
         {
-         "id": "3f8be54d-dee3-4ecb-86d5-38115f5500c8",
+         "id": "8c26aea7-77ef-4b90-9c98-3b940b191883",
          "encryption": "none",
          "flow": "xtls-rprx-vision"
         }
@@ -3297,37 +3255,6 @@
        "port": 2443,
        "users": [
         {
-         "id": "3f8be54d-dee3-4ecb-86d5-38115f5500c8",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "avito.ru",
-      "publicKey": "utvlwXJ0XdCaUDZI540Yeb6U4mflSl1csDA4WdITrDw",
-      "shortId": "2a1e215c533339e0"
-     }
-    },
-    "tag": "pl-11"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "188.225.32.89",
-       "port": 2443,
-       "users": [
-        {
          "id": "8c26aea7-77ef-4b90-9c98-3b940b191883",
          "encryption": "none",
          "flow": "xtls-rprx-vision"
@@ -3348,7 +3275,7 @@
       "shortId": "2a1e215c533339e0"
      }
     },
-    "tag": "pl-12"
+    "tag": "pl-11"
    },
    {
     "protocol": "freedom",
@@ -3427,8 +3354,7 @@
       "pl-8",
       "pl-9",
       "pl-10",
-      "pl-11",
-      "pl-12"
+      "pl-11"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -3462,8 +3388,7 @@
     "pl-8",
     "pl-9",
     "pl-10",
-    "pl-11",
-    "pl-12"
+    "pl-11"
    ]
   }
  },
@@ -4004,39 +3929,6 @@
     "tag": "us-2"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "45.8.201.119",
-       "port": 443,
-       "users": [
-        {
-         "id": "267b3a79-81f2-42ac-a409-c23b05b6329d",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {
-      "serviceName": "api.v2.us7f28b1d6"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "us7.bbobr.win",
-      "publicKey": "NOjnh1ZRSxW5LqakQctsf4Sx0xu1rFNtzce-v-MpwwE",
-      "shortId": "a59ba372400e4779"
-     }
-    },
-    "tag": "us-3"
-   },
-   {
     "protocol": "trojan",
     "settings": {
      "servers": [
@@ -4059,7 +3951,7 @@
       ]
      }
     },
-    "tag": "us-4"
+    "tag": "us-3"
    },
    {
     "protocol": "freedom",
@@ -4130,8 +4022,7 @@
      "selector": [
       "us-1",
       "us-2",
-      "us-3",
-      "us-4"
+      "us-3"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -4157,8 +4048,7 @@
    "subjectSelector": [
     "us-1",
     "us-2",
-    "us-3",
-    "us-4"
+    "us-3"
    ]
   }
  }
