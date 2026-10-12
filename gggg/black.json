@@ -256,32 +256,26 @@
     "tag": "gb-1"
    },
    {
-    "protocol": "vless",
+    "protocol": "trojan",
     "settings": {
-     "vnext": [
+     "servers": [
       {
-       "address": "78.159.250.104",
+       "address": "194.55.239.108",
        "port": 443,
-       "users": [
-        {
-         "id": "d2dc991e-3c5e-437f-8b5c-4e617bd07c93",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
+       "password": "dKn7hqgST668mj_8EgoMUd3_zPSxnTFQ"
       }
      ]
     },
     "streamSettings": {
      "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "qq",
-      "spiderX": "/",
-      "serverName": "rutube.ru",
-      "publicKey": "BgH8ba_xaAeLa5pyvwwJp6HT7i09aNoiAsE1HgTXXkU",
-      "shortId": "3275b9d98d3b69fc"
+     "security": "tls",
+     "tlsSettings": {
+      "serverName": "api-v2.captaingold.app",
+      "fingerprint": "firefox",
+      "alpn": [
+       "h2",
+       "http/1.1"
+      ]
      }
     },
     "tag": "gb-2"
@@ -610,31 +604,6 @@
   ],
   "outbounds": [
    {
-    "protocol": "trojan",
-    "settings": {
-     "servers": [
-      {
-       "address": "194.55.239.108",
-       "port": 443,
-       "password": "dKn7hqgST668mj_8EgoMUd3_zPSxnTFQ"
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "api-v2.captaingold.app",
-      "fingerprint": "firefox",
-      "alpn": [
-       "h2",
-       "http/1.1"
-      ]
-     }
-    },
-    "tag": "nl-1"
-   },
-   {
     "protocol": "vless",
     "settings": {
      "vnext": [
@@ -663,7 +632,7 @@
       "shortId": "1af6386058e62b75"
      }
     },
-    "tag": "nl-2"
+    "tag": "nl-1"
    },
    {
     "protocol": "freedom",
@@ -732,14 +701,13 @@
     {
      "tag": "nl-balancer",
      "selector": [
-      "nl-1",
-      "nl-2"
+      "nl-1"
      ],
      "strategy": {
       "type": "leastLoad",
       "settings": {
        "maxRTT": "1s",
-       "expected": 2,
+       "expected": 1,
        "baselines": [
         "1s"
        ],
@@ -757,8 +725,7 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "nl-1",
-    "nl-2"
+    "nl-1"
    ]
   }
  }
