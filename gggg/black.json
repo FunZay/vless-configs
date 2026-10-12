@@ -1003,6 +1003,182 @@
   }
  },
  {
+  "remarks": "🇫🇮 Нейро-Обход | @XelaraVpn",
+  "log": {
+   "loglevel": "warning"
+  },
+  "dns": {
+   "queryStrategy": "UseIP",
+   "servers": [
+    "https://1.1.1.1/dns-query",
+    "https://8.8.8.8/dns-query"
+   ]
+  },
+  "inbounds": [
+   {
+    "listen": "127.0.0.1",
+    "port": 10808,
+    "protocol": "socks",
+    "settings": {
+     "auth": "noauth",
+     "udp": true
+    },
+    "sniffing": {
+     "destOverride": [
+      "http",
+      "tls",
+      "quic"
+     ],
+     "enabled": true
+    },
+    "tag": "socks"
+   },
+   {
+    "listen": "127.0.0.1",
+    "port": 10809,
+    "protocol": "http",
+    "settings": {
+     "allowTransparent": false
+    },
+    "sniffing": {
+     "destOverride": [
+      "http",
+      "tls",
+      "quic"
+     ],
+     "enabled": true
+    },
+    "tag": "http"
+   }
+  ],
+  "outbounds": [
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "188.225.24.33",
+       "port": 8445,
+       "users": [
+        {
+         "id": "d2f0aeef-fa54-4c93-9fda-448eec3de210",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "edge",
+      "spiderX": "/Ec6moJoHmtiC-i0F",
+      "serverName": "api-cdn.sendmsg.ru",
+      "publicKey": "8C8i0OhzBlEEez7c332IU4s0B7uwpvVEaeTUJvA2HTA",
+      "shortId": "f7ce475282c06a8f"
+     }
+    },
+    "tag": "fi-1"
+   },
+   {
+    "protocol": "freedom",
+    "tag": "direct"
+   },
+   {
+    "protocol": "blackhole",
+    "tag": "block"
+   }
+  ],
+  "routing": {
+   "domainMatcher": "hybrid",
+   "domainStrategy": "IPIfNonMatch",
+   "rules": [
+    {
+     "type": "field",
+     "protocol": [
+      "bittorrent"
+     ],
+     "outboundTag": "block"
+    },
+    {
+     "type": "field",
+     "ip": [
+      "geoip:private"
+     ],
+     "outboundTag": "direct"
+    },
+    {
+     "type": "field",
+     "domain": [
+      "vk.com",
+      "yandex.ru",
+      "mail.ru",
+      "ok.ru",
+      "gosuslugi.ru",
+      "kremlin.ru",
+      "ozon.ru",
+      "wildberries.ru",
+      "vseinstrumenti.ru",
+      "max.ru",
+      "dzen.ru",
+      "rutube.ru",
+      "avito.ru",
+      "2gis.ru",
+      "kinopoisk.ru",
+      "sberbank.ru",
+      "tbank.ru",
+      "rzd.ru",
+      "nalog.ru",
+      "mchs.gov.ru",
+      "minzdrav.gov.ru",
+      "edu.gov.ru",
+      "mos.ru",
+      "spb.ru"
+     ],
+     "outboundTag": "direct"
+    },
+    {
+     "type": "field",
+     "network": "tcp,udp",
+     "balancerTag": "fi-balancer"
+    }
+   ],
+   "balancers": [
+    {
+     "tag": "fi-balancer",
+     "selector": [
+      "fi-1"
+     ],
+     "strategy": {
+      "type": "leastLoad",
+      "settings": {
+       "maxRTT": "1s",
+       "expected": 1,
+       "baselines": [
+        "1s"
+       ],
+       "tolerance": 0.01
+      }
+     }
+    }
+   ]
+  },
+  "burstObservatory": {
+   "pingConfig": {
+    "timeout": "10s",
+    "interval": "120s",
+    "sampling": 5,
+    "destination": "http://www.gstatic.com/generate_204"
+   },
+   "subjectSelector": [
+    "fi-1"
+   ]
+  }
+ },
+ {
   "remarks": "🇫🇷 Нейро-Обход | @XelaraVpn",
   "log": {
    "loglevel": "warning"
@@ -2580,37 +2756,6 @@
     "tag": "nl-2"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "188.225.24.33",
-       "port": 8445,
-       "users": [
-        {
-         "id": "d2f0aeef-fa54-4c93-9fda-448eec3de210",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "edge",
-      "spiderX": "/Ec6moJoHmtiC-i0F",
-      "serverName": "api-cdn.sendmsg.ru",
-      "publicKey": "8C8i0OhzBlEEez7c332IU4s0B7uwpvVEaeTUJvA2HTA",
-      "shortId": "f7ce475282c06a8f"
-     }
-    },
-    "tag": "nl-3"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -2678,8 +2823,7 @@
      "tag": "nl-balancer",
      "selector": [
       "nl-1",
-      "nl-2",
-      "nl-3"
+      "nl-2"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -2704,8 +2848,7 @@
    },
    "subjectSelector": [
     "nl-1",
-    "nl-2",
-    "nl-3"
+    "nl-2"
    ]
   }
  },
@@ -2947,39 +3090,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "92.53.74.182",
-       "port": 443,
-       "users": [
-        {
-         "id": "d97e4f1d-8a59-444e-8e12-e00bfe0820cd",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {
-      "serviceName": "grpc"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "edge",
-      "spiderX": "/",
-      "serverName": "freetato-digital.ru",
-      "publicKey": "pIvAHbj4d1ogUo7dEAvyNNVMYjP-7pUCCKN0vDJ1YxM",
-      "shortId": "d9662905"
-     }
-    },
-    "tag": "pl-7"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "78.159.250.34",
        "port": 4510,
        "users": [
@@ -3004,7 +3114,7 @@
       "shortId": "2d0c188798bae174"
      }
     },
-    "tag": "pl-8"
+    "tag": "pl-7"
    },
    {
     "protocol": "vless",
@@ -3035,7 +3145,7 @@
       "shortId": "2d0c188798bae174"
      }
     },
-    "tag": "pl-9"
+    "tag": "pl-8"
    },
    {
     "protocol": "vless",
@@ -3066,7 +3176,7 @@
       "shortId": "999e9c9057344de5"
      }
     },
-    "tag": "pl-10"
+    "tag": "pl-9"
    },
    {
     "protocol": "vless",
@@ -3097,7 +3207,7 @@
       "shortId": "2a1e215c533339e0"
      }
     },
-    "tag": "pl-11"
+    "tag": "pl-10"
    },
    {
     "protocol": "freedom",
@@ -3175,8 +3285,7 @@
       "pl-7",
       "pl-8",
       "pl-9",
-      "pl-10",
-      "pl-11"
+      "pl-10"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -3209,8 +3318,7 @@
     "pl-7",
     "pl-8",
     "pl-9",
-    "pl-10",
-    "pl-11"
+    "pl-10"
    ]
   }
  },
