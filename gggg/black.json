@@ -70,41 +70,6 @@
      "xhttpSettings": {
       "path": "/api/v1/upload",
       "mode": "auto",
-      "host": "randomquaint.net"
-     },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "randomquaint.net",
-      "fingerprint": "firefox",
-      "alpn": [
-       "h2",
-       "http/1.1"
-      ]
-     }
-    },
-    "tag": "bg-1"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "78.159.246.179",
-       "port": 8443,
-       "users": [
-        {
-         "id": "6a2aff19-ff1f-4a13-96c8-a4d8986a9699",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/api/v1/upload",
-      "mode": "auto",
       "host": "randomquaint.net",
       "extra": {
        "extra": null,
@@ -132,7 +97,7 @@
       "fingerprint": "firefox"
      }
     },
-    "tag": "bg-2"
+    "tag": "bg-1"
    },
    {
     "protocol": "vless",
@@ -163,7 +128,7 @@
       "fingerprint": "random"
      }
     },
-    "tag": "bg-3"
+    "tag": "bg-2"
    },
    {
     "protocol": "freedom",
@@ -233,8 +198,7 @@
      "tag": "bg-balancer",
      "selector": [
       "bg-1",
-      "bg-2",
-      "bg-3"
+      "bg-2"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -259,8 +223,7 @@
    },
    "subjectSelector": [
     "bg-1",
-    "bg-2",
-    "bg-3"
+    "bg-2"
    ]
   }
  },
@@ -2681,68 +2644,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "185.141.227.190",
-       "port": 7449,
-       "users": [
-        {
-         "id": "c7aba3ba-bc3a-4eb3-bfea-c8463d2b20df",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "cloud.1c.ru",
-      "publicKey": "TluV1p0lbKcf1UWlkQQ6T7HiIf5NcBax397uh23tUjw",
-      "shortId": "315bf0f2ca19696a"
-     }
-    },
-    "tag": "ru-3"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "185.141.227.190",
-       "port": 7449,
-       "users": [
-        {
-         "id": "b1d06677-5655-4d6e-931f-ea7314332afe",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "cloud.1c.ru",
-      "publicKey": "TluV1p0lbKcf1UWlkQQ6T7HiIf5NcBax397uh23tUjw",
-      "shortId": "315bf0f2ca19696a"
-     }
-    },
-    "tag": "ru-4"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "151.236.114.253",
        "port": 443,
        "users": [
@@ -2767,7 +2668,7 @@
       "shortId": "3275b9d98d3b69fc"
      }
     },
-    "tag": "ru-5"
+    "tag": "ru-3"
    },
    {
     "protocol": "vless",
@@ -2840,7 +2741,7 @@
       ]
      }
     },
-    "tag": "ru-6"
+    "tag": "ru-4"
    },
    {
     "protocol": "vless",
@@ -2890,7 +2791,7 @@
       "fingerprint": "safari"
      }
     },
-    "tag": "ru-7"
+    "tag": "ru-5"
    },
    {
     "protocol": "vless",
@@ -2939,7 +2840,7 @@
       "serverName": "dismissaltree.net"
      }
     },
-    "tag": "ru-8"
+    "tag": "ru-6"
    },
    {
     "protocol": "vless",
@@ -2987,7 +2888,7 @@
       "serverName": "dismissaltree.net"
      }
     },
-    "tag": "ru-9"
+    "tag": "ru-7"
    },
    {
     "protocol": "vless",
@@ -3036,7 +2937,7 @@
       "fingerprint": "random"
      }
     },
-    "tag": "ru-10"
+    "tag": "ru-8"
    },
    {
     "protocol": "vless",
@@ -3089,7 +2990,7 @@
       ]
      }
     },
-    "tag": "ru-11"
+    "tag": "ru-9"
    },
    {
     "protocol": "vless",
@@ -3120,7 +3021,7 @@
       "fingerprint": "random"
      }
     },
-    "tag": "ru-12"
+    "tag": "ru-10"
    },
    {
     "protocol": "vless",
@@ -3161,7 +3062,7 @@
       "fingerprint": "random"
      }
     },
-    "tag": "ru-13"
+    "tag": "ru-11"
    },
    {
     "protocol": "vless",
@@ -3192,7 +3093,7 @@
       "fingerprint": "firefox"
      }
     },
-    "tag": "ru-14"
+    "tag": "ru-12"
    },
    {
     "protocol": "freedom",
@@ -3272,9 +3173,7 @@
       "ru-9",
       "ru-10",
       "ru-11",
-      "ru-12",
-      "ru-13",
-      "ru-14"
+      "ru-12"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -3309,9 +3208,7 @@
     "ru-9",
     "ru-10",
     "ru-11",
-    "ru-12",
-    "ru-13",
-    "ru-14"
+    "ru-12"
    ]
   }
  },
