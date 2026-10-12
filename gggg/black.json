@@ -1095,6 +1095,37 @@
     "tag": "fi-1"
    },
    {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "188.225.24.33",
+       "port": 8445,
+       "users": [
+        {
+         "id": "d2f0aeef-fa54-4c93-9fda-448eec3de210",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "edge",
+      "spiderX": "/Ec6moJoHmtiC-i0F",
+      "serverName": "api-cdn.sendmsg.ru",
+      "publicKey": "8C8i0OhzBlEEez7c332IU4s0B7uwpvVEaeTUJvA2HTA",
+      "shortId": "f7ce475282c06a8f"
+     }
+    },
+    "tag": "fi-2"
+   },
+   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -1161,13 +1192,14 @@
     {
      "tag": "fi-balancer",
      "selector": [
-      "fi-1"
+      "fi-1",
+      "fi-2"
      ],
      "strategy": {
       "type": "leastLoad",
       "settings": {
        "maxRTT": "1s",
-       "expected": 1,
+       "expected": 2,
        "baselines": [
         "1s"
        ],
@@ -1185,7 +1217,8 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "fi-1"
+    "fi-1",
+    "fi-2"
    ]
   }
  },
@@ -2802,37 +2835,6 @@
     "tag": "nl-2"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "188.225.24.33",
-       "port": 8445,
-       "users": [
-        {
-         "id": "d2f0aeef-fa54-4c93-9fda-448eec3de210",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "edge",
-      "spiderX": "/Ec6moJoHmtiC-i0F",
-      "serverName": "api-cdn.sendmsg.ru",
-      "publicKey": "8C8i0OhzBlEEez7c332IU4s0B7uwpvVEaeTUJvA2HTA",
-      "shortId": "f7ce475282c06a8f"
-     }
-    },
-    "tag": "nl-3"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -2900,8 +2902,7 @@
      "tag": "nl-balancer",
      "selector": [
       "nl-1",
-      "nl-2",
-      "nl-3"
+      "nl-2"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -2926,8 +2927,7 @@
    },
    "subjectSelector": [
     "nl-1",
-    "nl-2",
-    "nl-3"
+    "nl-2"
    ]
   }
  },
@@ -3169,39 +3169,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "92.53.74.182",
-       "port": 443,
-       "users": [
-        {
-         "id": "d97e4f1d-8a59-444e-8e12-e00bfe0820cd",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {
-      "serviceName": "grpc"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "edge",
-      "spiderX": "/",
-      "serverName": "freetato-digital.ru",
-      "publicKey": "pIvAHbj4d1ogUo7dEAvyNNVMYjP-7pUCCKN0vDJ1YxM",
-      "shortId": "d9662905"
-     }
-    },
-    "tag": "pl-7"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "78.159.250.34",
        "port": 4510,
        "users": [
@@ -3226,7 +3193,7 @@
       "shortId": "2d0c188798bae174"
      }
     },
-    "tag": "pl-8"
+    "tag": "pl-7"
    },
    {
     "protocol": "vless",
@@ -3257,7 +3224,7 @@
       "shortId": "2d0c188798bae174"
      }
     },
-    "tag": "pl-9"
+    "tag": "pl-8"
    },
    {
     "protocol": "vless",
@@ -3269,6 +3236,37 @@
        "users": [
         {
          "id": "8c26aea7-77ef-4b90-9c98-3b940b191883",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "firefox",
+      "spiderX": "/",
+      "serverName": "avito.ru",
+      "publicKey": "s-gskYntpgVc2Gc4CI64vamYaZnnqpzNIhM1HTztJnQ",
+      "shortId": "999e9c9057344de5"
+     }
+    },
+    "tag": "pl-9"
+   },
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "37.143.15.161",
+       "port": 2443,
+       "users": [
+        {
+         "id": "3f8be54d-dee3-4ecb-86d5-38115f5500c8",
          "encryption": "none",
          "flow": "xtls-rprx-vision"
         }
@@ -3295,37 +3293,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "37.143.15.161",
-       "port": 2443,
-       "users": [
-        {
-         "id": "3f8be54d-dee3-4ecb-86d5-38115f5500c8",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "avito.ru",
-      "publicKey": "s-gskYntpgVc2Gc4CI64vamYaZnnqpzNIhM1HTztJnQ",
-      "shortId": "999e9c9057344de5"
-     }
-    },
-    "tag": "pl-11"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "188.225.32.89",
        "port": 2443,
        "users": [
@@ -3350,7 +3317,7 @@
       "shortId": "2a1e215c533339e0"
      }
     },
-    "tag": "pl-12"
+    "tag": "pl-11"
    },
    {
     "protocol": "vless",
@@ -3381,7 +3348,7 @@
       "shortId": "2a1e215c533339e0"
      }
     },
-    "tag": "pl-13"
+    "tag": "pl-12"
    },
    {
     "protocol": "freedom",
@@ -3461,8 +3428,7 @@
       "pl-9",
       "pl-10",
       "pl-11",
-      "pl-12",
-      "pl-13"
+      "pl-12"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -3497,8 +3463,7 @@
     "pl-9",
     "pl-10",
     "pl-11",
-    "pl-12",
-    "pl-13"
+    "pl-12"
    ]
   }
  },
