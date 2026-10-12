@@ -1089,6 +1089,33 @@
     "tag": "ee-1"
    },
    {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "194.55.239.239",
+       "port": 6443,
+       "users": [
+        {
+         "id": "7b859f9e-0e6a-475f-b5e3-5d671b043164",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "tls",
+     "tlsSettings": {
+      "serverName": "for.cloudgamings.org",
+      "fingerprint": "firefox"
+     }
+    },
+    "tag": "ee-2"
+   },
+   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -1155,13 +1182,14 @@
     {
      "tag": "ee-balancer",
      "selector": [
-      "ee-1"
+      "ee-1",
+      "ee-2"
      ],
      "strategy": {
       "type": "leastLoad",
       "settings": {
        "maxRTT": "1s",
-       "expected": 1,
+       "expected": 2,
        "baselines": [
         "1s"
        ],
@@ -1179,7 +1207,8 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "ee-1"
+    "ee-1",
+    "ee-2"
    ]
   }
  },
@@ -2067,24 +2096,28 @@
     "settings": {
      "vnext": [
       {
-       "address": "194.55.239.239",
-       "port": 6443,
+       "address": "185.86.145.78",
+       "port": 8443,
        "users": [
         {
-         "id": "7b859f9e-0e6a-475f-b5e3-5d671b043164",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
+         "id": "2292dd55-db84-45e3-89bc-9a23fd904b22",
+         "encryption": "none"
         }
        ]
       }
      ]
     },
     "streamSettings": {
-     "network": "tcp",
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "for.cloudgamings.org",
-      "fingerprint": "firefox"
+     "network": "grpc",
+     "grpcSettings": {},
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "firefox",
+      "spiderX": "/",
+      "serverName": "idlecore.me",
+      "publicKey": "Qf5kMbpi0sUGV4ZB_2wVGdi-iACSFv47quZT-z-ymEo",
+      "shortId": "a1b2c3d4"
      }
     },
     "tag": "nl-1"
