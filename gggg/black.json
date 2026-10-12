@@ -100,37 +100,6 @@
     "tag": "bg-1"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "78.159.250.84",
-       "port": 8443,
-       "users": [
-        {
-         "id": "6a2aff19-ff1f-4a13-96c8-a4d8986a9699",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/api/v1/upload",
-      "mode": "auto",
-      "host": "summerculture.net"
-     },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "summerculture.net",
-      "fingerprint": "random"
-     }
-    },
-    "tag": "bg-2"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -197,14 +166,13 @@
     {
      "tag": "bg-balancer",
      "selector": [
-      "bg-1",
-      "bg-2"
+      "bg-1"
      ],
      "strategy": {
       "type": "leastLoad",
       "settings": {
        "maxRTT": "1s",
-       "expected": 2,
+       "expected": 1,
        "baselines": [
         "1s"
        ],
@@ -222,8 +190,7 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "bg-1",
-    "bg-2"
+    "bg-1"
    ]
   }
  },
@@ -2216,37 +2183,6 @@
     "tag": "pl-4"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "78.159.250.34",
-       "port": 4510,
-       "users": [
-        {
-         "id": "c3db7657-88ce-42a6-b998-1e0364b277ac",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "9c99da.usecache.net",
-      "publicKey": "hkvjyE8WMKHvdGfMta7PAIGz6HAv2WiXvWvAQmsE_DM",
-      "shortId": "2d0c188798bae174"
-     }
-    },
-    "tag": "pl-5"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -2316,8 +2252,7 @@
       "pl-1",
       "pl-2",
       "pl-3",
-      "pl-4",
-      "pl-5"
+      "pl-4"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -2344,8 +2279,7 @@
     "pl-1",
     "pl-2",
     "pl-3",
-    "pl-4",
-    "pl-5"
+    "pl-4"
    ]
   }
  },
