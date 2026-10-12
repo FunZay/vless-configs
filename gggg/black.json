@@ -459,31 +459,6 @@
     "tag": "gb-2"
    },
    {
-    "protocol": "trojan",
-    "settings": {
-     "servers": [
-      {
-       "address": "194.55.239.108",
-       "port": 443,
-       "password": "dKn7hqgST668mj_8EgoMUd3_zPSxnTFQ"
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "api-v2.captaingold.app",
-      "fingerprint": "firefox",
-      "alpn": [
-       "h2",
-       "http/1.1"
-      ]
-     }
-    },
-    "tag": "gb-3"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -551,8 +526,7 @@
      "tag": "gb-balancer",
      "selector": [
       "gb-1",
-      "gb-2",
-      "gb-3"
+      "gb-2"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -577,8 +551,7 @@
    },
    "subjectSelector": [
     "gb-1",
-    "gb-2",
-    "gb-3"
+    "gb-2"
    ]
   }
  },
@@ -809,6 +782,31 @@
   ],
   "outbounds": [
    {
+    "protocol": "trojan",
+    "settings": {
+     "servers": [
+      {
+       "address": "194.55.239.108",
+       "port": 443,
+       "password": "dKn7hqgST668mj_8EgoMUd3_zPSxnTFQ"
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "tls",
+     "tlsSettings": {
+      "serverName": "api-v2.captaingold.app",
+      "fingerprint": "firefox",
+      "alpn": [
+       "h2",
+       "http/1.1"
+      ]
+     }
+    },
+    "tag": "nl-1"
+   },
+   {
     "protocol": "vless",
     "settings": {
      "vnext": [
@@ -837,7 +835,7 @@
       "shortId": "1af6386058e62b75"
      }
     },
-    "tag": "nl-1"
+    "tag": "nl-2"
    },
    {
     "protocol": "freedom",
@@ -906,13 +904,14 @@
     {
      "tag": "nl-balancer",
      "selector": [
-      "nl-1"
+      "nl-1",
+      "nl-2"
      ],
      "strategy": {
       "type": "leastLoad",
       "settings": {
        "maxRTT": "1s",
-       "expected": 1,
+       "expected": 2,
        "baselines": [
         "1s"
        ],
@@ -930,7 +929,8 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "nl-1"
+    "nl-1",
+    "nl-2"
    ]
   }
  }
