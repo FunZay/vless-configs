@@ -1837,73 +1837,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "fert6.localip.ir",
-       "port": 2087,
-       "users": [
-        {
-         "id": "a5db5ab5-8d28-49c0-ad55-0ad4724e5c0d",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "ws",
-     "wsSettings": {
-      "path": "/hokm",
-      "headers": {
-       "Host": "fert6.localip.ir"
-      }
-     },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "fert6.localip.ir",
-      "fingerprint": "chrome",
-      "alpn": [
-       "http/1.1"
-      ]
-     }
-    },
-    "tag": "dev-1"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "31.58.95.10",
-       "port": 443,
-       "users": [
-        {
-         "id": "c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {
-      "serviceName": "gdd-grpc"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "random",
-      "spiderX": "/",
-      "serverName": "de-gdd-1.unturned-rust-dead.lol",
-      "publicKey": "aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk"
-     }
-    },
-    "tag": "dev-2"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "fert1qswdfegrthy.localip.ir",
        "port": 2087,
        "users": [
@@ -1932,7 +1865,7 @@
       ]
      }
     },
-    "tag": "dev-3"
+    "tag": "dev-1"
    },
    {
     "protocol": "vless",
@@ -1967,7 +1900,42 @@
       ]
      }
     },
-    "tag": "dev-4"
+    "tag": "dev-2"
+   },
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "fert6.localip.ir",
+       "port": 2087,
+       "users": [
+        {
+         "id": "a5db5ab5-8d28-49c0-ad55-0ad4724e5c0d",
+         "encryption": "none"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "ws",
+     "wsSettings": {
+      "path": "/hokm",
+      "headers": {
+       "Host": "fert6.localip.ir"
+      }
+     },
+     "security": "tls",
+     "tlsSettings": {
+      "serverName": "fert6.localip.ir",
+      "fingerprint": "chrome",
+      "alpn": [
+       "http/1.1"
+      ]
+     }
+    },
+    "tag": "dev-3"
    },
    {
     "protocol": "freedom",
@@ -2204,8 +2172,7 @@
      "selector": [
       "dev-1",
       "dev-2",
-      "dev-3",
-      "dev-4"
+      "dev-3"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -2231,8 +2198,7 @@
    "subjectSelector": [
     "dev-1",
     "dev-2",
-    "dev-3",
-    "dev-4"
+    "dev-3"
    ]
   }
  },
@@ -2353,6 +2319,37 @@
     "settings": {
      "vnext": [
       {
+       "address": "2.27.14.244",
+       "port": 443,
+       "users": [
+        {
+         "id": "fd1d80da-3b27-457a-810b-2b28a309edc1",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "chrome",
+      "spiderX": "/",
+      "serverName": "www.google.com",
+      "publicKey": "uakxTTpl0pQZxA-wu_QEsyVDUlErAxEKmFcnQrzABXw",
+      "shortId": "c24b46e36cc6d6fa"
+     }
+    },
+    "tag": "sev-3"
+   },
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
        "address": "se3.h1cloud.net",
        "port": 25119,
        "users": [
@@ -2377,7 +2374,7 @@
       "shortId": "10f517"
      }
     },
-    "tag": "sev-3"
+    "tag": "sev-4"
    },
    {
     "protocol": "freedom",
@@ -2614,7 +2611,8 @@
      "selector": [
       "sev-1",
       "sev-2",
-      "sev-3"
+      "sev-3",
+      "sev-4"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -2640,7 +2638,8 @@
    "subjectSelector": [
     "sev-1",
     "sev-2",
-    "sev-3"
+    "sev-3",
+    "sev-4"
    ]
   }
  },
@@ -2764,11 +2763,11 @@
     "settings": {
      "vnext": [
       {
-       "address": "154.29.149.140",
-       "port": 16586,
+       "address": "ge-s-1.pythonmakemigreat.wiki",
+       "port": 443,
        "users": [
         {
-         "id": "57beeeb0-03fc-4fc9-94da-7604488a7134",
+         "id": "f8d52ece-fad4-478d-875d-df6eed3befa7",
          "encryption": "none",
          "flow": "xtls-rprx-vision"
         }
@@ -2783,43 +2782,12 @@
       "show": false,
       "fingerprint": "chrome",
       "spiderX": "/",
-      "serverName": "us1p1.xn--ghq880n3na965a.com",
-      "publicKey": "tBvlo8F8hKRXSK-EHRAfzEH-x3e4uvheGloO-9bPKx4",
-      "shortId": "70ab6d813e"
+      "serverName": "ge-s-1.pythonmakemigreat.wiki",
+      "publicKey": "5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8",
+      "shortId": "2c9a2790ad5900b2"
      }
     },
     "tag": "usv-3"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "154.29.149.140",
-       "port": 41705,
-       "users": [
-        {
-         "id": "57beeeb0-03fc-4fc9-94da-7604488a7134",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "us1p1.xn--ghq880n3na965a.com",
-      "publicKey": "KfOrtENkHAXDFlsCluw6fv62Q-WuJXCKI98XZihtemA",
-      "shortId": "e51285e3"
-     }
-    },
-    "tag": "usv-4"
    },
    {
     "protocol": "vless",
@@ -2851,18 +2819,18 @@
       "publicKey": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0"
      }
     },
-    "tag": "usv-5"
+    "tag": "usv-4"
    },
    {
     "protocol": "vless",
     "settings": {
      "vnext": [
       {
-       "address": "ge-s-1.pythonmakemigreat.wiki",
-       "port": 443,
+       "address": "154.29.149.140",
+       "port": 16586,
        "users": [
         {
-         "id": "f8d52ece-fad4-478d-875d-df6eed3befa7",
+         "id": "57beeeb0-03fc-4fc9-94da-7604488a7134",
          "encryption": "none",
          "flow": "xtls-rprx-vision"
         }
@@ -2877,12 +2845,12 @@
       "show": false,
       "fingerprint": "chrome",
       "spiderX": "/",
-      "serverName": "ge-s-1.pythonmakemigreat.wiki",
-      "publicKey": "5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8",
-      "shortId": "2c9a2790ad5900b2"
+      "serverName": "us1p1.xn--ghq880n3na965a.com",
+      "publicKey": "tBvlo8F8hKRXSK-EHRAfzEH-x3e4uvheGloO-9bPKx4",
+      "shortId": "70ab6d813e"
      }
     },
-    "tag": "usv-6"
+    "tag": "usv-5"
    },
    {
     "protocol": "freedom",
@@ -3121,8 +3089,7 @@
       "usv-2",
       "usv-3",
       "usv-4",
-      "usv-5",
-      "usv-6"
+      "usv-5"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -3150,8 +3117,7 @@
     "usv-2",
     "usv-3",
     "usv-4",
-    "usv-5",
-    "usv-6"
+    "usv-5"
    ]
   }
  }
