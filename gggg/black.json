@@ -738,37 +738,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "87.242.127.113",
-       "port": 4510,
-       "users": [
-        {
-         "id": "c3db7657-88ce-42a6-b998-1e0364b277ac",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "random",
-      "spiderX": "/",
-      "serverName": "9c99da.usecache.net",
-      "publicKey": "hkvjyE8WMKHvdGfMta7PAIGz6HAv2WiXvWvAQmsE_DM",
-      "shortId": "2d0c188798bae174"
-     }
-    },
-    "tag": "pl-1"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "185.229.9.240",
        "port": 443,
        "users": [
@@ -793,7 +762,7 @@
       "shortId": "27e53bbcab7593d7"
      }
     },
-    "tag": "pl-2"
+    "tag": "pl-1"
    },
    {
     "protocol": "freedom",
@@ -1028,14 +997,13 @@
     {
      "tag": "pl-balancer",
      "selector": [
-      "pl-1",
-      "pl-2"
+      "pl-1"
      ],
      "strategy": {
       "type": "leastLoad",
       "settings": {
        "maxRTT": "1s",
-       "expected": 2,
+       "expected": 1,
        "baselines": [
         "1s"
        ],
@@ -1053,8 +1021,7 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "pl-1",
-    "pl-2"
+    "pl-1"
    ]
   }
  },
@@ -1113,11 +1080,11 @@
     "settings": {
      "vnext": [
       {
-       "address": "fert6.localip.ir",
-       "port": 2087,
+       "address": "31.58.95.10",
+       "port": 443,
        "users": [
         {
-         "id": "a5db5ab5-8d28-49c0-ad55-0ad4724e5c0d",
+         "id": "c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8",
          "encryption": "none"
         }
        ]
@@ -1125,20 +1092,17 @@
      ]
     },
     "streamSettings": {
-     "network": "ws",
-     "wsSettings": {
-      "path": "/hokm",
-      "headers": {
-       "Host": "fert6.localip.ir"
-      }
+     "network": "grpc",
+     "grpcSettings": {
+      "serviceName": "gdd-grpc"
      },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "fert6.localip.ir",
-      "fingerprint": "chrome",
-      "alpn": [
-       "http/1.1"
-      ]
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "random",
+      "spiderX": "/",
+      "serverName": "de-gdd-1.unturned-rust-dead.lol",
+      "publicKey": "aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk"
      }
     },
     "tag": "dev-1"
@@ -1183,69 +1147,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "ge-s-1.pythonmakemigreat.wiki",
-       "port": 443,
-       "users": [
-        {
-         "id": "f8d52ece-fad4-478d-875d-df6eed3befa7",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "chrome",
-      "spiderX": "/",
-      "serverName": "ge-s-1.pythonmakemigreat.wiki",
-      "publicKey": "5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8",
-      "shortId": "2c9a2790ad5900b2"
-     }
-    },
-    "tag": "dev-3"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "31.58.95.10",
-       "port": 443,
-       "users": [
-        {
-         "id": "c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {
-      "serviceName": "gdd-grpc"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "random",
-      "spiderX": "/",
-      "serverName": "de-gdd-1.unturned-rust-dead.lol",
-      "publicKey": "aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk"
-     }
-    },
-    "tag": "dev-4"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "ops4asfseretuiyk.localip.ir",
        "port": 2087,
        "users": [
@@ -1274,7 +1175,42 @@
       ]
      }
     },
-    "tag": "dev-5"
+    "tag": "dev-3"
+   },
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "fert6.localip.ir",
+       "port": 2087,
+       "users": [
+        {
+         "id": "a5db5ab5-8d28-49c0-ad55-0ad4724e5c0d",
+         "encryption": "none"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "ws",
+     "wsSettings": {
+      "path": "/hokm",
+      "headers": {
+       "Host": "fert6.localip.ir"
+      }
+     },
+     "security": "tls",
+     "tlsSettings": {
+      "serverName": "fert6.localip.ir",
+      "fingerprint": "chrome",
+      "alpn": [
+       "http/1.1"
+      ]
+     }
+    },
+    "tag": "dev-4"
    },
    {
     "protocol": "freedom",
@@ -1512,8 +1448,7 @@
       "dev-1",
       "dev-2",
       "dev-3",
-      "dev-4",
-      "dev-5"
+      "dev-4"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -1540,8 +1475,7 @@
     "dev-1",
     "dev-2",
     "dev-3",
-    "dev-4",
-    "dev-5"
+    "dev-4"
    ]
   }
  },
@@ -1959,8 +1893,8 @@
      "security": "reality",
      "realitySettings": {
       "show": false,
-      "fingerprint": "qq",
-      "spiderX": "/5xmOzu3pGosH91u",
+      "fingerprint": "chrome",
+      "spiderX": "/",
       "serverName": "www.samsung.com",
       "publicKey": "szPq4a3cvxfBOmGyg-UJCV3d1Jqjnj7YR3gaxyYtnk4",
       "shortId": "10f517"
@@ -2021,8 +1955,8 @@
      "security": "reality",
      "realitySettings": {
       "show": false,
-      "fingerprint": "chrome",
-      "spiderX": "/",
+      "fingerprint": "qq",
+      "spiderX": "/5xmOzu3pGosH91u",
       "serverName": "www.samsung.com",
       "publicKey": "szPq4a3cvxfBOmGyg-UJCV3d1Jqjnj7YR3gaxyYtnk4",
       "shortId": "10f517"
@@ -2381,6 +2315,38 @@
     "settings": {
      "vnext": [
       {
+       "address": "147.45.60.160",
+       "port": 8444,
+       "users": [
+        {
+         "id": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
+         "encryption": "none"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "grpc",
+     "grpcSettings": {
+      "serviceName": "GunService"
+     },
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "random",
+      "spiderX": "/",
+      "serverName": "github.com",
+      "publicKey": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0"
+     }
+    },
+    "tag": "usv-2"
+   },
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
        "address": "193.233.220.203",
        "port": 8443,
        "users": [
@@ -2408,101 +2374,7 @@
       "shortId": "6bd33a75ebc0f26e"
      }
     },
-    "tag": "usv-2"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "147.45.60.160",
-       "port": 8444,
-       "users": [
-        {
-         "id": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {
-      "serviceName": "GunService"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "random",
-      "spiderX": "/",
-      "serverName": "github.com",
-      "publicKey": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0"
-     }
-    },
     "tag": "usv-3"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "154.29.149.140",
-       "port": 41705,
-       "users": [
-        {
-         "id": "57beeeb0-03fc-4fc9-94da-7604488a7134",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "us1p1.xn--ghq880n3na965a.com",
-      "publicKey": "KfOrtENkHAXDFlsCluw6fv62Q-WuJXCKI98XZihtemA",
-      "shortId": "e51285e3"
-     }
-    },
-    "tag": "usv-4"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "154.29.149.140",
-       "port": 16586,
-       "users": [
-        {
-         "id": "57beeeb0-03fc-4fc9-94da-7604488a7134",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "chrome",
-      "spiderX": "/",
-      "serverName": "us1p1.xn--ghq880n3na965a.com",
-      "publicKey": "tBvlo8F8hKRXSK-EHRAfzEH-x3e4uvheGloO-9bPKx4",
-      "shortId": "70ab6d813e"
-     }
-    },
-    "tag": "usv-5"
    },
    {
     "protocol": "freedom",
@@ -2739,9 +2611,7 @@
      "selector": [
       "usv-1",
       "usv-2",
-      "usv-3",
-      "usv-4",
-      "usv-5"
+      "usv-3"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -2767,9 +2637,7 @@
    "subjectSelector": [
     "usv-1",
     "usv-2",
-    "usv-3",
-    "usv-4",
-    "usv-5"
+    "usv-3"
    ]
   }
  }
