@@ -2842,6 +2842,35 @@
     "tag": "ee-5"
    },
    {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "188.225.38.216",
+       "port": 443,
+       "users": [
+        {
+         "id": "30292475-4666-4c26-bcb2-338a0919958b",
+         "encryption": "none"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "grpc",
+     "grpcSettings": {
+      "serviceName": "lalibobi.orbit.v3.Connect"
+     },
+     "security": "tls",
+     "tlsSettings": {
+      "serverName": "lalibobi.online",
+      "fingerprint": "edge"
+     }
+    },
+    "tag": "ee-6"
+   },
+   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -3078,7 +3107,8 @@
       "ee-2",
       "ee-3",
       "ee-4",
-      "ee-5"
+      "ee-5",
+      "ee-6"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -3106,7 +3136,8 @@
     "ee-2",
     "ee-3",
     "ee-4",
-    "ee-5"
+    "ee-5",
+    "ee-6"
    ]
   }
  },
@@ -4448,6 +4479,37 @@
     "tag": "fr-9"
    },
    {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "79.174.92.222",
+       "port": 443,
+       "users": [
+        {
+         "id": "03ca8c3f-e777-45b5-a1b1-592094ca99ee",
+         "encryption": "none"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "grpc",
+     "grpcSettings": {},
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "chrome",
+      "spiderX": "/",
+      "serverName": "m.vk.com",
+      "publicKey": "_PYBo3dyZRpGC44vADqcmlBCSeAVh1X8l3mulghVsTI",
+      "shortId": "a1b2c3d4"
+     }
+    },
+    "tag": "fr-10"
+   },
+   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -4688,7 +4750,8 @@
       "fr-6",
       "fr-7",
       "fr-8",
-      "fr-9"
+      "fr-9",
+      "fr-10"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -4720,7 +4783,8 @@
     "fr-6",
     "fr-7",
     "fr-8",
-    "fr-9"
+    "fr-9",
+    "fr-10"
    ]
   }
  },
@@ -9621,37 +9685,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "103.244.145.138",
-       "port": 443,
-       "users": [
-        {
-         "id": "e75ad2eb-6c1f-45ce-8023-f5f10875df66",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "random",
-      "spiderX": "/",
-      "serverName": "zsde.eu-cdn294.com",
-      "publicKey": "f4EJP55daJRlJkcZbbGsY-gFGGFGiXPPdfVxtNWQPCE",
-      "shortId": "c8621ebb1e56abb3"
-     }
-    },
-    "tag": "dev-2"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "193.233.74.6",
        "port": 8444,
        "users": [
@@ -9676,6 +9709,37 @@
       "serverName": "github.com",
       "publicKey": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
       "shortId": "457fab2ac885dbe0"
+     }
+    },
+    "tag": "dev-2"
+   },
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "103.244.145.138",
+       "port": 443,
+       "users": [
+        {
+         "id": "e75ad2eb-6c1f-45ce-8023-f5f10875df66",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "random",
+      "spiderX": "/",
+      "serverName": "zsde.eu-cdn294.com",
+      "publicKey": "f4EJP55daJRlJkcZbbGsY-gFGGFGiXPPdfVxtNWQPCE",
+      "shortId": "c8621ebb1e56abb3"
      }
     },
     "tag": "dev-3"
@@ -10750,37 +10814,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "3696b38bsg.murphyweb.sbs",
-       "port": 32134,
-       "users": [
-        {
-         "id": "5b01dc2d-6892-49b8-8289-3f73a32e00e4",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "chrome",
-      "spiderX": "/",
-      "serverName": "buylite.music.apple.com",
-      "publicKey": "OdTELUjAUKO_qr-O-uihaAZJAhA8GyIWVI6CpozVCU4",
-      "shortId": "6c6c7c97"
-     }
-    },
-    "tag": "hkv-1"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "152.233.71.81",
        "port": 443,
        "users": [
@@ -10803,6 +10836,37 @@
       "serverName": "brointelengence.com",
       "publicKey": "6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY",
       "shortId": "1c3e8241a8743df9"
+     }
+    },
+    "tag": "hkv-1"
+   },
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "3696b38bsg.murphyweb.sbs",
+       "port": 32134,
+       "users": [
+        {
+         "id": "5b01dc2d-6892-49b8-8289-3f73a32e00e4",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "chrome",
+      "spiderX": "/",
+      "serverName": "buylite.music.apple.com",
+      "publicKey": "OdTELUjAUKO_qr-O-uihaAZJAhA8GyIWVI6CpozVCU4",
+      "shortId": "6c6c7c97"
      }
     },
     "tag": "hkv-2"
@@ -11874,37 +11938,6 @@
     "tag": "plv-1"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "150.241.87.196",
-       "port": 443,
-       "users": [
-        {
-         "id": "a00e48ce-e56e-4ac1-8272-38983f0d8f99",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "random",
-      "spiderX": "/",
-      "serverName": "nh-pl-01.farmerly.cc",
-      "publicKey": "cp947CBxZl6dHGM5epfaXvKyj7Gh3CVBnprViDFL6Rk",
-      "shortId": "2174c487a4c9664b"
-     }
-    },
-    "tag": "plv-2"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -12137,14 +12170,13 @@
     {
      "tag": "plv-balancer",
      "selector": [
-      "plv-1",
-      "plv-2"
+      "plv-1"
      ],
      "strategy": {
       "type": "leastLoad",
       "settings": {
        "maxRTT": "1s",
-       "expected": 2,
+       "expected": 1,
        "baselines": [
         "1s"
        ],
@@ -12162,8 +12194,7 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "plv-1",
-    "plv-2"
+    "plv-1"
    ]
   }
  },
@@ -12636,6 +12667,37 @@
     "settings": {
      "vnext": [
       {
+       "address": "150.241.87.196",
+       "port": 443,
+       "users": [
+        {
+         "id": "a00e48ce-e56e-4ac1-8272-38983f0d8f99",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "random",
+      "spiderX": "/",
+      "serverName": "nh-pl-01.farmerly.cc",
+      "publicKey": "cp947CBxZl6dHGM5epfaXvKyj7Gh3CVBnprViDFL6Rk",
+      "shortId": "2174c487a4c9664b"
+     }
+    },
+    "tag": "sev-1"
+   },
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
        "address": "nh-pl-01.farmerly.cc",
        "port": 443,
        "users": [
@@ -12660,7 +12722,7 @@
       "shortId": "2174c487a4c9664b"
      }
     },
-    "tag": "sev-1"
+    "tag": "sev-2"
    },
    {
     "protocol": "freedom",
@@ -12895,13 +12957,14 @@
     {
      "tag": "sev-balancer",
      "selector": [
-      "sev-1"
+      "sev-1",
+      "sev-2"
      ],
      "strategy": {
       "type": "leastLoad",
       "settings": {
        "maxRTT": "1s",
-       "expected": 1,
+       "expected": 2,
        "baselines": [
         "1s"
        ],
@@ -12919,7 +12982,8 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "sev-1"
+    "sev-1",
+    "sev-2"
    ]
   }
  },
