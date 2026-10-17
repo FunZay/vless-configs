@@ -2163,29 +2163,28 @@
     "settings": {
      "vnext": [
       {
-       "address": "193.233.222.86",
-       "port": 27443,
+       "address": "77.110.105.122",
+       "port": 443,
        "users": [
         {
-         "id": "92e135b9-4c04-4e7e-8b28-d8074a202cf8",
-         "encryption": "none"
+         "id": "019fbe0f-2d9f-4b89-9f81-e1e36129892a",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
         }
        ]
       }
      ]
     },
     "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {
-      "serviceName": "grpc"
-     },
+     "network": "raw",
      "security": "reality",
      "realitySettings": {
       "show": false,
       "fingerprint": "random",
       "spiderX": "/",
-      "serverName": "static.polina.mom",
-      "publicKey": "zIF5SLjmd3gzvGPhEBKjqLv8_-7MOHMpJciVEehL0C8"
+      "serverName": "co-es.speedtec.ru",
+      "publicKey": "EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI",
+      "shortId": "226509f017e4c36d"
      }
     },
     "tag": "eev-1"
