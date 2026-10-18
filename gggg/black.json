@@ -431,7 +431,7 @@
        "port": 443,
        "users": [
         {
-         "id": "b73d3cf9-4e8f-48e7-9214-60df943e0650",
+         "id": "c10d62fe-9586-4f29-b106-a164283734af",
          "encryption": "none"
         }
        ]
@@ -458,11 +458,11 @@
     "settings": {
      "vnext": [
       {
-       "address": "87.228.101.153",
+       "address": "87.228.101.166",
        "port": 443,
        "users": [
         {
-         "id": "c10d62fe-9586-4f29-b106-a164283734af",
+         "id": "f09d6bd2-f127-48c7-957c-e3bb8d857620",
          "encryption": "none"
         }
        ]
@@ -489,11 +489,11 @@
     "settings": {
      "vnext": [
       {
-       "address": "87.228.101.166",
+       "address": "87.228.101.83",
        "port": 443,
        "users": [
         {
-         "id": "b73d3cf9-4e8f-48e7-9214-60df943e0650",
+         "id": "71f7a8cb-7a89-4c9e-a6c7-41e78a48ba43",
          "encryption": "none"
         }
        ]
@@ -524,7 +524,7 @@
        "port": 443,
        "users": [
         {
-         "id": "f09d6bd2-f127-48c7-957c-e3bb8d857620",
+         "id": "71f7a8cb-7a89-4c9e-a6c7-41e78a48ba43",
          "encryption": "none"
         }
        ]
@@ -555,7 +555,7 @@
        "port": 443,
        "users": [
         {
-         "id": "71f7a8cb-7a89-4c9e-a6c7-41e78a48ba43",
+         "id": "c10d62fe-9586-4f29-b106-a164283734af",
          "encryption": "none"
         }
        ]
@@ -582,11 +582,11 @@
     "settings": {
      "vnext": [
       {
-       "address": "87.228.101.166",
+       "address": "87.228.101.153",
        "port": 443,
        "users": [
         {
-         "id": "71f7a8cb-7a89-4c9e-a6c7-41e78a48ba43",
+         "id": "f09d6bd2-f127-48c7-957c-e3bb8d857620",
          "encryption": "none"
         }
        ]
@@ -613,11 +613,11 @@
     "settings": {
      "vnext": [
       {
-       "address": "87.228.101.83",
+       "address": "87.228.101.153",
        "port": 443,
        "users": [
         {
-         "id": "c10d62fe-9586-4f29-b106-a164283734af",
+         "id": "930912db-3862-4bc7-b4bb-ec16d6feee47",
          "encryption": "none"
         }
        ]
@@ -644,7 +644,7 @@
     "settings": {
      "vnext": [
       {
-       "address": "87.228.101.153",
+       "address": "87.228.101.83",
        "port": 443,
        "users": [
         {
@@ -675,11 +675,11 @@
     "settings": {
      "vnext": [
       {
-       "address": "87.228.101.83",
+       "address": "87.228.101.153",
        "port": 443,
        "users": [
         {
-         "id": "b73d3cf9-4e8f-48e7-9214-60df943e0650",
+         "id": "71f7a8cb-7a89-4c9e-a6c7-41e78a48ba43",
          "encryption": "none"
         }
        ]
@@ -706,7 +706,7 @@
     "settings": {
      "vnext": [
       {
-       "address": "87.228.101.153",
+       "address": "87.228.101.166",
        "port": 443,
        "users": [
         {
@@ -737,99 +737,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "87.228.101.83",
-       "port": 443,
-       "users": [
-        {
-         "id": "f09d6bd2-f127-48c7-957c-e3bb8d857620",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {},
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "ads.x5.ru",
-      "publicKey": "EqoBhFbuO605d09fK5nbwLsMeybnbAjikSfYlqnlKDY",
-      "shortId": "b9375f0fa99f07b0"
-     }
-    },
-    "tag": "de-12"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "87.228.101.153",
-       "port": 443,
-       "users": [
-        {
-         "id": "71f7a8cb-7a89-4c9e-a6c7-41e78a48ba43",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {},
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "ads.x5.ru",
-      "publicKey": "EqoBhFbuO605d09fK5nbwLsMeybnbAjikSfYlqnlKDY",
-      "shortId": "b9375f0fa99f07b0"
-     }
-    },
-    "tag": "de-13"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "87.228.101.166",
-       "port": 443,
-       "users": [
-        {
-         "id": "930912db-3862-4bc7-b4bb-ec16d6feee47",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {},
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "ads.x5.ru",
-      "publicKey": "EqoBhFbuO605d09fK5nbwLsMeybnbAjikSfYlqnlKDY",
-      "shortId": "b9375f0fa99f07b0"
-     }
-    },
-    "tag": "de-14"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "87.228.101.166",
        "port": 443,
        "users": [
@@ -854,7 +761,7 @@
       "shortId": "b9375f0fa99f07b0"
      }
     },
-    "tag": "de-15"
+    "tag": "de-12"
    },
    {
     "protocol": "freedom",
@@ -1100,10 +1007,7 @@
       "de-9",
       "de-10",
       "de-11",
-      "de-12",
-      "de-13",
-      "de-14",
-      "de-15"
+      "de-12"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -1138,10 +1042,7 @@
     "de-9",
     "de-10",
     "de-11",
-    "de-12",
-    "de-13",
-    "de-14",
-    "de-15"
+    "de-12"
    ]
   }
  },
@@ -2746,68 +2647,6 @@
        "port": 8443,
        "users": [
         {
-         "id": "17468701-9f0a-4140-9567-c319712ee2a4",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "ads.vk.ru",
-      "publicKey": "1psC2mENtLYukWhrdLs3n1aKRXyG7S0ZNINeZWxWDQs",
-      "shortId": "0ed5a66f"
-     }
-    },
-    "tag": "mx-1"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "194.55.239.164",
-       "port": 8443,
-       "users": [
-        {
-         "id": "29f5bf71-9285-49c8-a83c-a8eef0e1a3be",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "ads.vk.ru",
-      "publicKey": "1psC2mENtLYukWhrdLs3n1aKRXyG7S0ZNINeZWxWDQs",
-      "shortId": "337dadf4"
-     }
-    },
-    "tag": "mx-2"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "194.55.239.164",
-       "port": 8443,
-       "users": [
-        {
          "id": "8735952f-b2b8-468c-9a2d-cbc38dfd7cb2",
          "encryption": "none",
          "flow": "xtls-rprx-vision"
@@ -2828,7 +2667,7 @@
       "shortId": "a9943d8b"
      }
     },
-    "tag": "mx-3"
+    "tag": "mx-1"
    },
    {
     "protocol": "freedom",
@@ -3063,15 +2902,13 @@
     {
      "tag": "mx-balancer",
      "selector": [
-      "mx-1",
-      "mx-2",
-      "mx-3"
+      "mx-1"
      ],
      "strategy": {
       "type": "leastLoad",
       "settings": {
        "maxRTT": "1s",
-       "expected": 2,
+       "expected": 1,
        "baselines": [
         "1s"
        ],
@@ -3089,9 +2926,7 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "mx-1",
-    "mx-2",
-    "mx-3"
+    "mx-1"
    ]
   }
  },
@@ -3219,7 +3054,7 @@
        "port": 443,
        "users": [
         {
-         "id": "b73d3cf9-4e8f-48e7-9214-60df943e0650",
+         "id": "930912db-3862-4bc7-b4bb-ec16d6feee47",
          "encryption": "none"
         }
        ]
@@ -3250,7 +3085,7 @@
        "port": 443,
        "users": [
         {
-         "id": "930912db-3862-4bc7-b4bb-ec16d6feee47",
+         "id": "c10d62fe-9586-4f29-b106-a164283734af",
          "encryption": "none"
         }
        ]
@@ -3281,7 +3116,7 @@
        "port": 443,
        "users": [
         {
-         "id": "c10d62fe-9586-4f29-b106-a164283734af",
+         "id": "f09d6bd2-f127-48c7-957c-e3bb8d857620",
          "encryption": "none"
         }
        ]
@@ -3312,37 +3147,6 @@
        "port": 443,
        "users": [
         {
-         "id": "f09d6bd2-f127-48c7-957c-e3bb8d857620",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {},
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "ads.x5.ru",
-      "publicKey": "EqoBhFbuO605d09fK5nbwLsMeybnbAjikSfYlqnlKDY",
-      "shortId": "b9375f0fa99f07b0"
-     }
-    },
-    "tag": "nl-5"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "87.228.101.184",
-       "port": 443,
-       "users": [
-        {
          "id": "71f7a8cb-7a89-4c9e-a6c7-41e78a48ba43",
          "encryption": "none"
         }
@@ -3363,7 +3167,7 @@
       "shortId": "b9375f0fa99f07b0"
      }
     },
-    "tag": "nl-6"
+    "tag": "nl-5"
    },
    {
     "protocol": "vless",
@@ -3394,7 +3198,69 @@
       "shortId": "88d9dc52ef39c8bd"
      }
     },
+    "tag": "nl-6"
+   },
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "194.55.239.164",
+       "port": 8443,
+       "users": [
+        {
+         "id": "17468701-9f0a-4140-9567-c319712ee2a4",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "firefox",
+      "spiderX": "/",
+      "serverName": "ads.vk.ru",
+      "publicKey": "1psC2mENtLYukWhrdLs3n1aKRXyG7S0ZNINeZWxWDQs",
+      "shortId": "0ed5a66f"
+     }
+    },
     "tag": "nl-7"
+   },
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "194.55.239.164",
+       "port": 8443,
+       "users": [
+        {
+         "id": "29f5bf71-9285-49c8-a83c-a8eef0e1a3be",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "firefox",
+      "spiderX": "/",
+      "serverName": "ads.vk.ru",
+      "publicKey": "1psC2mENtLYukWhrdLs3n1aKRXyG7S0ZNINeZWxWDQs",
+      "shortId": "337dadf4"
+     }
+    },
+    "tag": "nl-8"
    },
    {
     "protocol": "freedom",
@@ -3635,7 +3501,8 @@
       "nl-4",
       "nl-5",
       "nl-6",
-      "nl-7"
+      "nl-7",
+      "nl-8"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -3665,7 +3532,8 @@
     "nl-4",
     "nl-5",
     "nl-6",
-    "nl-7"
+    "nl-7",
+    "nl-8"
    ]
   }
  },
@@ -9237,37 +9105,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "by2.nubov.org",
-       "port": 443,
-       "users": [
-        {
-         "id": "0557baea-dc72-4e74-97f8-5b59edb3d95b",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "by2.nubov.org",
-      "publicKey": "siKB_MMD6fyQl4BRKi2jOXYWTzwpgUD2U8Mq1Q5FWU8",
-      "shortId": "5da97320b0f2e857"
-     }
-    },
-    "tag": "byv-2"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "188.225.73.107",
        "port": 20043,
        "users": [
@@ -9294,42 +9131,7 @@
       "shortId": "b6b8a4bf8ed3ad13"
      }
     },
-    "tag": "byv-3"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "188.225.73.107",
-       "port": 20042,
-       "users": [
-        {
-         "id": "0557baea-dc72-4e74-97f8-5b59edb3d95b",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/",
-      "mode": "auto",
-      "host": "by2.nubov.org"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "by2.nubov.org",
-      "publicKey": "siKB_MMD6fyQl4BRKi2jOXYWTzwpgUD2U8Mq1Q5FWU8",
-      "shortId": "5da97320b0f2e857"
-     }
-    },
-    "tag": "byv-4"
+    "tag": "byv-2"
    },
    {
     "protocol": "freedom",
@@ -9565,9 +9367,7 @@
      "tag": "byv-balancer",
      "selector": [
       "byv-1",
-      "byv-2",
-      "byv-3",
-      "byv-4"
+      "byv-2"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -9592,9 +9392,7 @@
    },
    "subjectSelector": [
     "byv-1",
-    "byv-2",
-    "byv-3",
-    "byv-4"
+    "byv-2"
    ]
   }
  },
@@ -10812,38 +10610,6 @@
     "tag": "czv-3"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "193.233.217.20",
-       "port": 5443,
-       "users": [
-        {
-         "id": "92e135b9-4c04-4e7e-8b28-d8074a202cf8",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {
-      "serviceName": "grpc"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "random",
-      "spiderX": "/",
-      "serverName": "files.nyx53.shop",
-      "publicKey": "m95xufOq7mmISN572WqkK0Bzmzb3hDfpr6WNp76xfyc"
-     }
-    },
-    "tag": "czv-4"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -11078,8 +10844,7 @@
      "selector": [
       "czv-1",
       "czv-2",
-      "czv-3",
-      "czv-4"
+      "czv-3"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -11105,8 +10870,7 @@
    "subjectSelector": [
     "czv-1",
     "czv-2",
-    "czv-3",
-    "czv-4"
+    "czv-3"
    ]
   }
  },
@@ -11197,6 +10961,38 @@
     "settings": {
      "vnext": [
       {
+       "address": "72.56.241.75",
+       "port": 24443,
+       "users": [
+        {
+         "id": "92e135b9-4c04-4e7e-8b28-d8074a202cf8",
+         "encryption": "none"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "grpc",
+     "grpcSettings": {
+      "serviceName": "grpc"
+     },
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "firefox",
+      "spiderX": "/",
+      "serverName": "img.suzuki.lol",
+      "publicKey": "UMibHia_DnLd07hISnmp-_LZgY6ltCsgc3rXJ6xK8zA"
+     }
+    },
+    "tag": "dev-2"
+   },
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
        "address": "150.241.101.17",
        "port": 8443,
        "users": [
@@ -11221,7 +11017,7 @@
       "shortId": "6ba85179e30d4fc2"
      }
     },
-    "tag": "dev-2"
+    "tag": "dev-3"
    },
    {
     "protocol": "vless",
@@ -11252,7 +11048,7 @@
       "shortId": "00000000"
      }
     },
-    "tag": "dev-3"
+    "tag": "dev-4"
    },
    {
     "protocol": "vless",
@@ -11298,7 +11094,7 @@
       "shortId": "6255f31a8502bc4a"
      }
     },
-    "tag": "dev-4"
+    "tag": "dev-5"
    },
    {
     "protocol": "vless",
@@ -11331,7 +11127,7 @@
       "shortId": "6ba85179e30d4fc2"
      }
     },
-    "tag": "dev-5"
+    "tag": "dev-6"
    },
    {
     "protocol": "vless",
@@ -11364,7 +11160,7 @@
       "shortId": "6ba85179e30d4fc2"
      }
     },
-    "tag": "dev-6"
+    "tag": "dev-7"
    },
    {
     "protocol": "vless",
@@ -11397,7 +11193,7 @@
       "shortId": "6ba85179e30d4fc2"
      }
     },
-    "tag": "dev-7"
+    "tag": "dev-8"
    },
    {
     "protocol": "vless",
@@ -11427,7 +11223,7 @@
       "publicKey": "-u-p47L5mhflMs5y8hjB5p7Q978BE8JkC_ALyZzek2I"
      }
     },
-    "tag": "dev-8"
+    "tag": "dev-9"
    },
    {
     "protocol": "vless",
@@ -11461,7 +11257,7 @@
       ]
      }
     },
-    "tag": "dev-9"
+    "tag": "dev-10"
    },
    {
     "protocol": "vless",
@@ -11495,7 +11291,7 @@
       ]
      }
     },
-    "tag": "dev-10"
+    "tag": "dev-11"
    },
    {
     "protocol": "vless",
@@ -11529,7 +11325,7 @@
       ]
      }
     },
-    "tag": "dev-11"
+    "tag": "dev-12"
    },
    {
     "protocol": "vless",
@@ -11562,7 +11358,7 @@
       "shortId": "8d1e96"
      }
     },
-    "tag": "dev-12"
+    "tag": "dev-13"
    },
    {
     "protocol": "vless",
@@ -11593,7 +11389,7 @@
       "shortId": "70b4ca"
      }
     },
-    "tag": "dev-13"
+    "tag": "dev-14"
    },
    {
     "protocol": "vless",
@@ -11623,7 +11419,7 @@
       ]
      }
     },
-    "tag": "dev-14"
+    "tag": "dev-15"
    },
    {
     "protocol": "vless",
@@ -11656,7 +11452,7 @@
       "shortId": "6ba85179e30d4fc2"
      }
     },
-    "tag": "dev-15"
+    "tag": "dev-16"
    },
    {
     "protocol": "vless",
@@ -11689,7 +11485,7 @@
       "shortId": "6ba85179e30d4fc2"
      }
     },
-    "tag": "dev-16"
+    "tag": "dev-17"
    },
    {
     "protocol": "vless",
@@ -11722,7 +11518,7 @@
       "shortId": "6ba85179e30d4fc2"
      }
     },
-    "tag": "dev-17"
+    "tag": "dev-18"
    },
    {
     "protocol": "vless",
@@ -11768,7 +11564,7 @@
       "shortId": "6255f31a8502bc4a"
      }
     },
-    "tag": "dev-18"
+    "tag": "dev-19"
    },
    {
     "protocol": "vless",
@@ -11799,7 +11595,7 @@
       "shortId": "00000000"
      }
     },
-    "tag": "dev-19"
+    "tag": "dev-20"
    },
    {
     "protocol": "vless",
@@ -11830,7 +11626,7 @@
       "shortId": "00000000"
      }
     },
-    "tag": "dev-20"
+    "tag": "dev-21"
    },
    {
     "protocol": "vless",
@@ -11861,38 +11657,6 @@
       "serverName": "github.com",
       "publicKey": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
       "shortId": "457fab2ac885dbe0"
-     }
-    },
-    "tag": "dev-21"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "193.233.230.64",
-       "port": 1443,
-       "users": [
-        {
-         "id": "92e135b9-4c04-4e7e-8b28-d8074a202cf8",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {
-      "serviceName": "grpc"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "random",
-      "spiderX": "/",
-      "serverName": "static.nyx53.shop",
-      "publicKey": "vi1vP3RJQgLsRgzaiKvjr44iNRzI62lSYMipnrTMAUs"
      }
     },
     "tag": "dev-22"
@@ -12346,28 +12110,30 @@
     "settings": {
      "vnext": [
       {
-       "address": "ee3.nubov.org",
+       "address": "200.181.87.20",
        "port": 443,
        "users": [
         {
-         "id": "0557baea-dc72-4e74-97f8-5b59edb3d95b",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
+         "id": "86203f95-614e-478c-9b64-0cebe387e58b",
+         "encryption": "none"
         }
        ]
       }
      ]
     },
     "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "ee3.nubov.org",
-      "publicKey": "Roq7VfbYJ0anJ3yAS0RMAbxU4noDGqTRD1fCW6PsJ1g",
-      "shortId": "c62373f46fd02330"
+     "network": "xhttp",
+     "xhttpSettings": {
+      "path": "/mxqs0opza5oejfv3",
+      "mode": "auto"
+     },
+     "security": "tls",
+     "tlsSettings": {
+      "serverName": "host-lv-upscale.cdn.cachefleet.com",
+      "fingerprint": "chrome",
+      "alpn": [
+       "h2"
+      ]
      }
     },
     "tag": "eev-4"
@@ -14834,37 +14600,6 @@
     "tag": "gbv-4"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "bridge.nurcloud.org",
-       "port": 443,
-       "users": [
-        {
-         "id": "4ccee56c-79c8-4e00-9e89-9d1d1d6e5b10",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "th.api.nurcloud.org",
-      "publicKey": "FMKtk6ze4GHsUtpHYGJfdtjTa4pGggqNNFHEN4tidj8",
-      "shortId": "fd81b645eb48c325"
-     }
-    },
-    "tag": "gbv-5"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -15100,8 +14835,7 @@
       "gbv-1",
       "gbv-2",
       "gbv-3",
-      "gbv-4",
-      "gbv-5"
+      "gbv-4"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -15128,8 +14862,7 @@
     "gbv-1",
     "gbv-2",
     "gbv-3",
-    "gbv-4",
-    "gbv-5"
+    "gbv-4"
    ]
   }
  },
@@ -21156,66 +20889,6 @@
     "tag": "lvv-1"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "lv.s2.plancdn.stream",
-       "port": 8443,
-       "users": [
-        {
-         "id": "948a08d0-deef-4ac0-a841-4295b67f8635",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "yandex.ru",
-      "publicKey": "aEfv6dSZ2kNy4wiMMhZ6lQIjnCswpdbi3NNirFSgLEs"
-     }
-    },
-    "tag": "lvv-2"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "lv.s2.plancdn.stream",
-       "port": 8443,
-       "users": [
-        {
-         "id": "8c39ff7e-27ba-4578-bc5f-c6a6fedd1046",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "yandex.ru",
-      "publicKey": "aEfv6dSZ2kNy4wiMMhZ6lQIjnCswpdbi3NNirFSgLEs"
-     }
-    },
-    "tag": "lvv-3"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -21448,15 +21121,13 @@
     {
      "tag": "lvv-balancer",
      "selector": [
-      "lvv-1",
-      "lvv-2",
-      "lvv-3"
+      "lvv-1"
      ],
      "strategy": {
       "type": "leastLoad",
       "settings": {
        "maxRTT": "1s",
-       "expected": 2,
+       "expected": 1,
        "baselines": [
         "1s"
        ],
@@ -21474,9 +21145,7 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "lvv-1",
-    "lvv-2",
-    "lvv-3"
+    "lvv-1"
    ]
   }
  },
@@ -24149,38 +23818,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "72.56.241.75",
-       "port": 24443,
-       "users": [
-        {
-         "id": "92e135b9-4c04-4e7e-8b28-d8074a202cf8",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {
-      "serviceName": "grpc"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "firefox",
-      "spiderX": "/",
-      "serverName": "img.suzuki.lol",
-      "publicKey": "UMibHia_DnLd07hISnmp-_LZgY6ltCsgc3rXJ6xK8zA"
-     }
-    },
-    "tag": "plv-1"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "83.168.91.16",
        "port": 443,
        "users": [
@@ -24203,7 +23840,7 @@
       "fingerprint": "chrome"
      }
     },
-    "tag": "plv-2"
+    "tag": "plv-1"
    },
    {
     "protocol": "vless",
@@ -24234,7 +23871,7 @@
       "shortId": "49280570479dfcd7"
      }
     },
-    "tag": "plv-3"
+    "tag": "plv-2"
    },
    {
     "protocol": "vless",
@@ -24265,7 +23902,7 @@
       "shortId": "cad1e2accc3a48f3"
      }
     },
-    "tag": "plv-4"
+    "tag": "plv-3"
    },
    {
     "protocol": "freedom",
@@ -24502,8 +24139,7 @@
      "selector": [
       "plv-1",
       "plv-2",
-      "plv-3",
-      "plv-4"
+      "plv-3"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -24529,8 +24165,7 @@
    "subjectSelector": [
     "plv-1",
     "plv-2",
-    "plv-3",
-    "plv-4"
+    "plv-3"
    ]
   }
  },
@@ -26286,39 +25921,6 @@
     "tag": "sgv-6"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "200.181.87.20",
-       "port": 443,
-       "users": [
-        {
-         "id": "86203f95-614e-478c-9b64-0cebe387e58b",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/mxqs0opza5oejfv3",
-      "mode": "auto"
-     },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "host-lv-upscale.cdn.cachefleet.com",
-      "fingerprint": "chrome",
-      "alpn": [
-       "h2"
-      ]
-     }
-    },
-    "tag": "sgv-7"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -26556,8 +26158,7 @@
       "sgv-3",
       "sgv-4",
       "sgv-5",
-      "sgv-6",
-      "sgv-7"
+      "sgv-6"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -26586,8 +26187,7 @@
     "sgv-3",
     "sgv-4",
     "sgv-5",
-    "sgv-6",
-    "sgv-7"
+    "sgv-6"
    ]
   }
  },
@@ -26671,6 +26271,37 @@
      }
     },
     "tag": "thv-1"
+   },
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "bridge.nurcloud.org",
+       "port": 443,
+       "users": [
+        {
+         "id": "4ccee56c-79c8-4e00-9e89-9d1d1d6e5b10",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "firefox",
+      "spiderX": "/",
+      "serverName": "th.api.nurcloud.org",
+      "publicKey": "FMKtk6ze4GHsUtpHYGJfdtjTa4pGggqNNFHEN4tidj8",
+      "shortId": "fd81b645eb48c325"
+     }
+    },
+    "tag": "thv-2"
    },
    {
     "protocol": "freedom",
@@ -26905,13 +26536,14 @@
     {
      "tag": "thv-balancer",
      "selector": [
-      "thv-1"
+      "thv-1",
+      "thv-2"
      ],
      "strategy": {
       "type": "leastLoad",
       "settings": {
        "maxRTT": "1s",
-       "expected": 1,
+       "expected": 2,
        "baselines": [
         "1s"
        ],
@@ -26929,7 +26561,8 @@
     "destination": "http://www.gstatic.com/generate_204"
    },
    "subjectSelector": [
-    "thv-1"
+    "thv-1",
+    "thv-2"
    ]
   }
  },
