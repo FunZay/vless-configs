@@ -1,347 +1,5 @@
 [
  {
-  "remarks": "🇧🇬 XelaraAI-Обход | @XelaraVpn",
-  "log": {
-   "loglevel": "warning"
-  },
-  "dns": {
-   "queryStrategy": "UseIP",
-   "servers": [
-    "https://1.1.1.1/dns-query",
-    "https://8.8.8.8/dns-query"
-   ]
-  },
-  "inbounds": [
-   {
-    "listen": "127.0.0.1",
-    "port": 10808,
-    "protocol": "socks",
-    "settings": {
-     "auth": "noauth",
-     "udp": true
-    },
-    "sniffing": {
-     "destOverride": [
-      "http",
-      "tls",
-      "quic"
-     ],
-     "enabled": true
-    },
-    "tag": "socks"
-   },
-   {
-    "listen": "127.0.0.1",
-    "port": 10809,
-    "protocol": "http",
-    "settings": {
-     "allowTransparent": false
-    },
-    "sniffing": {
-     "destOverride": [
-      "http",
-      "tls",
-      "quic"
-     ],
-     "enabled": true
-    },
-    "tag": "http"
-   }
-  ],
-  "outbounds": [
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "78.159.246.179",
-       "port": 8443,
-       "users": [
-        {
-         "id": "2c634977-584e-4e1f-b501-1b70c77a6743",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/api/v1/upload",
-      "mode": "auto",
-      "host": "randomquaint.net"
-     },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "randomquaint.net",
-      "fingerprint": "firefox"
-     }
-    },
-    "tag": "bg-1"
-   },
-   {
-    "protocol": "freedom",
-    "tag": "direct"
-   },
-   {
-    "protocol": "blackhole",
-    "tag": "block"
-   }
-  ],
-  "routing": {
-   "domainMatcher": "hybrid",
-   "domainStrategy": "IPIfNonMatch",
-   "rules": [
-    {
-     "type": "field",
-     "protocol": [
-      "bittorrent"
-     ],
-     "outboundTag": "block"
-    },
-    {
-     "type": "field",
-     "ip": [
-      "geoip:private"
-     ],
-     "outboundTag": "direct"
-    },
-    {
-     "type": "field",
-     "domain": [
-      "gosuslugi.ru",
-      "mos.ru",
-      "spb.ru",
-      "kremlin.ru",
-      "government.ru",
-      "nalog.ru",
-      "nalog.gov.ru",
-      "mchs.gov.ru",
-      "minzdrav.gov.ru",
-      "edu.gov.ru",
-      "pfr.gov.ru",
-      "sfr.gov.ru",
-      "fssp.gov.ru",
-      "sledcom.ru",
-      "genproc.gov.ru",
-      "rkn.gov.ru",
-      "roskomnadzor.gov.ru",
-      "gosuslugi.mosreg.ru",
-      "mosreg.ru",
-      "prav.gov.ru",
-      "sber.ru",
-      "sberbank.ru",
-      "sberbank.com",
-      "sbol.ru",
-      "online.sberbank.ru",
-      "tbank.ru",
-      "tinkoff.ru",
-      "vtb.ru",
-      "online.vtb.ru",
-      "alfabank.ru",
-      "alfa.ru",
-      "gazprombank.ru",
-      "raiffeisen.ru",
-      "psbank.ru",
-      "rosbank.ru",
-      "otpbank.ru",
-      "sovcombank.ru",
-      "mtsbank.ru",
-      "rncb.ru",
-      "open.ru",
-      "pochtabank.ru",
-      "rshb.ru",
-      "banki.ru",
-      "cbr.ru",
-      "yandex.ru",
-      "ya.ru",
-      "yandex.com",
-      "yandex.net",
-      "yandex.kz",
-      "yandex.by",
-      "market.yandex.ru",
-      "market.yandex.com",
-      "taxi.yandex.ru",
-      "eda.yandex.ru",
-      "delivery.yandex.ru",
-      "lavka.yandex.ru",
-      "music.yandex.ru",
-      "music.yandex.com",
-      "money.yandex.ru",
-      "afisha.yandex.ru",
-      "realty.yandex.ru",
-      "mail.yandex.ru",
-      "360.yandex.ru",
-      "vk.com",
-      "vk.ru",
-      "mvk.com",
-      "userapi.com",
-      "vk.me",
-      "vk.company",
-      "vkvideo.ru",
-      "vk.link",
-      "vk.cc",
-      "mail.ru",
-      "bk.ru",
-      "inbox.ru",
-      "list.ru",
-      "internet.ru",
-      "my.mail.ru",
-      "cloud.mail.ru",
-      "calendar.mail.ru",
-      "ozon.ru",
-      "wildberries.ru",
-      "vseinstrumenti.ru",
-      "avito.ru",
-      "auto.ru",
-      "drom.ru",
-      "sbermegamarket.ru",
-      "megamarket.ru",
-      "lamoda.ru",
-      "kupivip.ru",
-      "aliexpress.ru",
-      "magnit.ru",
-      "lenta.com",
-      "auchan.ru",
-      "pyaterochka.ru",
-      "perekrestok.ru",
-      "dixy.ru",
-      "vkusvill.ru",
-      "samokat.ru",
-      "sbermarket.ru",
-      "5ka.ru",
-      "okmarket.ru",
-      "mvideo.ru",
-      "dns-shop.ru",
-      "eldorado.ru",
-      "citilink.ru",
-      "technopark.ru",
-      "detmir.ru",
-      "dochkisinochki.ru",
-      "delivery-club.ru",
-      "dominos.ru",
-      "pizzahut.ru",
-      "kfc.ru",
-      "burgerking.ru",
-      "dodos.ru",
-      "dodopizza.ru",
-      "sushiwok.ru",
-      "sitylink.ru",
-      "sitylink.com",
-      "taximaxim.ru",
-      "maxim.ru",
-      "gett.ru",
-      "drivee.ru",
-      "ria.ru",
-      "tass.ru",
-      "rbc.ru",
-      "kommersant.ru",
-      "kp.ru",
-      "lenta.ru",
-      "gazeta.ru",
-      "iz.ru",
-      "rg.ru",
-      "vz.ru",
-      "ng.ru",
-      "rt.com",
-      "russian.rt.com",
-      "vesti.ru",
-      "1tv.ru",
-      "1tv.com",
-      "smi.ru",
-      "forbes.ru",
-      "kinopoisk.ru",
-      "ivi.ru",
-      "okko.tv",
-      "more.tv",
-      "wink.ru",
-      "premier.one",
-      "start.ru",
-      "kion.ru",
-      "rutube.ru",
-      "smotrim.ru",
-      "vgtrk.ru",
-      "matchtv.ru",
-      "sportbox.ru",
-      "box-tv.ru",
-      "amediateka.ru",
-      "zvuk.com",
-      "max.ru",
-      "ok.ru",
-      "mts.ru",
-      "megafon.ru",
-      "beeline.ru",
-      "tele2.ru",
-      "yota.ru",
-      "sbermobile.ru",
-      "school.mos.ru",
-      "mosobr.ru",
-      "edu.ru",
-      "schoolotv.ru",
-      "uchi.ru",
-      "skyeng.ru",
-      "stepik.org",
-      "hh.ru",
-      "headhunter.ru",
-      "rabota.ru",
-      "zarplata.ru",
-      "superjob.ru",
-      "aeroflot.ru",
-      "s7.ru",
-      "utair.ru",
-      "rzd.ru",
-      "rzd.com",
-      "mosmetro.ru",
-      "transport.mos.ru",
-      "2gis.ru",
-      "2gis.com",
-      "maps.yandex.ru",
-      "russia.ru",
-      "moscow.ru",
-      "dzen.ru"
-     ],
-     "outboundTag": "direct"
-    },
-    {
-     "type": "field",
-     "network": "tcp,udp",
-     "balancerTag": "bg-balancer"
-    }
-   ],
-   "balancers": [
-    {
-     "tag": "bg-balancer",
-     "selector": [
-      "bg-1"
-     ],
-     "strategy": {
-      "type": "leastLoad",
-      "settings": {
-       "maxRTT": "1s",
-       "expected": 1,
-       "baselines": [
-        "1s"
-       ],
-       "tolerance": 0.01
-      }
-     }
-    }
-   ]
-  },
-  "burstObservatory": {
-   "pingConfig": {
-    "timeout": "10s",
-    "interval": "120s",
-    "sampling": 5,
-    "destination": "http://www.gstatic.com/generate_204"
-   },
-   "subjectSelector": [
-    "bg-1"
-   ]
-  }
- },
- {
   "remarks": "🇩🇪 XelaraAI-Обход | @XelaraVpn",
   "log": {
    "loglevel": "warning"
@@ -2972,111 +2630,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "185.141.227.180",
-       "port": 2053,
-       "users": [
-        {
-         "id": "2c634977-584e-4e1f-b501-1b70c77a6743",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/api/v1/upload",
-      "mode": "auto",
-      "host": "dismissaltree.net",
-      "extra": {
-       "host": "",
-       "path": "",
-       "mode": "",
-       "headers": null,
-       "xPaddingBytes": "100-1000",
-       "xPaddingObfsMode": false,
-       "xPaddingKey": "",
-       "xPaddingHeader": "",
-       "xPaddingPlacement": "",
-       "xPaddingMethod": "",
-       "uplinkHTTPMethod": "",
-       "sessionIDPlacement": "",
-       "sessionIDKey": "",
-       "sessionIDTable": "",
-       "sessionIDLength": "0",
-       "seqPlacement": "",
-       "seqKey": "",
-       "uplinkDataPlacement": "",
-       "uplinkDataKey": "",
-       "uplinkChunkSize": "0",
-       "noGRPCHeader": false,
-       "noSSEHeader": false,
-       "scMaxEachPostBytes": "1000000",
-       "scMinPostsIntervalMs": "30",
-       "scMaxBufferedPosts": 0,
-       "scStreamUpServerSecs": "0",
-       "serverMaxHeaderBytes": 0,
-       "xmux": {
-        "maxConcurrency": "16-32",
-        "maxConnections": "0",
-        "cMaxReuseTimes": "64-128",
-        "hMaxRequestTimes": "0",
-        "hMaxReusableSecs": "0",
-        "hKeepAlivePeriod": 0
-       },
-       "downloadSettings": null,
-       "extra": null
-      }
-     },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "dismissaltree.net",
-      "fingerprint": "chrome"
-     }
-    },
-    "tag": "ru-5"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "78.159.246.179",
-       "port": 2053,
-       "users": [
-        {
-         "id": "95a608b6-bff1-4e10-bb61-0a39f221bb7d",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/api/v1/upload",
-      "mode": "auto",
-      "host": "randomquaint.net"
-     },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "randomquaint.net",
-      "fingerprint": "firefox",
-      "alpn": [
-       "h2",
-       "http/1.1"
-      ]
-     }
-    },
-    "tag": "ru-6"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "78.159.246.85",
        "port": 2053,
        "users": [
@@ -3143,7 +2696,7 @@
       ]
      }
     },
-    "tag": "ru-7"
+    "tag": "ru-5"
    },
    {
     "protocol": "vless",
@@ -3178,7 +2731,7 @@
       ]
      }
     },
-    "tag": "ru-8"
+    "tag": "ru-6"
    },
    {
     "protocol": "vless",
@@ -3213,7 +2766,7 @@
       ]
      }
     },
-    "tag": "ru-9"
+    "tag": "ru-7"
    },
    {
     "protocol": "vless",
@@ -3247,7 +2800,7 @@
       ]
      }
     },
-    "tag": "ru-10"
+    "tag": "ru-8"
    },
    {
     "protocol": "vless",
@@ -3317,7 +2870,7 @@
       "fingerprint": "firefox"
      }
     },
-    "tag": "ru-11"
+    "tag": "ru-9"
    },
    {
     "protocol": "vless",
@@ -3387,7 +2940,7 @@
       "fingerprint": "firefox"
      }
     },
-    "tag": "ru-12"
+    "tag": "ru-10"
    },
    {
     "protocol": "vless",
@@ -3456,7 +3009,7 @@
       "fingerprint": "random"
      }
     },
-    "tag": "ru-13"
+    "tag": "ru-11"
    },
    {
     "protocol": "vless",
@@ -3489,7 +3042,7 @@
       ]
      }
     },
-    "tag": "ru-14"
+    "tag": "ru-12"
    },
    {
     "protocol": "freedom",
@@ -3735,9 +3288,7 @@
       "ru-9",
       "ru-10",
       "ru-11",
-      "ru-12",
-      "ru-13",
-      "ru-14"
+      "ru-12"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -3772,9 +3323,7 @@
     "ru-9",
     "ru-10",
     "ru-11",
-    "ru-12",
-    "ru-13",
-    "ru-14"
+    "ru-12"
    ]
   }
  },
@@ -5310,6 +4859,348 @@
    },
    "subjectSelector": [
     "amv-1"
+   ]
+  }
+ },
+ {
+  "remarks": "XelaraAI-VPN🇦🇶| @XelaraVPN",
+  "log": {
+   "loglevel": "warning"
+  },
+  "dns": {
+   "queryStrategy": "UseIP",
+   "servers": [
+    "https://1.1.1.1/dns-query",
+    "https://8.8.8.8/dns-query"
+   ]
+  },
+  "inbounds": [
+   {
+    "listen": "127.0.0.1",
+    "port": 10808,
+    "protocol": "socks",
+    "settings": {
+     "auth": "noauth",
+     "udp": true
+    },
+    "sniffing": {
+     "destOverride": [
+      "http",
+      "tls",
+      "quic"
+     ],
+     "enabled": true
+    },
+    "tag": "socks"
+   },
+   {
+    "listen": "127.0.0.1",
+    "port": 10809,
+    "protocol": "http",
+    "settings": {
+     "allowTransparent": false
+    },
+    "sniffing": {
+     "destOverride": [
+      "http",
+      "tls",
+      "quic"
+     ],
+     "enabled": true
+    },
+    "tag": "http"
+   }
+  ],
+  "outbounds": [
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "2.27.26.142",
+       "port": 443,
+       "users": [
+        {
+         "id": "507f392c-874d-4c5d-9102-bee13a686188",
+         "encryption": "none",
+         "flow": "xtls-rprx-vision"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "tcp",
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "edge",
+      "spiderX": "/",
+      "serverName": "aq-1.global-cdn.org",
+      "publicKey": "HKkU-5UanGjWdmX8E-EGulXMk1BnidkFsVveyyOlTg8",
+      "shortId": "90f9d05bf95cb335"
+     }
+    },
+    "tag": "aqv-1"
+   },
+   {
+    "protocol": "freedom",
+    "tag": "direct"
+   },
+   {
+    "protocol": "blackhole",
+    "tag": "block"
+   }
+  ],
+  "routing": {
+   "domainMatcher": "hybrid",
+   "domainStrategy": "IPIfNonMatch",
+   "rules": [
+    {
+     "type": "field",
+     "protocol": [
+      "bittorrent"
+     ],
+     "outboundTag": "block"
+    },
+    {
+     "type": "field",
+     "ip": [
+      "geoip:private"
+     ],
+     "outboundTag": "direct"
+    },
+    {
+     "type": "field",
+     "domain": [
+      "gosuslugi.ru",
+      "mos.ru",
+      "spb.ru",
+      "kremlin.ru",
+      "government.ru",
+      "nalog.ru",
+      "nalog.gov.ru",
+      "mchs.gov.ru",
+      "minzdrav.gov.ru",
+      "edu.gov.ru",
+      "pfr.gov.ru",
+      "sfr.gov.ru",
+      "fssp.gov.ru",
+      "sledcom.ru",
+      "genproc.gov.ru",
+      "rkn.gov.ru",
+      "roskomnadzor.gov.ru",
+      "gosuslugi.mosreg.ru",
+      "mosreg.ru",
+      "prav.gov.ru",
+      "sber.ru",
+      "sberbank.ru",
+      "sberbank.com",
+      "sbol.ru",
+      "online.sberbank.ru",
+      "tbank.ru",
+      "tinkoff.ru",
+      "vtb.ru",
+      "online.vtb.ru",
+      "alfabank.ru",
+      "alfa.ru",
+      "gazprombank.ru",
+      "raiffeisen.ru",
+      "psbank.ru",
+      "rosbank.ru",
+      "otpbank.ru",
+      "sovcombank.ru",
+      "mtsbank.ru",
+      "rncb.ru",
+      "open.ru",
+      "pochtabank.ru",
+      "rshb.ru",
+      "banki.ru",
+      "cbr.ru",
+      "yandex.ru",
+      "ya.ru",
+      "yandex.com",
+      "yandex.net",
+      "yandex.kz",
+      "yandex.by",
+      "market.yandex.ru",
+      "market.yandex.com",
+      "taxi.yandex.ru",
+      "eda.yandex.ru",
+      "delivery.yandex.ru",
+      "lavka.yandex.ru",
+      "music.yandex.ru",
+      "music.yandex.com",
+      "money.yandex.ru",
+      "afisha.yandex.ru",
+      "realty.yandex.ru",
+      "mail.yandex.ru",
+      "360.yandex.ru",
+      "vk.com",
+      "vk.ru",
+      "mvk.com",
+      "userapi.com",
+      "vk.me",
+      "vk.company",
+      "vkvideo.ru",
+      "vk.link",
+      "vk.cc",
+      "mail.ru",
+      "bk.ru",
+      "inbox.ru",
+      "list.ru",
+      "internet.ru",
+      "my.mail.ru",
+      "cloud.mail.ru",
+      "calendar.mail.ru",
+      "ozon.ru",
+      "wildberries.ru",
+      "vseinstrumenti.ru",
+      "avito.ru",
+      "auto.ru",
+      "drom.ru",
+      "sbermegamarket.ru",
+      "megamarket.ru",
+      "lamoda.ru",
+      "kupivip.ru",
+      "aliexpress.ru",
+      "magnit.ru",
+      "lenta.com",
+      "auchan.ru",
+      "pyaterochka.ru",
+      "perekrestok.ru",
+      "dixy.ru",
+      "vkusvill.ru",
+      "samokat.ru",
+      "sbermarket.ru",
+      "5ka.ru",
+      "okmarket.ru",
+      "mvideo.ru",
+      "dns-shop.ru",
+      "eldorado.ru",
+      "citilink.ru",
+      "technopark.ru",
+      "detmir.ru",
+      "dochkisinochki.ru",
+      "delivery-club.ru",
+      "dominos.ru",
+      "pizzahut.ru",
+      "kfc.ru",
+      "burgerking.ru",
+      "dodos.ru",
+      "dodopizza.ru",
+      "sushiwok.ru",
+      "sitylink.ru",
+      "sitylink.com",
+      "taximaxim.ru",
+      "maxim.ru",
+      "gett.ru",
+      "drivee.ru",
+      "ria.ru",
+      "tass.ru",
+      "rbc.ru",
+      "kommersant.ru",
+      "kp.ru",
+      "lenta.ru",
+      "gazeta.ru",
+      "iz.ru",
+      "rg.ru",
+      "vz.ru",
+      "ng.ru",
+      "rt.com",
+      "russian.rt.com",
+      "vesti.ru",
+      "1tv.ru",
+      "1tv.com",
+      "smi.ru",
+      "forbes.ru",
+      "kinopoisk.ru",
+      "ivi.ru",
+      "okko.tv",
+      "more.tv",
+      "wink.ru",
+      "premier.one",
+      "start.ru",
+      "kion.ru",
+      "rutube.ru",
+      "smotrim.ru",
+      "vgtrk.ru",
+      "matchtv.ru",
+      "sportbox.ru",
+      "box-tv.ru",
+      "amediateka.ru",
+      "zvuk.com",
+      "max.ru",
+      "ok.ru",
+      "mts.ru",
+      "megafon.ru",
+      "beeline.ru",
+      "tele2.ru",
+      "yota.ru",
+      "sbermobile.ru",
+      "school.mos.ru",
+      "mosobr.ru",
+      "edu.ru",
+      "schoolotv.ru",
+      "uchi.ru",
+      "skyeng.ru",
+      "stepik.org",
+      "hh.ru",
+      "headhunter.ru",
+      "rabota.ru",
+      "zarplata.ru",
+      "superjob.ru",
+      "aeroflot.ru",
+      "s7.ru",
+      "utair.ru",
+      "rzd.ru",
+      "rzd.com",
+      "mosmetro.ru",
+      "transport.mos.ru",
+      "2gis.ru",
+      "2gis.com",
+      "maps.yandex.ru",
+      "russia.ru",
+      "moscow.ru",
+      "dzen.ru"
+     ],
+     "outboundTag": "direct"
+    },
+    {
+     "type": "field",
+     "network": "tcp,udp",
+     "balancerTag": "aqv-balancer"
+    }
+   ],
+   "balancers": [
+    {
+     "tag": "aqv-balancer",
+     "selector": [
+      "aqv-1"
+     ],
+     "strategy": {
+      "type": "leastLoad",
+      "settings": {
+       "maxRTT": "1s",
+       "expected": 1,
+       "baselines": [
+        "1s"
+       ],
+       "tolerance": 0.01
+      }
+     }
+    }
+   ]
+  },
+  "burstObservatory": {
+   "pingConfig": {
+    "timeout": "10s",
+    "interval": "120s",
+    "sampling": 5,
+    "destination": "http://www.gstatic.com/generate_204"
+   },
+   "subjectSelector": [
+    "aqv-1"
    ]
   }
  },
@@ -7128,6 +7019,52 @@
     "settings": {
      "vnext": [
       {
+       "address": "103.244.144.91",
+       "port": 8443,
+       "users": [
+        {
+         "id": "acef60fc-6bd1-422a-8c8a-3f36ec7209ca",
+         "encryption": "none"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "xhttp",
+     "xhttpSettings": {
+      "path": "/edge/029ed21272b5/",
+      "mode": "packet-up",
+      "host": "cache-r8sa.veltacdn.cc",
+      "extra": {
+       "xmux": {
+        "cMaxReuseTimes": 0,
+        "maxConcurrency": 0,
+        "maxConnections": 2,
+        "hKeepAlivePeriod": 0,
+        "hMaxRequestTimes": "600-900",
+        "hMaxReusableSecs": "900-1800"
+       },
+       "noGRPCHeader": false
+      }
+     },
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "qq",
+      "spiderX": "/",
+      "serverName": "cache-r8sa.veltacdn.cc",
+      "publicKey": "QQhQZNhqr5ZKIsy_KV9LNPVE-0qSmezHZ3a0HVfYaGg",
+      "shortId": "6255f31a8502bc4a"
+     }
+    },
+    "tag": "bgv-4"
+   },
+   {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
        "address": "bridge.nurcloud.org",
        "port": 443,
        "users": [
@@ -7152,7 +7089,7 @@
       "shortId": "62e68cb4ccee6a00"
      }
     },
-    "tag": "bgv-4"
+    "tag": "bgv-5"
    },
    {
     "protocol": "freedom",
@@ -7390,7 +7327,8 @@
       "bgv-1",
       "bgv-2",
       "bgv-3",
-      "bgv-4"
+      "bgv-4",
+      "bgv-5"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -7417,7 +7355,8 @@
     "bgv-1",
     "bgv-2",
     "bgv-3",
-    "bgv-4"
+    "bgv-4",
+    "bgv-5"
    ]
   }
  },
@@ -8569,6 +8508,38 @@
     "tag": "czv-2"
    },
    {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "193.233.217.20",
+       "port": 5443,
+       "users": [
+        {
+         "id": "92e135b9-4c04-4e7e-8b28-d8074a202cf8",
+         "encryption": "none"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "grpc",
+     "grpcSettings": {
+      "serviceName": "grpc"
+     },
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "random",
+      "spiderX": "/",
+      "serverName": "files.nyx53.shop",
+      "publicKey": "m95xufOq7mmISN572WqkK0Bzmzb3hDfpr6WNp76xfyc"
+     }
+    },
+    "tag": "czv-3"
+   },
+   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -8802,7 +8773,8 @@
      "tag": "czv-balancer",
      "selector": [
       "czv-1",
-      "czv-2"
+      "czv-2",
+      "czv-3"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -8827,7 +8799,8 @@
    },
    "subjectSelector": [
     "czv-1",
-    "czv-2"
+    "czv-2",
+    "czv-3"
    ]
   }
  },
@@ -8949,11 +8922,11 @@
     "settings": {
      "vnext": [
       {
-       "address": "103.244.144.91",
-       "port": 8443,
+       "address": "13.143.167.51",
+       "port": 443,
        "users": [
         {
-         "id": "acef60fc-6bd1-422a-8c8a-3f36ec7209ca",
+         "id": "4f5e791a-1c8e-4313-b36e-13103fc07609",
          "encryption": "none"
         }
        ]
@@ -8963,29 +8936,17 @@
     "streamSettings": {
      "network": "xhttp",
      "xhttpSettings": {
-      "path": "/edge/029ed21272b5/",
-      "mode": "packet-up",
-      "host": "cache-r8sa.veltacdn.cc",
-      "extra": {
-       "xmux": {
-        "cMaxReuseTimes": 0,
-        "maxConcurrency": 0,
-        "maxConnections": 2,
-        "hKeepAlivePeriod": 0,
-        "hMaxRequestTimes": "600-900",
-        "hMaxReusableSecs": "900-1800"
-       },
-       "noGRPCHeader": false
-      }
+      "path": "/kr4n7q2m8x5p1w9a",
+      "mode": "auto"
      },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "qq",
-      "spiderX": "/",
-      "serverName": "cache-r8sa.veltacdn.cc",
-      "publicKey": "QQhQZNhqr5ZKIsy_KV9LNPVE-0qSmezHZ3a0HVfYaGg",
-      "shortId": "6255f31a8502bc4a"
+     "security": "tls",
+     "tlsSettings": {
+      "serverName": "de10.vpsphone.site",
+      "fingerprint": "edge",
+      "alpn": [
+       "h2",
+       "http/1.1"
+      ]
      }
     },
     "tag": "dev-3"
@@ -9462,39 +9423,6 @@
     "tag": "dev-17"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "193.233.74.6",
-       "port": 8444,
-       "users": [
-        {
-         "id": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {
-      "serviceName": "GunService"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "chrome",
-      "spiderX": "/",
-      "serverName": "github.com",
-      "publicKey": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
-      "shortId": "457fab2ac885dbe0"
-     }
-    },
-    "tag": "dev-18"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -9743,8 +9671,7 @@
       "dev-14",
       "dev-15",
       "dev-16",
-      "dev-17",
-      "dev-18"
+      "dev-17"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -9784,8 +9711,7 @@
     "dev-14",
     "dev-15",
     "dev-16",
-    "dev-17",
-    "dev-18"
+    "dev-17"
    ]
   }
  },
@@ -9935,39 +9861,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "200.181.87.20",
-       "port": 443,
-       "users": [
-        {
-         "id": "86203f95-614e-478c-9b64-0cebe387e58b",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/mxqs0opza5oejfv3",
-      "mode": "auto"
-     },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "host-lv-upscale.cdn.cachefleet.com",
-      "fingerprint": "chrome",
-      "alpn": [
-       "h2"
-      ]
-     }
-    },
-    "tag": "eev-4"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "ee-2e06d85dc0.shamanapp.online",
        "port": 34451,
        "users": [
@@ -9996,7 +9889,7 @@
       ]
      }
     },
-    "tag": "eev-5"
+    "tag": "eev-4"
    },
    {
     "protocol": "vless",
@@ -10027,7 +9920,7 @@
       "shortId": "226509f017e4c36d"
      }
     },
-    "tag": "eev-6"
+    "tag": "eev-5"
    },
    {
     "protocol": "freedom",
@@ -10266,8 +10159,7 @@
       "eev-2",
       "eev-3",
       "eev-4",
-      "eev-5",
-      "eev-6"
+      "eev-5"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -10295,8 +10187,7 @@
     "eev-2",
     "eev-3",
     "eev-4",
-    "eev-5",
-    "eev-6"
+    "eev-5"
    ]
   }
  },
@@ -11407,69 +11298,6 @@
     "tag": "fiv-3"
    },
    {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "2.27.26.142",
-       "port": 443,
-       "users": [
-        {
-         "id": "507f392c-874d-4c5d-9102-bee13a686188",
-         "encryption": "none",
-         "flow": "xtls-rprx-vision"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "tcp",
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "edge",
-      "spiderX": "/",
-      "serverName": "aq-1.global-cdn.org",
-      "publicKey": "HKkU-5UanGjWdmX8E-EGulXMk1BnidkFsVveyyOlTg8",
-      "shortId": "90f9d05bf95cb335"
-     }
-    },
-    "tag": "fiv-4"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
-       "address": "109.172.54.135",
-       "port": 8444,
-       "users": [
-        {
-         "id": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "grpc",
-     "grpcSettings": {
-      "serviceName": "GunService"
-     },
-     "security": "reality",
-     "realitySettings": {
-      "show": false,
-      "fingerprint": "chrome",
-      "spiderX": "/",
-      "serverName": "github.com",
-      "publicKey": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0"
-     }
-    },
-    "tag": "fiv-5"
-   },
-   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -11704,9 +11532,7 @@
      "selector": [
       "fiv-1",
       "fiv-2",
-      "fiv-3",
-      "fiv-4",
-      "fiv-5"
+      "fiv-3"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -11732,9 +11558,7 @@
    "subjectSelector": [
     "fiv-1",
     "fiv-2",
-    "fiv-3",
-    "fiv-4",
-    "fiv-5"
+    "fiv-3"
    ]
   }
  },
@@ -16698,40 +16522,6 @@
     "settings": {
      "vnext": [
       {
-       "address": "13.143.167.51",
-       "port": 443,
-       "users": [
-        {
-         "id": "4f5e791a-1c8e-4313-b36e-13103fc07609",
-         "encryption": "none"
-        }
-       ]
-      }
-     ]
-    },
-    "streamSettings": {
-     "network": "xhttp",
-     "xhttpSettings": {
-      "path": "/kr4n7q2m8x5p1w9a",
-      "mode": "auto"
-     },
-     "security": "tls",
-     "tlsSettings": {
-      "serverName": "de10.vpsphone.site",
-      "fingerprint": "edge",
-      "alpn": [
-       "h2",
-       "http/1.1"
-      ]
-     }
-    },
-    "tag": "krv-4"
-   },
-   {
-    "protocol": "vless",
-    "settings": {
-     "vnext": [
-      {
        "address": "bridge.nurcloud.org",
        "port": 443,
        "users": [
@@ -16756,7 +16546,7 @@
       "shortId": "e553add25ceb4a3c"
      }
     },
-    "tag": "krv-5"
+    "tag": "krv-4"
    },
    {
     "protocol": "freedom",
@@ -16994,8 +16784,7 @@
       "krv-1",
       "krv-2",
       "krv-3",
-      "krv-4",
-      "krv-5"
+      "krv-4"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -17022,8 +16811,7 @@
     "krv-1",
     "krv-2",
     "krv-3",
-    "krv-4",
-    "krv-5"
+    "krv-4"
    ]
   }
  },
@@ -22331,6 +22119,39 @@
     "tag": "sgv-4"
    },
    {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "200.181.87.20",
+       "port": 443,
+       "users": [
+        {
+         "id": "86203f95-614e-478c-9b64-0cebe387e58b",
+         "encryption": "none"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "xhttp",
+     "xhttpSettings": {
+      "path": "/mxqs0opza5oejfv3",
+      "mode": "auto"
+     },
+     "security": "tls",
+     "tlsSettings": {
+      "serverName": "host-lv-upscale.cdn.cachefleet.com",
+      "fingerprint": "chrome",
+      "alpn": [
+       "h2"
+      ]
+     }
+    },
+    "tag": "sgv-5"
+   },
+   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -22566,7 +22387,8 @@
       "sgv-1",
       "sgv-2",
       "sgv-3",
-      "sgv-4"
+      "sgv-4",
+      "sgv-5"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -22593,7 +22415,8 @@
     "sgv-1",
     "sgv-2",
     "sgv-3",
-    "sgv-4"
+    "sgv-4",
+    "sgv-5"
    ]
   }
  },
@@ -23629,6 +23452,39 @@
     "tag": "usv-6"
    },
    {
+    "protocol": "vless",
+    "settings": {
+     "vnext": [
+      {
+       "address": "23.166.72.70",
+       "port": 8443,
+       "users": [
+        {
+         "id": "f5593de6-6d13-40d8-a23d-d2481d9ecfa9",
+         "encryption": "none"
+        }
+       ]
+      }
+     ]
+    },
+    "streamSettings": {
+     "network": "grpc",
+     "grpcSettings": {
+      "serviceName": "simplegrpc"
+     },
+     "security": "reality",
+     "realitySettings": {
+      "show": false,
+      "fingerprint": "firefox",
+      "spiderX": "/",
+      "serverName": "wifi-uk.convertvideo123.online",
+      "publicKey": "zvDl-tnM_FtSLG45j7FXchPAl1dFJaE_T0Lgy26xuXU",
+      "shortId": "b9e7a1c4d8329f10"
+     }
+    },
+    "tag": "usv-7"
+   },
+   {
     "protocol": "freedom",
     "tag": "direct"
    },
@@ -23866,7 +23722,8 @@
       "usv-3",
       "usv-4",
       "usv-5",
-      "usv-6"
+      "usv-6",
+      "usv-7"
      ],
      "strategy": {
       "type": "leastLoad",
@@ -23895,7 +23752,8 @@
     "usv-3",
     "usv-4",
     "usv-5",
-    "usv-6"
+    "usv-6",
+    "usv-7"
    ]
   }
  },
